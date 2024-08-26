@@ -1,0 +1,19 @@
+{
+    "@@locale": "en",
+    "dream":"Dream",
+    "@dream":{},
+    "gym":"Gym",
+    "@gym":{},
+    "fitnessTailoredJustForYou":"Fitness tailored just for you",
+    "@fitnessTailoredJustForYou":{},
+    "phoneNumber": "Phone number",
+    "@phoneNumber":{},
+    "password":"Password",
+    "@password":{},
+    "forgotPassword":"Forgot password?",
+    "@forgotPassword":{},
+    "login":"Log In",
+    "@login":{},
+    "adminClickHere":"Admin! click here",
+    "@adminClickHere":{}
+}

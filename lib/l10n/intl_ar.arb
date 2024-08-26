@@ -1,0 +1,13 @@
+{
+    "@@locale": "ar",
+    "dream":"Dream",
+    "@dream":{},
+    "gym":"Gym",
+    "@gym":{},
+    "fitnessTailoredJustForYou":"دريم جيم: لياقة بدنية مصممة خصيصًا لك",
+    "@fitnessTailoredJustForYou":{},
+    "phoneNumber":"رقم الهاتف",
+    "@phoneNumber":{},
+    "password":"كلمة المرور",
+    "@password":{}
+}

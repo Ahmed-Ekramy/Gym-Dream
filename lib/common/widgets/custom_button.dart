@@ -18,25 +18,22 @@ class CustomButton extends StatelessWidget {
   final double? height;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsDirectional.symmetric(horizontal: 18.w),
-      child: SizedBox(
-        height: height!.h,
-        width: double.infinity,
-        child: ElevatedButton(
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(color),
-            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0),
-              ),
+    return SizedBox(
+      height: height!.h,
+      width: double.infinity,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(color),
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
             ),
           ),
-          onPressed: onPressed,
-          child: Text(
-            title,
-            style: AppTextStyle.white500S16,
-          ),
+        ),
+        onPressed: onPressed,
+        child: Text(
+          title,
+          style: AppTextStyle.white500S16,
         ),
       ),
     );

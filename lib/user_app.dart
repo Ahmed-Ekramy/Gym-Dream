@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'common/routes/app_route.dart';
+import 'generated/l10n.dart';
 
 class UserAppGym extends StatelessWidget {
   const UserAppGym({super.key});
@@ -12,6 +15,13 @@ class UserAppGym extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
           theme: ThemeData(
               bottomNavigationBarTheme: BottomNavigationBarThemeData(
                   elevation: 0,
