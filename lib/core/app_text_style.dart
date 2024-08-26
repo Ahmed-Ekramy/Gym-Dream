@@ -254,7 +254,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w400,
       fontSize: 11.0.sp,
       height: 16.5 / 11.0.sp,
-      letterSpacing: -2.0.sp,
+      letterSpacing: 0.0.sp,
       color: AppColor.grey,
     ),
   );

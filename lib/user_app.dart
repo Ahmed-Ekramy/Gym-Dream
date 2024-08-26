@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/routes/route.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import 'common/routes/app_route.dart';
 
