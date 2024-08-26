@@ -10,7 +10,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 48.0.sp,
       height: 72.0 / 48.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.secondary,
     ),
   );
@@ -19,7 +19,6 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 16.0.sp,
       height: 24.0 / 16.0.sp,
-      letterSpacing: -2.0.sp,
       color: AppColor.secondary,
     ),
   );
@@ -28,7 +27,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 18.0.sp,
       height: 27.0 / 18.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.secondary,
     ),
   );
@@ -53,7 +52,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 14.0.sp,
       height: 21.0 / 14.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.secondary,
     ),
   );
@@ -143,7 +142,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 10.0.sp,
       height: 15.0 / 10.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.blackOpacity4,
     ),
   );
@@ -168,7 +167,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w400,
       fontSize: 14.0.sp,
       height: 21.0 / 14.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.blackOpacity4,
     ),
   );
@@ -177,7 +176,15 @@ class AppTextStyle {
       fontWeight: FontWeight.w400,
       fontSize: 11.0.sp,
       height: 21.0 / 14.0.sp,
-      letterSpacing: -2.0.sp,
+
+      color: AppColor.blackOpacity4,
+    ),
+  );
+  static final TextStyle blackOpacity500S7 = GoogleFonts.readexPro(
+    textStyle:  TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 7.0.sp,
+      height: 10.0 / 7.0.sp,
       color: AppColor.blackOpacity4,
     ),
   );
@@ -187,7 +194,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 48.0.sp,
       height: 72.0 / 48.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.primary,
     ),
   );
@@ -196,7 +203,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 14.0.sp,
       height: 21.0 / 14.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.primary,
     ),
   );
@@ -205,7 +212,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 18.0.sp,
       height: 27.0 / 18.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.primary,
     ),
   );
@@ -248,7 +255,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w400,
       fontSize: 11.0.sp,
       height: 16.5 / 11.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.grey,
     ),
   );
@@ -313,7 +320,6 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 6.0.sp,
       height: 9.0 / 6.0.sp,
-       letterSpacing:  -2.0.sp,
       color: AppColor.grey,
     ),
   );
@@ -322,7 +328,6 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 14.0.sp,
       height: 21.0 / 14.0.sp,
-       letterSpacing:  -2.0.sp,
       color: AppColor.grey,
     ),
   );
@@ -373,6 +378,14 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 22.0.sp,
       height: 22.0 / 22.0.sp,
+      color: AppColor.white,
+    ),
+  );
+  static final TextStyle white500S7 = GoogleFonts.readexPro(
+    textStyle:  TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 7.0.sp,
+      height: 10.0 / 7.0.sp,
       color: AppColor.white,
     ),
   );
@@ -432,7 +445,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 18.0.sp,
       height: 27 / 18.0.sp,
-      letterSpacing: -2.0.sp,
+
       color: AppColor.brown,
     ),
   );
