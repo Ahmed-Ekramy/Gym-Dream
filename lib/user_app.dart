@@ -7,7 +7,7 @@ class UserAppGym extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   ScreenUtilInit(
+    return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
@@ -21,8 +21,7 @@ class UserAppGym extends StatelessWidget {
                   selectedIconTheme: IconThemeData(size: 20.sp),
                   unselectedIconTheme: IconThemeData(size: 18.sp))),
           debugShowCheckedModeBanner: false,
-          onGenerateRoute: (settings)=> AppRoute.onGenerateRoute(settings),
-          initialRoute: '/homeUser',
+          onGenerateRoute: AppRoute.onGenerateRoute,
         );
       },
     );

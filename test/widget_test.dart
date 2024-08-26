@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:gym_dream/main.dart';
 import 'package:gym_dream/user_app.dart';
 
 void main() {
