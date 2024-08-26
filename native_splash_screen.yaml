@@ -1,0 +1,6 @@
+flutter_native_splash:
+  color: "#FE8C07"
+  image: assets/images/saleforaLogo.png
+  android_12:
+    image: assets/images/saleforaLogo.png
+    icon_background_color: "#FE8C07"
