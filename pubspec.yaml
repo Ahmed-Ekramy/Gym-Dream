@@ -55,13 +55,8 @@ dependencies:
   retrofit_generator: ^8.1.2
   shared_preferences: ^2.2.3
   shimmer: ^3.0.0
-
-flutter_native_splash:
-  color: "#FE8C07"
-  image: assets/images/logo.png
-  android_12:
-    image: assets/images/logo.png
-    icon_background_color: "#FE8C07"
+  freezed_annotation: ^2.4.4
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -82,6 +77,7 @@ flutter:
   assets:
     - assets/images/
   #   - images/a_dot_ham.jpeg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

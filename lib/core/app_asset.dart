@@ -1,3 +1,3 @@
 class AppAsset {
-  static const login = "assets/images/trainerAuthImage.png";
+  static const login = "asset/images/Login.png";
 }

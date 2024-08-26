@@ -3,7 +3,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'common/routes/app_route.dart';
-import 'generated/l10n.dart';
 
 class UserAppGym extends StatelessWidget {
   const UserAppGym({super.key});
@@ -32,6 +31,7 @@ class UserAppGym extends StatelessWidget {
                   unselectedIconTheme: IconThemeData(size: 18.sp))),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoute.onGenerateRoute,
+          initialRoute: Routes.initialRoute,
         );
       },
     );
