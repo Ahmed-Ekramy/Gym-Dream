@@ -6,6 +6,8 @@ import 'package:gym_dream/core/app_text_style.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
+      this.width,
+      this.textStyle,
       required this.title,
       required this.onPressed,
       this.color = AppColor.primary,
@@ -16,11 +18,13 @@ class CustomButton extends StatelessWidget {
   final Color? textColor;
   final Color? color;
   final double? height;
+  final double? width;
+  final TextStyle? textStyle;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height!.h,
-      width: double.infinity,
+      width: width!.w,
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(color),
@@ -33,7 +37,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: AppTextStyle.white500S16,
+          style: textStyle,
         ),
       ),
     );
