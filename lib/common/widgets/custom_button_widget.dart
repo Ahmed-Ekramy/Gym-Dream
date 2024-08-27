@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/core/app_text_style.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -36,7 +37,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: textStyle,
+          style: textStyle ?? AppTextStyle.white500S16,
         ),
       ),
     );
