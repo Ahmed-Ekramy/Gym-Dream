@@ -26,15 +26,13 @@ environment:
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter p  build_runner: ^2.4.12
 dependencies:
   build_runner: ^2.4.12
   cached_network_image: ^3.4.1
   carousel_slider: ^5.0.0
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   dio: ^5.6.0
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
@@ -54,18 +52,28 @@ dependencies:
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
   readmore: ^3.0.0
-  retrofit: ^4.2.0
+  retrofit: ^4.1.0
   retrofit_generator: ^8.2.0
   shared_preferences: ^2.3.2
   shimmer: ^3.0.0
+  qr_flutter: ^4.1.0
+  equatable: ^2.0.5
+
 
 dev_dependencies:
-  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
 
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.0
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
 # The following section is specific to Flutter packages.
 flutter:
   # The following line ensures that the Material Icons font is
@@ -78,10 +86,13 @@ flutter:
     - assets/images/
     - assets/svg/
   #   - images/a_dot_ham.jpeg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
+
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
@@ -101,5 +112,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-flutter_intl:
-  enabled: true

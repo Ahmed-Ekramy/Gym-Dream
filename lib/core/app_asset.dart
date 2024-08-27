@@ -4,4 +4,5 @@ class AppAsset {
   static const bell = "assets/svg/bell.svg";
   static const eyeClosed = "assets/svg/eye-closed.svg";
   static const eyeOpen = "assets/svg/eye-open.svg";
+  static const vector = "assets/svg/Vector.svg";
 }
