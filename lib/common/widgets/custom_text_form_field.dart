@@ -54,6 +54,7 @@ class CustomTextFormField extends StatelessWidget {
               readOnly: readOnly,
               controller: controller,
               obscuringCharacter: "*",
+              style: AppTextStyle.black500S14,
               obscureText: inputType == InputType.password && isPasswordVisible,
               keyboardType: _getKeyboardType(),
               inputFormatters: inputType == InputType.phoneNumber
@@ -73,7 +74,7 @@ class CustomTextFormField extends StatelessWidget {
                   start: 18.w,
                 ),
                 hintText: hint,
-                hintStyle: AppTextStyle.black400S14,
+                hintStyle: AppTextStyle.gray500S14,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: const BorderSide(color: AppColor.primary),

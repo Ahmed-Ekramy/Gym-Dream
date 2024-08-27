@@ -8,8 +8,8 @@ import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/user/auth/cubits/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-class UserLoginView extends StatelessWidget {
-  const UserLoginView({super.key});
+class AdminLoginView extends StatelessWidget {
+  const AdminLoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,16 +72,6 @@ class UserLoginView extends StatelessWidget {
                     width: double.infinity,
                     title: S.of(context).login,
                     onPressed: () {},
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional.centerEnd,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        S.of(context).adminClickHere,
-                        style: AppTextStyle.blue600S8,
-                      ),
-                    ),
                   ),
                   Image.asset(AppAsset.login)
                 ],

@@ -20,7 +20,7 @@ class AppRoute {
 
       case Routes.userLogin:
         return MaterialPageRoute(
-          builder: (_) => const UserLogInView(),
+          builder: (_) => const UserLoginView(),
         );
       default:
         return MaterialPageRoute(

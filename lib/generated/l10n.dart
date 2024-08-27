@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -175,6 +176,16 @@ class S {
     return Intl.message(
       'Password must be at least 8 characters long',
       name: 'passwordMustBeAtLeast8CharactersLong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 8 characters long`
+  String get yourPhoneNumber {
+    return Intl.message(
+      'your phone number',
+      name: 'yourPhoneNumber',
       desc: '',
       args: [],
     );
