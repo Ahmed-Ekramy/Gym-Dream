@@ -53,6 +53,7 @@ class CustomTextFormField extends StatelessWidget {
               cursorColor: AppColor.primary,
               readOnly: readOnly,
               controller: controller,
+              obscuringCharacter: "*",
               obscureText: inputType == InputType.password && isPasswordVisible,
               keyboardType: _getKeyboardType(),
               inputFormatters: inputType == InputType.phoneNumber

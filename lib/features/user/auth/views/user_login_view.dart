@@ -53,7 +53,7 @@ class UserLogInView extends StatelessWidget {
                   ),
                   SizedBox(height: 22.h),
                   CustomTextFormField(
-                    hint: '',
+                    hint: '********',
                     isLast: false,
                     title: S.of(context).password,
                     inputType: InputType.password,
