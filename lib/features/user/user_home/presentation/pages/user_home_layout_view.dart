@@ -30,7 +30,6 @@ class UserHomeLayoutView extends StatelessWidget {
                 ),
               ],
             ),
-
     ],
         ),
       ),
