@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/routes/route.dart';
+import 'package:gym_dream/core/app_color.dart';
 import 'common/routes/app_route.dart';
 
 class UserAppGym extends StatelessWidget {
@@ -13,15 +15,15 @@ class UserAppGym extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           theme: ThemeData(
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                  elevation: 0,
-                  backgroundColor: Colors.white,
-                  selectedItemColor: Colors.black,
-                  unselectedItemColor: Colors.grey,
-                  selectedIconTheme: IconThemeData(size: 20.sp),
-                  unselectedIconTheme: IconThemeData(size: 18.sp))),
+            textSelectionTheme: const TextSelectionThemeData(
+              cursorColor: AppColor.primary,
+              selectionColor: AppColor.primary,
+              selectionHandleColor: AppColor.primary,
+            ),
+          ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoute.onGenerateRoute,
+          initialRoute: Routes.initialRoute,
         );
       },
     );
