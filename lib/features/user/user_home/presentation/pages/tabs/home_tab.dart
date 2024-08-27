@@ -46,8 +46,8 @@ class HomeTab extends StatelessWidget {
                       children: [
                         Text("warning", style: AppTextStyle.redBlood500S14),
                         CustomButton(
-                          width: 90.w,
-                          height: 20.h,
+                          width: 130.w,
+                          height: 30.h,
                           title: "Our branches",
                           textStyle: AppTextStyle.white700S14
                               .copyWith(fontSize: 10.sp),
