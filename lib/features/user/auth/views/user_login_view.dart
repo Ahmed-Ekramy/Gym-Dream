@@ -29,11 +29,15 @@ class UserLogInView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '${S.of(context).dream} ',
+                          '${S
+                              .of(context)
+                              .dream} ',
                           style: AppTextStyle.black600S48,
                         ),
                         Text(
-                          S.of(context).gym,
+                          S
+                              .of(context)
+                              .gym,
                           style: AppTextStyle.orange600S48,
                         ),
                       ],
@@ -41,34 +45,52 @@ class UserLogInView extends StatelessWidget {
                   ),
                   SizedBox(height: 16.h),
                   Text(
-                    S.of(context).fitnessTailoredJustForYou,
+                    S
+                        .of(context)
+                        .fitnessTailoredJustForYou,
                     style: AppTextStyle.grey400S11,
                   ),
                   SizedBox(height: 30.h),
                   CustomTextFormField(
-                    hint: '010********',
+                    hint: S
+                        .of(context)
+                        .enterYourPhoneNumber,
                     isLast: false,
-                    title: S.of(context).phoneNumber,
+                    title: S
+                        .of(context)
+                        .phoneNumber,
                     inputType: InputType.phoneNumber,
                   ),
                   SizedBox(height: 22.h),
                   CustomTextFormField(
-                    hint: '********',
+                    hint: S
+                        .of(context)
+                        .password,
                     isLast: false,
-                    title: S.of(context).password,
+                    title: S
+                        .of(context)
+                        .password,
                     inputType: InputType.password,
                   ),
                   SizedBox(height: 23.h),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
                     child: Text(
-                      S.of(context).forgotPassword,
+                      S
+                          .of(context)
+                          .forgotPassword,
                       style: AppTextStyle.blackOpacity500S12,
                     ),
                   ),
-                  SizedBox(height: 58.h),
+                  SizedBox(
+                    height: 58.h,
+                  ),
                   CustomButton(
-                    title: S.of(context).login,
+                    textStyle: AppTextStyle.white700S16,
+                    width: double.infinity,
+                    title: S
+                        .of(context)
+                        .login,
                     onPressed: () {},
                   ),
                   Align(
@@ -76,7 +98,9 @@ class UserLogInView extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        S.of(context).adminClickHere,
+                        S
+                            .of(context)
+                            .adminClickHere,
                         style: AppTextStyle.blue600S8,
                       ),
                     ),

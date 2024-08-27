@@ -21,7 +21,6 @@ class UserHomeLayoutView extends StatelessWidget {
             SliverAppBar(
               expandedHeight: 70.h,
               backgroundColor: Colors.transparent,
-              // Set background to transparent
               flexibleSpace: const CustomFlexibleBar(),
               actions: [
                 SvgPicture.asset(
@@ -46,7 +45,7 @@ class UserHomeLayoutView extends StatelessWidget {
                         Text("warning", style: AppTextStyle.redBlood500S14),
                         CustomButton(
                           width: 90.w,
-                          heightt: 20.h,
+                          height: 20.h,
                           title: "Our branches",
                           textStyle: AppTextStyle.white700S14
                               .copyWith(fontSize: 10.sp),

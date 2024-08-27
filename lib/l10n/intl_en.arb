@@ -25,5 +25,7 @@
     "pleaseEnterYourPassword":"Please enter your password",
     "@pleaseEnterYourPassword":{},
     "passwordMustBeAtLeast8CharactersLong":"Password must be at least 8 characters long",
-    "@passwordMustBeAtLeast8CharactersLong":{}
+    "@passwordMustBeAtLeast8CharactersLong":{},
+    "enterYourPhoneNumber":"Enter Your Phone Number",
+    "@enterYourPhoneNumber":{}
 }
