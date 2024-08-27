@@ -23,7 +23,7 @@ class UserAppGym extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoute.onGenerateRoute,
-          initialRoute: Routes.userLogin,
+          initialRoute: Routes.initialRoute,
         );
       },
     );
