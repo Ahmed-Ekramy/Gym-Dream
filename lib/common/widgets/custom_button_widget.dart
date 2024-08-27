@@ -6,6 +6,8 @@ import 'package:gym_dream/core/app_text_style.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
+      this.width,
+      this.textStyle,
       required this.title,
       required this.onPressed,
       this.color = AppColor.primary,
@@ -33,7 +35,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: AppTextStyle.white500S16,
+          style: AppTextStyle.white500S13,
         ),
       ),
     );
