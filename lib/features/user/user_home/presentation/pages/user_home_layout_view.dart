@@ -11,7 +11,6 @@ import '../../../../../core/app_color.dart';
 import '../manager/home_user_cubit.dart';
 import '../manager/home_user_state.dart';
 import '../widgets/custom_flixibleBar.dart';
-import '../widgets/custom_row_capacity.dart';
 
 class UserHomeLayoutView extends StatelessWidget {
   const UserHomeLayoutView({super.key});
