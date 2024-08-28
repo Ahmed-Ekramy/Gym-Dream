@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/generated/l10n.dart';
+
 import 'common/routes/app_route.dart';
 
 class UserAppGym extends StatelessWidget {
@@ -32,7 +33,7 @@ class UserAppGym extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoute.onGenerateRoute,
-          initialRoute: Routes.userLogin,
+          initialRoute: Routes.choosingView,
         );
       },
     );

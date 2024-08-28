@@ -7,6 +7,7 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/admin/auth/widgets/dream_gym_text.dart';
 import 'package:gym_dream/features/user/auth/cubits/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
@@ -25,22 +26,7 @@ class AdminLoginView extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '${S.of(context).dream} ',
-                          style: AppTextStyle.black600S48,
-                        ),
-                        Text(
-                          S.of(context).gym,
-                          style: AppTextStyle.orange600S48,
-                        ),
-                      ],
-                    ),
-                  ),
+                  const DreamGymText(),
                   SizedBox(height: 16.h),
                   Text(
                     S.of(context).fitnessTailoredJustForYou,
@@ -78,8 +64,22 @@ class AdminLoginView extends StatelessWidget {
                           newRoute: Routes.homeAdminLayout);
                     },
                   ),
-                  SizedBox(height: 30.h),
-                  Image.asset(AppAsset.login)
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: TextButton(
+                      onPressed: () {
+                        context.navigateTo(routeName: Routes.userLogin);
+                      },
+                      child: Text(
+                        S.of(context).userClickHere,
+                        style: AppTextStyle.blue600S8,
+                      ),
+                    ),
+                  ),
+                  Image.asset(
+                    height: 200.h,
+                    AppAsset.admin,
+                  )
                 ],
               ),
             ),

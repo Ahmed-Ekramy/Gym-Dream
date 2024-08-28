@@ -27,5 +27,15 @@
     "passwordMustBeAtLeast8CharactersLong":"Password must be at least 8 characters long",
     "@passwordMustBeAtLeast8CharactersLong":{},
     "yourPhoneNumber":"your phone number",
-    "@yourPhoneNumber":{}
+    "@yourPhoneNumber":{},
+    "chooseYourMemberShipType":"Choose your member ship type",
+    "@chooseYourMemberShipType":{},
+    "admin":"Admin",
+    "@admin":{},
+    "trainer":"Trainer",
+    "@trainer":{},
+    "next":"Next",
+    "@next":{},
+    "userClickHere":"User? click here",
+    "@userClickHere":{}
 }

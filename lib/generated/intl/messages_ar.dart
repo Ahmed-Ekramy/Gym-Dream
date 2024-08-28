@@ -22,11 +22,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "admin": MessageLookupByLibrary.simpleMessage("المشرف"),
+        "adminClickHere":
+            MessageLookupByLibrary.simpleMessage("المشرف! انقر هنا"),
+        "chooseYourMemberShipType":
+            MessageLookupByLibrary.simpleMessage("اختر نوع العضوية الخاص بك"),
         "dream": MessageLookupByLibrary.simpleMessage("Dream"),
         "fitnessTailoredJustForYou": MessageLookupByLibrary.simpleMessage(
-            "دريم جيم: لياقة بدنية مصممة خصيصًا لك"),
+            "الرياضة المحترفة مصممة خصيصًا لك"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف")
+        "passwordMustBeAtLeast8CharactersLong":
+            MessageLookupByLibrary.simpleMessage(
+                "يجب أن تكون كلمة المرور على الأقل 8 حروفًا"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "phoneNumberMustBe11DigitsLong": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يكون رقم الهاتف على الأقل 11 رقمًا"),
+        "phoneNumberMustStartWith01": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يبدأ رقم الهاتف بـ \"01\""),
+        "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال كلمة المرور الخاصة بك"),
+        "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال رقم الهاتف الخاص بك"),
+        "trainer": MessageLookupByLibrary.simpleMessage("المدرب"),
+        "yourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("رقم الهاتف الخاص بك")
       };
 }
