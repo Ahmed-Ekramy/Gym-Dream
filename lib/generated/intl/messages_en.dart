@@ -28,6 +28,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseYourMemberShipType": MessageLookupByLibrary.simpleMessage(
             "Choose your member ship type"),
         "dream": MessageLookupByLibrary.simpleMessage("Dream"),
+        "enterTheOtp": MessageLookupByLibrary.simpleMessage("Enter the OTP"),
+        "enterTheOtpCodeSentToYourWhatsappNumber":
+            MessageLookupByLibrary.simpleMessage(
+                "Enter the OTP code sent to your WhatsApp number"),
         "fitnessTailoredJustForYou": MessageLookupByLibrary.simpleMessage(
             "Fitness tailored just for you"),
         "forgotPassword":
@@ -48,9 +52,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
         "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Please enter your phone number"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
+        "sendNewOtp": MessageLookupByLibrary.simpleMessage("Send new OTP"),
+        "theCodeWillBeResentAfter": MessageLookupByLibrary.simpleMessage(
+            "The code will be resent after"),
         "trainer": MessageLookupByLibrary.simpleMessage("Trainer"),
+        "tryAgainLater":
+            MessageLookupByLibrary.simpleMessage("Try again later"),
         "userClickHere":
             MessageLookupByLibrary.simpleMessage("User? click here"),
+        "verification": MessageLookupByLibrary.simpleMessage("Verification"),
         "yourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("your phone number")
       };

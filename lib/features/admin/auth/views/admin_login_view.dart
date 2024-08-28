@@ -49,12 +49,15 @@ class AdminLoginView extends StatelessWidget {
                   SizedBox(height: 23.h),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
-                    child: Text(
-                      S.of(context).forgotPassword,
-                      style: AppTextStyle.blackOpacity500S12,
+                    child: TextButton(
+                      child: Text(S.of(context).forgotPassword,
+                          style: AppTextStyle.blackOpacity500S12),
+                      onPressed: () {
+                        context.navigateTo(routeName: Routes.forgrtPassword);
+                      },
                     ),
                   ),
-                  SizedBox(height: 58.h),
+                  SizedBox(height: 20.h),
                   CustomButton(
                     textStyle: AppTextStyle.white700S16,
                     width: double.infinity,

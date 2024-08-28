@@ -10,4 +10,5 @@ class AppAsset {
   static const exercises = "assets/svg/Exercises.svg";
   static const admin = "assets/images/admin.png";
   static const trainer = "assets/images/trainer.png";
+  static const backIcon = "assets/svg/backIcon.svg";
 }

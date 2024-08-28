@@ -239,6 +239,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter the OTP`
+  String get enterTheOtp {
+    return Intl.message(
+      'Enter the OTP',
+      name: 'enterTheOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the OTP code sent to your WhatsApp number`
+  String get enterTheOtpCodeSentToYourWhatsappNumber {
+    return Intl.message(
+      'Enter the OTP code sent to your WhatsApp number',
+      name: 'enterTheOtpCodeSentToYourWhatsappNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The code will be resent after`
+  String get theCodeWillBeResentAfter {
+    return Intl.message(
+      'The code will be resent after',
+      name: 'theCodeWillBeResentAfter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification`
+  String get verification {
+    return Intl.message(
+      'Verification',
+      name: 'verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again later`
+  String get tryAgainLater {
+    return Intl.message(
+      'Try again later',
+      name: 'tryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send new OTP`
+  String get sendNewOtp {
+    return Intl.message(
+      'Send new OTP',
+      name: 'sendNewOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
