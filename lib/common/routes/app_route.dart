@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/auth/views/admin_login_view.dart';
+import 'package:gym_dream/features/admin/auth/views/choosing_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
@@ -37,7 +38,10 @@ class AppRoute {
             child: const LayOutViews(),
           ),
         );
-
+      case Routes.choosingView:
+        return MaterialPageRoute(
+          builder: (_) => const ChoosingView(),
+        );
       case Routes.userLogin:
         return MaterialPageRoute(
           builder: (_) => const UserLoginView(),

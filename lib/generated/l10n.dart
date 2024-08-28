@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -181,11 +180,61 @@ class S {
     );
   }
 
-  /// `Password must be at least 8 characters long`
+  /// `your phone number`
   String get yourPhoneNumber {
     return Intl.message(
       'your phone number',
       name: 'yourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your member ship type`
+  String get chooseYourMemberShipType {
+    return Intl.message(
+      'Choose your member ship type',
+      name: 'chooseYourMemberShipType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Admin`
+  String get admin {
+    return Intl.message(
+      'Admin',
+      name: 'admin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trainer`
+  String get trainer {
+    return Intl.message(
+      'Trainer',
+      name: 'trainer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User? click here`
+  String get userClickHere {
+    return Intl.message(
+      'User? click here',
+      name: 'userClickHere',
       desc: '',
       args: [],
     );
