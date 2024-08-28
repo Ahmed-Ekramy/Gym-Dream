@@ -8,6 +8,11 @@ import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_l
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import 'package:gym_dream/features/admin/admin_home/presentation/pages/admin_home_view.dart';
+import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
+
+import '../../features/user/user_home/presentation/manager/home_user_cubit.dart';
+import '../../features/user/user_home/presentation/pages/user_home_layout_view.dart';
 
 class AppRoute {
   static Route onGenerateRoute(RouteSettings settings) {
@@ -37,6 +42,10 @@ class AppRoute {
           ),
         );
 
+      case Routes.userLogin:
+        return MaterialPageRoute(
+          builder: (_) => const UserLoginView(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
