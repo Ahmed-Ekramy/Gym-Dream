@@ -37,5 +37,19 @@
     "next":"Next",
     "@next":{},
     "userClickHere":"User? click here",
-    "@userClickHere":{}
+    "@userClickHere":{},
+    "enterTheOtp":"Enter the OTP",
+    "@enterTheOtp":{},
+    "enterTheOtpCodeSentToYourWhatsappNumber":"Enter the OTP code sent to your WhatsApp number",
+    "@enterTheOtpCodeSentToYourWhatsappNumber": {},
+    "theCodeWillBeResentAfter":"The code will be resent after",
+    "@theCodeWillBeResentAfter":{},
+    "verification":"Verification",
+    "@verification":{},
+    "tryAgainLater":"Try again later",
+    "@tryAgainLater":{},
+    "sendNewOtp":"Send new OTP",
+    "@sendNewOtp":{},
+    "send":"Send",
+    "@send":{}
 }

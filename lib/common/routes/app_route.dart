@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/auth/views/admin_login_view.dart';
 import 'package:gym_dream/features/admin/auth/views/choosing_view.dart';
+import 'package:gym_dream/features/admin/auth/views/forgot_password.dart';
+import 'package:gym_dream/features/admin/auth/views/otp_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
@@ -49,6 +51,18 @@ class AppRoute {
       case Routes.adminLogin:
         return MaterialPageRoute(
           builder: (_) => const AdminLoginView(),
+        );
+      case Routes.forgrtPassword:
+        return MaterialPageRoute(
+          builder: (_) => const ForgotPassword(),
+        );
+      case Routes.userOtp:
+        return MaterialPageRoute(
+          builder: (_) => const OtpView(),
+        );
+      case Routes.adminOtp:
+        return MaterialPageRoute(
+          builder: (_) => const OtpView(),
         );
       default:
         return MaterialPageRoute(
