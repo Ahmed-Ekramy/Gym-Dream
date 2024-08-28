@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -103,7 +105,9 @@ class OtpView extends StatelessWidget {
               CustomButton(
                 width: double.infinity,
                 title: S.of(context).verification,
-                onPressed: () {},
+                onPressed: () {
+                  context.navigateTo(routeName: Routes.creatNewPassword);
+                },
               ),
               SizedBox(height: 25.h),
             ],

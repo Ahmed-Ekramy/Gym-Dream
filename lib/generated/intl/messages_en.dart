@@ -27,18 +27,28 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Admin! click here"),
         "chooseYourMemberShipType": MessageLookupByLibrary.simpleMessage(
             "Choose your member ship type"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "createNewPassword":
+            MessageLookupByLibrary.simpleMessage("Create new password"),
         "dream": MessageLookupByLibrary.simpleMessage("Dream"),
         "enterTheOtp": MessageLookupByLibrary.simpleMessage("Enter the OTP"),
         "enterTheOtpCodeSentToYourWhatsappNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Enter the OTP code sent to your WhatsApp number"),
+        "enterYourNewPassword":
+            MessageLookupByLibrary.simpleMessage("Enter your new password"),
         "fitnessTailoredJustForYou": MessageLookupByLibrary.simpleMessage(
             "Fitness tailored just for you"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
+        "instructions": MessageLookupByLibrary.simpleMessage("Instructions"),
         "login": MessageLookupByLibrary.simpleMessage("Log In"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "numbers09": MessageLookupByLibrary.simpleMessage("Numbers (0-9)"),
+        "owerCaseLettersAz":
+            MessageLookupByLibrary.simpleMessage("Lowercase letters (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordMustBeAtLeast8CharactersLong":
             MessageLookupByLibrary.simpleMessage(
@@ -52,13 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
         "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Please enter your phone number"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "sendNewOtp": MessageLookupByLibrary.simpleMessage("Send new OTP"),
+        "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
+            "Special symbols such as (!, @, #, \$, %, ^, &, *)"),
         "theCodeWillBeResentAfter": MessageLookupByLibrary.simpleMessage(
             "The code will be resent after"),
         "trainer": MessageLookupByLibrary.simpleMessage("Trainer"),
         "tryAgainLater":
             MessageLookupByLibrary.simpleMessage("Try again later"),
+        "uppercaseLettersAZ":
+            MessageLookupByLibrary.simpleMessage("Uppercase letters(A-Z)"),
+        "useDifferentTypesOfCharacters": MessageLookupByLibrary.simpleMessage(
+            "Use different types of characters"),
         "userClickHere":
             MessageLookupByLibrary.simpleMessage("User? click here"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),

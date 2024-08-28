@@ -22,34 +22,64 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "admin": MessageLookupByLibrary.simpleMessage("المشرف"),
+        "admin": MessageLookupByLibrary.simpleMessage("مدير"),
         "adminClickHere":
-            MessageLookupByLibrary.simpleMessage("المشرف! انقر هنا"),
+            MessageLookupByLibrary.simpleMessage("مدير! اضغط هنا"),
         "chooseYourMemberShipType":
-            MessageLookupByLibrary.simpleMessage("اختر نوع العضوية الخاص بك"),
+            MessageLookupByLibrary.simpleMessage("اختر نوع العضوية"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "createNewPassword":
+            MessageLookupByLibrary.simpleMessage("إنشاء كلمة مرور جديدة"),
         "dream": MessageLookupByLibrary.simpleMessage("Dream"),
+        "enterTheOtp": MessageLookupByLibrary.simpleMessage("أدخل رمز التحقق"),
+        "enterTheOtpCodeSentToYourWhatsappNumber":
+            MessageLookupByLibrary.simpleMessage(
+                "أدخل رمز التحقق المرسل إلى رقم الواتساب الخاص بك"),
+        "enterYourNewPassword": MessageLookupByLibrary.simpleMessage(
+            "أدخل كلمة المرور الجديدة الخاصة بك"),
         "fitnessTailoredJustForYou": MessageLookupByLibrary.simpleMessage(
-            "الرياضة المحترفة مصممة خصيصًا لك"),
+            "اللياقة البدنية مصممة خصيصًا لك"),
         "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
+        "instructions": MessageLookupByLibrary.simpleMessage("التعليمات"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "numbers09": MessageLookupByLibrary.simpleMessage("الأرقام (0-9)"),
+        "owerCaseLettersAz":
+            MessageLookupByLibrary.simpleMessage("الأحرف الصغيرة (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordMustBeAtLeast8CharactersLong":
             MessageLookupByLibrary.simpleMessage(
-                "يجب أن تكون كلمة المرور على الأقل 8 حروفًا"),
+                "يجب أن تكون كلمة المرور على الأقل 8 أحرف طويلة"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "phoneNumberMustBe11DigitsLong": MessageLookupByLibrary.simpleMessage(
-            "يجب أن يكون رقم الهاتف على الأقل 11 رقمًا"),
+            "رقم الهاتف يجب أن يكون طوله 11 رقمًا"),
         "phoneNumberMustStartWith01": MessageLookupByLibrary.simpleMessage(
-            "يجب أن يبدأ رقم الهاتف بـ \"01\""),
-        "pleaseEnterYourPassword": MessageLookupByLibrary.simpleMessage(
-            "يرجى إدخال كلمة المرور الخاصة بك"),
-        "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "يرجى إدخال رقم الهاتف الخاص بك"),
-        "trainer": MessageLookupByLibrary.simpleMessage("المدرب"),
-        "yourPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("رقم الهاتف الخاص بك")
+            "رقم الهاتف يجب أن يبدأ بـ \"01\""),
+        "pleaseEnterYourPassword":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال كلمة المرور"),
+        "pleaseEnterYourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال رقم هاتفك"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendNewOtp":
+            MessageLookupByLibrary.simpleMessage("إرسال رمز تحقق جديد"),
+        "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
+            "رموز خاصة مثل (!, @, #, \$, %, ^, &, *)"),
+        "theCodeWillBeResentAfter":
+            MessageLookupByLibrary.simpleMessage("سيتم إعادة إرسال الرمز بعد"),
+        "trainer": MessageLookupByLibrary.simpleMessage("مدرب"),
+        "tryAgainLater":
+            MessageLookupByLibrary.simpleMessage("حاول مرة أخرى لاحقًا"),
+        "uppercaseLettersAZ":
+            MessageLookupByLibrary.simpleMessage("الأحرف الكبيرة (A-Z)"),
+        "useDifferentTypesOfCharacters": MessageLookupByLibrary.simpleMessage(
+            "استخدم أنواع مختلفة من الحروف"),
+        "userClickHere":
+            MessageLookupByLibrary.simpleMessage("مستخدم؟ اضغط هنا"),
+        "verification": MessageLookupByLibrary.simpleMessage("التحقق"),
+        "yourPhoneNumber": MessageLookupByLibrary.simpleMessage("رقم هاتفك")
       };
 }
