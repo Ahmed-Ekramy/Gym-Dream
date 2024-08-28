@@ -309,6 +309,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Create new password`
+  String get createNewPassword {
+    return Intl.message(
+      'Create new password',
+      name: 'createNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password`
+  String get enterYourNewPassword {
+    return Intl.message(
+      'Enter your new password',
+      name: 'enterYourNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Instructions`
+  String get instructions {
+    return Intl.message(
+      'Instructions',
+      name: 'instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use different types of characters`
+  String get useDifferentTypesOfCharacters {
+    return Intl.message(
+      'Use different types of characters',
+      name: 'useDifferentTypesOfCharacters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uppercase letters(A-Z)`
+  String get uppercaseLettersAZ {
+    return Intl.message(
+      'Uppercase letters(A-Z)',
+      name: 'uppercaseLettersAZ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowercase letters (a-z)`
+  String get owerCaseLettersAz {
+    return Intl.message(
+      'Lowercase letters (a-z)',
+      name: 'owerCaseLettersAz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Numbers (0-9)`
+  String get numbers09 {
+    return Intl.message(
+      'Numbers (0-9)',
+      name: 'numbers09',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special symbols such as (!, @, #, $, %, ^, &, *)`
+  String get specialSymbolsSuchAs {
+    return Intl.message(
+      'Special symbols such as (!, @, #, \$, %, ^, &, *)',
+      name: 'specialSymbolsSuchAs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
