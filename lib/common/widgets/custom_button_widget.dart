@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/core/app_text_style.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -10,18 +11,19 @@ class CustomButton extends StatelessWidget {
       required this.title,
       required this.onPressed,
       this.color = AppColor.primary,
-      this.textColor = const Color(0xffF6F6F9),
-      this.heightt = 55});
+      this.height = 55});
+
   final void Function() onPressed;
   final String title;
-  final Color? textColor;
+
   final Color? color;
-  final double? heightt, width;
+  final double? height, width;
   final TextStyle? textStyle;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: heightt!.h,
+      height: height!.h,
       width: width,
       child: ElevatedButton(
         style: ButtonStyle(
@@ -35,7 +37,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: textStyle,
+          style: textStyle ?? AppTextStyle.white500S16,
         ),
       ),
     );

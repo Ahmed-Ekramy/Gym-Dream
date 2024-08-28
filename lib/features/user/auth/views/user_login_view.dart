@@ -66,7 +66,9 @@ class UserLoginView extends StatelessWidget {
                       style: AppTextStyle.blackOpacity500S12,
                     ),
                   ),
-                  SizedBox(height: 58.h),
+                  SizedBox(
+                    height: 58.h,
+                  ),
                   CustomButton(
                     textStyle: AppTextStyle.white700S16,
                     width: double.infinity,
