@@ -6,25 +6,19 @@ import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
-
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
-import 'package:gym_dream/features/admin/admin_home/presentation/pages/admin_home_view.dart';
-import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
-
-import '../../features/user/user_home/presentation/manager/home_user_cubit.dart';
-import '../../features/user/user_home/presentation/pages/user_home_layout_view.dart';
 
 class AppRoute {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.initialRoute:
         return MaterialPageRoute(
-          builder: (_) => const UserLogInView(),
+          builder: (_) => const UserLoginView(),
         );
 
       case Routes.login:
         return MaterialPageRoute(
-          builder: (_) => const UserLogInView(),
+          builder: (_) => const UserLoginView(),
         );
 
       case Routes.homeUserLayout:
