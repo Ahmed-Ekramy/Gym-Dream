@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_asset.dart';
@@ -71,8 +73,12 @@ class AdminLoginView extends StatelessWidget {
                     textStyle: AppTextStyle.white700S16,
                     width: double.infinity,
                     title: S.of(context).login,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.navigateAndReplacement(
+                          newRoute: Routes.homeAdminLayout);
+                    },
                   ),
+                  SizedBox(height: 30.h),
                   Image.asset(AppAsset.login)
                 ],
               ),

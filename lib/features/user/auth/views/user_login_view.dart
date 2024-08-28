@@ -83,7 +83,7 @@ class UserLoginView extends StatelessWidget {
                     alignment: AlignmentDirectional.centerEnd,
                     child: TextButton(
                       onPressed: () {
-                        context.navigateTo(routeName: Routes.homeAdminLayout);
+                        context.navigateTo(routeName: Routes.adminLogin);
                       },
                       child: Text(
                         S.of(context).adminClickHere,
