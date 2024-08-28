@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_dream/features/admin/admin_home/presentation/pages/admin_home_view.dart';
 import 'package:gym_dream/features/admin/layout/data/models/change_index_params.dart';
 import 'package:gym_dream/features/admin/layout/data/repositories/layout_repo.dart';
 import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
@@ -20,9 +21,9 @@ class LayoutRepoImpl extends LayOutRepo {
   @override
   List<Widget> getBody() {
     return const <Widget>[
-      // Admin(),
-      // StoreViewBody(),
-      // HomeBody(),
+      AdminHomeView(),
+      AdminHomeView(),
+      AdminHomeView(),
     ];
   }
 
@@ -40,14 +41,6 @@ class LayoutRepoImpl extends LayOutRepo {
         BottomNavigationBarItem(
           label: 'Home',
           icon: Icon(Iconsax.home),
-        ),
-        BottomNavigationBarItem(
-          label: 'Favorite',
-          icon: Icon(Icons.favorite),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Iconsax.user),
-          label: 'Profile',
         ),
       ];
 }
