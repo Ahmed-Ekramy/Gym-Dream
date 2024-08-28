@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 
@@ -32,7 +30,7 @@ class CustomRowCapacity extends StatelessWidget {
           ),
         ),
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppColor.yellowLight,
           ),
           width: 64.w,

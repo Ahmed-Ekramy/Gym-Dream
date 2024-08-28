@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/admin_home/presentation/pages/admin_home_view.dart';
 import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
@@ -29,6 +28,13 @@ class AppRoute {
         );
       default:
         return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(
+              child: Text(
+                'No route defined for ${settings.name}',
+              ),
+            ),
+          ),
           builder: (_) => Scaffold(
             body: Center(
               child: Text(

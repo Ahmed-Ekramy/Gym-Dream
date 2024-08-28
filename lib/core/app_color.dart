@@ -6,6 +6,8 @@ class AppColor {
   static const Color orangeLight = Color(0xFFFFEEDA);
   static const Color secondary = Color(0xFF000000);
   static const Color blackOpacity4 = Color(0x66000000);
+  static const Color black = Color(0x66000000);
+
   static const Color blueNavy = Color(0xFF30475E);
   static const Color blueSlate = Color(0xFF61788A);
   static const Color bluePale = Color(0xFFE8EBF2);
@@ -19,5 +21,5 @@ class AppColor {
   static const Color green = Color(0xFF08CF61);
   static const Color brown = Color(0xFFA17545);
   static const Color yellow = Color(0xFFFFFF00);
-  static const Color yellowLight = Color(0xFFFFEEDA);
+  static const Color yellowLight = Color(0xFFDED847);
 }
