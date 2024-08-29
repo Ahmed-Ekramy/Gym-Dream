@@ -8,5 +8,5 @@ abstract class LayOutRepo {
 
   List<Widget> getBody();
 
-  List<BottomNavigationBarItem> getBottomNavItems();
+  List<BottomNavigationBarItem> getBottomNavItems(BuildContext context);
 }
