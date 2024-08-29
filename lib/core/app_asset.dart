@@ -1,5 +1,5 @@
 class AppAsset {
-  static const login = "assets/images/trainerAuthImage.png";
+  static const trainee = "assets/images/trainerAuthImage.png";
   static const boy = "assets/images/boy.png";
   static const bell = "assets/svg/bell.svg";
   static const eyeClosed = "assets/svg/eye-closed.svg";
@@ -11,6 +11,8 @@ class AppAsset {
   static const admin = "assets/images/admin.png";
   static const trainer = "assets/images/trainer.png";
   static const backIcon = "assets/svg/backIcon.svg";
+  static const passwordChangedSuccessfullyView =
+      "assets/images/Password_changed_successfully.png";
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
   static const logoutIcon = "assets/svg/logout.svg";

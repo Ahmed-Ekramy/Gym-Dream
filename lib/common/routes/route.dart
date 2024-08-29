@@ -10,4 +10,6 @@ class Routes {
   static const String homeAdminLayout = '/homeAdminLayout';
   static const String forgrtPassword = '/forgetPassword';
   static const String creatNewPassword = '/creatNewPassword';
+  static const String passwordChangedSuccessfully =
+      '/passwordChangedSuccessfully';
 }
