@@ -25,7 +25,7 @@ class AdminPersonalInformationAndCapacity extends StatelessWidget {
         ),
         SizedBox(height: 2.h),
         const AdminRowCapacity(
-          capacity: 10,
+          capacity: 100,
         ),
       ],
     );
