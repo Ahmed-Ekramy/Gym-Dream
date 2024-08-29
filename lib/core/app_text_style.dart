@@ -110,6 +110,14 @@ class AppTextStyle {
       color: AppColor.secondary,
     ),
   );
+  static final TextStyle black500S20 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 20.0.sp,
+      height: 25.0 / 20.0.sp,
+      color: AppColor.secondary,
+    ),
+  );
   static final TextStyle black700S22 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w700,

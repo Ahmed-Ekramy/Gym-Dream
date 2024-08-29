@@ -6,6 +6,7 @@ import 'package:gym_dream/features/admin/auth/views/choosing_view.dart';
 import 'package:gym_dream/features/admin/auth/views/create_new_password.dart';
 import 'package:gym_dream/features/admin/auth/views/forgot_password.dart';
 import 'package:gym_dream/features/admin/auth/views/otp_view.dart';
+import 'package:gym_dream/features/admin/auth/views/password_changed_successfully_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/user/auth/views/user_login_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
@@ -68,6 +69,10 @@ class AppRoute {
       case Routes.creatNewPassword:
         return MaterialPageRoute(
           builder: (_) => const CreateNewPassword(),
+        );
+      case Routes.passwordChangedSuccessfully:
+        return MaterialPageRoute(
+          builder: (_) => const PasswordChangedSuccessfullyView(),
         );
       default:
         return MaterialPageRoute(

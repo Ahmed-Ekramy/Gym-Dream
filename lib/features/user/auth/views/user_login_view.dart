@@ -99,7 +99,7 @@ class UserLoginView extends StatelessWidget {
                   ),
                   Image.asset(
                     height: 200.h,
-                    AppAsset.login,
+                    AppAsset.trainee,
                   )
                 ],
               ),

@@ -43,14 +43,14 @@ class ChoosingView extends StatelessWidget {
                         return UserKind(
                           onTap: () => context
                               .read<ChoosingCubit>()
-                              .selectCustomerKind('trainer'),
-                          color: selectedCustomerKind == 'trainer'
+                              .selectCustomerKind('trainee'),
+                          color: selectedCustomerKind == 'trainee'
                               ? AppColor.primary
                               : AppColor.grey,
-                          name: S.of(context).trainer,
-                          image: AppAsset.trainer,
+                          name: S.of(context).trainee,
+                          image: AppAsset.trainee,
                           opacity: selectedCustomerKind.isEmpty ||
-                                  selectedCustomerKind == 'trainer'
+                                  selectedCustomerKind == 'trainee'
                               ? 1.0
                               : 0.5,
                         );

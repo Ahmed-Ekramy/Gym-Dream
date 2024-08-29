@@ -58,6 +58,7 @@ class UserKind extends StatelessWidget {
                 width: 117.2.h,
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                    fit: BoxFit.fill,
                     image: AssetImage(image),
                   ),
                   shape: BoxShape.circle,
