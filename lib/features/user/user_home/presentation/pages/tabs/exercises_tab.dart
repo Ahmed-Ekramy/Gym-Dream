@@ -89,6 +89,7 @@ class CollectionExercise extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0.w),
                     child: Column(
+                      crossAxisAlignment:  CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
