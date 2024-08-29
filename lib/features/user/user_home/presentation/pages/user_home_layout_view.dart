@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 
-import '../../../../../common/widgets/custom_button_widget.dart';
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
 import '../manager/home_user_cubit.dart';
@@ -21,10 +19,9 @@ class UserHomeLayoutView extends StatelessWidget {
       builder: (context, state) {
         return SafeArea(
           child: Scaffold(
-            appBar:   AppBar(
-          toolbarHeight: 70.h,
+            appBar: AppBar(
+              toolbarHeight: 70.h,
               backgroundColor: Colors.transparent,
-              // Set background to transparent
               flexibleSpace: const CustomFlexibleBar(),
               actions: [
                 SvgPicture.asset(
@@ -41,7 +38,8 @@ class UserHomeLayoutView extends StatelessWidget {
                 type: BottomNavigationBarType.fixed,
                 selectedItemColor: AppColor.primary,
                 unselectedItemColor: AppColor.grey,
-                selectedLabelStyle:  AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
+                selectedLabelStyle:
+                    AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
                 onTap: (value) {
                   HomeUserCubit.get(context).changeIndex(value);
                 },

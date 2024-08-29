@@ -16,4 +16,6 @@ class AppAsset {
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
   static const logoutIcon = "assets/svg/logout.svg";
+  static const usaFlag = "assets/images/usa.png";
+  static const egyptFlag = "assets/images/egypt.png";
 }

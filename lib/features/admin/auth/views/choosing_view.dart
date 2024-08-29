@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/cubit/change_language_cubit.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
@@ -12,8 +13,9 @@ import '../cubits/choosing_contoller.dart';
 import '../widgets/user_kind.dart';
 
 class ChoosingView extends StatelessWidget {
-  const ChoosingView({super.key});
-
+  const ChoosingView({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -25,6 +27,44 @@ class ChoosingView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Column(
               children: [
+                Align(
+                  alignment: AlignmentDirectional.topStart,
+                  child: Container(
+                    height: 21.h,
+                    width: 80.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6.r),
+                      border: Border.all(color: AppColor.blackOpacity4),
+                    ),
+                    child: BlocBuilder<LocaleCubit, Locale>(
+                      builder: (context, locale) {
+                        return GestureDetector(
+                          onTap: () {
+                            context.read<LocaleCubit>().toggleLocale();
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(
+                                height: 15.h,
+                                width: 20.w,
+                                locale.languageCode == 'en'
+                                    ? AppAsset.egyptFlag
+                                    : AppAsset.usaFlag,
+                              ),
+                              Text(
+                                locale.languageCode == 'en'
+                                    ? 'العربية'
+                                    : 'English',
+                                style: AppTextStyle.black500S11,
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
                 const DreamGymText(),
                 SizedBox(
                   height: 120.h,
@@ -53,6 +93,7 @@ class ChoosingView extends StatelessWidget {
                                   selectedCustomerKind == 'trainee'
                               ? 1.0
                               : 0.5,
+                          index: 0,
                         );
                       },
                     ),
@@ -72,6 +113,7 @@ class ChoosingView extends StatelessWidget {
                                   selectedCustomerKind == 'admin'
                               ? 1.0
                               : 0.5,
+                          index: 1,
                         );
                       },
                     ),
