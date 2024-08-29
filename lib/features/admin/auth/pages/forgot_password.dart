@@ -26,7 +26,7 @@ class ForgotPassword extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 50.h,
+                height: 40.h,
               ),
               const BackIcon(),
               SizedBox(
@@ -43,10 +43,13 @@ class ForgotPassword extends StatelessWidget {
                 S.of(context).pleaseEnterYourPhoneNumber,
                 style: AppTextStyle.gray500S13,
               ),
+              SizedBox(
+                height: 20.h,
+              ),
               CustomTextFormField(
                 hint: S.of(context).phoneNumber,
                 isLast: true,
-                title: '',
+                title: S.of(context).phoneNumber,
                 inputType: InputType.phoneNumber,
               ),
               const Spacer(),
@@ -59,7 +62,7 @@ class ForgotPassword extends StatelessWidget {
                 },
               ),
               SizedBox(
-                height: 30.h,
+                height: 25.h,
               ),
             ],
           ),

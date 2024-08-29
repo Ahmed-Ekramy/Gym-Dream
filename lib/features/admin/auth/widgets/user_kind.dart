@@ -31,8 +31,8 @@ class UserKind extends StatelessWidget {
               opacity: opacity,
               child: Container(
                 alignment: Alignment.topCenter,
-                height: 133.h,
-                width: 160.w,
+                height: 115.h,
+                width: 145.w,
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 1.5,
@@ -44,22 +44,22 @@ class UserKind extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20.h),
                   child: Text(
                     name,
-                    style: AppTextStyle.black400S14,
+                    style: AppTextStyle.black600S18,
                   ),
                 ),
               ),
             ),
           ),
           Positioned(
-            top: 70.h,
+            top: 65.h,
             child: Opacity(
               opacity: opacity,
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: index,
                 child: Container(
-                  height: 117.2.h,
-                  width: 117.2.h,
+                  height: 95.2.h,
+                  width: 95.2.h,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.fill,

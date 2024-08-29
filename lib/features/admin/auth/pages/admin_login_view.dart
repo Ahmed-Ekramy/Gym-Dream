@@ -20,7 +20,7 @@ class AdminLoginView extends StatelessWidget {
       create: (context) => PasswordVisibilityCubit(),
       child: Scaffold(
         body: SafeArea(
-          minimum: EdgeInsets.only(top: 45.h),
+          minimum: EdgeInsets.only(top: 55.h),
           child: Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
             child: SingleChildScrollView(
@@ -46,7 +46,7 @@ class AdminLoginView extends StatelessWidget {
                     title: S.of(context).password,
                     inputType: InputType.password,
                   ),
-                  SizedBox(height: 23.h),
+                  SizedBox(height: 8.h),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
                     child: TextButton(
@@ -58,7 +58,7 @@ class AdminLoginView extends StatelessWidget {
                       },
                     ),
                   ),
-                  SizedBox(height: 20.h),
+                  SizedBox(height: 30.h),
                   CustomButton(
                     textStyle: AppTextStyle.white700S16,
                     width: double.infinity,

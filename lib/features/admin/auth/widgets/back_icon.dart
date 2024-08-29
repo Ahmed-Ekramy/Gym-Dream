@@ -20,7 +20,7 @@ class BackIcon extends StatelessWidget {
         icon: Localizations.localeOf(context).languageCode == 'en'
             ? SvgPicture.asset(
                 AppAsset.backIcon,
-                height: 30.h,
+                height: 25.r,
               )
             : Transform(
                 alignment: Alignment.center,
@@ -29,7 +29,7 @@ class BackIcon extends StatelessWidget {
                 ),
                 child: SvgPicture.asset(
                   AppAsset.backIcon,
-                  height: 30.h,
+                  height: 25.r,
                 ),
               ),
       ),

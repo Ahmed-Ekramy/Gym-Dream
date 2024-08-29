@@ -24,7 +24,7 @@ class ChoosingView extends StatelessWidget {
         body: SafeArea(
           minimum: EdgeInsets.only(top: 45.h),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            padding: EdgeInsets.symmetric(horizontal: 28.w),
             child: Column(
               children: [
                 Align(
@@ -67,11 +67,11 @@ class ChoosingView extends StatelessWidget {
                 ),
                 const DreamGymText(),
                 SizedBox(
-                  height: 120.h,
+                  height: 100.h,
                 ),
                 Text(
                   S.of(context).chooseYourMemberShipType,
-                  style: AppTextStyle.black600S18,
+                  style: AppTextStyle.black700S18,
                 ),
                 SizedBox(
                   height: 45.h,
@@ -119,9 +119,7 @@ class ChoosingView extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 125.h,
-                ),
+                const Spacer(),
                 BlocBuilder<ChoosingCubit, String>(
                   builder: (context, selectedCustomerKind) {
                     return selectedCustomerKind.isNotEmpty
@@ -136,6 +134,9 @@ class ChoosingView extends StatelessWidget {
                           )
                         : const SizedBox.shrink();
                   },
+                ),
+                SizedBox(
+                  height: 60.h,
                 ),
               ],
             ),
