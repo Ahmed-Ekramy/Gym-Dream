@@ -7,11 +7,13 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/user/auth/cubits/password_visibility_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 enum InputType {
   phoneNumber,
   password,
   name,
+  createPassword,
 }
 
 class CustomTextFormField extends StatelessWidget {
@@ -54,6 +56,7 @@ class CustomTextFormField extends StatelessWidget {
               readOnly: readOnly,
               controller: controller,
               obscuringCharacter: "*",
+              style: AppTextStyle.black500S14,
               obscureText: inputType == InputType.password && isPasswordVisible,
               keyboardType: _getKeyboardType(),
               inputFormatters: inputType == InputType.phoneNumber
@@ -73,7 +76,7 @@ class CustomTextFormField extends StatelessWidget {
                   start: 18.w,
                 ),
                 hintText: hint,
-                hintStyle: AppTextStyle.black400S14,
+                hintStyle: AppTextStyle.gray500S14,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: const BorderSide(color: AppColor.primary),
@@ -116,20 +119,20 @@ class CustomTextFormField extends StatelessWidget {
               validator: (value) {
                 if (inputType == InputType.phoneNumber) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your phone number';
+                    return S.of(context).pleaseEnterYourPhoneNumber;
                   }
                   if (!value.startsWith('01')) {
-                    return 'Phone number must start with "01"';
+                    return S.of(context).phoneNumberMustStartWith01;
                   }
                   if (value.length != 11) {
-                    return 'Phone number must be 11 digits long';
+                    return S.of(context).phoneNumberMustBe11DigitsLong;
                   }
                 } else if (inputType == InputType.password) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your password';
+                    return S.of(context).pleaseEnterYourPhoneNumber;
                   }
                   if (value.length < 8) {
-                    return 'Password must be at least 6 characters long';
+                    return S.of(context).passwordMustBeAtLeast8CharactersLong;
                   }
                 }
                 return null;

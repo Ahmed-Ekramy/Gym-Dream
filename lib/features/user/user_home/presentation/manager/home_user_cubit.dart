@@ -11,14 +11,32 @@ class HomeUserCubit extends Cubit<HomeUserState> {
   static HomeUserCubit get(context) => BlocProvider.of(context);
   final List<Widget> tabs = [
     const HomeTab(),
-    const ExercisesTab(),
     const HistoryTab(),
+    const ExercisesTab(),
+
   ];
   int currentIndex = 0;
+  bool isAppBarVisible = true;
+  bool isBottomNavVisible = true;
 
   void changeIndex(int index) {
     currentIndex = index;
     emit( HomeUserChangeNav());
+  }
+  void hideAppBarAndBottomNav() {
+    if (isAppBarVisible || isBottomNavVisible) {
+      isAppBarVisible = false;
+      isBottomNavVisible = false;
+      emit(HomeUserVisibilityChanged());
+    }
+  }
+
+  void showAppBarAndBottomNav() {
+    if (!isAppBarVisible || !isBottomNavVisible) {
+      isAppBarVisible = true;
+      isBottomNavVisible = true;
+      emit(HomeUserVisibilityChanged());
+    }
   }
 
 }

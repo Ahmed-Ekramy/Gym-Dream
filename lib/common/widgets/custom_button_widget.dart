@@ -11,21 +11,20 @@ class CustomButton extends StatelessWidget {
       required this.title,
       required this.onPressed,
       this.color = AppColor.primary,
-      this.textColor = const Color(0xffF6F6F9),
       this.height = 55});
+
   final void Function() onPressed;
   final String title;
-  final Color? textColor;
+
   final Color? color;
-  final double? height;
-  final double? width;
-   final TextStyle? textStyle;
+  final double? height, width;
+  final TextStyle? textStyle;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height!.h,
       width: width,
-
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(color),
@@ -38,7 +37,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style:textStyle?? AppTextStyle.white500S16,
+          style: textStyle ?? AppTextStyle.white500S16,
         ),
       ),
     );

@@ -179,6 +179,236 @@ class S {
       args: [],
     );
   }
+
+  /// `your phone number`
+  String get yourPhoneNumber {
+    return Intl.message(
+      'your phone number',
+      name: 'yourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your member ship type`
+  String get chooseYourMemberShipType {
+    return Intl.message(
+      'Choose your member ship type',
+      name: 'chooseYourMemberShipType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Admin`
+  String get admin {
+    return Intl.message(
+      'Admin',
+      name: 'admin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trainer`
+  String get trainer {
+    return Intl.message(
+      'Trainer',
+      name: 'trainer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User? click here`
+  String get userClickHere {
+    return Intl.message(
+      'User? click here',
+      name: 'userClickHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the OTP`
+  String get enterTheOtp {
+    return Intl.message(
+      'Enter the OTP',
+      name: 'enterTheOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the OTP code sent to your WhatsApp number`
+  String get enterTheOtpCodeSentToYourWhatsappNumber {
+    return Intl.message(
+      'Enter the OTP code sent to your WhatsApp number',
+      name: 'enterTheOtpCodeSentToYourWhatsappNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The code will be resent after`
+  String get theCodeWillBeResentAfter {
+    return Intl.message(
+      'The code will be resent after',
+      name: 'theCodeWillBeResentAfter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification`
+  String get verification {
+    return Intl.message(
+      'Verification',
+      name: 'verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again later`
+  String get tryAgainLater {
+    return Intl.message(
+      'Try again later',
+      name: 'tryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send new OTP`
+  String get sendNewOtp {
+    return Intl.message(
+      'Send new OTP',
+      name: 'sendNewOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new password`
+  String get createNewPassword {
+    return Intl.message(
+      'Create new password',
+      name: 'createNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password`
+  String get enterYourNewPassword {
+    return Intl.message(
+      'Enter your new password',
+      name: 'enterYourNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Instructions`
+  String get instructions {
+    return Intl.message(
+      'Instructions',
+      name: 'instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use different types of characters`
+  String get useDifferentTypesOfCharacters {
+    return Intl.message(
+      'Use different types of characters',
+      name: 'useDifferentTypesOfCharacters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uppercase letters(A-Z)`
+  String get uppercaseLettersAZ {
+    return Intl.message(
+      'Uppercase letters(A-Z)',
+      name: 'uppercaseLettersAZ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lowercase letters (a-z)`
+  String get owerCaseLettersAz {
+    return Intl.message(
+      'Lowercase letters (a-z)',
+      name: 'owerCaseLettersAz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Numbers (0-9)`
+  String get numbers09 {
+    return Intl.message(
+      'Numbers (0-9)',
+      name: 'numbers09',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special symbols such as (!, @, #, $, %, ^, &, *)`
+  String get specialSymbolsSuchAs {
+    return Intl.message(
+      'Special symbols such as (!, @, #, \$, %, ^, &, *)',
+      name: 'specialSymbolsSuchAs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
