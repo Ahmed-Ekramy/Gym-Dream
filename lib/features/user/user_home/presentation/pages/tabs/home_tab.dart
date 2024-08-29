@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-
 import '../../../../../../common/widgets/custom_button_widget.dart';
-import '../../../../../../core/app_asset.dart';
-import '../../../../../../core/app_color.dart';
 import '../../../../../../core/app_text_style.dart';
-import '../../widgets/custom_flixibleBar.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -16,20 +11,6 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverAppBar(
-          expandedHeight: 70.h,
-          backgroundColor: Colors.transparent,
-          // Set background to transparent
-          flexibleSpace: const CustomFlexibleBar(),
-          actions: [
-            SvgPicture.asset(
-              color: AppColor.secondary,
-              AppAsset.bell,
-              width: 24.w,
-              height: 24.h,
-            ),
-          ],
-        ),
         SliverToBoxAdapter(
             child: Card(
               elevation: 3,
@@ -114,7 +95,8 @@ class HomeTab extends StatelessWidget {
               return Padding(
                 padding: EdgeInsets.only(
                     left: 8.0.w, right: 8.0.w, bottom: 8.0.h),
-                child: Row(
+                child:
+                Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("2/3/2024",

@@ -11,4 +11,7 @@ class AppAsset {
   static const admin = "assets/images/admin.png";
   static const trainer = "assets/images/trainer.png";
   static const backIcon = "assets/svg/backIcon.svg";
+  static const arrowIcon = "assets/svg/Arrow.svg";
+  static const loginIcon = "assets/svg/Login.svg";
+  static const logoutIcon = "assets/svg/logout.svg";
 }

@@ -320,7 +320,6 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 6.0.sp,
       height: 9.0 / 6.0.sp,
-      letterSpacing: -2.0.sp,
       color: AppColor.grey,
     ),
   );
@@ -329,7 +328,6 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 14.0.sp,
       height: 21.0 / 14.0.sp,
-      letterSpacing: -2.0.sp,
       color: AppColor.grey,
     ),
   );
@@ -413,6 +411,14 @@ class AppTextStyle {
       fontWeight: FontWeight.w400,
       fontSize: 10.0.sp,
       height: 12.5 / 10.0.sp,
+      color: AppColor.blueNavy,
+    ),
+  );
+  static final TextStyle blueNavy400S12 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w400,
+      fontSize: 12.0.sp,
+      height: 15/ 12.0.sp,
       color: AppColor.blueNavy,
     ),
   );
