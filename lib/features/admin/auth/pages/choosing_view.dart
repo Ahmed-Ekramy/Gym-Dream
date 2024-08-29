@@ -8,7 +8,7 @@ import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/auth/widgets/dream_gym_text.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-import '../cubits/choosing_contoller.dart';
+import '../manager/choosing_contoller.dart';
 import '../widgets/user_kind.dart';
 
 class ChoosingView extends StatelessWidget {
