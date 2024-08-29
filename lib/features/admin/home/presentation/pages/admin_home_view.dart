@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_dream/features/admin/admin_home/presentation/widgets/admin_home_body_view.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/admin_home_body_view.dart';
 
 class AdminHomeView extends StatelessWidget {
   const AdminHomeView({super.key});

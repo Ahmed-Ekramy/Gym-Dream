@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_dream/features/admin/admin_home/presentation/pages/admin_home_view.dart';
+import 'package:gym_dream/features/admin/home/presentation/pages/admin_home_view.dart';
 import 'package:gym_dream/features/admin/layout/data/models/change_index_params.dart';
 import 'package:gym_dream/features/admin/layout/data/repositories/layout_repo.dart';
 import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
