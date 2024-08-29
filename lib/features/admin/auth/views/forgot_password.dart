@@ -54,7 +54,8 @@ class ForgotPassword extends StatelessWidget {
                 width: double.infinity,
                 title: S.of(context).send,
                 onPressed: () {
-                  context.navigateTo(routeName: Routes.adminOtp);
+                  AppNavigation.navigateTo(
+                      context: context, routeName: Routes.adminOtp);
                 },
               ),
               SizedBox(
