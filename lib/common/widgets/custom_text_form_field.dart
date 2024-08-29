@@ -28,7 +28,7 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.onChanged,
     this.onTap,
-    this.passwordToMatch, // Used for confirm password validation
+    this.passwordToMatch,
   });
 
   final String hint;
@@ -39,7 +39,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final InputType inputType;
   final void Function()? onTap;
-  final String? passwordToMatch; // Used for confirming password validation
+  final String? passwordToMatch;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class CustomTextFormField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTextStyle.black400S14,
+          style: AppTextStyle.black600S16,
         ),
         SizedBox(height: 13.h),
         BlocBuilder<PasswordVisibilityCubit, bool>(
@@ -74,8 +74,8 @@ class CustomTextFormField extends StatelessWidget {
                   minHeight: 25.h,
                 ),
                 contentPadding: EdgeInsetsDirectional.only(
-                  top: 18.h,
-                  bottom: 18.h,
+                  top: 16.h,
+                  bottom: 16.h,
                   start: 18.w,
                 ),
                 hintText: hint,
@@ -105,6 +105,7 @@ class CustomTextFormField extends StatelessWidget {
                         padding: EdgeInsetsDirectional.only(end: 12.w),
                         child: IconButton(
                           icon: SvgPicture.asset(
+                            height: 20.h,
                             color: isPasswordVisible
                                 ? AppColor.grey
                                 : AppColor.primary,

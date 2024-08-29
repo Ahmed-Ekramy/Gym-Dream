@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "owerCaseLettersAz":
             MessageLookupByLibrary.simpleMessage("الأحرف الصغيرة (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordChanged":
+            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور "),
         "passwordDoesNotMatch":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
         "passwordMustBeAtLeast8CharactersLong":
@@ -71,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إرسال رمز تحقق جديد"),
         "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
             "رموز خاصة مثل (!, @, #, \$, %, ^, &, *)"),
+        "successfully": MessageLookupByLibrary.simpleMessage("بنجاح 🎉"),
         "theCodeWillBeResentAfter":
             MessageLookupByLibrary.simpleMessage("سيتم إعادة إرسال الرمز بعد"),
         "trainee": MessageLookupByLibrary.simpleMessage("متدرب"),

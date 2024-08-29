@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "owerCaseLettersAz":
             MessageLookupByLibrary.simpleMessage("Lowercase letters (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordChanged":
+            MessageLookupByLibrary.simpleMessage("Password changed "),
         "passwordChangedSuccessfullyView": MessageLookupByLibrary.simpleMessage(
             "Password changed successfully 🎉"),
         "passwordDoesNotMatch":
@@ -72,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendNewOtp": MessageLookupByLibrary.simpleMessage("Send new OTP"),
         "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
             "Special symbols such as (!, @, #, \$, %, ^, &, *)"),
+        "successfully": MessageLookupByLibrary.simpleMessage("successfully 🎉"),
         "theCodeWillBeResentAfter": MessageLookupByLibrary.simpleMessage(
             "The code will be resent after"),
         "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),

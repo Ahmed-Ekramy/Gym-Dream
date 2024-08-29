@@ -7,6 +7,7 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/admin/auth/widgets/dream_gym_text.dart';
 import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
@@ -19,28 +20,13 @@ class UserLoginView extends StatelessWidget {
       create: (context) => PasswordVisibilityCubit(),
       child: Scaffold(
         body: SafeArea(
-          minimum: EdgeInsets.only(top: 45.h),
+          minimum: EdgeInsets.only(top: 55.h),
           child: Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '${S.of(context).dream} ',
-                          style: AppTextStyle.black600S48,
-                        ),
-                        Text(
-                          S.of(context).gym,
-                          style: AppTextStyle.orange600S48,
-                        ),
-                      ],
-                    ),
-                  ),
+                  const DreamGymText(),
                   SizedBox(height: 16.h),
                   Text(
                     S.of(context).fitnessTailoredJustForYou,
@@ -60,7 +46,7 @@ class UserLoginView extends StatelessWidget {
                     title: S.of(context).password,
                     inputType: InputType.password,
                   ),
-                  SizedBox(height: 23.h),
+                  SizedBox(height: 8.h),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
                     child: TextButton(
@@ -73,7 +59,7 @@ class UserLoginView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20.h,
+                    height: 30.h,
                   ),
                   CustomButton(
                     textStyle: AppTextStyle.white700S16,

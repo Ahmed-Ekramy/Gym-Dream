@@ -29,7 +29,7 @@ class OtpView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 50.h),
+              SizedBox(height: 40.h),
               const BackIcon(),
               SizedBox(height: 40.h),
               Text(
@@ -39,7 +39,7 @@ class OtpView extends StatelessWidget {
               SizedBox(height: 20.h),
               Text(
                 S.of(context).enterTheOtpCodeSentToYourWhatsappNumber,
-                style: AppTextStyle.gray500S13,
+                style: AppTextStyle.gray600S12,
               ),
               SizedBox(height: 20.h),
               Directionality(
@@ -67,7 +67,7 @@ class OtpView extends StatelessWidget {
                   onChanged: (value) {},
                 ),
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height: 10.h),
               BlocBuilder<OtpCubit, int>(
                 builder: (context, state) {
                   if (state == 0) {
