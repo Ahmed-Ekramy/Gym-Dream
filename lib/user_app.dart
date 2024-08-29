@@ -17,7 +17,7 @@ class UserAppGym extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
-          locale: const Locale('ar'),
+          locale: const Locale('en'),
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
