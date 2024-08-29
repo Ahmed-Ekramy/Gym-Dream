@@ -81,9 +81,12 @@ class AdminLoginView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Image.asset(
-                    height: 200.h,
-                    AppAsset.admin,
+                  Hero(
+                    tag: 1,
+                    child: Image.asset(
+                      height: 200.h,
+                      AppAsset.admin,
+                    ),
                   )
                 ],
               ),

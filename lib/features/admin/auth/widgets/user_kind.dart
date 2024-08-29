@@ -10,13 +10,14 @@ class UserKind extends StatelessWidget {
     required this.name,
     required this.image,
     this.opacity = 1.0,
+    required this.index,
   });
 
   final void Function() onTap;
   final Color color;
   final String name, image;
   final double opacity;
-
+  final int index;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -53,18 +54,22 @@ class UserKind extends StatelessWidget {
             top: 70.h,
             child: Opacity(
               opacity: opacity,
-              child: Container(
-                height: 117.2.h,
-                width: 117.2.h,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(image),
-                  ),
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    width: 3,
-                    color: color,
+              child: Hero(
+                transitionOnUserGestures: true,
+                tag: index,
+                child: Container(
+                  height: 117.2.h,
+                  width: 117.2.h,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(image),
+                    ),
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      width: 3,
+                      color: color,
+                    ),
                   ),
                 ),
               ),
