@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-
 import '../../../../../../common/widgets/custom_button_widget.dart';
-import '../../../../../../core/app_asset.dart';
-import '../../../../../../core/app_color.dart';
 import '../../../../../../core/app_text_style.dart';
-import '../../widgets/custom_flixibleBar.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
