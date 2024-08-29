@@ -1,10 +1,14 @@
   import 'package:flutter/material.dart';
 
-class ExercisesTab   extends StatelessWidget {
+class ExercisesTab  extends StatelessWidget {
     const  ExercisesTab ({super.key});
   
     @override
     Widget build(BuildContext context) {
-      return const Placeholder();
+      return const Column(
+        children: [
+          Text('ExercisesTab'),
+        ],
+      );
     }
   }

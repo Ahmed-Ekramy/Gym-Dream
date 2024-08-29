@@ -13,4 +13,7 @@ class AppAsset {
   static const backIcon = "assets/svg/backIcon.svg";
   static const passwordChangedSuccessfullyView =
       "assets/images/Password_changed_successfully.png";
+  static const arrowIcon = "assets/svg/Arrow.svg";
+  static const loginIcon = "assets/svg/Login.svg";
+  static const logoutIcon = "assets/svg/logout.svg";
 }
