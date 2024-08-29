@@ -13,50 +13,37 @@ class CustomFlexibleBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlexibleSpaceBar(
-      background: Container(
-        decoration: BoxDecoration(
-          color: AppColor.primaryLight,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(16.r), // Adjust the radius as needed
-            bottomRight: Radius.circular(16.r),
-          ),
-        ),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:
-                      EdgeInsets.only(left: 16.w), // Add left padding to align
-                  child: CircleAvatar(
-                    radius: 30.r,
-                    backgroundImage: const AssetImage(
-                      AppAsset.boy,
-                    ),
-                  ),
-                ),
-                SizedBox(width: 10.w),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('ID: 123456', style: AppTextStyle.black600S16),
-                    SizedBox(height: 10.h),
-                    Text(
-                      maxLines: 2,
-                      '12 sessions completed, 8 sessions remaining',
-                      style: AppTextStyle.blackOpacity600S14.copyWith(
-                        fontSize: 8.sp,
-                      ),
-                    ),
-                    SizedBox(height: 10.h),
-                    const CustomRowCapacity(),
-                  ],
-                ),
-              ],
+      background: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding:
+                EdgeInsets.only(left: 16.w), // Add left padding to align
+            child: CircleAvatar(
+              radius: 30.r,
+              backgroundImage: const AssetImage(
+                AppAsset.boy,
+              ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(width: 10.w),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('ID: 123456', style: AppTextStyle.black600S16),
+              SizedBox(height: 10.h),
+              Text(
+                maxLines: 2,
+                '12 sessions completed, 8 sessions remaining',
+                style: AppTextStyle.blackOpacity600S14.copyWith(
+                  fontSize: 8.sp,
+                ),
+              ),
+              SizedBox(height: 10.h),
+              const CustomRowCapacity(),
+            ],
+          ),
+        ],
       ),
     );
   }
