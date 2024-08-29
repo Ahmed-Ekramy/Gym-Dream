@@ -113,6 +113,7 @@ class CollectionExercise extends StatelessWidget {
                 Image.asset(imageExercise,
                     fit: BoxFit.fill, width: 130.w, height: 110.h),
               ],
+
             ),
           ],
         ),
