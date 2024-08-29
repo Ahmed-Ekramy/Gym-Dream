@@ -35,11 +35,8 @@ class UserHomeLayoutView extends StatelessWidget {
                 ),
               ],
             ),
-            body: SafeArea(
-          
-              child: HomeUserCubit.get(context)
-                  .tabs[HomeUserCubit.get(context).currentIndex],
-            ),
+            body: HomeUserCubit.get(context)
+                .tabs[HomeUserCubit.get(context).currentIndex],
             bottomNavigationBar: BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
                 selectedItemColor: AppColor.primary,

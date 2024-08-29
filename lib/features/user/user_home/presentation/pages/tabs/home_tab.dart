@@ -95,7 +95,8 @@ class HomeTab extends StatelessWidget {
               return Padding(
                 padding: EdgeInsets.only(
                     left: 8.0.w, right: 8.0.w, bottom: 8.0.h),
-                child: Row(
+                child:
+                Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("2/3/2024",

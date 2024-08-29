@@ -11,8 +11,9 @@ class HomeUserCubit extends Cubit<HomeUserState> {
   static HomeUserCubit get(context) => BlocProvider.of(context);
   final List<Widget> tabs = [
     const HomeTab(),
-    const ExercisesTab(),
     const HistoryTab(),
+    const ExercisesTab(),
+
   ];
   int currentIndex = 0;
 
