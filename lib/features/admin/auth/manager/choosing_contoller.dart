@@ -11,10 +11,10 @@ class ChoosingCubit extends Cubit<String> {
   }
 
   void navigateToSelectedPage(BuildContext context) {
-    if (state == 'trainer') {
-      AppNavigation.navigateTo(context: context, routeName: Routes.adminLogin);
-    } else if (state == 'admin') {
+    if (state == 'trainee') {
       AppNavigation.navigateTo(context: context, routeName: Routes.userLogin);
+    } else if (state == 'admin') {
+      AppNavigation.navigateTo(context: context, routeName: Routes.adminLogin);
     }
   }
 }

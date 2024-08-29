@@ -32,8 +32,8 @@
     "@chooseYourMemberShipType": {},
     "admin": "مدير",
     "@admin": {},
-    "trainer": "مدرب",
-    "@trainer": {},
+    "trainee": "متدرب",
+    "@trainee": {},
     "next": "التالي",
     "@next": {},
     "userClickHere": "مستخدم؟ اضغط هنا",
@@ -71,5 +71,11 @@
     "numbers09": "الأرقام (0-9)",
     "@numbers09": {},
     "specialSymbolsSuchAs": "رموز خاصة مثل (!, @, #, $, %, ^, &, *)",
-    "@specialSymbolsSuchAs": {}
+    "@specialSymbolsSuchAs": {},
+    "passwordDoesNotMatch": "كلمة المرور غير متطابقة",
+    "@passwordDoesNotMatch": {},
+    "passwordChangedSuccessfully": "تم تغيير كلمة المرور بنجاح 🎉",
+    "@passwordChangedSuccessfully": {},
+    "goToHome":"الذهاب للرئيسية",
+    "@goToHome":{}
 }

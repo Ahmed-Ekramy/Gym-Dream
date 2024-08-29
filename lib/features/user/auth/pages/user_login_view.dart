@@ -80,8 +80,8 @@ class UserLoginView extends StatelessWidget {
                     width: double.infinity,
                     title: S.of(context).login,
                     onPressed: () {
-                      AppNavigation.navigateAndRemoveUntil(
-                          context: context, newRoute: '/homeUserLayout');
+                      AppNavigation.navigateTo(
+                          context: context, routeName: Routes.homeUserLayout);
                     },
                   ),
                   Align(

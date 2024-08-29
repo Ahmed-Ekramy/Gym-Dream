@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "اللياقة البدنية مصممة خصيصًا لك"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "goToHome": MessageLookupByLibrary.simpleMessage("الذهاب للرئيسية"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "instructions": MessageLookupByLibrary.simpleMessage("التعليمات"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -50,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "owerCaseLettersAz":
             MessageLookupByLibrary.simpleMessage("الأحرف الصغيرة (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
         "passwordMustBeAtLeast8CharactersLong":
             MessageLookupByLibrary.simpleMessage(
                 "يجب أن تكون كلمة المرور على الأقل 8 أحرف طويلة"),
@@ -70,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "رموز خاصة مثل (!, @, #, \$, %, ^, &, *)"),
         "theCodeWillBeResentAfter":
             MessageLookupByLibrary.simpleMessage("سيتم إعادة إرسال الرمز بعد"),
-        "trainer": MessageLookupByLibrary.simpleMessage("مدرب"),
+        "trainee": MessageLookupByLibrary.simpleMessage("متدرب"),
         "tryAgainLater":
             MessageLookupByLibrary.simpleMessage("حاول مرة أخرى لاحقًا"),
         "uppercaseLettersAZ":

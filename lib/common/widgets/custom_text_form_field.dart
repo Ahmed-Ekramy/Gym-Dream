@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/user/auth/cubits/password_visibility_cubit.dart';
+import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 enum InputType {
@@ -14,6 +14,7 @@ enum InputType {
   password,
   name,
   createPassword,
+  confirmPassword,
 }
 
 class CustomTextFormField extends StatelessWidget {
@@ -27,6 +28,7 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.onChanged,
     this.onTap,
+    this.passwordToMatch, // Used for confirm password validation
   });
 
   final String hint;
@@ -37,6 +39,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final InputType inputType;
   final void Function()? onTap;
+  final String? passwordToMatch; // Used for confirming password validation
 
   @override
   Widget build(BuildContext context) {
@@ -57,12 +60,12 @@ class CustomTextFormField extends StatelessWidget {
               controller: controller,
               obscuringCharacter: "*",
               style: AppTextStyle.black500S14,
-              obscureText: inputType == InputType.password && isPasswordVisible,
+              obscureText: _isObscured(inputType, isPasswordVisible),
               keyboardType: _getKeyboardType(),
               inputFormatters: inputType == InputType.phoneNumber
                   ? [
                       LengthLimitingTextInputFormatter(11),
-                      FilteringTextInputFormatter.digitsOnly
+                      FilteringTextInputFormatter.digitsOnly,
                     ]
                   : null,
               decoration: InputDecoration(
@@ -95,7 +98,9 @@ class CustomTextFormField extends StatelessWidget {
                     width: 2.0,
                   ),
                 ),
-                suffixIcon: inputType == InputType.password
+                suffixIcon: (inputType == InputType.password ||
+                        inputType == InputType.createPassword ||
+                        inputType == InputType.confirmPassword)
                     ? Padding(
                         padding: EdgeInsetsDirectional.only(end: 12.w),
                         child: IconButton(
@@ -127,12 +132,19 @@ class CustomTextFormField extends StatelessWidget {
                   if (value.length != 11) {
                     return S.of(context).phoneNumberMustBe11DigitsLong;
                   }
-                } else if (inputType == InputType.password) {
+                } else if (inputType == InputType.createPassword) {
                   if (value == null || value.isEmpty) {
-                    return S.of(context).pleaseEnterYourPhoneNumber;
+                    return S.of(context).pleaseEnterYourPassword;
                   }
-                  if (value.length < 8) {
-                    return S.of(context).passwordMustBeAtLeast8CharactersLong;
+                  if (!_isStrongPassword(value)) {
+                    return S.of(context).useDifferentTypesOfCharacters;
+                  }
+                } else if (inputType == InputType.confirmPassword) {
+                  if (value == null || value.isEmpty) {
+                    return S.of(context).pleaseEnterYourPassword;
+                  }
+                  if (value != passwordToMatch) {
+                    return S.of(context).passwordDoesNotMatch;
                   }
                 }
                 return null;
@@ -148,9 +160,24 @@ class CustomTextFormField extends StatelessWidget {
   TextInputType _getKeyboardType() {
     if (inputType == InputType.phoneNumber) {
       return TextInputType.phone;
-    } else if (inputType == InputType.password) {
+    } else if (inputType == InputType.password ||
+        inputType == InputType.createPassword ||
+        inputType == InputType.confirmPassword) {
       return TextInputType.text;
     }
     return TextInputType.text;
+  }
+
+  bool _isObscured(InputType inputType, bool isPasswordVisible) {
+    return (inputType == InputType.password ||
+            inputType == InputType.confirmPassword ||
+            inputType == InputType.createPassword) &&
+        isPasswordVisible;
+  }
+
+  bool _isStrongPassword(String value) {
+    final regex =
+        RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#\$&*~]).{8,}$');
+    return regex.hasMatch(value);
   }
 }
