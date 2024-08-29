@@ -25,6 +25,10 @@ class UserHomeLayoutView extends StatelessWidget {
                 .tabs[HomeUserCubit.get(context).currentIndex],
           ),
           bottomNavigationBar: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              selectedItemColor: AppColor.primary,
+              unselectedItemColor: AppColor.grey,
+              selectedLabelStyle:  AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
               onTap: (value) {
                 HomeUserCubit.get(context).changeIndex(value);
               },
@@ -42,7 +46,7 @@ class UserHomeLayoutView extends StatelessWidget {
                         BlendMode.srcIn,
                       ),
                     ),
-                    label: ''),
+                    label: 'Home'),
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(
                       AppAsset.history,
@@ -55,7 +59,7 @@ class UserHomeLayoutView extends StatelessWidget {
                         BlendMode.srcIn,
                       ),
                     ),
-                    label: ''),
+                    label: 'History'),
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(
                       AppAsset.exercises,
@@ -68,7 +72,7 @@ class UserHomeLayoutView extends StatelessWidget {
                         BlendMode.srcIn,
                       ),
                     ),
-                    label: ''),
+                    label: 'Exercises'),
               ]),
         );
       },
