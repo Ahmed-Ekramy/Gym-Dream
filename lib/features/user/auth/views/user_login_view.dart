@@ -67,7 +67,8 @@ class UserLoginView extends StatelessWidget {
                       child: Text(S.of(context).forgotPassword,
                           style: AppTextStyle.blackOpacity500S12),
                       onPressed: () {
-                        context.navigateTo(routeName: Routes.forgrtPassword);
+                        AppNavigation.navigateTo(
+                            context: context, routeName: Routes.forgrtPassword);
                       },
                     ),
                   ),
@@ -79,14 +80,16 @@ class UserLoginView extends StatelessWidget {
                     width: double.infinity,
                     title: S.of(context).login,
                     onPressed: () {
-                      context.navigateTo(routeName: Routes.homeUserLayout);
+                      AppNavigation.navigateTo(
+                          context: context, routeName: Routes.homeUserLayout);
                     },
                   ),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
                     child: TextButton(
                       onPressed: () {
-                        context.navigateTo(routeName: Routes.adminLogin);
+                        AppNavigation.navigateTo(
+                            context: context, routeName: Routes.adminLogin);
                       },
                       child: Text(
                         S.of(context).adminClickHere,

@@ -1,25 +1,36 @@
 import 'package:flutter/material.dart';
 
-extension Navigation on BuildContext {
-  void navigateTo({required String routeName, Object? arguments}) {
-    Navigator.pushNamed(this, routeName, arguments: arguments);
+class AppNavigation {
+  static void navigateTo({
+    required BuildContext context,
+    required String routeName,
+    Object? arguments,
+  }) {
+    Navigator.pushNamed(context, routeName, arguments: arguments);
   }
 
-  void navigateAndReplacement({required String newRoute, Object? arguments}) {
-    Navigator.pushReplacementNamed(this, newRoute, arguments: arguments);
+  static void navigateAndReplacement({
+    required BuildContext context,
+    required String newRoute,
+    Object? arguments,
+  }) {
+    Navigator.pushReplacementNamed(context, newRoute, arguments: arguments);
   }
 
-  Future<Object?> navigateAndRemoveUntil({
+  static Future<Object?> navigateAndRemoveUntil({
+    required BuildContext context,
     required String newRoute,
     Object? arguments,
   }) {
     return Navigator.pushNamedAndRemoveUntil(
-      this,
+      context,
       newRoute,
-      (Route<dynamic> route) => false, // remove all previous routes
+      (Route<dynamic> route) => false,
       arguments: arguments,
     );
   }
 
-  void pop() => Navigator.of(this).pop();
+  static void pop(BuildContext context) {
+    Navigator.pop(context);
+  }
 }

@@ -15,7 +15,7 @@ class BackIcon extends StatelessWidget {
       alignment: AlignmentDirectional.centerStart,
       child: IconButton(
         onPressed: () {
-          context.pop();
+          AppNavigation.pop(context);
         },
         icon: Localizations.localeOf(context).languageCode == 'en'
             ? SvgPicture.asset(

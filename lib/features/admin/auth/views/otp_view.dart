@@ -106,7 +106,8 @@ class OtpView extends StatelessWidget {
                 width: double.infinity,
                 title: S.of(context).verification,
                 onPressed: () {
-                  context.navigateTo(routeName: Routes.creatNewPassword);
+                  AppNavigation.navigateTo(
+                      context: context, routeName: Routes.creatNewPassword);
                 },
               ),
               SizedBox(height: 25.h),

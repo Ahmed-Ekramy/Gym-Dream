@@ -13,7 +13,7 @@ enum InputType {
   phoneNumber,
   password,
   name,
-  confirmPassword,
+  createPassword,
 }
 
 class CustomTextFormField extends StatelessWidget {

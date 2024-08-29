@@ -12,9 +12,9 @@ class ChoosingCubit extends Cubit<String> {
 
   void navigateToSelectedPage(BuildContext context) {
     if (state == 'trainer') {
-      context.navigateAndReplacement(newRoute: Routes.userLogin);
+      AppNavigation.navigateTo(context: context, routeName: Routes.adminLogin);
     } else if (state == 'admin') {
-      context.navigateAndReplacement(newRoute: Routes.adminLogin);
+      AppNavigation.navigateTo(context: context, routeName: Routes.userLogin);
     }
   }
 }
