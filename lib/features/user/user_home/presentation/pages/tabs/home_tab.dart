@@ -16,20 +16,6 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverAppBar(
-          expandedHeight: 70.h,
-          backgroundColor: Colors.transparent,
-          // Set background to transparent
-          flexibleSpace: const CustomFlexibleBar(),
-          actions: [
-            SvgPicture.asset(
-              color: AppColor.secondary,
-              AppAsset.bell,
-              width: 24.w,
-              height: 24.h,
-            ),
-          ],
-        ),
         SliverToBoxAdapter(
             child: Card(
               elevation: 3,
