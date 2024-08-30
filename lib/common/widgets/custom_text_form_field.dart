@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 enum InputType {

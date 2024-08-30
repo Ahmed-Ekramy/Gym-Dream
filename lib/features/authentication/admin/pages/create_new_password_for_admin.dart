@@ -7,13 +7,13 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-import '../widgets/back_icon.dart';
+import '../../widgets/back_icon.dart';
 
-class CreateNewPassword extends StatelessWidget {
-  const CreateNewPassword({super.key});
+class CreateNewPasswordForAdmin extends StatelessWidget {
+  const CreateNewPasswordForAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -102,9 +102,9 @@ class CreateNewPassword extends StatelessWidget {
                   width: double.infinity,
                   title: S.of(context).save,
                   onPressed: () {
-                    AppNavigation.navigateTo(
+                    AppNavigation.navigateAndRemoveUntil(
                       context: context,
-                      routeName: Routes.passwordChangedSuccessfully,
+                      newRoute: Routes.passwordChangedSuccessfullyForAdmin,
                     );
                   },
                 ),

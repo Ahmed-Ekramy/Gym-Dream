@@ -7,12 +7,12 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/auth/widgets/dream_gym_text.dart';
-import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/widgets/dream_gym_text.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-class UserLoginView extends StatelessWidget {
-  const UserLoginView({super.key});
+class AdminLoginView extends StatelessWidget {
+  const AdminLoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,40 +54,39 @@ class UserLoginView extends StatelessWidget {
                           style: AppTextStyle.blackOpacity500S12),
                       onPressed: () {
                         AppNavigation.navigateTo(
-                            context: context, routeName: Routes.forgrtPassword);
+                            context: context,
+                            routeName: Routes.forgotPasswordForAdmin);
                       },
                     ),
                   ),
-                  SizedBox(
-                    height: 30.h,
-                  ),
+                  SizedBox(height: 30.h),
                   CustomButton(
                     textStyle: AppTextStyle.white700S16,
                     width: double.infinity,
                     title: S.of(context).login,
                     onPressed: () {
                       AppNavigation.navigateTo(
-                          context: context, routeName: Routes.homeUserLayout);
+                          context: context, routeName: Routes.homeAdminLayout);
                     },
                   ),
                   Align(
                     alignment: AlignmentDirectional.centerEnd,
                     child: TextButton(
                       onPressed: () {
-                        AppNavigation.navigateTo(
-                            context: context, routeName: Routes.adminLogin);
+                        AppNavigation.navigateAndReplacement(
+                            context: context, newRoute: Routes.traineeLogin);
                       },
                       child: Text(
-                        S.of(context).adminClickHere,
+                        S.of(context).userClickHere,
                         style: AppTextStyle.blue600S8,
                       ),
                     ),
                   ),
                   Hero(
-                    tag: 0,
+                    tag: 1,
                     child: Image.asset(
                       height: 200.h,
-                      AppAsset.trainee,
+                      AppAsset.admin,
                     ),
                   )
                 ],
