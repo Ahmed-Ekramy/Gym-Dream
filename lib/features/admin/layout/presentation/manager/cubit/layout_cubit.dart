@@ -20,8 +20,8 @@ class LayoutCubit extends Cubit<LayoutState> {
     return layOutRepo.getBody();
   }
 
-  List<BottomNavigationBarItem> getBottomNavItems() =>
-      layOutRepo.getBottomNavItems();
+  List<BottomNavigationBarItem> getBottomNavItems(BuildContext context) =>
+      layOutRepo.getBottomNavItems(context);
 
   void changeBottomNavIndex(int index, BuildContext context) {
     currentIndex = index;

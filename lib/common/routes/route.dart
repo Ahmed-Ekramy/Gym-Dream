@@ -5,9 +5,16 @@ class Routes {
   static const String homeUserLayout = '/homeUserLayout';
   static const String adminLogin = '/adminLogin';
   static const String adminOtp = '/adminOtp';
-  static const String userLogin = '/userLogin';
-  static const String userOtp = '/userOtp';
+  static const String traineeLogin = '/traineeLogin';
+  static const String traineeOtp = '/userOtp';
   static const String homeAdminLayout = '/homeAdminLayout';
-  static const String forgrtPassword = '/forgetPassword';
-  static const String creatNewPassword = '/creatNewPassword';
+  static const String forgotPasswordForAdmin = '/forgetPasswordForAdmin';
+  static const String createNewPasswordForAdmin = '/createNewPasswordForAdmin';
+  static const String passwordChangedSuccessfullyForAdmin =
+      '/passwordChangedSuccessfullyForAdmin';
+  static const String forgotPasswordForTrainee = '/forgetPasswordForTrainee';
+  static const String createNewPasswordForTrainee =
+      '/createNewPasswordForTrainee';
+  static const String passwordChangedSuccessfullyForTrainee =
+      '/passwordChangedSuccessfullyForTrainee';
 }

@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Fitness tailored just for you"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "goToHome": MessageLookupByLibrary.simpleMessage("Go to Home"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "instructions": MessageLookupByLibrary.simpleMessage("Instructions"),
         "login": MessageLookupByLibrary.simpleMessage("Log In"),
@@ -50,6 +51,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "owerCaseLettersAz":
             MessageLookupByLibrary.simpleMessage("Lowercase letters (a-z)"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordChanged":
+            MessageLookupByLibrary.simpleMessage("Password changed "),
+        "passwordChangedSuccessfullyView": MessageLookupByLibrary.simpleMessage(
+            "Password changed successfully 🎉"),
+        "passwordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage("Password does not match"),
         "passwordMustBeAtLeast8CharactersLong":
             MessageLookupByLibrary.simpleMessage(
                 "Password must be at least 8 characters long"),
@@ -67,9 +74,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendNewOtp": MessageLookupByLibrary.simpleMessage("Send new OTP"),
         "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
             "Special symbols such as (!, @, #, \$, %, ^, &, *)"),
+        "successfully": MessageLookupByLibrary.simpleMessage("successfully 🎉"),
         "theCodeWillBeResentAfter": MessageLookupByLibrary.simpleMessage(
             "The code will be resent after"),
-        "trainer": MessageLookupByLibrary.simpleMessage("Trainer"),
+        "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
         "tryAgainLater":
             MessageLookupByLibrary.simpleMessage("Try again later"),
         "uppercaseLettersAZ":

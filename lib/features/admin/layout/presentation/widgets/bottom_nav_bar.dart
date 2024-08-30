@@ -17,10 +17,10 @@ class BottomNavBar extends StatelessWidget {
         return BottomNavigationBar(
           currentIndex: cubit.currentIndex,
           onTap: (index) => cubit.changeBottomNavIndex(index, context),
-          items: cubit.getBottomNavItems(),
+          items: cubit.getBottomNavItems(context),
           selectedItemColor: AppColor.primary,
           unselectedItemColor: Colors.grey,
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.primaryLight,
           elevation: 0,
           showSelectedLabels: true,
           showUnselectedLabels: true,

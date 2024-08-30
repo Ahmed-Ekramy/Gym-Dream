@@ -32,8 +32,8 @@
     "@chooseYourMemberShipType":{},
     "admin":"Admin",
     "@admin":{},
-    "trainer":"Trainer",
-    "@trainer":{},
+    "trainee":"Trainee",
+    "@trainee":{},
     "next":"Next",
     "@next":{},
     "userClickHere":"User? click here",
@@ -71,5 +71,15 @@
     "numbers09":"Numbers (0-9)",
     "@numbers09":{},
     "specialSymbolsSuchAs":"Special symbols such as (!, @, #, $, %, ^, &, *)",
-    "@specialSymbolsSuchAs":{}
+    "@specialSymbolsSuchAs":{},
+    "passwordDoesNotMatch": "Password does not match",
+    "@passwordDoesNotMatch":{},
+    "passwordChangedSuccessfullyView":"Password changed successfully 🎉",
+    "@passwordChangedSuccessfullyView":{},
+    "goToHome":"Go to Home",
+    "@goToHome":{},
+    "passwordChanged":"Password changed ",
+    "@passwordChanged":{},
+    "successfully":"successfully 🎉",
+    "@successfully":{}
 }

@@ -210,11 +210,11 @@ class S {
     );
   }
 
-  /// `Trainer`
-  String get trainer {
+  /// `Trainee`
+  String get trainee {
     return Intl.message(
-      'Trainer',
-      name: 'trainer',
+      'Trainee',
+      name: 'trainee',
       desc: '',
       args: [],
     );
@@ -405,6 +405,56 @@ class S {
     return Intl.message(
       'Special symbols such as (!, @, #, \$, %, ^, &, *)',
       name: 'specialSymbolsSuchAs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password does not match`
+  String get passwordDoesNotMatch {
+    return Intl.message(
+      'Password does not match',
+      name: 'passwordDoesNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed successfully 🎉`
+  String get passwordChangedSuccessfullyView {
+    return Intl.message(
+      'Password changed successfully 🎉',
+      name: 'passwordChangedSuccessfullyView',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to Home`
+  String get goToHome {
+    return Intl.message(
+      'Go to Home',
+      name: 'goToHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password changed `
+  String get passwordChanged {
+    return Intl.message(
+      'Password changed ',
+      name: 'passwordChanged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `successfully 🎉`
+  String get successfully {
+    return Intl.message(
+      'successfully 🎉',
+      name: 'successfully',
       desc: '',
       args: [],
     );
