@@ -30,7 +30,6 @@ class BottomScanButton extends StatelessWidget {
             SizedBox(width: 8.w),
             Text(title, style: textStyle ?? AppTextStyle.white700S14),
           ],
-        ) // Icon
-        );
+        ));
   }
 }
