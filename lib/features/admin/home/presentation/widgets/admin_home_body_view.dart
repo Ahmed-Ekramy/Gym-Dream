@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_add_new_user_and_send_invite.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_header.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/admin_recent_scanned_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_recently_scanned.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_warning_massage.dart';
 
@@ -36,7 +37,13 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
         SizedBox(height: 16.h),
         AdminRecentlyScanned(imageList: imageList),
         SizedBox(height: 8.h),
-        const AdminAddNewUserAndSendInvite()
+        const AdminAddNewUserAndSendInvite(),
+        SizedBox(height: 8.h),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          child: AdminRecentScannedImages(
+              imageList: imageList, title: 'New Members'),
+        ),
       ],
     );
   }

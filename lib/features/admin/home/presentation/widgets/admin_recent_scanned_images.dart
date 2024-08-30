@@ -4,8 +4,10 @@ import 'package:gym_dream/core/app_text_style.dart';
 
 class AdminRecentScannedImages extends StatelessWidget {
   final List<String> imageList;
+  final String title;
 
-  const AdminRecentScannedImages({super.key, required this.imageList});
+  const AdminRecentScannedImages(
+      {super.key, required this.imageList, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class AdminRecentScannedImages extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Recently scanned',
+          title,
           style: AppTextStyle.blackOpacity400S10,
         ),
         const SizedBox(height: 10),

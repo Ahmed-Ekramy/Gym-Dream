@@ -20,7 +20,10 @@ class AdminRecentlyScanned extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         children: [
-          AdminRecentScannedImages(imageList: imageList),
+          AdminRecentScannedImages(
+            title: '   Recently scanned',
+            imageList: imageList,
+          ),
           SizedBox(width: 50.w),
           Expanded(
             child: BottomTextAndIconButton(
