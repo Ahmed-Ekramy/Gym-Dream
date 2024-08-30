@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
-import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/home/presentation/widgets/admin_personal_information_and_capacity.dart';
+
+import 'package:gym_dream/features/admin/home/presentation/widgets/admin_header.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/admin_recent_scanned_images.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/custom_scanned_botton.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_warning_massage.dart';
-import 'card_icon_bottom.dart';
 
 class AdminHomeBodyView extends StatefulWidget {
   const AdminHomeBodyView({super.key});
+
   @override
   State<AdminHomeBodyView> createState() => _AdminHomeBodyViewState();
 }
@@ -26,37 +29,28 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
     AppAsset.boy,
     AppAsset.boy
   ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: AppColor.primaryLight,
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20.r),
-              bottomRight: Radius.circular(20.r),
-            ),
-          ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30.h)
-                .copyWith(bottom: 16.h),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 26.r,
-                  backgroundImage: const AssetImage(
-                    AppAsset.boy,
-                  ),
+        const AdminHeader(),
+        const CustomWarningMassage(),
+        SizedBox(height: 16.h),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          child: Row(
+            children: [
+              AdminRecentScannedImages(imageList: imageList),
+              SizedBox(width: 50.w),
+              Expanded(
+                child: BottomScanButton(
+                  title: 'Scan Now',
+                  textStyle: AppTextStyle.white700S14,
+                  icon: SvgPicture.asset(AppAsset.scan),
                 ),
-                SizedBox(width: 11.w),
-                const AdminPersonalInformationAndCapacity(),
-                const Spacer(),
-                const CardIconBottom(),
-                SizedBox(width: 5.w),
-              ],
-            ),
+              )
+            ],
           ),
         )
       ],
