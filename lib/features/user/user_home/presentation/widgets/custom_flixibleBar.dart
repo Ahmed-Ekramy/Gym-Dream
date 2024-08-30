@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../../core/app_asset.dart';
-import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 import 'custom_row_capacity.dart';
 
@@ -17,8 +17,7 @@ class CustomFlexibleBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding:
-                EdgeInsets.only(left: 16.w), // Add left padding to align
+            padding: EdgeInsets.only(left: 16.w), // Add left padding to align
             child: CircleAvatar(
               radius: 30.r,
               backgroundImage: const AssetImage(

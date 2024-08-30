@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 
 import '../../../../../../core/app_text_style.dart';
@@ -89,7 +88,7 @@ class CollectionExercise extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0.w),
                     child: Column(
-                      crossAxisAlignment:  CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
@@ -113,7 +112,6 @@ class CollectionExercise extends StatelessWidget {
                 Image.asset(imageExercise,
                     fit: BoxFit.fill, width: 130.w, height: 110.h),
               ],
-
             ),
           ],
         ),

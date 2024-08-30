@@ -7,12 +7,12 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/auth/widgets/back_icon.dart';
-import 'package:gym_dream/features/user/auth/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgotPasswordForAdmin extends StatelessWidget {
+  const ForgotPasswordForAdmin({super.key});
 
   @override
   Widget build(BuildContext context) {
