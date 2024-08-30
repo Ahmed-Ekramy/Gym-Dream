@@ -34,7 +34,6 @@ class AdminHeader extends StatelessWidget {
             const AdminPersonalInformationAndCapacity(),
             const Spacer(),
             const CardIconBottom(),
-            SizedBox(width: 5.w),
           ],
         ),
       ),
