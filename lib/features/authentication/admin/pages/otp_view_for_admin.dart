@@ -7,14 +7,14 @@ import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/auth/manager/otp_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/otp_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../widgets/back_icon.dart';
+import '../../widgets/back_icon.dart';
 
-class OtpView extends StatelessWidget {
-  const OtpView({
+class OtpViewForAdmin extends StatelessWidget {
+  const OtpViewForAdmin({
     super.key,
   });
 
@@ -107,7 +107,8 @@ class OtpView extends StatelessWidget {
                 title: S.of(context).verification,
                 onPressed: () {
                   AppNavigation.navigateTo(
-                      context: context, routeName: Routes.creatNewPassword);
+                      context: context,
+                      routeName: Routes.createNewPasswordForAdmin);
                 },
               ),
               SizedBox(height: 25.h),

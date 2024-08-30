@@ -8,7 +8,6 @@ import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 import '../manager/home_user_cubit.dart';
 import '../manager/home_user_state.dart';
-import '../widgets/custom_flixibleBar.dart';
 import '../widgets/custom_row_capacity.dart';
 
 class UserHomeLayoutView extends StatelessWidget {
@@ -36,47 +35,47 @@ class UserHomeLayoutView extends StatelessWidget {
               child: Column(
                 children: [
                   AnimatedContainer(
-                    width:  double.infinity,
+                    width: double.infinity,
                     duration: const Duration(milliseconds: 300),
                     height: cubit.isAppBarVisible ? 90.h : 0.0,
                     child: AppBar(
                       toolbarHeight: 90.h,
                       backgroundColor: AppColor.orangeLight,
-                shape:  const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  ),
-                ),
-
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      radius: 30.r,
-                      backgroundImage: const AssetImage(
-                        AppAsset.boy,
-                      ),
-                    ),
-                    SizedBox(width: 5.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('ID: 123456', style: AppTextStyle.black600S16),
-                        SizedBox(height: 10.h),
-                        Text(
-                          maxLines: 2,
-                          '12 sessions completed, 8 sessions remaining',
-                          style: AppTextStyle.blackOpacity600S14.copyWith(
-                            fontSize: 8.sp,
-                          ),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
                         ),
-                        SizedBox(height: 10.h),
-                        const CustomRowCapacity(),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          CircleAvatar(
+                            radius: 30.r,
+                            backgroundImage: const AssetImage(
+                              AppAsset.boy,
+                            ),
+                          ),
+                          SizedBox(width: 5.w),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('ID: 123456',
+                                  style: AppTextStyle.black600S16),
+                              SizedBox(height: 10.h),
+                              Text(
+                                maxLines: 2,
+                                '12 sessions completed, 8 sessions remaining',
+                                style: AppTextStyle.blackOpacity600S14.copyWith(
+                                  fontSize: 8.sp,
+                                ),
+                              ),
+                              SizedBox(height: 10.h),
+                              const CustomRowCapacity(),
+                            ],
+                          ),
+                        ],
+                      ),
                       actions: [
                         SvgPicture.asset(
                           color: AppColor.secondary,
@@ -120,7 +119,8 @@ class __BottomNavBarState extends State<_BottomNavBar> {
             type: BottomNavigationBarType.fixed,
             selectedItemColor: AppColor.primary,
             unselectedItemColor: AppColor.grey,
-            selectedLabelStyle: AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
+            selectedLabelStyle:
+                AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
             onTap: (value) {
               cubit.changeIndex(value);
             },
@@ -132,7 +132,9 @@ class __BottomNavBarState extends State<_BottomNavBar> {
                     width: 24.w,
                     height: 24.h,
                     colorFilter: ColorFilter.mode(
-                      cubit.currentIndex == 0 ? AppColor.primary : AppColor.grey,
+                      cubit.currentIndex == 0
+                          ? AppColor.primary
+                          : AppColor.grey,
                       BlendMode.srcIn,
                     ),
                   ),
@@ -143,7 +145,9 @@ class __BottomNavBarState extends State<_BottomNavBar> {
                     width: 24.w,
                     height: 24.h,
                     colorFilter: ColorFilter.mode(
-                      cubit.currentIndex == 1 ? AppColor.primary : AppColor.grey,
+                      cubit.currentIndex == 1
+                          ? AppColor.primary
+                          : AppColor.grey,
                       BlendMode.srcIn,
                     ),
                   ),
@@ -154,7 +158,9 @@ class __BottomNavBarState extends State<_BottomNavBar> {
                     width: 24.w,
                     height: 24.h,
                     colorFilter: ColorFilter.mode(
-                      cubit.currentIndex == 2 ? AppColor.primary : AppColor.grey,
+                      cubit.currentIndex == 2
+                          ? AppColor.primary
+                          : AppColor.grey,
                       BlendMode.srcIn,
                     ),
                   ),

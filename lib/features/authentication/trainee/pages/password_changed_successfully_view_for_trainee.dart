@@ -6,8 +6,8 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-class PasswordChangedSuccessfullyView extends StatelessWidget {
-  const PasswordChangedSuccessfullyView({super.key});
+class PasswordChangedSuccessfullyViewForTrainee extends StatelessWidget {
+  const PasswordChangedSuccessfullyViewForTrainee({super.key});
 
   @override
   Widget build(BuildContext context) {
