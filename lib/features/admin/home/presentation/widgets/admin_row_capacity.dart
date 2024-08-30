@@ -56,7 +56,7 @@ class AdminRowCapacity extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             color: capacity > 80 && capacity <= 1000
-                ? AppColor.redLight
+                ? AppColor.redBlood
                 : AppColor.redLight.withOpacity(0.5),
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(4.r),
