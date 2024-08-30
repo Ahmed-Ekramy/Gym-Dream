@@ -14,6 +14,10 @@ class AppAsset {
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
   static const logoutIcon = "assets/svg/logout.svg";
+
+  static const add = "assets/svg/add.svg";
+
+  static const scan = "assets/svg/scan.svg";
   static const weightLifting = "assets/images/Weight Lifting.png";
   static const chestBackground = "assets/images/chastBackground.png";
   static const cardioBackground = "assets/images/cardioBackground.png";

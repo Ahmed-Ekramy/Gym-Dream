@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/admin_home/presentation/widgets/admin_row_capacity.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/admin_row_capacity.dart';
 
 class AdminPersonalInformationAndCapacity extends StatelessWidget {
   const AdminPersonalInformationAndCapacity({
@@ -25,7 +25,7 @@ class AdminPersonalInformationAndCapacity extends StatelessWidget {
         ),
         SizedBox(height: 2.h),
         const AdminRowCapacity(
-          capacity: 10,
+          capacity: 100,
         ),
       ],
     );
