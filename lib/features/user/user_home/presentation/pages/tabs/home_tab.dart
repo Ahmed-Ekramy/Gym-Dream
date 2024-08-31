@@ -11,7 +11,7 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      physics:  const NeverScrollableScrollPhysics(),
+      // physics:  const NeverScrollableScrollPhysics(),
        slivers: [
         const WarningCard(),
         SliverToBoxAdapter(
