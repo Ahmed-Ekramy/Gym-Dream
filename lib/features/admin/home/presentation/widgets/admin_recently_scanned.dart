@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_users_images.dart';
@@ -29,7 +31,11 @@ class AdminRecentlyScanned extends StatelessWidget {
           SizedBox(width: 50.w),
           Expanded(
             child: BottomTextAndIconButton(
-              onTap: () => scanNow(context),
+              onTap: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.adminTrustedUserView);
+              },
+              // onTap: () => scanNow(context),
               title: 'Scan Now',
               textStyle: AppTextStyle.white700S14,
               icon: SvgPicture.asset(AppAsset.scan),
