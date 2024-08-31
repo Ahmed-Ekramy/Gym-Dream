@@ -11,18 +11,20 @@ class BottomTextAndIconButton extends StatelessWidget {
       this.textStyle,
       this.backGroundcolor,
       this.heigh,
-      this.width});
+      this.width,
+      this.onTap});
   final String title;
   final Widget? icon;
   final TextStyle? textStyle;
   final double? heigh;
   final double? width;
   final Color? backGroundcolor;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
           height: heigh ?? 40.h,
           width: width ?? 80.h,

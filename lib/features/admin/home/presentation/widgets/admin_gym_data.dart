@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -22,17 +23,21 @@ class AdminGymData extends StatelessWidget {
           SizedBox(height: 8.h),
           Row(
             children: [
-              const Expanded(
-                child: AdminGymDataItem(
-                  title: 'People in Gym now',
-                  value: '90',
+              Expanded(
+                child: FadeInLeft(
+                  child: const AdminGymDataItem(
+                    title: 'People in Gym now',
+                    value: '90',
+                  ),
                 ),
               ),
               SizedBox(width: 16.w),
-              const Expanded(
-                child: AdminGymDataItem(
-                  title: 'Equipment Usages',
-                  value: '30%',
+              Expanded(
+                child: FadeInRight(
+                  child: const AdminGymDataItem(
+                    title: 'Equipment Usages',
+                    value: '30%',
+                  ),
                 ),
               ),
             ],
@@ -40,17 +45,21 @@ class AdminGymData extends StatelessWidget {
           SizedBox(height: 8.h),
           Row(
             children: [
-              const Expanded(
-                child: AdminGymDataItem(
-                  title: 'Check-ins Today',
-                  value: '200',
+              Expanded(
+                child: FadeInLeft(
+                  child: const AdminGymDataItem(
+                    title: 'Check-ins Today',
+                    value: '200',
+                  ),
                 ),
               ),
               SizedBox(width: 16.w),
-              const Expanded(
-                child: AdminGymDataItem(
-                  title: 'Total Check-ins this month',
-                  value: '1,321',
+              Expanded(
+                child: FadeInRight(
+                  child: const AdminGymDataItem(
+                    title: 'Total Check-ins this month',
+                    value: '1,321',
+                  ),
                 ),
               ),
             ],
