@@ -16,6 +16,7 @@ class AppAsset {
   static const logoutIcon = "assets/svg/logout.svg";
 
   static const add = "assets/svg/add.svg";
+  static const backgroundBranch = "assets/images/background branch.png";
 
   static const scan = "assets/svg/scan.svg";
   static const weightLifting = "assets/images/Weight Lifting.png";
