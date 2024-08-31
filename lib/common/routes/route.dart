@@ -3,6 +3,7 @@ class Routes {
   static const String choosingView = '/choosingView';
   static const String login = '/login';
   static const String homeUserLayout = '/homeUserLayout';
+  static const String ourBranchesView = '/ourBranchesView';
   static const String adminLogin = '/adminLogin';
   static const String adminOtp = '/adminOtp';
   static const String traineeLogin = '/traineeLogin';

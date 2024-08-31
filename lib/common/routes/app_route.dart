@@ -18,6 +18,7 @@ import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_l
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
   static Route onGenerateRoute(RouteSettings settings) {
@@ -90,6 +91,11 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const PasswordChangedSuccessfullyViewForTrainee(),
         );
+          case Routes.ourBranchesView:
+        return MaterialPageRoute(
+          builder: (_) => const  OurBranchesView(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -216,6 +216,14 @@ class AppTextStyle {
       color: AppColor.primary,
     ),
   );
+  static final TextStyle orangeOpacity600S12 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 12.0.sp,
+      height: 18.0 / 12.0.sp,
+      color: AppColor.orangeOpacity40,
+    ),
+  );
   static final TextStyle orange600S18 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
@@ -378,6 +386,14 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       fontSize: 13.5.sp,
       height: 21.0 / 13.5.sp,
+      color: AppColor.white,
+    ),
+  );
+  static final TextStyle white600S18 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 18.0.sp,
+      height: 27.0 / 18.0.sp,
       color: AppColor.white,
     ),
   );
