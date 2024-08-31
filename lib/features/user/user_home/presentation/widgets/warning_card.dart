@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../common/helper/naviagtion_extentaions.dart';
+import '../../../../../common/routes/route.dart';
 import '../../../../../common/widgets/custom_button_widget.dart';
 import '../../../../../core/app_text_style.dart';
 
@@ -32,7 +34,10 @@ class WarningCard extends StatelessWidget {
                       title: "Our branches",
                       textStyle: AppTextStyle.white700S14
                           .copyWith(fontSize: 10.sp),
-                      onPressed: () {},
+                      onPressed: () {
+                          AppNavigation.navigateTo(
+                              context: context, routeName: Routes.ourBranchesView);
+                      },
                     )
                   ],
                 ),
