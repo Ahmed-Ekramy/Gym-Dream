@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
-import 'package:gym_dream/features/admin/trusted_user/presentation/pages/trusted_user_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
 import 'package:gym_dream/features/authentication/admin/pages/forgot_password_for_admin.dart';
@@ -20,6 +19,7 @@ import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_l
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import '../../features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
