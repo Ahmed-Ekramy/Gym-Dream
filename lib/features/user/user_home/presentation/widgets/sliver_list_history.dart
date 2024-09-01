@@ -20,9 +20,7 @@ class SliverListHistory extends StatelessWidget {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Platinum",
-                    style:
-                    AppTextStyle.blueNavy400S12),
+
                 Text("2/3/2024",
                     style:
                     AppTextStyle.blueNavy400S12),

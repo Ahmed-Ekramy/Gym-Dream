@@ -18,7 +18,7 @@ class ExercisesTab extends StatelessWidget {
           SliverToBoxAdapter(child: SizedBox(height: 2.h)),
           SliverToBoxAdapter(
               child: Text('Train with the latest workouts that fit your day.',
-                  style: AppTextStyle.gray600S6)),
+                  style: AppTextStyle.gray600S6.copyWith(fontSize: 10.sp))),
           SliverToBoxAdapter(child: SizedBox(height: 8.h)),
           SliverList(
             delegate: SliverChildListDelegate([

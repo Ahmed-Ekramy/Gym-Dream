@@ -25,8 +25,7 @@ class ContainerHistorySchedule extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Package",
-                        style: AppTextStyle.blueNavy500S14),
+
                     Row(
                       children: [
                         Text("Date",
