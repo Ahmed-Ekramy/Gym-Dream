@@ -8,7 +8,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_users_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_text_and_icon_botton.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+// import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class AdminRecentlyScanned extends StatelessWidget {
   const AdminRecentlyScanned({
@@ -50,21 +50,22 @@ class AdminRecentlyScanned extends StatelessWidget {
 Future<void> scanNow(BuildContext context) async {
   String scanResult;
   try {
-    scanResult = await FlutterBarcodeScanner.scanBarcode(
-      '#ff6666',
-      'Cancel',
-      true,
-      ScanMode.QR,
-    );
+    // scanResult = await FlutterBarcodeScanner.scanBarcode(
+    //   '#ff6666',
+    //   'Cancel',
+    //   true,
+    //   ScanMode.QR,
+    // );
   } on PlatformException {
     scanResult = 'Failed to get platform version.';
   }
 
-  if (scanResult.isNotEmpty && scanResult != '-1') {
-    debugPrint(scanResult);
-    bool isValid = isValidPerson(scanResult);
+  // if (scanResult.isNotEmpty && scanResult != '-1')
+  if (true) {
+    // debugPrint(scanResult);
+    // bool isValid = isValidPerson(scanResult);
 
-    if (isValid) {
+    if (false) {
       // If  valid,
       // AppNavigation.navigateTo(
       //   context: context,
