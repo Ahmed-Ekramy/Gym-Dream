@@ -97,7 +97,6 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const OurBranchesView(),
         );
-
       case Routes.adminTrustedUserView:
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),
