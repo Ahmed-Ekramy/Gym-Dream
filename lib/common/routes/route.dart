@@ -11,14 +11,10 @@ class Routes {
   static const String homeAdminLayout = '/homeAdminLayout';
   static const String forgotPasswordForAdmin = '/forgetPasswordForAdmin';
   static const String createNewPasswordForAdmin = '/createNewPasswordForAdmin';
-  static const String passwordChangedSuccessfullyForAdmin =
-      '/passwordChangedSuccessfullyForAdmin';
+  static const String passwordChangedSuccessfullyForAdmin = '/passwordChangedSuccessfullyForAdmin';
   static const String forgotPasswordForTrainee = '/forgetPasswordForTrainee';
-  static const String createNewPasswordForTrainee =
-      '/createNewPasswordForTrainee';
-  static const String passwordChangedSuccessfullyForTrainee =
-      '/passwordChangedSuccessfullyForTrainee';
-
+  static const String createNewPasswordForTrainee = '/createNewPasswordForTrainee';
+  static const String passwordChangedSuccessfullyForTrainee = '/passwordChangedSuccessfullyForTrainee';
   static const String adminTrustedUserView = '/adminTrustedUserView';
-  static const String adminAddMemberView = '/adminAddMemberView';
+  static const String exercisesDetailsView = '/exercisesDetailsView';
 }

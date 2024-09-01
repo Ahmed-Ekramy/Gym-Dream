@@ -61,11 +61,14 @@ class UserHomeLayoutView extends StatelessWidget {
                   ],
                 ),
                 actions: [
-                  SvgPicture.asset(
-                    AppAsset.bell,
-                    color: AppColor.secondary,
-                    width: 24.w,
-                    height: 24.h,
+                  Padding(
+                    padding:  EdgeInsets.symmetric( horizontal: 16.0.w ),
+                    child: SvgPicture.asset(
+                      AppAsset.bell,
+                      color: AppColor.secondary,
+                      width: 24.w,
+                      height: 24.h,
+                    ),
                   ),
                 ],
               ),

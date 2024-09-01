@@ -35,7 +35,6 @@ class AppAsset {
   static const check = "assets/svg/check.svg";
   static const calendar = "assets/svg/calendar.svg";
   static const platinum = "assets/images/platinum.png";
-
   static const camera = "assets/svg/camera.svg";
 
   static const arrowCircleRight = "assets/svg/arrow-circle-right.svg";

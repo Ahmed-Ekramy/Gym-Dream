@@ -18,7 +18,7 @@ class HistoryTab extends StatelessWidget {
           SliverToBoxAdapter(child: SizedBox(height: 2.h)),
           SliverToBoxAdapter(
               child: Text('Your gym attendance date',
-                  style: AppTextStyle.gray600S6)),
+                  style: AppTextStyle.gray600S14..copyWith(fontSize: 10.sp))),
           SliverToBoxAdapter(child: SizedBox(height: 8.h)),
           const ContainerHistorySchedule(),
           SliverToBoxAdapter(child: SizedBox(height: 8.h)),
@@ -28,6 +28,3 @@ class HistoryTab extends StatelessWidget {
     );
   }
 }
-
-
-
