@@ -32,4 +32,7 @@ class AppAsset {
   static const egyptFlag = "assets/images/egypt.png";
   static const passwordChangedSuccessfullyView =
       "assets/images/Password_changed_successfully.png";
+  static const check = "assets/svg/check.svg";
+  static const calendar = "assets/svg/calendar.svg";
+  static const platinum = "assets/images/platinum.png";
 }
