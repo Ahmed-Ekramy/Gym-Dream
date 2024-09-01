@@ -14,6 +14,7 @@ import 'package:gym_dream/features/authentication/trainee/pages/forgot_password_
 import 'package:gym_dream/features/authentication/trainee/pages/otp_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/password_changed_successfully_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_view.dart';
+import 'package:gym_dream/features/user/exercieses_details/presentation/pages/excercises_details_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
@@ -101,6 +102,11 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),
         );
+        case Routes.adminTrustedUserView:
+        return MaterialPageRoute(
+          builder: (_) => const ExercisesDetailsView(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
