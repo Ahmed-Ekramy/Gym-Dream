@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 
 class CardIconBottom extends StatelessWidget {
@@ -14,13 +16,12 @@ class CardIconBottom extends StatelessWidget {
         color: const Color(0xffF7F7F7),
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: const Center(
+      child: Center(
         child: Badge(
           backgroundColor: AppColor.primary,
-          label: Text('6'),
-          child: Icon(
-            Icons.notifications,
-            color: AppColor.black,
+          label: const Text('6'),
+          child: SvgPicture.asset(
+            AppAsset.bell,
           ),
         ),
       ),
