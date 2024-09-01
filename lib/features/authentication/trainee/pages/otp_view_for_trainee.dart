@@ -7,7 +7,7 @@ import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/authentication/manager/otp_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/otp%20cubit/otp_timer_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 

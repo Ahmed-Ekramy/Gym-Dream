@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password%20visibility%20cubit/password_visibility_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 enum InputType {
@@ -28,7 +28,6 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.onChanged,
     this.onTap,
-    this.passwordToMatch,
   });
 
   final String hint;
@@ -39,7 +38,6 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final InputType inputType;
   final void Function()? onTap;
-  final String? passwordToMatch;
 
   @override
   Widget build(BuildContext context) {
@@ -133,19 +131,12 @@ class CustomTextFormField extends StatelessWidget {
                   if (value.length != 11) {
                     return S.of(context).phoneNumberMustBe11DigitsLong;
                   }
-                } else if (inputType == InputType.createPassword) {
+                } else if (inputType == InputType.password) {
                   if (value == null || value.isEmpty) {
                     return S.of(context).pleaseEnterYourPassword;
                   }
-                  if (!_isStrongPassword(value)) {
-                    return S.of(context).useDifferentTypesOfCharacters;
-                  }
-                } else if (inputType == InputType.confirmPassword) {
-                  if (value == null || value.isEmpty) {
-                    return S.of(context).pleaseEnterYourPassword;
-                  }
-                  if (value != passwordToMatch) {
-                    return S.of(context).passwordDoesNotMatch;
+                  if (value.length < 8) {
+                    return S.of(context).passwordMustBeAtLeast8CharactersLong;
                   }
                 }
                 return null;
