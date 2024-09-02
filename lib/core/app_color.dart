@@ -25,4 +25,6 @@ class AppColor {
   static const Color brown = Color(0xFFA17545);
   static const Color yellow = Color(0xFFFFFF00);
   static const Color yellowLight = Color.fromRGBO(222, 216, 71, 0.2);
+
+  static const Color blueeee = Color(0xff348CB5);
 }
