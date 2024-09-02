@@ -7,7 +7,7 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/authentication/manager/password_visibility_cubit.dart';
+import 'package:gym_dream/features/authentication/manager/password%20visibility%20cubit/password_visibility_cubit.dart';
 import 'package:gym_dream/features/authentication/widgets/dream_gym_text.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
