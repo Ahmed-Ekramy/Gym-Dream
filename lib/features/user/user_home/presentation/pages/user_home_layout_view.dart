@@ -23,6 +23,7 @@ class UserHomeLayoutView extends StatelessWidget {
           Column(
             children: [
               AppBar(
+                automaticallyImplyLeading: false,
                 toolbarHeight: 90.h,
                 backgroundColor: AppColor.orangeLight,
                 shape: const RoundedRectangleBorder(

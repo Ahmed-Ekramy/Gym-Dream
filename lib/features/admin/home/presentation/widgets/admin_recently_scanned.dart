@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
@@ -47,6 +46,38 @@ class AdminRecentlyScanned extends StatelessWidget {
   }
 }
 
+// Future<void> scanNow(BuildContext context) async {
+//   String scanResult;
+//   try {
+//     scanResult = await FlutterBarcodeScanner.scanBarcode(
+//       '#ff6666',
+//       'Cancel',
+//       true,
+//       ScanMode.QR,
+//     );
+//   } on PlatformException {
+//     scanResult = 'Failed to get platform version.';
+//   }
+
+//   if (scanResult.isNotEmpty && scanResult != '-1') {
+//     debugPrint(scanResult);
+//     bool isValid = isValidPerson(scanResult);
+
+//     if (isValid) {
+//       // If  valid,
+//       // AppNavigation.navigateTo(
+//       //   context: context,
+//       //   routeName: Routes.desiredScreen,
+//       // );
+//     } else {
+//       // // If not valid
+//       // AppNavigation.navigateTo(
+//       //   context: context,
+//       //   routeName: Routes.desiredScreen,
+//       // );
+//     }
+//   }
+// }
 Future<void> scanNow(BuildContext context) async {
   String scanResult;
   try {
@@ -81,7 +112,7 @@ Future<void> scanNow(BuildContext context) async {
   }
 }
 
-bool isValidPerson(String scanResult) {
-  // compare scanResult with a valid IDs
-  return scanResult == "valid_qr_code";
-}
+// bool isValidPerson(String scanResult) {
+//   // compare scanResult with a valid IDs
+//   return scanResult == "valid_qr_code";
+// }

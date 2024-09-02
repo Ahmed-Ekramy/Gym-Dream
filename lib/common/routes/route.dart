@@ -20,4 +20,5 @@ class Routes {
       '/passwordChangedSuccessfullyForTrainee';
 
   static const String adminTrustedUserView = '/adminTrustedUserView';
+  static const String adminAddMemberView = '/adminAddMemberView';
 }

@@ -10,6 +10,5 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   ServiceLocator().setUpServiceLocator();
   Bloc.observer = MyBlocObserver();
-
   runApp(const UserAppGym());
 }
