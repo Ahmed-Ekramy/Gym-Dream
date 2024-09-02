@@ -78,9 +78,3 @@ class AdminRecentlyScanned extends StatelessWidget {
 //     }
 //   }
 // }
-
-
-// bool isValidPerson(String scanResult) {
-//   // compare scanResult with a valid IDs
-//   return scanResult == "valid_qr_code";
-// }
