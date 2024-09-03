@@ -1,5 +1,3 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,10 +10,13 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   ServiceLocator().setUpServiceLocator();
   Bloc.observer = MyBlocObserver();
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (_) => const UserAppGym(),
-    ),
-  );
+  runApp(const UserAppGym());
+
+  // For device preview mode
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (_) => const UserAppGym(),
+  //   ),
+  // );
 }
