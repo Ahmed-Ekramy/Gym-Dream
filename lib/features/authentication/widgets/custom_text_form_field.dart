@@ -7,7 +7,6 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/password%20visibility%20cubit/password_visibility_cubit.dart';
-import 'package:gym_dream/generated/l10n.dart';
 
 enum InputType {
   phoneNumber,
@@ -28,6 +27,7 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.onChanged,
     this.onTap,
+    this.validate,
   });
 
   final String hint;
@@ -38,6 +38,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final InputType inputType;
   final void Function()? onTap;
+  final String? Function(String?)? validate;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +68,7 @@ class CustomTextFormField extends StatelessWidget {
                     ]
                   : null,
               decoration: InputDecoration(
+                errorStyle: AppTextStyle.redBlood500S14,
                 prefixIconConstraints: BoxConstraints(
                   minWidth: 25.h,
                   minHeight: 25.h,
@@ -120,27 +122,29 @@ class CustomTextFormField extends StatelessWidget {
                       )
                     : null,
               ),
-              validator: (value) {
-                if (inputType == InputType.phoneNumber) {
-                  if (value == null || value.isEmpty) {
-                    return S.of(context).pleaseEnterYourPhoneNumber;
-                  }
-                  if (!value.startsWith('01')) {
-                    return S.of(context).phoneNumberMustStartWith01;
-                  }
-                  if (value.length != 11) {
-                    return S.of(context).phoneNumberMustBe11DigitsLong;
-                  }
-                } else if (inputType == InputType.password) {
-                  if (value == null || value.isEmpty) {
-                    return S.of(context).pleaseEnterYourPassword;
-                  }
-                  if (value.length < 8) {
-                    return S.of(context).passwordMustBeAtLeast8CharactersLong;
-                  }
-                }
-                return null;
-              },
+
+              validator: validate,
+              // (value) {
+              //   if (inputType == InputType.phoneNumber) {
+              //     if (value == null || value.isEmpty) {
+              //       return S.of(context).pleaseEnterYourPhoneNumber;
+              //     }
+              //     if (!value.startsWith('01')) {
+              //       return S.of(context).phoneNumberMustStartWith01;
+              //     }
+              //     if (value.length != 11) {
+              //       return S.of(context).phoneNumberMustBe11DigitsLong;
+              //     }
+              //   } else if (inputType == InputType.password) {
+              //     if (value == null || value.isEmpty) {
+              //       return S.of(context).pleaseEnterYourPassword;
+              //     }
+              //     if (value.length < 8) {
+              //       return S.of(context).passwordMustBeAtLeast8CharactersLong;
+              //     }
+              //   }
+              //   return null;
+              // },
               onChanged: onChanged,
             );
           },
