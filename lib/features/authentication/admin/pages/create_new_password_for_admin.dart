@@ -149,7 +149,7 @@ class PasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood700S18,
         ),
       );
     } else if (!state.isPasswordLongEnough || !state.isPasswordStrong) {
@@ -159,7 +159,7 @@ class PasswordValidationMessages extends StatelessWidget {
           !state.isPasswordLongEnough
               ? S.of(context).passwordMustBeAtLeast8CharactersLong
               : S.of(context).useDifferentTypesOfCharacters,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood700S18,
         ),
       );
     }
@@ -179,7 +179,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood700S18,
         ),
       );
     } else if (!state.passwordsMatch) {
@@ -187,7 +187,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).passwordDoesNotMatch,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood700S18,
         ),
       );
     }

@@ -73,7 +73,12 @@ class HomeTab extends StatelessWidget {
                   )),
             ],
           ),
-        )
+        ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 5.h,
+          ),
+        ),
       ],
     );
   }
