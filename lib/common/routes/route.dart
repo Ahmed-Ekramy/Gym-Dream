@@ -21,4 +21,7 @@ class Routes {
 
   static const String adminTrustedUserView = '/adminTrustedUserView';
   static const String adminAddMemberView = '/adminAddMemberView';
+
+  static const String packageDetailsView = '/packageDetailsView';
+  static const String qrCodeView = '/qrCodeView';
 }

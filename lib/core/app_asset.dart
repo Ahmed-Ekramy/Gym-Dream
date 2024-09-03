@@ -14,7 +14,9 @@ class AppAsset {
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
   static const logoutIcon = "assets/svg/logout.svg";
-
+  static const silver = "assets/images/gold.png";
+  static const gold = "assets/images/gold.png";
+  static const platinum = "assets/images/platinum.png";
   static const add = "assets/svg/add.svg";
   static const backgroundBranch = "assets/images/background branch.png";
 
@@ -34,7 +36,6 @@ class AppAsset {
       "assets/images/Password_changed_successfully.png";
   static const check = "assets/svg/check.svg";
   static const calendar = "assets/svg/calendar.svg";
-  static const platinum = "assets/images/platinum.png";
 
   static const camera = "assets/svg/camera.svg";
 
