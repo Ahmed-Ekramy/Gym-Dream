@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
+import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/package_pricing_card.dart';
@@ -19,7 +22,7 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 8.h),
         child: Column(
           children: [
             Row(
@@ -61,7 +64,16 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
                 },
               ),
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: 8.h),
+            CustomButton(
+              width: double.infinity,
+              height: 30.h,
+              title: 'Confirm',
+              onPressed: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.adminConfirmUser);
+              },
+            ),
           ],
         ),
       ),
