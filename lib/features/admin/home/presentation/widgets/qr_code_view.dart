@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_dream/core/app_color.dart';
 
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -14,10 +15,16 @@ class _QrCodeViewState extends State<QrCodeView> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   Barcode? qrResult;
   QRViewController? controller;
+  @override
+  void dispose() {
+    controller?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+        body: Column(
       children: [
         Expanded(
           flex: 5,
@@ -28,18 +35,18 @@ class _QrCodeViewState extends State<QrCodeView> {
         ),
         Expanded(
           flex: 1,
-          child: SizedBox(
-            width: double.infinity,
+          child: Container(
+            color: AppColor.white,
             child: Center(
               child: Text(
-                qrResult != null ? 'Result: ${qrResult!.code}' : '',
+                qrResult != null ? 'Result: ${qrResult!.code}' : 'Scan a code',
                 style: AppTextStyle.black700S18,
               ),
             ),
           ),
         ),
       ],
-    );
+    ));
   }
 
   void _onQRViewCreated(QRViewController controller) {
@@ -48,26 +55,6 @@ class _QrCodeViewState extends State<QrCodeView> {
       setState(() {
         qrResult = scanData;
       });
-
-      // bool isUserTrusted = await _checkUserInDatabase(scanData.code);
-
-      // if (isUserTrusted) {
-      //   AppNavigation.navigateTo(
-      //     context: context,
-      //     routeName: Routes.adminTrustedUserView,
-      //   );
-      // } else {
-      //   AppNavigation.navigateTo(
-      //     context: context,
-      //     routeName: Routes.adminTrustedUserView,
-      //   );
-      // }
     });
-  }
-
-  @override
-  void dispose() {
-    controller?.dispose();
-    super.dispose();
   }
 }
