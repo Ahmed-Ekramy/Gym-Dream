@@ -24,4 +24,6 @@ class Routes {
 
   static const String packageDetailsView = '/packageDetailsView';
   static const String qrCodeView = '/qrCodeView';
+
+  static const String adminConfirmUser = '/adminConfirmUser';
 }
