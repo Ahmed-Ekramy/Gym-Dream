@@ -8,6 +8,7 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/otp%20cubit/otp_timer_cubit.dart';
+import 'package:gym_dream/features/authentication/widgets/title_section.dart';
 import 'package:gym_dream/generated/l10n.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -32,9 +33,8 @@ class OtpViewForTrainee extends StatelessWidget {
               SizedBox(height: 40.h),
               const BackIcon(),
               SizedBox(height: 40.h),
-              Text(
-                S.of(context).enterTheOtp,
-                style: AppTextStyle.black700S20,
+              TitleSection(
+                title: S.of(context).enterTheOtp,
               ),
               SizedBox(height: 20.h),
               Text(
