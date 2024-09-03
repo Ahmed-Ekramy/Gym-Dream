@@ -78,6 +78,14 @@ class MyValidatorsHelper {
     return null;
   }
 
+  static String? dateValidator(String? value) {
+    if (value!.isEmpty) {
+      return 'Please enter an date';
+    }
+
+    return null;
+  }
+
   static String? cityValidator(String? value) {
     if (value!.isEmpty) {
       return 'Please enter a City name';
