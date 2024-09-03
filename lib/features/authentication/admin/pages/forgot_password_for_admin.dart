@@ -9,6 +9,7 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/password%20visibility%20cubit/password_visibility_cubit.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/features/authentication/widgets/title_section.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 class ForgotPasswordForAdmin extends StatelessWidget {
@@ -32,9 +33,8 @@ class ForgotPasswordForAdmin extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              Text(
-                S.of(context).forgotPassword,
-                style: AppTextStyle.black700S20,
+              TitleSection(
+                title: S.of(context).forgotPassword,
               ),
               SizedBox(
                 height: 20.h,
