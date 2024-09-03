@@ -3,6 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_confirm_user.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/pages/package_details_view.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/qr_code_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
@@ -110,6 +113,19 @@ class AppRoute {
             child: const AdminAddMemberView(),
           ),
         );
+      case Routes.packageDetailsView:
+        return MaterialPageRoute(
+          builder: (_) => const PackageDetailsView(),
+        );
+      case Routes.qrCodeView:
+        return MaterialPageRoute(
+          builder: (_) => const QrCodeView(),
+        );
+      case Routes.adminConfirmUser:
+        return MaterialPageRoute(
+          builder: (_) => const AdminConfirmUser(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

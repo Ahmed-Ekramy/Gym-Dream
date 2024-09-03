@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/app_text_form_field.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
@@ -110,7 +112,8 @@ class _AdminAddMemberViewBodyFormState
                 ),
                 TextButton(
                   onPressed: () {
-                    // Navigator.of(context).pushNamed('/admin/packages');
+                    AppNavigation.navigateTo(
+                        context: context, routeName: Routes.packageDetailsView);
                   },
                   child: Text(
                     'Details',
