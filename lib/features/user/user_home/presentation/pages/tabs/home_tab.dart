@@ -12,7 +12,7 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       // physics:  const NeverScrollableScrollPhysics(),
-       slivers: [
+      slivers: [
         const WarningCard(),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -40,8 +40,8 @@ class HomeTab extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: Center(
-              child: Text("History", style: AppTextStyle.orange600S18)),
+          child:
+              Center(child: Text("History", style: AppTextStyle.orange600S18)),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -59,8 +59,22 @@ class HomeTab extends StatelessWidget {
             height: 5.h,
           ),
         ),
-        const LastAttendList()
+        const LastAttendList(),
+        SliverToBoxAdapter(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const SizedBox(),
+              TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "See More",
+                    style: AppTextStyle.blue600S14.copyWith(fontSize: 10.sp),
+                  )),
+            ],
+          ),
+        )
       ],
-    ) ;
+    );
   }
 }

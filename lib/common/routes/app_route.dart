@@ -18,7 +18,6 @@ import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_vi
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
-
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
@@ -97,7 +96,6 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const OurBranchesView(),
         );
-
       case Routes.adminTrustedUserView:
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),

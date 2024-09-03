@@ -7,7 +7,6 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_users_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_text_and_icon_botton.dart';
-// import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class AdminRecentlyScanned extends StatelessWidget {
   const AdminRecentlyScanned({
