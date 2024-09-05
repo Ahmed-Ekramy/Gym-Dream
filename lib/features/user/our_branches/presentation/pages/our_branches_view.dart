@@ -76,91 +76,63 @@ class OurBranchesView extends StatelessWidget {
               ],
             ),
           )),
-          SliverToBoxAdapter(
-              child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
-            child: Stack(
-              children: [
-                Image.asset(
-                  fit: BoxFit.fill,
-                  AppAsset.backgroundBranch,
-                  width: double.infinity,
-                  height: 90.h,
-                ),
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 10.h),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Ahmed Maher Street",
-                            style: AppTextStyle.white600S18,
-                          ),
-                          SizedBox(height: 5.h),
-                          Text(
-                            "Ahmed Maher Street",
-                            style: AppTextStyle.gray600S14,
-                          ),
-                          SizedBox(height: 20.h),
-                          const CustomRowCapacity(),
-                        ],
-                      ),
-                      CustomButton(
-                        width: 86.w,
-                        height: 25.h,
-                        title: "location",
-                        textStyle:
-                            AppTextStyle.white700S14.copyWith(fontSize: 10.sp),
-                        onPressed: () {
-                          AppNavigation.navigateTo(
-                              context: context,
-                              routeName: Routes.ourBranchesView);
-                        },
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )),
           SliverList.builder(
               itemCount: 15,
               itemBuilder: (context, index) {
-                return Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 8.h),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        fit: BoxFit.cover,
-                        AppAsset.backgroundBranch,
-                        width: 100.w,
-                        height: 90.h,
-                      ),
-                      SizedBox(width: 10.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Ahmed Maher Street',
-                            style: AppTextStyle.black600S18,
+                return
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
+
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          fit: BoxFit.fill,
+                          AppAsset.backgroundBranch,
+                          width: double.infinity,
+                          height: 90.h,
+                        ),
+                        Padding(
+                          padding:
+                          EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 10.h),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Ahmed Maher Street",
+                                    style: AppTextStyle.white600S18,
+                                  ),
+                                  SizedBox(height: 5.h),
+                                  Text(
+                                    "Ahmed Maher Street",
+                                    style: AppTextStyle.gray600S14,
+                                  ),
+                                  SizedBox(height: 20.h),
+                                  const CustomRowCapacity(),
+                                ],
+                              ),
+                              CustomButton(
+                                width: 86.w,
+                                height: 25.h,
+                                title: "location",
+                                textStyle:
+                                AppTextStyle.white700S14.copyWith(fontSize: 10.sp),
+                                onPressed: () {
+                                  AppNavigation.navigateTo(
+                                      context: context,
+                                      routeName: Routes.ourBranchesView);
+                                },
+                              )
+                            ],
                           ),
-                          Text(
-                            'away from you : 200 meters',
-                            style: AppTextStyle.orangeOpacity600S12,
-                          ),
-                          SizedBox(height: 20.h),
-                          const CustomRowCapacity(),
-                        ],
-                      ),
-                    ],
-                  ),
-                );
-              })
+                        )
+                      ],
+
+                    ),
+                  );
+              }),
         ],
       )),
     );

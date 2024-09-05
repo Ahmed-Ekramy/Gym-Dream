@@ -37,6 +37,8 @@ class AppAsset {
   static const platinum = "assets/images/platinum.png";
 
   static const camera = "assets/svg/camera.svg";
+  static const gymImage = "assets/images/User-img.png";
+  static const eosIcons = "assets/images/eos-icons_admin-outlined.png";
 
   static const arrowCircleRight = "assets/svg/arrow-circle-right.svg";
 }

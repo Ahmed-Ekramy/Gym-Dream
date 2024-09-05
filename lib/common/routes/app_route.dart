@@ -16,9 +16,11 @@ import 'package:gym_dream/features/authentication/trainee/pages/otp_view_for_tra
 import 'package:gym_dream/features/authentication/trainee/pages/password_changed_successfully_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
+import 'package:gym_dream/features/user/user_home/presentation/pages/tabs/history_tab.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import '../../features/user/notification_user/presentation/pages/notification_user_view.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
@@ -104,6 +106,15 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const AdminAddMemberView(),
         );
+        case Routes.notificationUserView:
+        return MaterialPageRoute(
+          builder: (_) => const NotificationUserView(),
+        );
+  case Routes.historyTap:
+        return MaterialPageRoute(
+          builder: (_) => const HistoryTab(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
