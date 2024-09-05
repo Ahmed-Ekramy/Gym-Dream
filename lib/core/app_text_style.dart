@@ -459,7 +459,13 @@ class AppTextStyle {
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
       fontSize: 8.0.sp,
-      height: 24 / 16.0.sp,
+      color: AppColor.blue,
+    ),
+  );
+  static final TextStyle blueBoldS10 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 10.0.sp,
       color: AppColor.blue,
     ),
   );

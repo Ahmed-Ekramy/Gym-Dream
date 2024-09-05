@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/core/app_asset.dart';
 
+import '../../../../../../common/routes/route.dart';
 import '../../../../../../core/app_text_style.dart';
 
 class ExercisesTab extends StatelessWidget {
@@ -20,33 +22,20 @@ class ExercisesTab extends StatelessWidget {
               child: Text('Train with the latest workouts that fit your day.',
                   style: AppTextStyle.gray600S6.copyWith(fontSize: 12.sp))),
           SliverToBoxAdapter(child: SizedBox(height: 8.h)),
-          SliverList(
-            delegate: SliverChildListDelegate([
-              const CollectionExercise(
+          SliverList.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.exerciseDetails);
+              },
+              child: const CollectionExercise(
                 imageBackground: AppAsset.chestBackground,
                 imageExercise: AppAsset.chestMan,
                 nameExercise: 'Chest and abdominal exercises',
                 numberExercises: 10,
               ),
-              const CollectionExercise(
-                imageBackground: AppAsset.backBackground,
-                imageExercise: AppAsset.backMan,
-                nameExercise: 'Back and Shoulders exercises',
-                numberExercises: 10,
-              ),
-              const CollectionExercise(
-                imageBackground: AppAsset.legBackground,
-                imageExercise: AppAsset.legMan,
-                nameExercise: 'leg exercise',
-                numberExercises: 10,
-              ),
-              const CollectionExercise(
-                imageBackground: AppAsset.cardioBackground,
-                imageExercise: AppAsset.cardio,
-                nameExercise: 'Cardio exercise',
-                numberExercises: 10,
-              ),
-            ]),
+            ),
           )
         ],
       ),
