@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -41,11 +43,13 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: 50.w,
-            ),
+            SizedBox(width: 40.w),
             Expanded(
               child: BottomTextAndIconButton(
+                onTap: () {
+                  AppNavigation.navigateTo(
+                      context: context, routeName: Routes.adminAddMemberView);
+                },
                 title: 'Add Member',
                 textStyle: AppTextStyle.orange600S14,
                 icon: SvgPicture.asset(
@@ -53,7 +57,8 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
                 ),
                 backGroundcolor: const Color(0xffF5EDE5),
               ),
-            )
+            ),
+            SizedBox(width: 10.w),
           ],
         ),
       ),

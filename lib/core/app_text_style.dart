@@ -216,6 +216,14 @@ class AppTextStyle {
       color: AppColor.primary,
     ),
   );
+  static final TextStyle orangeOpacity600S12 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 12.0.sp,
+      height: 18.0 / 12.0.sp,
+      color: AppColor.orangeOpacity40,
+    ),
+  );
   static final TextStyle orange600S18 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
@@ -381,6 +389,14 @@ class AppTextStyle {
       color: AppColor.white,
     ),
   );
+  static final TextStyle white600S18 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 18.0.sp,
+      height: 27.0 / 18.0.sp,
+      color: AppColor.white,
+    ),
+  );
   static final TextStyle white500S22 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w500,
@@ -443,7 +459,13 @@ class AppTextStyle {
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
       fontSize: 8.0.sp,
-      height: 24 / 16.0.sp,
+      color: AppColor.blue,
+    ),
+  );
+  static final TextStyle blueBoldS10 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 10.0.sp,
       color: AppColor.blue,
     ),
   );
@@ -472,11 +494,19 @@ class AppTextStyle {
       color: AppColor.brown,
     ),
   );
+  static final TextStyle redBlood700S18 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 18.0.sp,
+      height: 21 / 18.0.sp,
+      color: AppColor.redBlood,
+    ),
+  );
   static final TextStyle redBlood500S14 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w500,
       fontSize: 14.0.sp,
-      height: 21 / 14.0.sp,
+      height: 18 / 14.0.sp,
       color: AppColor.redBlood,
     ),
   );

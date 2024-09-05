@@ -14,8 +14,11 @@ class AppAsset {
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
   static const logoutIcon = "assets/svg/logout.svg";
-
+  static const silver = "assets/images/gold.png";
+  static const gold = "assets/images/gold.png";
+  static const platinum = "assets/images/platinum.png";
   static const add = "assets/svg/add.svg";
+  static const backgroundBranch = "assets/images/background branch.png";
 
   static const scan = "assets/svg/scan.svg";
   static const weightLifting = "assets/images/Weight Lifting.png";
@@ -31,4 +34,13 @@ class AppAsset {
   static const egyptFlag = "assets/images/egypt.png";
   static const passwordChangedSuccessfullyView =
       "assets/images/Password_changed_successfully.png";
+  static const check = "assets/svg/check.svg";
+  static const calendar = "assets/svg/calendar.svg";
+
+  static const camera = "assets/svg/camera.svg";
+  static const gymImage = "assets/images/User-img.png";
+  static const eosIcons = "assets/images/eos-icons_admin-outlined.png";
+
+  static const arrowCircleRight = "assets/svg/arrow-circle-right.svg";
+  static const imageExerciseDetails = "assets/images/image exercise details.png";
 }

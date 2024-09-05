@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
+import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
 import 'package:gym_dream/features/authentication/admin/pages/forgot_password_for_admin.dart';
@@ -13,11 +15,13 @@ import 'package:gym_dream/features/authentication/trainee/pages/forgot_password_
 import 'package:gym_dream/features/authentication/trainee/pages/otp_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/password_changed_successfully_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_view.dart';
+import 'package:gym_dream/features/user/exercieses_details/presentation/page/exercieses_details.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
   static Route onGenerateRoute(RouteSettings settings) {
@@ -90,6 +94,24 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const PasswordChangedSuccessfullyViewForTrainee(),
         );
+      case Routes.ourBranchesView:
+        return MaterialPageRoute(
+          builder: (_) => const OurBranchesView(),
+        );
+
+      case Routes.adminTrustedUserView:
+        return MaterialPageRoute(
+          builder: (_) => const TrustedUserView(),
+        );
+      case Routes.adminAddMemberView:
+        return MaterialPageRoute(
+          builder: (_) => const AdminAddMemberView(),
+        );
+           case Routes.exerciseDetails:
+        return MaterialPageRoute(
+          builder: (_) => const ExercisesDetails(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -24,7 +24,7 @@ class CustomRowCapacity extends StatelessWidget {
           height: 14.h,
           child: Center(
             child: Text(
-              'Active',
+              'Low capacity',
               style: AppTextStyle.white500S7,
             ),
           ),
@@ -37,7 +37,7 @@ class CustomRowCapacity extends StatelessWidget {
           height: 14.h,
           child: Center(
             child: Text(
-              'Active',
+              'Medium capacity',
               style: AppTextStyle.blackOpacity500S7,
             ),
           ),
@@ -54,7 +54,7 @@ class CustomRowCapacity extends StatelessWidget {
           height: 14.h,
           child: Center(
             child: Text(
-              'Active',
+              'High capacity',
               style: AppTextStyle.blackOpacity500S7,
             ),
           ),

@@ -3,6 +3,7 @@ class Routes {
   static const String choosingView = '/choosingView';
   static const String login = '/login';
   static const String homeUserLayout = '/homeUserLayout';
+  static const String ourBranchesView = '/ourBranchesView';
   static const String adminLogin = '/adminLogin';
   static const String adminOtp = '/adminOtp';
   static const String traineeLogin = '/traineeLogin';
@@ -17,4 +18,13 @@ class Routes {
       '/createNewPasswordForTrainee';
   static const String passwordChangedSuccessfullyForTrainee =
       '/passwordChangedSuccessfullyForTrainee';
+
+  static const String adminTrustedUserView = '/adminTrustedUserView';
+  static const String adminAddMemberView = '/adminAddMemberView';
+
+  static const String packageDetailsView = '/packageDetailsView';
+  static const String qrCodeView = '/qrCodeView';
+
+  static const String adminConfirmUser = '/adminConfirmUser';
+  static const String exerciseDetails = '/exerciseDetails';
 }

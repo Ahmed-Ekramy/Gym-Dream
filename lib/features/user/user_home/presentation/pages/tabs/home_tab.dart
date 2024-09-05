@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
+import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../../../../../core/app_text_style.dart';
 import '../../widgets/last_attend_list.dart';
@@ -11,8 +14,8 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      physics:  const NeverScrollableScrollPhysics(),
-       slivers: [
+      // physics:  const NeverScrollableScrollPhysics(),
+      slivers: [
         const WarningCard(),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -40,8 +43,8 @@ class HomeTab extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: Center(
-              child: Text("History", style: AppTextStyle.orange600S18)),
+          child:
+              Center(child: Text("History", style: AppTextStyle.orange600S18)),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -59,8 +62,29 @@ class HomeTab extends StatelessWidget {
             height: 5.h,
           ),
         ),
-        const LastAttendList()
+        const LastAttendList(),
+        SliverToBoxAdapter(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const SizedBox(),
+              TextButton(
+                  onPressed: () {
+                    HomeUserCubit.get(context).changeIndex(1);
+                  },
+                  child: Text(
+                    "See More",
+                    style: AppTextStyle.blue600S14.copyWith(fontSize: 10.sp),
+                  )),
+            ],
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 5.h,
+          ),
+        ),
       ],
-    ) ;
+    );
   }
 }
