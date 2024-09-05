@@ -33,6 +33,7 @@ dependencies:
   carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
+  device_preview: ^1.2.0
   dio: ^5.6.0
   equatable: ^2.0.5
   flutter:
@@ -45,15 +46,15 @@ dependencies:
   flutter_svg: ^2.0.10+1
   fluttertoast: ^8.2.8
   font_awesome_flutter: ^10.7.0
-  freezed: ^2.5.7
-  freezed_annotation: ^2.4.4
   get_it: ^7.7.0
   google_fonts: ^6.2.1
   iconsax: ^0.0.8
+  image_picker: ^0.8.6
   intl: ^0.19.0
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
   pin_code_fields: ^8.0.1
+  qr_code_scanner: ^1.0.1
   qr_flutter: ^4.1.0
   readmore: ^3.0.0
   retrofit: ^4.1.0

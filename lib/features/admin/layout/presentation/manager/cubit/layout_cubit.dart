@@ -14,7 +14,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   static LayoutCubit getObject(context) =>
       BlocProvider.of<LayoutCubit>(context);
 
-  int currentIndex = 2;
+  int currentIndex = 0;
 
   List<Widget> getBody() {
     return layOutRepo.getBody();

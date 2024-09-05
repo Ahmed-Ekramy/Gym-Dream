@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
-import 'package:gym_dream/common/widgets/custom_text_form_field.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/generated/l10n.dart';
@@ -13,6 +12,7 @@ import '../../manager/create password cubit/create_password_cubit.dart';
 import '../../manager/create password cubit/create_password_state.dart';
 import '../../manager/password visibility cubit/password_visibility_cubit.dart';
 import '../../widgets/back_icon.dart';
+import '../../widgets/custom_text_form_field.dart';
 
 class CreateNewPasswordForAdmin extends StatelessWidget {
   const CreateNewPasswordForAdmin({super.key});
@@ -149,7 +149,7 @@ class PasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S14,
         ),
       );
     } else if (!state.isPasswordLongEnough || !state.isPasswordStrong) {
@@ -159,7 +159,7 @@ class PasswordValidationMessages extends StatelessWidget {
           !state.isPasswordLongEnough
               ? S.of(context).passwordMustBeAtLeast8CharactersLong
               : S.of(context).useDifferentTypesOfCharacters,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S14,
         ),
       );
     }
@@ -179,7 +179,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S14,
         ),
       );
     } else if (!state.passwordsMatch) {
@@ -187,7 +187,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).passwordDoesNotMatch,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S14,
         ),
       );
     }

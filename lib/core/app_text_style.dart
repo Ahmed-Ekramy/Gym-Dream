@@ -496,4 +496,12 @@ class AppTextStyle {
       color: AppColor.redBlood,
     ),
   );
+  static final TextStyle redBlood500S14 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 14.0.sp,
+      height: 18 / 14.0.sp,
+      color: AppColor.redBlood,
+    ),
+  );
 }
