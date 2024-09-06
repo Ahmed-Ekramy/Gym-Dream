@@ -5,8 +5,8 @@ import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import 'package:gym_dream/features/admin/home/presentation/widgets/admin_users_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_text_and_icon_botton.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/recently_member_images.dart';
 
 class AdminRecentlyScanned extends StatelessWidget {
   const AdminRecentlyScanned({
@@ -22,7 +22,7 @@ class AdminRecentlyScanned extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         children: [
-          AdminUsersImages(
+          RecentlyMemberImages(
             title: 'Recently scanned',
             imageList: imageList,
           ),

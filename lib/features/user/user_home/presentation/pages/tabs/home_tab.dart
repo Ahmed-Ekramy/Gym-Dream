@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
-import 'package:gym_dream/common/routes/route.dart';
+
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../../../../../core/app_text_style.dart';
