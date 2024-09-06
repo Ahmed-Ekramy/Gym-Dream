@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
+import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
@@ -107,9 +108,14 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const AdminAddMemberView(),
         );
-           case Routes.exerciseDetails:
+      case Routes.exerciseDetails:
         return MaterialPageRoute(
           builder: (_) => const ExercisesDetails(),
+        );
+
+      case Routes.ourMemberView:
+        return MaterialPageRoute(
+          builder: (_) => const OurMemberView(),
         );
 
       default:
