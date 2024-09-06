@@ -27,4 +27,6 @@ class Routes {
 
   static const String adminConfirmUser = '/adminConfirmUser';
   static const String exerciseDetails = '/exerciseDetails';
+
+  static const String ourMemberView = '/ourMemberView';
 }
