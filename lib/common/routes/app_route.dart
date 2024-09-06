@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
@@ -106,7 +107,10 @@ class AppRoute {
         );
       case Routes.adminAddMemberView:
         return MaterialPageRoute(
-          builder: (_) => const AdminAddMemberView(),
+          builder: (_) => BlocProvider(
+            create: (context) => AddMemberCubit(),
+            child: const AdminAddMemberView(),
+          ),
         );
       case Routes.exerciseDetails:
         return MaterialPageRoute(
