@@ -5,6 +5,8 @@ import 'package:gym_dream/features/admin/add_member/presentation/manager/add_mem
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
+import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
+import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
@@ -120,6 +122,14 @@ class AppRoute {
       case Routes.ourMemberView:
         return MaterialPageRoute(
           builder: (_) => const OurMemberView(),
+        );
+      case Routes.adminSearchView:
+        return MaterialPageRoute(
+          builder: (_) => const AdminSearchView(),
+        );
+      case Routes.adminSearchResultView:
+        return MaterialPageRoute(
+          builder: (_) => const AdminSearchResultView(),
         );
 
       default:
