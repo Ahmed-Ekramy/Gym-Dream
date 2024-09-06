@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/features/admin/exercise/presentation/pages/admin_exercise_view.dart';
 import 'package:gym_dream/features/admin/history/presentation/pages/admin_history_view.dart';
 import 'package:gym_dream/features/admin/home/presentation/pages/admin_home_view.dart';
 import 'package:gym_dream/features/admin/layout/data/models/change_index_params.dart';
@@ -28,7 +29,7 @@ class LayoutRepoImpl extends LayOutRepo {
     return const <Widget>[
       AdminHomeView(),
       AdminHistoryView(),
-      AdminHomeView(),
+      AdminExerciseView(),
     ];
   }
 
