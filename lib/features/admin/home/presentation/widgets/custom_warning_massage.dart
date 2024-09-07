@@ -22,7 +22,7 @@ class CustomWarningMassage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("warning", style: AppTextStyle.redBlood700S18),
+                  Text("warning", style: AppTextStyle.redBlood500S14),
                   GestureDetector(
                     onTap: () {},
                     child: Container(

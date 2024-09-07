@@ -63,7 +63,8 @@ class AppTextFormFiled extends StatelessWidget {
             suffixIcon: suffixIcon,
             suffixIconColor: const Color.fromARGB(255, 101, 98, 98),
             prefixIcon: prefixIcon,
-            filled: false,
+            filled: filled ?? false,
+            fillColor: fillColor ?? Colors.transparent,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
               borderSide: const BorderSide(

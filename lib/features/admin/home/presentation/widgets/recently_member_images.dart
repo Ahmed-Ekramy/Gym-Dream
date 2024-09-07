@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 
-class AdminUsersImages extends StatelessWidget {
+class RecentlyMemberImages extends StatelessWidget {
   final List<String> imageList;
   final String title;
 
-  const AdminUsersImages(
+  const RecentlyMemberImages(
       {super.key, required this.imageList, required this.title});
 
   @override

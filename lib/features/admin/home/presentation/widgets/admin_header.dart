@@ -38,8 +38,11 @@ class AdminHeader extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
-      actions: const [
-        CardIconBottom(),
+      actions: [
+        Padding(
+          padding: EdgeInsets.only(right: 16.w),
+          child: const CardIconBottom(),
+        ),
       ],
     );
   }

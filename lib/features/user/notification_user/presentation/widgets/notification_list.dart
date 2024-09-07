@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 import 'notification_row_padge.dart';
@@ -23,8 +22,7 @@ class NotificationList extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
             padding: EdgeInsets.all(5.sp),
             height: 130.h,
-            child: Column(
-                children: [
+            child: Column(children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -43,4 +41,3 @@ class NotificationList extends StatelessWidget {
     );
   }
 }
-
