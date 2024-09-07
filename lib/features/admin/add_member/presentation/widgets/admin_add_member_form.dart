@@ -62,7 +62,6 @@ class _AdminAddMemberViewBodyFormState
                 maxLine: 1,
                 validator: (text) {
                   return MyValidatorsHelper.displayNameValidator(context, text);
-                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
