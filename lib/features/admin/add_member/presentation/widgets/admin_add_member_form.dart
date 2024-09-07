@@ -61,7 +61,7 @@ class _AdminAddMemberViewBodyFormState
                 keyboardType: TextInputType.name,
                 maxLine: 1,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -77,7 +77,7 @@ class _AdminAddMemberViewBodyFormState
                 keyboardType: TextInputType.phone,
                 maxLine: 1,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -148,7 +148,7 @@ class _AdminAddMemberViewBodyFormState
                 maxLine: 1,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -159,7 +159,7 @@ class _AdminAddMemberViewBodyFormState
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 validator: (text) {
-                  return MyValidatorsHelper.dateValidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 controller: cubit.birthDateController,
                 hintText: cubit.birthDateController.text.isNotEmpty
@@ -186,7 +186,7 @@ class _AdminAddMemberViewBodyFormState
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 validator: (text) {
-                  return MyValidatorsHelper.dateValidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 controller: cubit.startDateController,
                 hintText: cubit.startDateController.text.isEmpty
@@ -213,7 +213,7 @@ class _AdminAddMemberViewBodyFormState
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 validator: (text) {
-                  return MyValidatorsHelper.dateValidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 controller: cubit.startDateController,
                 hintText: cubit.endDateController.text.isEmpty
@@ -244,7 +244,7 @@ class _AdminAddMemberViewBodyFormState
                 obscureText: false,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 suffixIcon: IconButton(
                   onPressed: () {},
@@ -267,7 +267,7 @@ class _AdminAddMemberViewBodyFormState
                 obscureText: false,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 maxLine: 1,
                 suffixIcon: IconButton(

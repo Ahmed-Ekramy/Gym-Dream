@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/helper/validators_helper.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 import 'package:gym_dream/features/authentication/manager/otp%20cubit/validation_cubit.dart';
 import 'package:gym_dream/features/authentication/manager/password%20visibility%20cubit/password_visibility_cubit.dart';
 import 'package:gym_dream/features/authentication/widgets/custom_text_form_field.dart';
@@ -17,11 +19,8 @@ class AdminLoginView extends StatelessWidget {
 
   void _validateAndNavigate(BuildContext context, GlobalKey<FormState> formKey,
       ValidationCubit validationCubit) {
-    if (formKey.currentState?.validate() ?? false) {
-      AppNavigation.navigateTo(
-        context: context,
-        routeName: Routes.homeAdminLayout,
-      );
+    if (formKey.currentState?.validate() ?? true) {
+      context.read<AuthCubit>().login(isAdmin: true);
     }
   }
 
@@ -57,19 +56,10 @@ class AdminLoginView extends StatelessWidget {
                       title: S.of(context).phoneNumber,
                       inputType: InputType.phoneNumber,
                       validate: (value) {
-                        if (value == null || value.isEmpty) {
-                          return S.of(context).pleaseEnterYourPhoneNumber;
-                        }
-                        if (!(value.startsWith('010') ||
-                            value.startsWith('011') ||
-                            value.startsWith('012') ||
-                            value.startsWith('015'))) {
-                          return S.of(context).phoneNumberMustStartWith01;
-                        }
-                        if (value.length != 11) {
-                          return S.of(context).phoneNumberMustBe11DigitsLong;
-                        }
-                        return null;
+                        return MyValidatorsHelper.phoneValidator(
+                          context,
+                          value,
+                        );
                       },
                     ),
                     SizedBox(height: 22.h),
@@ -79,15 +69,8 @@ class AdminLoginView extends StatelessWidget {
                       title: S.of(context).password,
                       inputType: InputType.password,
                       validate: (value) {
-                        if (value == null || value.isEmpty) {
-                          return S.of(context).pleaseEnterYourPassword;
-                        }
-                        if (value.length < 8) {
-                          return S
-                              .of(context)
-                              .passwordMustBeAtLeast8CharactersLong;
-                        }
-                        return null;
+                        return MyValidatorsHelper.passwordValidator(
+                            context, value);
                       },
                     ),
                     SizedBox(height: 8.h),
