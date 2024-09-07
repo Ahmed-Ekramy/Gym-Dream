@@ -13,7 +13,8 @@ class NotificationAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
+    return
+      SliverAppBar(
         backgroundColor: AppColor.orangeLight,
         title: Text('Notification', style: AppTextStyle.black600S18),
         centerTitle: true,
