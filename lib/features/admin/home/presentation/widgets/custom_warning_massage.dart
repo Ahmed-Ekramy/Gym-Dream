@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 
 class CustomWarningMassage extends StatelessWidget {
   const CustomWarningMassage({
@@ -24,7 +26,11 @@ class CustomWarningMassage extends StatelessWidget {
                 children: [
                   Text("warning", style: AppTextStyle.redBlood500S14),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Future.delayed(Duration.zero, () {
+                        context.read<AuthCubit>().logout();
+                      });
+                    },
                     child: Container(
                       width: 90.w,
                       height: 25.h,

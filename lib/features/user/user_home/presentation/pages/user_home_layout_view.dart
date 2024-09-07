@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
@@ -20,8 +21,7 @@ class UserHomeLayoutView extends StatelessWidget {
       final cubit = HomeUserCubit.get(context);
       return SafeArea(
         child: Scaffold(
-          body:
-          Column(
+          body: Column(
             children: [
               AppBar(
                 automaticallyImplyLeading: false,
@@ -68,36 +68,19 @@ class UserHomeLayoutView extends StatelessWidget {
                   ],
                 ),
                 actions: [
-                  InkWell(
+                  GestureDetector(
                     onTap: () {
-                      AppNavigation.navigateTo(
-                          context: context, routeName: '/userNotification');
+                      Future.delayed(Duration.zero, () {
+                        context.read<AuthCubit>().logout();
+                      });
                     },
-                    child: Badge(
-                      backgroundColor: AppColor.primary,
-                      label: const Text('6'),
-                      padding: EdgeInsets.all(1.r),
-                      alignment: Alignment.topCenter,
-                      offset: const Offset(10, -1),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColor.white,
-                          border: Border.all(
-                            color: AppColor.orangeOpacity40,
-                            width: 2.0.w,
-                          ),
-                        ),
-                        child: SvgPicture.asset(
-                          AppAsset.bell,
-                          color: AppColor.secondary,
-                          width: 24.w,
-                          height: 24.h,
-                        ),
-                      ),
+                    child: SvgPicture.asset(
+                      AppAsset.bell,
+                      color: AppColor.secondary,
+                      width: 24.w,
+                      height: 24.h,
                     ),
                   ),
-                  SizedBox(width: 10.w),
                 ],
               ),
               Expanded(
@@ -110,8 +93,8 @@ class UserHomeLayoutView extends StatelessWidget {
             type: BottomNavigationBarType.fixed,
             selectedItemColor: AppColor.primary,
             unselectedItemColor: AppColor.grey,
-            selectedLabelStyle: AppTextStyle.orange700S16.copyWith(
-                fontSize: 10.sp),
+            selectedLabelStyle:
+                AppTextStyle.orange700S16.copyWith(fontSize: 10.sp),
             onTap: (value) {
               cubit.changeIndex(value);
             },

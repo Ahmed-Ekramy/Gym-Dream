@@ -1,5 +1,10 @@
+import 'package:flutter/material.dart';
+
+import '../../generated/l10n.dart';
+
 class MyValidatorsHelper {
-  static String? displayNamevalidator(String? displayName) {
+  static String? displayNameValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
       return 'Display name cannot be empty';
     }
@@ -9,9 +14,10 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? displayProductNamevalidator(String? displayName) {
+  static String? displayProductNameValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
-      return 'Display Porduct name cannot be empty';
+      return 'Display Product name cannot be empty';
     }
     if (displayName.length < 3 || displayName.length > 20) {
       return 'Display Product name must be between 3 and 20 characters';
@@ -19,9 +25,10 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? displayProductPricevalidator(String? displayName) {
+  static String? displayProductPriceValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
-      return 'Display Porduct Price cannot be empty';
+      return 'Display Product Price cannot be empty';
     }
     if (displayName.isEmpty || displayName.length > 5) {
       return 'Display Product price must be between 1 and 5 characters';
@@ -29,17 +36,18 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? displayProductDescribtionevalidator(String? displayName) {
+  static String? displayProductDescriptionValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
-      return 'Display Porduct Description cannot be empty';
+      return 'Display Product Description cannot be empty';
     }
-
     return null;
   }
 
-  static String? displayProductTagsvalidator(String? displayName) {
+  static String? displayProductTagsValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
-      return 'Display Porduct Tags cannot be empty';
+      return 'Display Product Tags cannot be empty';
     }
     if (displayName.length < 5) {
       return 'Display Product Tags must be at least 5 characters long';
@@ -47,17 +55,18 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? displayProductSallervalidator(String? displayName) {
+  static String? displayProductSellerValidator(
+      BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
-      return 'Display Porduct Saller cannot be empty';
+      return 'Display Product Seller cannot be empty';
     }
     if (displayName.length < 3 || displayName.length > 20) {
-      return 'Display Product Saller must be between 3 and 20 characters';
+      return 'Display Product Seller must be between 3 and 20 characters';
     }
     return null;
   }
 
-  static String? emailValidator(String? value) {
+  static String? emailValidator(BuildContext context, String? value) {
     if (value!.isEmpty) {
       return 'Please enter an email';
     }
@@ -68,7 +77,17 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? passwordValidator(String? value) {
+  static String? passwordValidator(BuildContext context, String? value) {
+    if (value == null || value.isEmpty) {
+      return S.of(context).pleaseEnterYourPassword;
+    }
+    if (value.length < 8) {
+      return S.of(context).passwordMustBeAtLeast8CharactersLong;
+    }
+    return null;
+  }
+
+  static String? loginPasswordValidator(BuildContext context, String? value) {
     if (value!.isEmpty) {
       return 'Please enter a password';
     }
@@ -78,15 +97,7 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? dateValidator(String? value) {
-    if (value!.isEmpty) {
-      return 'Please enter an date';
-    }
-
-    return null;
-  }
-
-  static String? cityValidator(String? value) {
+  static String? cityValidator(BuildContext context, String? value) {
     if (value!.isEmpty) {
       return 'Please enter a City name';
     }
@@ -96,17 +107,24 @@ class MyValidatorsHelper {
     return null;
   }
 
-  static String? phoneValidator(String? value) {
-    if (value!.isEmpty) {
-      return 'Please enter a phone number';
+  static String? phoneValidator(BuildContext context, String? value) {
+    if (value == null || value.isEmpty) {
+      return S.of(context).pleaseEnterYourPhoneNumber;
     }
-    if (value.length < 6) {
-      return 'phone number must be at least 6 numbers';
+    if (!(value.startsWith('010') ||
+        value.startsWith('011') ||
+        value.startsWith('012') ||
+        value.startsWith('015'))) {
+      return S.of(context).phoneNumberMustStartWith01;
+    }
+    if (value.length != 11) {
+      return S.of(context).phoneNumberMustBe11DigitsLong;
     }
     return null;
   }
 
-  static String? repeatPasswordValidator({String? value, String? password}) {
+  static String? repeatPasswordValidator(BuildContext context,
+      {String? value, String? password}) {
     if (value != password) {
       return 'Passwords do not match';
     }
