@@ -129,27 +129,6 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const ExercisesDetails(),
         );
-      case Routes.userProfile:
-        return MaterialPageRoute(
-          builder: (_) => const UserProfileView(),
-        );
-      case Routes.userNotification:
-        return MaterialPageRoute(
-          builder: (_) => const NotificationUserView(),
-        );
-
-      case Routes.ourMemberView:
-        return MaterialPageRoute(
-          builder: (_) => const OurMemberView(),
-        );
-      case Routes.adminSearchView:
-        return MaterialPageRoute(
-          builder: (_) => const AdminSearchView(),
-        );
-      case Routes.adminSearchResultView:
-        return MaterialPageRoute(
-          builder: (_) => const AdminSearchResultView(),
-        );
 
       default:
         return MaterialPageRoute(

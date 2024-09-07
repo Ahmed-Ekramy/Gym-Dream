@@ -27,11 +27,4 @@ class Routes {
 
   static const String adminConfirmUser = '/adminConfirmUser';
   static const String exerciseDetails = '/exerciseDetails';
-  static const String userProfile = '/userProfile';
-  static const String userNotification = '/userNotification';
-  static const String ourMemberView = '/ourMemberView';
-
-  static const String adminSearchView = '/adminSearchView';
-
-  static const String adminSearchResultView = '/adminSearchResultView';
 }
