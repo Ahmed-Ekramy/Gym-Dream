@@ -5,38 +5,48 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_personal_information_and_capacity.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/card_icon_bottom.dart';
 
-class AdminHeader extends StatelessWidget {
-  const AdminHeader({super.key});
+class AdminHeader extends StatelessWidget implements PreferredSizeWidget {
+  final double toolbarHeight;
+
+  const AdminHeader({
+    super.key,
+    this.toolbarHeight = 90.0, // Default height if not provided
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: AppColor.primaryLight,
+    return AppBar(
+      automaticallyImplyLeading: false,
+      toolbarHeight: toolbarHeight.h,
+      backgroundColor: AppColor.primaryLight,
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20.r),
-          bottomRight: Radius.circular(20.r),
+          bottomLeft: Radius.circular(20),
+          bottomRight: Radius.circular(20),
         ),
       ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30.h)
-            .copyWith(bottom: 16.h),
-        child: Row(
-          children: [
-            CircleAvatar(
-              radius: 26.r,
-              backgroundImage: const AssetImage(
-                AppAsset.boy,
-              ),
-            ),
-            SizedBox(width: 11.w),
-            const AdminPersonalInformationAndCapacity(),
-            const Spacer(),
-            const CardIconBottom(),
-          ],
-        ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            radius: 30.r,
+            backgroundImage: const AssetImage(AppAsset.boy),
+          ),
+          SizedBox(width: 5.w),
+          const Expanded(
+            child: AdminPersonalInformationAndCapacity(),
+          ),
+        ],
       ),
+      actions: [
+        Padding(
+          padding: EdgeInsets.only(right: 16.w),
+          child: const CardIconBottom(),
+        ),
+      ],
     );
   }
+
+  @override
+  Size get preferredSize => Size.fromHeight(toolbarHeight.h);
 }

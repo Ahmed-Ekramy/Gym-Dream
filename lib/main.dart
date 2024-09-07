@@ -11,4 +11,12 @@ void main() async {
   ServiceLocator().setUpServiceLocator();
   Bloc.observer = MyBlocObserver();
   runApp(const UserAppGym());
+
+  // For device preview mode
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (_) => const UserAppGym(),
+  //   ),
+  // );
 }

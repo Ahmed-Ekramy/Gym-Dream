@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 
 import '../../../../../core/app_asset.dart';
@@ -35,10 +36,16 @@ class UserHomeLayoutView extends StatelessWidget {
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CircleAvatar(
-                      radius: 30.r,
-                      backgroundImage: const AssetImage(
-                        AppAsset.boy,
+                    InkWell(
+                      onTap: () {
+                        AppNavigation.navigateTo(
+                            context: context, routeName: '/userProfile');
+                      },
+                      child: CircleAvatar(
+                        radius: 30.r,
+                        backgroundImage: const AssetImage(
+                          AppAsset.boy,
+                        ),
                       ),
                     ),
                     SizedBox(width: 5.w),

@@ -38,6 +38,12 @@ class AppAsset {
   static const calendar = "assets/svg/calendar.svg";
 
   static const camera = "assets/svg/camera.svg";
+  static const gymImage = "assets/images/User-img.png";
+  static const eosIcons = "assets/images/eos-icons_admin-outlined.png";
 
   static const arrowCircleRight = "assets/svg/arrow-circle-right.svg";
+  static const imageExerciseDetails =
+      "assets/images/image exercise details.png";
+  static const search = "assets/svg/search.svg";
+  static const arrowdown = "assets/svg/arrowdown.svg";
 }

@@ -41,7 +41,7 @@ class CustomWarningMassage extends StatelessWidget {
                       child: Center(
                         child: Text(
                           "Send to all",
-                          style: AppTextStyle.redBlood500S14.copyWith(
+                          style: AppTextStyle.redBlood700S18.copyWith(
                             fontSize: 10.sp,
                           ),
                         ),

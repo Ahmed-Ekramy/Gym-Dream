@@ -15,6 +15,7 @@ class AppColor {
   static const Color blueSlate = Color(0xFF61788A);
   static const Color bluePale = Color(0xFFE8EBF2);
   static const Color grey = Color(0xFFC5C5C5);
+  static const Color grayLight  = Color.fromRGBO(237, 238, 240, 1);
   static const Color grayLightOpacity40 = Color.fromRGBO(164, 164, 164, 0.4);
   static const Color white = Color(0xFFFFFFFF);
   static const Color blue = Color(0xFF56B6DC);

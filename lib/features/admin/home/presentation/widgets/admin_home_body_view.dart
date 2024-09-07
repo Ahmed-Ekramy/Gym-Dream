@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_add_new_user_and_send_invite.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_gym_data.dart';
-import 'package:gym_dream/features/admin/home/presentation/widgets/admin_header.dart';
-import 'package:gym_dream/features/admin/home/presentation/widgets/admin_users_images.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/our_member_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_recently_scanned.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_warning_massage.dart';
 
@@ -35,7 +36,7 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const AdminHeader(),
+          // const AdminHeader(),
           const CustomWarningMassage(),
           SizedBox(height: 16.h),
           AdminRecentlyScanned(imageList: imageList),
@@ -44,9 +45,13 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
           SizedBox(height: 8.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: AdminUsersImages(
+            child: OurMemberImages(
+              onTap: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.ourMemberView);
+              },
               imageList: imageList,
-              title: 'New Members',
+              title: 'Our Members',
             ),
           ),
           SizedBox(height: 16.h),
