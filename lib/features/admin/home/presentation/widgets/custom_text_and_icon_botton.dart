@@ -26,6 +26,7 @@ class BottomTextAndIconButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 4.w),
           height: heigh ?? 40.h,
           decoration: BoxDecoration(
             color: backGroundcolor ?? AppColor.primary,
