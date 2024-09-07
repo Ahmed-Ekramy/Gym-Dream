@@ -10,6 +10,7 @@ import 'package:gym_dream/features/admin/our_member/presentation/pages/our_membe
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
+import 'package:gym_dream/features/admin/user_profile/presentation/pages/user_data_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
 import 'package:gym_dream/features/authentication/admin/pages/forgot_password_for_admin.dart';
@@ -22,13 +23,13 @@ import 'package:gym_dream/features/authentication/trainee/pages/otp_view_for_tra
 import 'package:gym_dream/features/authentication/trainee/pages/password_changed_successfully_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_view.dart';
 import 'package:gym_dream/features/user/exercieses_details/presentation/page/exercieses_details.dart';
+import 'package:gym_dream/features/user/notification_user/presentation/pages/notification_user_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
 import '../../features/user/User_profile/presentation/pages/user_profile_view.dart';
-import '../../features/user/notification_user/presentation/pages/notification_user_view.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
@@ -145,17 +146,13 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const AdminSearchView(),
         );
-      case Routes.packageDetailsView:
-        return MaterialPageRoute(
-          builder: (_) => const PackageDetailsView(),
-        );
-      case Routes.adminConfirmUser:
-        return MaterialPageRoute(
-          builder: (_) => const AdminConfirmUser(),
-        );
       case Routes.adminSearchResultView:
         return MaterialPageRoute(
           builder: (_) => const AdminSearchResultView(),
+        );
+      case Routes.userDataView:
+        return MaterialPageRoute(
+          builder: (_) => const UserDataView(),
         );
 
       default:

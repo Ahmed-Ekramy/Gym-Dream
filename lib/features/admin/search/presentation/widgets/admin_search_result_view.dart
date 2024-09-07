@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -40,12 +42,18 @@ class AdminSearchResultView extends StatelessWidget {
             child: ListView.builder(
               itemCount: 20,
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(top: 4),
-                  child: GymMemberListViewItem(
-                    id: '101230',
-                    image: AppAsset.boy,
-                    name: 'Shady Mohamed Steha',
+                return Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: GestureDetector(
+                    onTap: () {
+                      AppNavigation.navigateTo(
+                          context: context, routeName: Routes.userDataView);
+                    },
+                    child: const GymMemberListViewItem(
+                      id: '101230',
+                      image: AppAsset.boy,
+                      name: 'Shady Mohamed Steha',
+                    ),
                   ),
                 );
               },
