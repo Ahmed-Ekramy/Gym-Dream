@@ -59,7 +59,7 @@ class AppTextFormFiled extends StatelessWidget {
               bottom: 16.h,
               start: 18.w,
             ),
-            errorStyle: AppTextStyle.redBlood700S18,
+            errorStyle: AppTextStyle.redBlood500S10,
             suffixIcon: suffixIcon,
             suffixIconColor: const Color.fromARGB(255, 101, 98, 98),
             prefixIcon: prefixIcon,

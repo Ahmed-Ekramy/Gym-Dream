@@ -13,7 +13,8 @@ class ContainerHistorySchedule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return
+      SliverToBoxAdapter(
       child: Container(
           width: double.infinity,
           height: 25.h,

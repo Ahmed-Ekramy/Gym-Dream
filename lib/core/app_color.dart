@@ -5,7 +5,7 @@ class AppColor {
   static const Color primaryLight = Color(0xFFF8F2EA);
 
   static const Color primaryLightThan = Color(0xffFCFAF7);
-  static const Color orangeLight = Color(0xFFFFEEDA);
+  static const Color orangeLight = Color(0xFFF8F2EA);
   static const Color orangeOpacity40 = Color.fromRGBO(254, 140, 7, 0.4);
   static const Color secondary = Color(0xFF000000);
   static const Color blackOpacity4 = Color(0x66000000);
