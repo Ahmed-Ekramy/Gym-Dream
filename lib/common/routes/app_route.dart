@@ -134,9 +134,11 @@ class AppRoute {
           builder: (_) => const UserProfileView(),
         );
       case Routes.userNotification:
+  case Routes.userProfile:
         return MaterialPageRoute(
-          builder: (_) => const NotificationUserView(),
+          builder: (_) => const UserProfileView(),
         );
+
 
       case Routes.ourMemberView:
         return MaterialPageRoute(
