@@ -36,10 +36,16 @@ class UserHomeLayoutView extends StatelessWidget {
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CircleAvatar(
-                      radius: 30.r,
-                      backgroundImage: const AssetImage(
-                        AppAsset.boy,
+                    InkWell(
+                      onTap: () {
+                        AppNavigation.navigateTo(
+                            context: context, routeName: '/userProfile');
+                      },
+                      child: CircleAvatar(
+                        radius: 30.r,
+                        backgroundImage: const AssetImage(
+                          AppAsset.boy,
+                        ),
                       ),
                     ),
                     SizedBox(width: 5.w),
@@ -65,7 +71,7 @@ class UserHomeLayoutView extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       AppNavigation.navigateTo(
-                          context: context, routeName: '/notificationUserView');
+                          context: context, routeName: '/userNotification');
                     },
                     child: Badge(
                       backgroundColor: AppColor.primary,

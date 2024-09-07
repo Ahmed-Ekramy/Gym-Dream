@@ -25,6 +25,8 @@ import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_l
 import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import '../../features/user/User_profile/presentation/pages/user_profile_view.dart';
+import '../../features/user/notification_user/presentation/pages/notification_user_view.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 
 class AppRoute {
@@ -117,6 +119,14 @@ class AppRoute {
       case Routes.exerciseDetails:
         return MaterialPageRoute(
           builder: (_) => const ExercisesDetails(),
+        );
+  case Routes.userProfile:
+        return MaterialPageRoute(
+          builder: (_) => const UserProfileView(),
+        );
+case Routes.userNotification:
+        return MaterialPageRoute(
+          builder: (_) => const NotificationUserView(),
         );
 
       case Routes.ourMemberView:

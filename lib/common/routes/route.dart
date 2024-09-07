@@ -27,10 +27,15 @@ class Routes {
 
   static const String adminConfirmUser = '/adminConfirmUser';
   static const String exerciseDetails = '/exerciseDetails';
+<<<<<<< HEAD
 
   static const String ourMemberView = '/ourMemberView';
 
   static const String adminSearchView = '/adminSearchView';
 
   static const String adminSearchResultView = '/adminSearchResultView';
+=======
+  static const String userProfile = '/userProfile';
+  static const String userNotification = '/userNotification';
+>>>>>>> c14043d (profile screen)
 }
