@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_confirm_user.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/pages/package_details_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
@@ -104,7 +106,14 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const OurBranchesView(),
         );
-
+      case Routes.packageDetailsView:
+        return MaterialPageRoute(
+          builder: (_) => const PackageDetailsView(),
+        );
+      case Routes.adminConfirmUser:
+        return MaterialPageRoute(
+          builder: (_) => const AdminConfirmUser(),
+        );
       case Routes.adminTrustedUserView:
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),
@@ -120,11 +129,11 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const ExercisesDetails(),
         );
-  case Routes.userProfile:
+      case Routes.userProfile:
         return MaterialPageRoute(
           builder: (_) => const UserProfileView(),
         );
-case Routes.userNotification:
+      case Routes.userNotification:
         return MaterialPageRoute(
           builder: (_) => const NotificationUserView(),
         );
