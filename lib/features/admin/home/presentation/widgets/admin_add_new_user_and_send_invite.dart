@@ -43,9 +43,7 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: 50.w,
-            ),
+            SizedBox(width: 40.w),
             Expanded(
               child: BottomTextAndIconButton(
                 onTap: () {
@@ -59,7 +57,8 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
                 ),
                 backGroundcolor: const Color(0xffF5EDE5),
               ),
-            )
+            ),
+            SizedBox(width: 10.w),
           ],
         ),
       ),

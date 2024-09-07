@@ -68,7 +68,7 @@ class CustomTextFormField extends StatelessWidget {
                     ]
                   : null,
               decoration: InputDecoration(
-                errorStyle: AppTextStyle.redBlood500S14,
+                errorStyle: AppTextStyle.redBlood700S18,
                 prefixIconConstraints: BoxConstraints(
                   minWidth: 25.h,
                   minHeight: 25.h,
