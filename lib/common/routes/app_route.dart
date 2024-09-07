@@ -23,6 +23,7 @@ import 'package:gym_dream/features/authentication/trainee/pages/otp_view_for_tra
 import 'package:gym_dream/features/authentication/trainee/pages/password_changed_successfully_view_for_trainee.dart';
 import 'package:gym_dream/features/authentication/trainee/pages/trainee_login_view.dart';
 import 'package:gym_dream/features/user/exercieses_details/presentation/page/exercieses_details.dart';
+import 'package:gym_dream/features/user/notification_user/presentation/pages/notification_user_view.dart';
 import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:gym_dream/features/user/user_home/presentation/pages/user_home_layout_view.dart';
 import 'package:gym_dream/service_locator.dart';
@@ -134,6 +135,9 @@ class AppRoute {
           builder: (_) => const UserProfileView(),
         );
       case Routes.userNotification:
+        return MaterialPageRoute(
+          builder: (_) => const NotificationUserView(),
+        );
       case Routes.ourMemberView:
         return MaterialPageRoute(
           builder: (_) => const OurMemberView(),
