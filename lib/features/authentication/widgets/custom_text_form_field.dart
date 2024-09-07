@@ -28,6 +28,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.onTap,
     this.validate,
+    this.focusNode,
   });
 
   final String hint;
@@ -39,6 +40,7 @@ class CustomTextFormField extends StatelessWidget {
   final InputType inputType;
   final void Function()? onTap;
   final String? Function(String?)? validate;
+  final FocusNode? focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +55,7 @@ class CustomTextFormField extends StatelessWidget {
         BlocBuilder<PasswordVisibilityCubit, bool>(
           builder: (context, isPasswordVisible) {
             return TextFormField(
+              focusNode: focusNode,
               onTap: onTap,
               cursorColor: AppColor.primary,
               readOnly: readOnly,
@@ -68,7 +71,7 @@ class CustomTextFormField extends StatelessWidget {
                     ]
                   : null,
               decoration: InputDecoration(
-                errorStyle: AppTextStyle.redBlood500S14,
+                errorStyle: AppTextStyle.redBlood500S10,
                 prefixIconConstraints: BoxConstraints(
                   minWidth: 25.h,
                   minHeight: 25.h,
@@ -122,29 +125,7 @@ class CustomTextFormField extends StatelessWidget {
                       )
                     : null,
               ),
-
               validator: validate,
-              // (value) {
-              //   if (inputType == InputType.phoneNumber) {
-              //     if (value == null || value.isEmpty) {
-              //       return S.of(context).pleaseEnterYourPhoneNumber;
-              //     }
-              //     if (!value.startsWith('01')) {
-              //       return S.of(context).phoneNumberMustStartWith01;
-              //     }
-              //     if (value.length != 11) {
-              //       return S.of(context).phoneNumberMustBe11DigitsLong;
-              //     }
-              //   } else if (inputType == InputType.password) {
-              //     if (value == null || value.isEmpty) {
-              //       return S.of(context).pleaseEnterYourPassword;
-              //     }
-              //     if (value.length < 8) {
-              //       return S.of(context).passwordMustBeAtLeast8CharactersLong;
-              //     }
-              //   }
-              //   return null;
-              // },
               onChanged: onChanged,
             );
           },
@@ -171,9 +152,9 @@ class CustomTextFormField extends StatelessWidget {
         isPasswordVisible;
   }
 
-  bool _isStrongPassword(String value) {
-    final regex =
-        RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#\$&*~]).{8,}$');
-    return regex.hasMatch(value);
-  }
+  // bool _isStrongPassword(String value) {
+  //   final regex =
+  //       RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#\$&*~]).{8,}$');
+  //   return regex.hasMatch(value);
+  // }
 }

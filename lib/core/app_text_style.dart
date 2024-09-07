@@ -442,7 +442,7 @@ class AppTextStyle {
     textStyle: TextStyle(
       fontWeight: FontWeight.w400,
       fontSize: 12.0.sp,
-      height: 15/ 12.0.sp,
+      height: 15 / 12.0.sp,
       color: AppColor.blueNavy,
     ),
   );
@@ -492,6 +492,14 @@ class AppTextStyle {
     textStyle: TextStyle(
       fontWeight: FontWeight.w500,
       fontSize: 14.0.sp,
+      height: 21 / 14.0.sp,
+      color: AppColor.redBlood,
+    ),
+  );
+  static final TextStyle redBlood500S10 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 10.0.sp,
       height: 21 / 14.0.sp,
       color: AppColor.redBlood,
     ),

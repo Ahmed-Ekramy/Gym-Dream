@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/helper/validators_helper.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
@@ -72,19 +73,8 @@ class ForgotPasswordForTrainee extends StatelessWidget {
                       title: S.of(context).phoneNumber,
                       inputType: InputType.phoneNumber,
                       validate: (value) {
-                        if (value == null || value.isEmpty) {
-                          return S.of(context).pleaseEnterYourPhoneNumber;
-                        }
-                        if (!(value.startsWith('010') ||
-                            value.startsWith('011') ||
-                            value.startsWith('012') ||
-                            value.startsWith('015'))) {
-                          return S.of(context).phoneNumberMustStartWith01;
-                        }
-                        if (value.length != 11) {
-                          return S.of(context).phoneNumberMustBe11DigitsLong;
-                        }
-                        return null;
+                        return MyValidatorsHelper.phoneValidator(
+                            context, value);
                       },
                     ),
                     const Spacer(),
