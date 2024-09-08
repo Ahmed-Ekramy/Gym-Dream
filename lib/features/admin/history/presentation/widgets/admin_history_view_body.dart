@@ -12,7 +12,6 @@ class AdminHistoryViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(slivers: [
       const CustomAppBarHistory(),
-      SliverToBoxAdapter(child: SizedBox(height: 8.h)),
       const CustomTextRich(),
       SliverToBoxAdapter(child: SizedBox(height: 8.h)),
       const CustomContainerScheduleAdmin(),

@@ -23,14 +23,13 @@ class DaysLeftItem extends StatelessWidget {
             color: AppColor.primaryLight,
             borderRadius: BorderRadius.circular(12.r),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
+          child: Center(
+            child: FittedBox(
+              child: Text(
                 value,
                 style: AppTextStyle.black700S18.copyWith(fontSize: 16.sp),
               ),
-            ],
+            ),
           ),
         ),
         SizedBox(height: 8.h),
