@@ -16,11 +16,11 @@ class DreamGymText extends StatelessWidget {
         children: [
           Text(
             '${S.of(context).dream} ',
-            style: AppTextStyle.black600S48,
+            style: AppTextStyle.black600S42,
           ),
           Text(
             S.of(context).gym,
-            style: AppTextStyle.orange600S48,
+            style: AppTextStyle.orange600S42,
           ),
         ],
       ),
