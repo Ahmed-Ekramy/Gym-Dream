@@ -20,7 +20,7 @@ class AdminSearchViewBody extends StatelessWidget {
           children: [
             AppTextFormFiled(
               filled: true,
-              fillColor: const Color(0xffF0F2F5),
+              fillColor: AppColor.grayLight,
               hintText: 'Nmae',
               obscureText: false,
               suffixIcon: IconButton(
@@ -35,7 +35,7 @@ class AdminSearchViewBody extends StatelessWidget {
             ),
             AppTextFormFiled(
               filled: true,
-              fillColor: const Color(0xffF0F2F5),
+              fillColor: AppColor.grayLight,
               hintText: 'Id',
               obscureText: false,
               suffixIcon: IconButton(
@@ -50,7 +50,7 @@ class AdminSearchViewBody extends StatelessWidget {
             ),
             AppTextFormFiled(
               filled: true,
-              fillColor: const Color(0xffF0F2F5),
+              fillColor: AppColor.grayLight,
               hintText: 'Package',
               obscureText: false,
               suffixIcon: IconButton(
@@ -65,7 +65,7 @@ class AdminSearchViewBody extends StatelessWidget {
             ),
             AppTextFormFiled(
               filled: true,
-              fillColor: const Color(0xffF0F2F5),
+              fillColor: AppColor.grayLight,
               hintText: 'Gender',
               obscureText: false,
               suffixIcon: IconButton(
@@ -80,7 +80,7 @@ class AdminSearchViewBody extends StatelessWidget {
             ),
             AppTextFormFiled(
               filled: true,
-              fillColor: const Color(0xffF0F2F5),
+              fillColor: AppColor.grayLight,
               hintText: 'Phone number',
               obscureText: false,
               suffixIcon: IconButton(

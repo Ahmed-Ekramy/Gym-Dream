@@ -10,6 +10,7 @@ import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
+import 'package:gym_dream/features/admin/setting/presentation/widgets/admin_setting_view_body.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/specific_user_history.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/user_data_view.dart';
@@ -143,6 +144,10 @@ class AppRoute {
       case Routes.userNotification:
         return MaterialPageRoute(
           builder: (_) => const NotificationUserView(),
+        );
+      case Routes.languageSelectionScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LanguageSelectionScreen(),
         );
       case Routes.ourMemberView:
         return MaterialPageRoute(
