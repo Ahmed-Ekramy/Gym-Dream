@@ -21,6 +21,8 @@ class AdminLoginView extends StatelessWidget {
       ValidationCubit validationCubit) {
     if (formKey.currentState?.validate() ?? true) {
       context.read<AuthCubit>().login(isAdmin: true);
+      AppNavigation.navigateTo(
+          context: context, routeName: Routes.homeAdminLayout);
     }
   }
 

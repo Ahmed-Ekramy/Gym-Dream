@@ -37,6 +37,8 @@ class AppAsset {
   static const check = "assets/svg/check.svg";
   static const calendar = "assets/svg/calendar.svg";
 
+  static const setting = "assets/svg/setting.svg";
+
   static const camera = "assets/svg/camera.svg";
   static const gymImage = "assets/images/User-img.png";
   static const eosIcons = "assets/images/eos-icons_admin-outlined.png";
