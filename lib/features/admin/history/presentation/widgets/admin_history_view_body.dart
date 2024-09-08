@@ -10,22 +10,13 @@ class AdminHistoryViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: CustomScrollView(slivers: [
-        const CustomAppBarHistory(),
-        SliverToBoxAdapter(child: SizedBox(height: 8.h)),
-        const CustomTextRich(),
-        SliverToBoxAdapter(child: SizedBox(height: 8.h)),
-        const CustomContainerScheduleAdmin(),
-        const RecentScannerDate(),
-      ]),
-    );
+    return CustomScrollView(slivers: [
+      const CustomAppBarHistory(),
+      SliverToBoxAdapter(child: SizedBox(height: 8.h)),
+      const CustomTextRich(),
+      SliverToBoxAdapter(child: SizedBox(height: 8.h)),
+      const CustomContainerScheduleAdmin(),
+      const RecentScannerDate(),
+    ]);
   }
 }
-
-
-
-
-
-
-
