@@ -68,19 +68,36 @@ class UserHomeLayoutView extends StatelessWidget {
                   ],
                 ),
                 actions: [
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
-                      Future.delayed(Duration.zero, () {
-                        context.read<AuthCubit>().logout();
-                      });
+                      AppNavigation.navigateTo(
+                          context: context, routeName: '/userNotification');
                     },
-                    child: SvgPicture.asset(
-                      AppAsset.bell,
-                      color: AppColor.secondary,
-                      width: 24.w,
-                      height: 24.h,
+                    child: Badge(
+                      backgroundColor: AppColor.primary,
+                      label: const Text('6'),
+                      padding: EdgeInsets.all(1.r),
+                      alignment: Alignment.topCenter,
+                      offset: const Offset(10, -1),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.white,
+                          border: Border.all(
+                            color: AppColor.orangeOpacity40,
+                            width: 2.0.w,
+                          ),
+                        ),
+                        child: SvgPicture.asset(
+                          AppAsset.bell,
+                          color: AppColor.secondary,
+                          width: 24.w,
+                          height: 24.h,
+                        ),
+                      ),
                     ),
                   ),
+                  SizedBox(width: 10.w),
                 ],
               ),
               Expanded(
