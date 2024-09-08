@@ -10,6 +10,7 @@ import 'package:gym_dream/features/admin/home/presentation/pages/admin_home_view
 import 'package:gym_dream/features/admin/layout/data/models/change_index_params.dart';
 import 'package:gym_dream/features/admin/layout/data/repositories/layout_repo.dart';
 import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import 'package:gym_dream/features/admin/setting/presentation/view/admin_setting_view.dart';
 
 class LayoutRepoImpl extends LayOutRepo {
   LayoutRepoImpl();
@@ -30,6 +31,7 @@ class LayoutRepoImpl extends LayOutRepo {
       AdminHomeView(),
       AdminHistoryView(),
       AdminExerciseView(),
+      AdminSettingView(),
     ];
   }
 
@@ -77,6 +79,20 @@ class LayoutRepoImpl extends LayOutRepo {
             ),
           ),
           label: 'Exercises',
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            AppAsset.setting,
+            width: 24.w,
+            height: 24.h,
+            colorFilter: ColorFilter.mode(
+              BlocProvider.of<LayoutCubit>(context).currentIndex == 2
+                  ? AppColor.primary
+                  : AppColor.grey,
+              BlendMode.srcIn,
+            ),
+          ),
+          label: 'settings',
         ),
       ];
 }
