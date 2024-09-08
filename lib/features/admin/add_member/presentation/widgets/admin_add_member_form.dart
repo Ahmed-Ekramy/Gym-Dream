@@ -77,9 +77,7 @@ class _AdminAddMemberViewBodyFormState
                 keyboardType: TextInputType.phone,
                 maxLine: 1,
                 validator: (text) {
-                  return null;
-
-                  // return MyValidatorsHelper.displayNamevalidator(text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -150,7 +148,7 @@ class _AdminAddMemberViewBodyFormState
                 maxLine: 1,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.phoneValidator(context, text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -252,7 +250,7 @@ class _AdminAddMemberViewBodyFormState
                 obscureText: false,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.passwordValidator(context, text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 suffixIcon: IconButton(
                   onPressed: () {},
@@ -275,7 +273,7 @@ class _AdminAddMemberViewBodyFormState
                 obscureText: false,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.passwordValidator(context, text);
+                  return MyValidatorsHelper.displayNameValidator(context, text);
                 },
                 maxLine: 1,
                 suffixIcon: IconButton(

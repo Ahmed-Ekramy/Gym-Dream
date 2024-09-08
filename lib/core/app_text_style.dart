@@ -5,11 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_color.dart';
 
 class AppTextStyle {
-  static final TextStyle black600S48 = GoogleFonts.readexPro(
+  static final TextStyle black600S42 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
-      fontSize: 48.0.sp,
-      height: 72.0 / 48.0.sp,
+      fontSize: 42.0.sp,
       color: AppColor.secondary,
     ),
   );
@@ -18,7 +17,14 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 16.0.sp,
       height: 24.0 / 16.0.sp,
-      color: AppColor.secondary,
+      color: AppColor.black,
+    ),
+  );
+  static final TextStyle green700S12 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 12.0.sp,
+      color: AppColor.green,
     ),
   );
   static final TextStyle black600S18 = GoogleFonts.readexPro(
@@ -200,11 +206,10 @@ class AppTextStyle {
       color: AppColor.blackOpacity4,
     ),
   );
-  static final TextStyle orange600S48 = GoogleFonts.readexPro(
+  static final TextStyle orange600S42 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w600,
-      fontSize: 48.0.sp,
-      height: 72.0 / 48.0.sp,
+      fontSize: 42.0.sp,
       color: AppColor.primary,
     ),
   );
@@ -477,7 +482,20 @@ class AppTextStyle {
       color: AppColor.blueSlate,
     ),
   );
-
+  static final TextStyle darkBlue700S10 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 10.0.sp,
+      color: AppColor.darkBlue,
+    ),
+  );
+  static final TextStyle darkBlue700S12 = GoogleFonts.readexPro(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 12.0.sp,
+      color: AppColor.darkBlue,
+    ),
+  );
   static final TextStyle brown400S14 = GoogleFonts.readexPro(
     textStyle: TextStyle(
       fontWeight: FontWeight.w400,

@@ -14,6 +14,7 @@ class BackIcon extends StatelessWidget {
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: IconButton(
+        padding: EdgeInsets.zero,
         onPressed: () {
           AppNavigation.pop(context);
         },
