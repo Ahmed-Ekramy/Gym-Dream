@@ -10,6 +10,7 @@ import 'package:gym_dream/features/admin/our_member/presentation/pages/our_membe
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
+import 'package:gym_dream/features/admin/user_profile/presentation/pages/specific_user_history.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/user_data_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
@@ -153,6 +154,10 @@ class AppRoute {
       case Routes.userDataView:
         return MaterialPageRoute(
           builder: (_) => const UserDataView(),
+        );
+      case Routes.specificUserHistor:
+        return MaterialPageRoute(
+          builder: (_) => const SpecificUserHistory(),
         );
 
       default:

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/widgets/last_session_item.dart';
 
@@ -26,7 +28,10 @@ class UserHistoryAndLastSession extends StatelessWidget {
             ),
             const Spacer(),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.specificUserHistor);
+              },
               child: Text(
                 'see more',
                 style: AppTextStyle.blue600S14,
