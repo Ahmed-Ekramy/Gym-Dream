@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../exercies_tab/presentation/pages/exercises_tab.dart';
 import '../../../history_tab/presentation/pages/history_tab.dart';
 import '../../../home_tab/presentation/pages/home_tab.dart';
+import '../../../setting_tab/presentation/pages/setting_tab.dart';
 import 'home_user_state.dart';
 
 class HomeUserCubit extends Cubit<HomeUserState> {
@@ -13,6 +14,7 @@ class HomeUserCubit extends Cubit<HomeUserState> {
     const HomeTab(),
     const HistoryTab(),
     const ExercisesTab(),
+    const SettingTab(),
 
   ];
   int currentIndex = 0;

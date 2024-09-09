@@ -51,5 +51,6 @@ class AppAsset {
   static const imageExerciseDetails =
       "assets/images/image exercise details.png";
   static const search = "assets/svg/search.svg";
-  static const arrowdown = "assets/svg/arrowdown.svg";
+  static const settings = "assets/svg/settings.svg";
+  static const arrowDown = "assets/svg/arrowdown.svg";
 }
