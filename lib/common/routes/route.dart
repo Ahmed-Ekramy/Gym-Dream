@@ -36,4 +36,7 @@ class Routes {
   static const String userNotification = '/userNotification';
 
   static const String userDataView = '/userDataView';
+
+  static const String languageSelectionScreen = '/languageSelectionScreen';
+  static const String specificUserHistor = '/SpecificUserHistory';
 }

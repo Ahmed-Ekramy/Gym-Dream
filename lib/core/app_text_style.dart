@@ -17,7 +17,7 @@ class AppTextStyle {
       fontWeight: FontWeight.w600,
       fontSize: 16.0.sp,
       height: 24.0 / 16.0.sp,
-      color: AppColor.black,
+      color: AppColor.secondary,
     ),
   );
   static final TextStyle green700S12 = GoogleFonts.readexPro(
@@ -412,7 +412,7 @@ class AppTextStyle {
   );
   static final TextStyle white500S7 = GoogleFonts.readexPro(
     textStyle: TextStyle(
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w700,
       fontSize: 7.0.sp,
       height: 10.0 / 7.0.sp,
       color: AppColor.white,

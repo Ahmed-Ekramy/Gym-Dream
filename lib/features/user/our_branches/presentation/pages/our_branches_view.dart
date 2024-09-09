@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 import '../../../../../common/helper/naviagtion_extentaions.dart';
 import '../../../../../common/routes/route.dart';
@@ -19,50 +20,8 @@ class OurBranchesView extends StatelessWidget {
       child: Scaffold(
           body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            toolbarHeight: 90.h,
-            backgroundColor: AppColor.orangeLight,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
-              ),
-            ),
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CircleAvatar(
-                  radius: 30.r,
-                  backgroundImage: const AssetImage(
-                    AppAsset.boy,
-                  ),
-                ),
-                SizedBox(width: 5.w),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('ID: 123456', style: AppTextStyle.black600S16),
-                    SizedBox(height: 10.h),
-                    Text(
-                      '12 sessions completed, 8 sessions remaining',
-                      maxLines: 2,
-                      style: AppTextStyle.blackOpacity600S14.copyWith(
-                        fontSize: 8.sp,
-                      ),
-                    ),
-                    SizedBox(height: 10.h),
-                    const CustomRowCapacity(),
-                  ],
-                ),
-              ],
-            ),
-            actions: [
-              SvgPicture.asset(
-                AppAsset.bell,
-                width: 24.w,
-                height: 24.h,
-              ),
-            ],
+          const SliverAppBar(
+            leading: BackIcon(),
           ),
           SliverToBoxAdapter(
               child: Padding(
@@ -79,59 +38,62 @@ class OurBranchesView extends StatelessWidget {
           SliverList.builder(
               itemCount: 15,
               itemBuilder: (context, index) {
-                return
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
-
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          fit: BoxFit.fill,
-                          AppAsset.backgroundBranch,
-                          width: double.infinity,
-                          height: 90.h,
-                        ),
-                        Padding(
-                          padding:
-                          EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 10.h),
+                return Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        fit: BoxFit.fill,
+                        AppAsset.backgroundBranch,
+                        width: double.infinity,
+                        height: 120.h,
+                      ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10.0.w, vertical: 10.h),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Ahmed Maher Street",
-                                    style: AppTextStyle.white600S18,
-                                  ),
-                                  SizedBox(height: 5.h),
-                                  Text(
-                                    "Ahmed Maher Street",
-                                    style: AppTextStyle.gray600S14,
-                                  ),
-                                  SizedBox(height: 20.h),
-                                  const CustomRowCapacity(),
-                                ],
+                              Expanded(
+                                flex: 4,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Ahmed Maher Street",
+                                      style: AppTextStyle.white600S18,
+                                    ),
+                                    SizedBox(height: 5.h),
+                                    Text(
+                                      "away from you : 200 meters",
+                                      style: AppTextStyle.gray600S14,
+                                    ),
+                                    SizedBox(height: 20.h),
+                                    const CustomRowCapacity(),
+                                  ],
+                                ),
                               ),
-                              CustomButton(
-                                width: 86.w,
-                                height: 25.h,
-                                title: "location",
-                                textStyle:
-                                AppTextStyle.white700S14.copyWith(fontSize: 10.sp),
-                                onPressed: () {
-                                  AppNavigation.navigateTo(
+                              Expanded(
+                                flex: 2,
+                                child: CustomButton(
+                                  height: 20.h,
+                                  title: "location",
+                                  textStyle: AppTextStyle.white700S14
+                                      .copyWith(fontSize: 10.sp),
+                                  onPressed: () {
+                                    AppNavigation.navigateTo(
                                       context: context,
-                                      routeName: Routes.ourBranchesView);
-                                },
-                              )
+                                      routeName: Routes.ourBranchesView,
+                                    );
+                                  },
+                                ),
+                              ),
                             ],
-                          ),
-                        )
-                      ],
-
-                    ),
-                  );
+                          ))
+                    ],
+                  ),
+                );
               }),
         ],
       )),

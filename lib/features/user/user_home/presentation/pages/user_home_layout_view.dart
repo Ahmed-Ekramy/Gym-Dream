@@ -24,7 +24,6 @@ class UserHomeLayoutView extends StatelessWidget {
           body: Column(
             children: [
               AppBar(
-                automaticallyImplyLeading: false,
                 toolbarHeight: 90.h,
                 backgroundColor: AppColor.orangeLight,
                 shape: const RoundedRectangleBorder(
@@ -43,44 +42,66 @@ class UserHomeLayoutView extends StatelessWidget {
                       },
                       child: CircleAvatar(
                         radius: 30.r,
-                        backgroundImage: const AssetImage(
-                          AppAsset.boy,
-                        ),
+                        backgroundImage: const AssetImage(AppAsset.boy),
                       ),
                     ),
                     SizedBox(width: 5.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('ID: 123456', style: AppTextStyle.black600S16),
-                        SizedBox(height: 10.h),
-                        Text(
-                          '12 sessions completed, 8 sessions remaining',
-                          maxLines: 2,
-                          style: AppTextStyle.blackOpacity600S14.copyWith(
-                            fontSize: 8.sp,
+                    Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
+                        children: [
+                          Text('ID: 123456',
+                              style: AppTextStyle.black600S16.copyWith(
+                                color:  const Color(0xff01152D)
+                              )),
+                          SizedBox(height: 5.h),
+                          Text(
+                            '12 sessions completed,8 sessions remaining',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTextStyle.blackOpacity600S14.copyWith(
+                              fontSize: 10.sp,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 10.h),
-                        const CustomRowCapacity(),
-                      ],
+                          SizedBox(height: 10.h),
+                          const CustomRowCapacity(),
+                        ],
+                      ),
                     ),
                   ],
                 ),
                 actions: [
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
-                      Future.delayed(Duration.zero, () {
-                        context.read<AuthCubit>().logout();
-                      });
+                      AppNavigation.navigateTo(
+                          context: context, routeName: '/userNotification');
                     },
-                    child: SvgPicture.asset(
-                      AppAsset.bell,
-                      color: AppColor.secondary,
-                      width: 24.w,
-                      height: 24.h,
+                    child: Badge(
+                      backgroundColor: AppColor.primary,
+                      label: const Text('6'),
+                      padding: EdgeInsets.all(1.r),
+                      alignment: Alignment.topCenter,
+                      offset: const Offset(10, -1),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.white,
+                          border: Border.all(
+                            color: AppColor.orangeOpacity40,
+                            width: 2.0.w,
+                          ),
+                        ),
+                        child: SvgPicture.asset(
+                          AppAsset.bell,
+                          color: AppColor.secondary,
+                          width: 24.w,
+                          height: 24.h,
+                        ),
+                      ),
                     ),
                   ),
+                  SizedBox(width: 10.w),
                 ],
               ),
               Expanded(

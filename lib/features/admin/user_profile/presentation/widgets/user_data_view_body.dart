@@ -76,10 +76,12 @@ class UserDataViewBody extends StatelessWidget {
                           backgroundImage: const AssetImage(AppAsset.boy),
                         ),
                         SizedBox(height: 2.h),
-                        Text(
-                          'Birth date : 10/3/2002',
-                          style:
-                              AppTextStyle.black400S14.copyWith(fontSize: 9.sp),
+                        FittedBox(
+                          child: Text(
+                            'Birth date : 10/3/2002',
+                            style: AppTextStyle.black400S14
+                                .copyWith(fontSize: 9.sp),
+                          ),
                         ),
                       ],
                     ),
