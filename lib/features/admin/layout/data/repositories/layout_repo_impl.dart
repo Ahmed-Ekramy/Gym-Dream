@@ -86,7 +86,7 @@ class LayoutRepoImpl extends LayOutRepo {
             width: 24.w,
             height: 24.h,
             colorFilter: ColorFilter.mode(
-              BlocProvider.of<LayoutCubit>(context).currentIndex == 2
+              BlocProvider.of<LayoutCubit>(context).currentIndex == 3
                   ? AppColor.primary
                   : AppColor.grey,
               BlendMode.srcIn,

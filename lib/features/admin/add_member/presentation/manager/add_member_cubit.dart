@@ -11,8 +11,11 @@ part 'add_member_state.dart';
 class AddMemberCubit extends Cubit<AddMemberState> {
   AddMemberCubit() : super(AddMemberInitial());
 
+  // Form key for validation
   var formKey = GlobalKey<FormState>();
   AutovalidateMode? autovalidateMode = AutovalidateMode.disabled;
+
+  // Controllers
   var fullNameController = TextEditingController();
   var iDController = TextEditingController();
   var watsAppController = TextEditingController();
@@ -21,22 +24,37 @@ class AddMemberCubit extends Cubit<AddMemberState> {
   final TextEditingController birthDateController = TextEditingController();
   final TextEditingController startDateController = TextEditingController();
   final TextEditingController endDateController = TextEditingController();
+
+  // Image file
+  File? image;
+
+  // Gender
+  String? gender;
+
+  // Select Date Method (Handles both Start and End Dates)
   Future<void> selectDate(BuildContext context,
-      {required TextEditingController date}) async {
+      {required TextEditingController date, bool isStartDate = false}) async {
+    DateTime initialDate = DateTime.now();
     DateTime? selectedDate = await showDatePicker(
       context: context,
-      initialDate: DateTime(2000),
+      initialDate: initialDate,
       firstDate: DateTime(1924),
-      lastDate: DateTime(2014),
+      lastDate: DateTime(2100),
     );
 
     if (selectedDate != null) {
       date.text = DateFormat('yyyy-MM-dd').format(selectedDate);
-      emit(AddMemberDateUpdatedState()); // Emit state to update UI if needed
+
+      if (isStartDate) {
+        DateTime endDate = selectedDate.add(const Duration(days: 30));
+        endDateController.text = DateFormat('yyyy-MM-dd').format(endDate);
+      }
+
+      emit(AddMemberDateUpdatedState());
     }
   }
 
-  File? image;
+  // Upload Image from Gallery
   Future<File?> uploadImageFromGalleryModel({
     required ImagePicker picker,
   }) async {
@@ -46,7 +64,7 @@ class AddMemberCubit extends Cubit<AddMemberState> {
       if (pickedFile != null) {
         image = File(pickedFile.path);
         emit(UploadImageFromGallerySuccessState(image: pickedFile));
-        return image; // Return the image file
+        return image;
       } else {
         emit(const UploadImageErrorState(errorMessage: "No image picked"));
         return null;
@@ -57,9 +75,32 @@ class AddMemberCubit extends Cubit<AddMemberState> {
     }
   }
 
-  String? gender; // Add this field
+  // Update Gender
   void updateGender(String selectedGender) {
     gender = selectedGender;
-    emit(AddMemberGenderUpdatedState()); // Emit a new state if needed
+    emit(AddMemberGenderUpdatedState());
+  }
+
+  // Dispose all controllers
+  void dispose() {
+    fullNameController.dispose();
+    iDController.dispose();
+    watsAppController.dispose();
+    passWordController.dispose();
+    confirmPassWordController.dispose();
+    birthDateController.dispose();
+    startDateController.dispose();
+    endDateController.dispose();
+  }
+
+  // Optional: Method to validate the form fields
+  bool validateForm() {
+    if (formKey.currentState!.validate()) {
+      return true;
+    } else {
+      autovalidateMode = AutovalidateMode.always;
+      emit(AddMemberValidationErrorState());
+      return false;
+    }
   }
 }

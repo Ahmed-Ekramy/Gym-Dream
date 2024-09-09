@@ -22,3 +22,5 @@ final class UploadImageErrorState extends AddMemberState {
 final class AddMemberGenderUpdatedState extends AddMemberState {}
 
 final class AddMemberDateUpdatedState extends AddMemberState {}
+
+final class AddMemberValidationErrorState extends AddMemberState {}
