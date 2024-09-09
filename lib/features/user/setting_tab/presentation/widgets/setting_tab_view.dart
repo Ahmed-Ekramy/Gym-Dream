@@ -27,7 +27,7 @@ class SettingTabView extends StatelessWidget {
                 itemName: ' Language',
                 iconItem: Icons.translate,
                 onTap: () {
-                  AppNavigation.navigateTo(context: context, routeName: "/userProfile");
+                  AppNavigation.navigateTo(context: context, routeName: "/languageView");
 
                 }),
             CustomCardItemSetting(

@@ -31,6 +31,7 @@ import 'package:gym_dream/service_locator.dart';
 
 import '../../features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
 import '../../features/user/User_profile/presentation/pages/user_profile_view.dart';
+import '../../features/user/language/presentation/pages/language_view.dart';
 import '../../features/user/our_branches/presentation/pages/our_branches_view.dart';
 import '../../features/user/user_home_layout/presentation/manager/home_user_cubit.dart';
 import '../../features/user/user_home_layout/presentation/pages/user_home_layout_view.dart';
@@ -168,6 +169,10 @@ class AppRoute {
       case Routes.specificUserHistor:
         return MaterialPageRoute(
           builder: (_) => const SpecificUserHistory(),
+        );
+  case Routes.languageView:
+        return MaterialPageRoute(
+          builder: (_) => const LanguageView(),
         );
 
       default:
