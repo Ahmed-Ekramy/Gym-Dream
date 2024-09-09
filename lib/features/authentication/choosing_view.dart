@@ -22,9 +22,9 @@ class ChoosingView extends StatelessWidget {
       create: (context) => ChoosingCubit(),
       child: Scaffold(
         body: SafeArea(
-          minimum: EdgeInsets.only(top: 45.h),
+          minimum: EdgeInsets.only(top: 0.h),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 28.w),
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Column(
               children: [
                 Align(
@@ -66,16 +66,12 @@ class ChoosingView extends StatelessWidget {
                   ),
                 ),
                 const DreamGymText(),
-                SizedBox(
-                  height: 100.h,
-                ),
+                const Spacer(),
                 Text(
                   S.of(context).chooseYourMemberShipType,
                   style: AppTextStyle.black700S18,
                 ),
-                SizedBox(
-                  height: 45.h,
-                ),
+                const Spacer(),
                 Row(
                   children: [
                     BlocBuilder<ChoosingCubit, String>(
@@ -135,9 +131,7 @@ class ChoosingView extends StatelessWidget {
                         : const SizedBox.shrink();
                   },
                 ),
-                SizedBox(
-                  height: 60.h,
-                ),
+                const Spacer(),
               ],
             ),
           ),
