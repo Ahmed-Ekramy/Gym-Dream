@@ -21,6 +21,8 @@ class TraineeLoginView extends StatelessWidget {
       ValidationCubit validationCubit) {
     if (formKey.currentState?.validate() ?? true) {
       context.read<AuthCubit>().login(isAdmin: false);
+      AppNavigation.navigateAndRemoveUntil(
+          context: context, newRoute: Routes.homeUserLayout);
     }
   }
 

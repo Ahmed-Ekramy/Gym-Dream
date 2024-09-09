@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/validators_helper.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exercise_cubit.dart';
@@ -10,8 +11,11 @@ import 'package:gym_dream/features/admin/exercise/presentation/widgets/upload_ex
 import 'package:image_picker/image_picker.dart';
 
 class AddExercisesDialogBody extends StatelessWidget {
+  final GlobalKey<FormState> formKey; // Add formKey
+
   const AddExercisesDialogBody({
     super.key,
+    required this.formKey, // Initialize the formKey
   });
 
   @override
@@ -20,64 +24,68 @@ class AddExercisesDialogBody extends StatelessWidget {
 
     return BlocProvider(
       create: (context) => ExerciseCubit(),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          UploadExerciseImage(
-            picker: picker,
-          ),
-          const AddExercisesTextField(
-            hint: 'name',
-            readOnly: false,
-            textInputType: TextInputType.text,
-          ),
-          const AddExercisesTextField(
-            hint: 'count',
-            readOnly: false,
-            textInputType: TextInputType.number,
-          ),
-          const AddExercisesTextField(
-            hint: 'repetition',
-            readOnly: false,
-            textInputType: TextInputType.number,
-          ),
-          const Align(
-            alignment: AlignmentDirectional.centerStart,
-            child: ExercisesGroupDropDown(),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          TextField(
-            textAlign: TextAlign.center,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide.none,
-              ),
-              filled: true,
-              fillColor: AppColor.babyBlue,
-              hintText: 'Video Link',
-              hintStyle: AppTextStyle.darkBlue700S12,
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide.none,
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide.none,
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide.none,
-              ),
-              disabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                borderSide: BorderSide.none,
+      child: Form(
+        key: formKey, // Attach formKey to the Form widget
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            UploadExerciseImage(
+              picker: picker,
+            ),
+            AddExercisesTextField(
+              validator: (value) {
+                return MyValidatorsHelper.displayNameValidator(context, value);
+              },
+              hint: 'name',
+              readOnly: false,
+              textInputType: TextInputType.text,
+            ),
+            AddExercisesTextField(
+              validator: (value) {
+                return MyValidatorsHelper.addExercisesValidator(context, value);
+              },
+              hint: 'count',
+              readOnly: false,
+              textInputType: TextInputType.number,
+            ),
+            AddExercisesTextField(
+              validator: (value) {
+                return MyValidatorsHelper.addExercisesValidator(context, value);
+              },
+              hint: 'repetition',
+              readOnly: false,
+              textInputType: TextInputType.number,
+            ),
+            const Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: ExercisesGroupDropDown(),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            SizedBox(
+              height: 40.h,
+              child: TextFormField(
+                maxLines: 1,
+                validator: (value) {
+                  return MyValidatorsHelper.urlValidator(
+                      value); // Ensure the validator returns a message if invalid
+                },
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: AppColor.babyBlue,
+                  hintText: 'Video Link',
+                  hintStyle: AppTextStyle.darkBlue700S12,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
