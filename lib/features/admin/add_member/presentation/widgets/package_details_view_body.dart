@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/package_pricing_card.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class PackageDetailsViewBody extends StatefulWidget {
   const PackageDetailsViewBody({super.key});
@@ -27,7 +27,7 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
           children: [
             Row(
               children: [
-                const CustomArrowBack(),
+                const BackIcon(),
                 SizedBox(width: 32.w),
                 Text(
                   'Choose your plan',

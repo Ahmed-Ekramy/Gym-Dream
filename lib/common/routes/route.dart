@@ -38,6 +38,6 @@ class Routes {
 
   static const String userDataView = '/userDataView';
 
-  static const String languageSelectionScreen = '/languageSelectionScreen';
+  static const String languageSelectionScreen = '/languageView';
   static const String specificUserHistor = '/SpecificUserHistory';
 }

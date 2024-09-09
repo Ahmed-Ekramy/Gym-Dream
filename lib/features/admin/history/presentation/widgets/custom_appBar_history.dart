@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+
 import '../../../../../core/app_text_style.dart';
 
 class CustomAppBarHistory extends StatelessWidget {
@@ -27,7 +28,7 @@ class CustomAppBarHistory extends StatelessWidget {
       ),
       leading: const Padding(
         padding: EdgeInsets.only(left: 8),
-        child: CustomArrowBack(),
+        child: BackIcon(),
       ),
     );
   }

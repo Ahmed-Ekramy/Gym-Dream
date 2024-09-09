@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
-import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 
 class AdminSettingViewBody extends StatelessWidget {
   const AdminSettingViewBody({super.key});
@@ -32,7 +32,7 @@ class AdminSettingViewBody extends StatelessWidget {
           SettingItem(
             onTap: () {
               AppNavigation.navigateTo(
-                  context: context, routeName: Routes.languageSelectionScreen);
+                  context: context, routeName: Routes.languageView);
             },
             image: AppAsset.language,
             title: 'Language',
@@ -41,7 +41,18 @@ class AdminSettingViewBody extends StatelessWidget {
             height: 8.h,
           ),
           SettingItem(
-            onTap: () {},
+            onTap: () {
+              Future.delayed(
+                Duration.zero,
+                () {
+                  context.read<AuthCubit>().logout();
+                },
+              );
+              AppNavigation.navigateAndRemoveUntil(
+                context: context,
+                newRoute: Routes.choosingView,
+              );
+            },
             image: AppAsset.redLogout,
             title: 'Logout',
             titlestyle: AppTextStyle.black400S22.copyWith(
@@ -55,84 +66,84 @@ class AdminSettingViewBody extends StatelessWidget {
   }
 }
 
-class LanguageSelectionScreen extends StatefulWidget {
-  const LanguageSelectionScreen({super.key});
+// class LanguageSelectionScreen extends StatefulWidget {
+//   const LanguageSelectionScreen({super.key});
 
-  @override
-  _LanguageSelectionScreenState createState() =>
-      _LanguageSelectionScreenState();
-}
+//   @override
+//   _LanguageSelectionScreenState createState() =>
+//       _LanguageSelectionScreenState();
+// }
 
-class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
-  String _selectedLanguage = 'English';
+// class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
+//   String _selectedLanguage = 'English';
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leadingWidth: 40.w,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 8),
-          child: CustomArrowBack(),
-        ),
-        centerTitle: true,
-        title: const Text('Language Selection'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 16,
-        ),
-        child: Column(
-          children: [
-            ListTile(
-              leading: Image.asset(AppAsset.english, width: 30),
-              title: const Text(
-                'English',
-                style: TextStyle(fontSize: 20),
-              ),
-              trailing: Radio<String>(
-                activeColor: AppColor.green,
-                value: 'English',
-                groupValue: _selectedLanguage,
-                onChanged: (String? value) {
-                  setState(() {
-                    _selectedLanguage = value!;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              leading: Image.asset(AppAsset.egyptFlag, width: 30),
-              title: const Text(
-                'Arabic',
-                style: TextStyle(fontSize: 20),
-              ),
-              trailing: Radio<String>(
-                value: 'Arabic',
-                groupValue: _selectedLanguage,
-                onChanged: (String? value) {
-                  setState(() {
-                    _selectedLanguage = value!;
-                  });
-                },
-              ),
-            ),
-            const Spacer(),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: CustomButton(
-                height: 35.h,
-                width: double.infinity,
-                title: 'Save',
-                onPressed: () {},
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         leadingWidth: 40.w,
+//         leading: const Padding(
+//           padding: EdgeInsets.only(left: 8),
+//           child: BackIcon(),
+//         ),
+//         centerTitle: true,
+//         title: const Text('Language Selection'),
+//       ),
+//       body: Padding(
+//         padding: const EdgeInsets.symmetric(
+//           vertical: 16,
+//         ),
+//         child: Column(
+//           children: [
+//             ListTile(
+//               leading: Image.asset(AppAsset.english, width: 30),
+//               title: const Text(
+//                 'English',
+//                 style: TextStyle(fontSize: 20),
+//               ),
+//               trailing: Radio<String>(
+//                 activeColor: AppColor.green,
+//                 value: 'English',
+//                 groupValue: _selectedLanguage,
+//                 onChanged: (String? value) {
+//                   setState(() {
+//                     _selectedLanguage = value!;
+//                   });
+//                 },
+//               ),
+//             ),
+//             ListTile(
+//               leading: Image.asset(AppAsset.egyptFlag, width: 30),
+//               title: const Text(
+//                 'Arabic',
+//                 style: TextStyle(fontSize: 20),
+//               ),
+//               trailing: Radio<String>(
+//                 value: 'Arabic',
+//                 groupValue: _selectedLanguage,
+//                 onChanged: (String? value) {
+//                   setState(() {
+//                     _selectedLanguage = value!;
+//                   });
+//                 },
+//               ),
+//             ),
+//             const Spacer(),
+//             Padding(
+//               padding: const EdgeInsets.all(16),
+//               child: CustomButton(
+//                 height: 35.h,
+//                 width: double.infinity,
+//                 title: 'Save',
+//                 onPressed: () {},
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class SettingItem extends StatelessWidget {
   const SettingItem({

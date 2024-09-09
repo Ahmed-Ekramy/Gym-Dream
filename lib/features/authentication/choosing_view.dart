@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/cubit/change_language_cubit.dart';
+import 'package:gym_dream/common/cubit/local_language_cubit.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
@@ -22,9 +22,9 @@ class ChoosingView extends StatelessWidget {
       create: (context) => ChoosingCubit(),
       child: Scaffold(
         body: SafeArea(
-          minimum: EdgeInsets.only(top: 0.h),
+          minimum: EdgeInsets.only(top: 45.h),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            padding: EdgeInsets.symmetric(horizontal: 28.w),
             child: Column(
               children: [
                 Align(
@@ -66,12 +66,16 @@ class ChoosingView extends StatelessWidget {
                   ),
                 ),
                 const DreamGymText(),
-                const Spacer(),
+                SizedBox(
+                  height: 100.h,
+                ),
                 Text(
                   S.of(context).chooseYourMemberShipType,
                   style: AppTextStyle.black700S18,
                 ),
-                const Spacer(),
+                SizedBox(
+                  height: 45.h,
+                ),
                 Row(
                   children: [
                     BlocBuilder<ChoosingCubit, String>(
@@ -131,7 +135,9 @@ class ChoosingView extends StatelessWidget {
                         : const SizedBox.shrink();
                   },
                 ),
-                const Spacer(),
+                SizedBox(
+                  height: 60.h,
+                ),
               ],
             ),
           ),

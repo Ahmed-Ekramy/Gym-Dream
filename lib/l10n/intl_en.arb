@@ -81,5 +81,7 @@
     "passwordChanged":"Password changed ",
     "@passwordChanged":{},
     "successfully":"successfully 🎉",
-    "@successfully":{}
+    "@successfully":{},
+    "profile":"profile",
+    "@profile":{}
 }

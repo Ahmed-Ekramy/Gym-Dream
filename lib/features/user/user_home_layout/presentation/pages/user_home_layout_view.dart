@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
-import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
@@ -49,12 +48,10 @@ class UserHomeLayoutView extends StatelessWidget {
                     Flexible(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-
                         children: [
                           Text('ID: 123456',
-                              style: AppTextStyle.black600S16.copyWith(
-                                color:  const Color(0xff01152D)
-                              )),
+                              style: AppTextStyle.black600S16
+                                  .copyWith(color: const Color(0xff01152D))),
                           SizedBox(height: 5.h),
                           Text(
                             '12 sessions completed,8 sessions remaining',

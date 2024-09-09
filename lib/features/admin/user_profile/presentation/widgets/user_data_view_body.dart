@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_left_widget.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/personal_info_package_item.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/widgets/user_history_and_last_session.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class UserDataViewBody extends StatelessWidget {
   const UserDataViewBody({super.key});
@@ -21,7 +21,7 @@ class UserDataViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomArrowBack(),
+              const BackIcon(),
               SizedBox(height: 8.h),
               Row(
                 children: [

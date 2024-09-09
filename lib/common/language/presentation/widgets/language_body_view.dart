@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/app_asset.dart';
-import '../manager/language_cubit.dart';
+import 'package:gym_dream/common/cubit/language_cubit.dart';
+
+import '../../../../core/app_asset.dart';
 import 'button_save_language.dart';
 import 'custom_list_tile.dart';
 
 class LanguageBodyView extends StatelessWidget {
-  const LanguageBodyView({
-    super.key,
-  });
+  const LanguageBodyView({super.key});
 
   @override
   Widget build(BuildContext context) {
