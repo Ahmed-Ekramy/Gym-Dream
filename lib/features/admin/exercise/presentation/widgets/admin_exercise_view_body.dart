@@ -16,8 +16,7 @@ class AdminExerciseViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          ExerciseCubit()..loadExercises(), // Ensure exercises are loaded
+      create: (context) => ExerciseCubit()..loadExercises(),
       child: SafeArea(
         child: CustomScrollView(
           slivers: [
@@ -69,7 +68,6 @@ class AdminExerciseViewBody extends StatelessWidget {
                     );
                   } else if (state is ExerciseListSuccess &&
                       state.exercises.isEmpty) {
-                    // Show message if the list is empty
                     return Center(
                       child: Text(
                         'No exercises available.',
@@ -78,9 +76,10 @@ class AdminExerciseViewBody extends StatelessWidget {
                     );
                   }
                   return const Center(
-                      child: CircularProgressIndicator(
-                    color: AppColor.primary,
-                  )); // Show a loader while fetching data
+                    child: CircularProgressIndicator(
+                      color: AppColor.primary,
+                    ),
+                  );
                 },
               ),
             ),
