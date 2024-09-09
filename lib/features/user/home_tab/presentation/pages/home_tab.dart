@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:gym_dream/features/user/user_home/presentation/manager/home_user_cubit.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import '../../../../../../core/app_text_style.dart';
-import '../../widgets/last_attend_list.dart';
-import '../../widgets/warning_card.dart';
+import '../../../../../core/app_text_style.dart';
+import '../../../history_tab/presentation/widgets/last_attend_list.dart';
+import '../../../user_home_layout/presentation/manager/home_user_cubit.dart';
+import '../widgets/warning_card.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
-
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(

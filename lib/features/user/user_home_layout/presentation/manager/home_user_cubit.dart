@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../pages/tabs/exercises_tab.dart';
-import '../pages/tabs/history_tab.dart';
-import '../pages/tabs/home_tab.dart';
+import '../../../exercies_tab/presentation/pages/exercises_tab.dart';
+import '../../../history_tab/presentation/pages/history_tab.dart';
+import '../../../home_tab/presentation/pages/home_tab.dart';
 import 'home_user_state.dart';
 
 class HomeUserCubit extends Cubit<HomeUserState> {

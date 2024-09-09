@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/core/app_asset.dart';
 
-import '../../../../../../common/routes/route.dart';
-import '../../../../../../core/app_text_style.dart';
-import '../../widgets/collection_exercise.dart';
+import '../../../../../common/routes/route.dart';
+import '../../../../../core/app_text_style.dart';
+import '../widgets/collection_exercise.dart';
 
 class ExercisesTab extends StatelessWidget {
   const ExercisesTab({super.key});

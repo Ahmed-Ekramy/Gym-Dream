@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 import '../../../../../common/helper/naviagtion_extentaions.dart';
 import '../../../../../common/routes/route.dart';
 import '../../../../../common/widgets/custom_button_widget.dart';
 import '../../../../../core/app_asset.dart';
-import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
-import '../../../user_home/presentation/widgets/custom_row_capacity.dart';
+import '../../../user_home_layout/presentation/widgets/custom_row_capacity.dart';
 
 class OurBranchesView extends StatelessWidget {
   const OurBranchesView({super.key});
