@@ -15,93 +15,95 @@ class AdminSearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          AppTextFormFiled(
-            filled: true,
-            fillColor: AppColor.grayLight,
-            hintText: 'Nmae',
-            obscureText: false,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppAsset.search,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            AppTextFormFiled(
+              filled: true,
+              fillColor: AppColor.grayLight,
+              hintText: 'Nmae',
+              obscureText: false,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppAsset.search,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 16.h,
-          ),
-          AppTextFormFiled(
-            filled: true,
-            fillColor: AppColor.grayLight,
-            hintText: 'Id',
-            obscureText: false,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppAsset.search,
+            SizedBox(
+              height: 16.h,
+            ),
+            AppTextFormFiled(
+              filled: true,
+              fillColor: AppColor.grayLight,
+              hintText: 'Id',
+              obscureText: false,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppAsset.search,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 16.h,
-          ),
-          AppTextFormFiled(
-            filled: true,
-            fillColor: AppColor.grayLight,
-            hintText: 'Package',
-            obscureText: false,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppAsset.arrowdown,
+            SizedBox(
+              height: 16.h,
+            ),
+            AppTextFormFiled(
+              filled: true,
+              fillColor: AppColor.grayLight,
+              hintText: 'Package',
+              obscureText: false,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppAsset.arrowdown,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 16.h,
-          ),
-          AppTextFormFiled(
-            filled: true,
-            fillColor: AppColor.grayLight,
-            hintText: 'Gender',
-            obscureText: false,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppAsset.arrowdown,
+            SizedBox(
+              height: 16.h,
+            ),
+            AppTextFormFiled(
+              filled: true,
+              fillColor: AppColor.grayLight,
+              hintText: 'Gender',
+              obscureText: false,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppAsset.arrowdown,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 16.h,
-          ),
-          AppTextFormFiled(
-            filled: true,
-            fillColor: AppColor.grayLight,
-            hintText: 'Phone number',
-            obscureText: false,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                AppAsset.search,
+            SizedBox(
+              height: 16.h,
+            ),
+            AppTextFormFiled(
+              filled: true,
+              fillColor: AppColor.grayLight,
+              hintText: 'Phone number',
+              obscureText: false,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: SvgPicture.asset(
+                  AppAsset.search,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 24.h,
-          ),
-          CustomButton(
-            height: 35.h,
-            width: double.infinity,
-            title: 'Search',
-            onPressed: () {
-              AppNavigation.navigateTo(
-                  context: context, routeName: Routes.adminSearchResultView);
-            },
-          )
-        ],
+            SizedBox(
+              height: 24.h,
+            ),
+            CustomButton(
+              height: 35.h,
+              width: double.infinity,
+              title: 'Search',
+              onPressed: () {
+                AppNavigation.navigateTo(
+                    context: context, routeName: Routes.adminSearchResultView);
+              },
+            )
+          ],
+        ),
       ),
     );
   }

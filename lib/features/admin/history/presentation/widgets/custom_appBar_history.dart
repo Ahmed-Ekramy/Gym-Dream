@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../core/app_asset.dart';
-import '../../../../../core/app_color.dart';
+import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import '../../../../../core/app_text_style.dart';
 
 class CustomAppBarHistory extends StatelessWidget {
@@ -13,39 +11,23 @@ class CustomAppBarHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      centerTitle: true,
+      leadingWidth: 35.w,
       automaticallyImplyLeading: false,
-      toolbarHeight: 90.h,
-      backgroundColor: AppColor.orangeLight,
+      toolbarHeight: 50.h,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
       ),
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          InkWell(
-            onTap: () {
-              // AppNavigation.navigateTo(
-              //     context: context, routeName: '/userProfile');
-            },
-            child: CircleAvatar(
-              radius: 30.r,
-              backgroundImage: const AssetImage(
-                AppAsset.boy,
-              ),
-            ),
-          ),
-          SizedBox(width: 5.w),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Ahmed Ekramy Fahmy', style: AppTextStyle.black600S16),
-              Text(' ID: 101020', style: AppTextStyle.blackOpacity600S14),
-            ],
-          ),
-        ],
+      title: Text(
+        "recently scanned",
+        style: AppTextStyle.black400S22,
+      ),
+      leading: const Padding(
+        padding: EdgeInsets.only(left: 8),
+        child: CustomArrowBack(),
       ),
     );
   }

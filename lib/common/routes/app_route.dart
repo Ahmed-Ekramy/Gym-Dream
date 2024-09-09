@@ -5,11 +5,14 @@ import 'package:gym_dream/features/admin/add_member/presentation/manager/add_mem
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_add_member_view.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/admin_confirm_user.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/pages/package_details_view.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/qr_code_view.dart';
 import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
+import 'package:gym_dream/features/admin/setting/presentation/widgets/admin_setting_view_body.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
+import 'package:gym_dream/features/admin/user_profile/presentation/pages/specific_user_history.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/user_data_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/admin_login_view.dart';
 import 'package:gym_dream/features/authentication/admin/pages/create_new_password_for_admin.dart';
@@ -115,6 +118,10 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const AdminConfirmUser(),
         );
+      case Routes.qrCodeView:
+        return MaterialPageRoute(
+          builder: (_) => const QrCodeView(),
+        );
       case Routes.adminTrustedUserView:
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),
@@ -138,6 +145,10 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const NotificationUserView(),
         );
+      case Routes.languageSelectionScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LanguageSelectionScreen(),
+        );
       case Routes.ourMemberView:
         return MaterialPageRoute(
           builder: (_) => const OurMemberView(),
@@ -153,6 +164,10 @@ class AppRoute {
       case Routes.userDataView:
         return MaterialPageRoute(
           builder: (_) => const UserDataView(),
+        );
+      case Routes.specificUserHistor:
+        return MaterialPageRoute(
+          builder: (_) => const SpecificUserHistory(),
         );
 
       default:

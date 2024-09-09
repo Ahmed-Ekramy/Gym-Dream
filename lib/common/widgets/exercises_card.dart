@@ -22,43 +22,50 @@ class ExercisesCard extends StatelessWidget {
         height: 80.h,
         child: Row(
           children: [
-            Image.asset(AppAsset.imageExerciseDetails),
+            // Set a fixed width for the image to prevent overflow
+            Image.asset(
+              AppAsset.imageExerciseDetails,
+              width: 80.w,
+              fit: BoxFit.cover,
+            ),
             const SizedBox(width: 10),
-            SizedBox(
-              width: 150.w,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    'Bench press',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTextStyle.black500S14,
-                  ),
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '10-8\t\rCount\n',
-                          style: AppTextStyle.blackOpacity500S10,
-                        ),
-                        TextSpan(
-                          text: '10\t\rGroups\n',
-                          style: AppTextStyle.blackOpacity500S10,
-                        ),
-                        TextSpan(
-                          text: '300\t\rCalories',
-                          style: AppTextStyle.blackOpacity500S10,
-                        ),
-                      ],
+            // Use Expanded to prevent overflow of text
+            Expanded(
+              child: SizedBox(
+                width: 150.w,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Bench press',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTextStyle.black500S14,
                     ),
-                  ),
-                ],
+                    Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '10-8\t\rCount\n',
+                            style: AppTextStyle.blackOpacity500S10,
+                          ),
+                          TextSpan(
+                            text: '10\t\rGroups\n',
+                            style: AppTextStyle.blackOpacity500S10,
+                          ),
+                          TextSpan(
+                            text: '300\t\rCalories',
+                            style: AppTextStyle.blackOpacity500S10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 if (deleteButton != null) deleteButton!,
@@ -77,6 +84,7 @@ class ExercisesCard extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(width: 10),
           ],
         ),
       ),
