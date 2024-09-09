@@ -24,7 +24,6 @@ class UserHomeLayoutView extends StatelessWidget {
           body: Column(
             children: [
               AppBar(
-                automaticallyImplyLeading: false,
                 toolbarHeight: 90.h,
                 backgroundColor: AppColor.orangeLight,
                 shape: const RoundedRectangleBorder(
@@ -43,27 +42,32 @@ class UserHomeLayoutView extends StatelessWidget {
                       },
                       child: CircleAvatar(
                         radius: 30.r,
-                        backgroundImage: const AssetImage(
-                          AppAsset.boy,
-                        ),
+                        backgroundImage: const AssetImage(AppAsset.boy),
                       ),
                     ),
                     SizedBox(width: 5.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('ID: 123456', style: AppTextStyle.black600S16),
-                        SizedBox(height: 10.h),
-                        Text(
-                          '12 sessions completed, 8 sessions remaining',
-                          maxLines: 2,
-                          style: AppTextStyle.blackOpacity600S14.copyWith(
-                            fontSize: 8.sp,
+                    Flexible(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
+                        children: [
+                          Text('ID: 123456',
+                              style: AppTextStyle.black600S16.copyWith(
+                                color:  const Color(0xff01152D)
+                              )),
+                          SizedBox(height: 5.h),
+                          Text(
+                            '12 sessions completed,8 sessions remaining',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTextStyle.blackOpacity600S14.copyWith(
+                              fontSize: 10.sp,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 10.h),
-                        const CustomRowCapacity(),
-                      ],
+                          SizedBox(height: 10.h),
+                          const CustomRowCapacity(),
+                        ],
+                      ),
                     ),
                   ],
                 ),

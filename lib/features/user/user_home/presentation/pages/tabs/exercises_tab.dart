@@ -5,6 +5,7 @@ import 'package:gym_dream/core/app_asset.dart';
 
 import '../../../../../../common/routes/route.dart';
 import '../../../../../../core/app_text_style.dart';
+import '../../widgets/collection_exercise.dart';
 
 class ExercisesTab extends StatelessWidget {
   const ExercisesTab({super.key});
@@ -43,68 +44,7 @@ class ExercisesTab extends StatelessWidget {
   }
 }
 
-class CollectionExercise extends StatelessWidget {
-  const CollectionExercise({
-    required this.imageBackground,
-    required this.imageExercise,
-    required this.nameExercise,
-    required this.numberExercises,
-    super.key,
-  });
 
-  final String imageBackground;
-  final String imageExercise;
-  final String nameExercise;
-  final int numberExercises;
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Container(
-        height: 110.h,
-        color: Colors.transparent,
-        child: Stack(
-          children: [
-            Image.asset(
-              height: 110.h,
-              imageBackground,
-              fit: BoxFit.fill,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 190.w,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text(
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            nameExercise,
-                            style: AppTextStyle.black500S14),
-                        Row(
-                          children: [
-                            Image.asset(AppAsset.weightLifting,
-                                width: 50.w, height: 50.h),
-                            Text('$numberExercises Exercises',
-                                style: AppTextStyle.blackOpacity600S14),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                Image.asset(imageExercise,
-                    fit: BoxFit.fill, width: 130.w, height: 110.h),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+
+
