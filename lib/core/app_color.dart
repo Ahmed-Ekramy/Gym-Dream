@@ -21,6 +21,7 @@ class AppColor {
   static const Color blue = Color(0xFF56B6DC);
   static const Color red = Color(0xFFE50914);
   static const Color redLight = Color.fromRGBO(188, 41, 41, 0.2);
+  static const Color redLightThan = Color(0xFFFF6F6F);
   static const Color redBlood = Color(0xFF990808);
   static const Color green = Color(0xFF08CF61);
   static const Color greenLight = Color(0xffDDFEDB);
