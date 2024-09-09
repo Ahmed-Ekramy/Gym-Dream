@@ -55,6 +55,30 @@ class MyValidatorsHelper {
     return null;
   }
 
+  static String? urlValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter a URL';
+    }
+    final RegExp urlPattern = RegExp(
+      r'^(https?|ftp)://[^\s/$.?#].[^\s]*$',
+      caseSensitive: false,
+    );
+    if (!urlPattern.hasMatch(value)) {
+      return 'Please enter a valid URL';
+    }
+    return null;
+  }
+
+  static String? addExercisesValidator(BuildContext context, String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Enter the right number';
+    }
+    if (value.length > 2 || value == '0' || value == '00') {
+      return 'Enter the right number';
+    }
+    return null;
+  }
+
   static String? displayProductSellerValidator(
       BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {
