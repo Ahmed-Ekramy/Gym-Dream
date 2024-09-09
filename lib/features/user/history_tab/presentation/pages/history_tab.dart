@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../core/app_text_style.dart';
-import '../../widgets/container_history_schedule.dart';
-import '../../widgets/sliver_list_history.dart';
+import '../../../../../core/app_text_style.dart';
+import '../widgets/container_history_schedule.dart';
+import '../widgets/sliver_list_history.dart';
 
 class HistoryTab extends StatelessWidget {
   const HistoryTab({super.key});

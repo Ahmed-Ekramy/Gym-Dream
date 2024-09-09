@@ -56,7 +56,7 @@ class AdminSearchViewBody extends StatelessWidget {
               suffixIcon: IconButton(
                 onPressed: () {},
                 icon: SvgPicture.asset(
-                  AppAsset.arrowdown,
+                  AppAsset.arrowDown,
                 ),
               ),
             ),
@@ -71,7 +71,7 @@ class AdminSearchViewBody extends StatelessWidget {
               suffixIcon: IconButton(
                 onPressed: () {},
                 icon: SvgPicture.asset(
-                  AppAsset.arrowdown,
+                  AppAsset.arrowDown,
                 ),
               ),
             ),

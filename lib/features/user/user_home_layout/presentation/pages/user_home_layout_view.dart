@@ -157,6 +157,18 @@ class UserHomeLayoutView extends StatelessWidget {
                 ),
                 label: 'Exercises',
               ),
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  AppAsset.settings,
+                  width: 24.w,
+                  height: 24.h,
+                  colorFilter: ColorFilter.mode(
+                    cubit.currentIndex == 3 ? AppColor.primary : AppColor.grey,
+                    BlendMode.srcIn,
+                  ),
+                ),
+                label: 'Settings',
+              ),
             ],
           ),
         ),
