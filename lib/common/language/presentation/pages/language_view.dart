@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/cubit/language_cubit.dart';
 import 'package:gym_dream/core/app_text_style.dart';
-import '../../../../../common/widgets/custom_arrow_back.dart';
-import '../../../../../common/widgets/custom_button_widget.dart';
-import '../../../../../core/app_asset.dart';
-import '../../../../../core/app_color.dart';
-import '../manager/language_cubit.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+
+import '../../../../core/app_color.dart';
 import '../widgets/language_body_view.dart';
 
 class LanguageView extends StatelessWidget {
@@ -22,7 +21,7 @@ class LanguageView extends StatelessWidget {
           leadingWidth: 40.w,
           leading: const Padding(
             padding: EdgeInsets.only(left: 8),
-            child: CustomArrowBack(),
+            child: BackIcon(),
           ),
           centerTitle: true,
           title: Text(
@@ -35,5 +34,3 @@ class LanguageView extends StatelessWidget {
     );
   }
 }
-
-

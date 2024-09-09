@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/widgets/custom_app_bar.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/all_member_view_body.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/new_member_view_body.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/search_icon.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class OurMemberView extends StatefulWidget {
   static const String routeName = 'OurMemberView';
@@ -41,7 +41,7 @@ class _MyTabbedPageState extends State<OurMemberView>
       child: Scaffold(
         appBar: const CustomAppBar(
           title: 'Gym members',
-          leading: CustomArrowBack(),
+          leading: BackIcon(),
           actions: [
             SearchIcon(),
           ],

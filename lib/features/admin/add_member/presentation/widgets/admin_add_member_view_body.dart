@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
-
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/admin_add_member_form.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/create_user_and_enter_data_widget.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class AdminAddMemberViewBody extends StatelessWidget {
   const AdminAddMemberViewBody({super.key});
@@ -17,7 +16,7 @@ class AdminAddMemberViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const CustomArrowBack(),
+              const BackIcon(),
               SizedBox(height: 8.h),
               const CreateUserAndEnterDataWidget(),
               SizedBox(height: 8.h),

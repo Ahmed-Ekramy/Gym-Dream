@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         centerTitle: true,
         leadingWidth: leadingWidth.w,
-        leading: leading ?? const CustomArrowBack(),
+        leading: leading ?? const BackIcon(),
         title: Text(
           title,
           style: AppTextStyle.black400S22,

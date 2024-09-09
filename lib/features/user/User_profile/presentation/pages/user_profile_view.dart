@@ -17,21 +17,21 @@ class UserProfileView extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-            backgroundColor: AppColor.orangeLight,
-            title: Text('Profile', style: AppTextStyle.black600S18),
-            centerTitle: true,
-            leading: InkWell(
-              onTap: () => Navigator.pop(context),
-              child: Container(
-                padding: EdgeInsets.all(5.sp),
-                child: SvgPicture.asset(
-                  fit:  BoxFit.fill,
-                  width: 10.w,
-                  height: 10.h,
-                  AppAsset.arrowCircleRight,
-                ),
-              ),
-            )),
+                backgroundColor: AppColor.orangeLight,
+                title: Text('Profile', style: AppTextStyle.black600S18),
+                centerTitle: true,
+                leading: InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                    padding: EdgeInsets.all(5.sp),
+                    child: SvgPicture.asset(
+                      fit: BoxFit.fill,
+                      width: 10.w,
+                      height: 10.h,
+                      AppAsset.arrowCircleRight,
+                    ),
+                  ),
+                )),
             SliverToBoxAdapter(
               child: SizedBox(height: 20.h),
             ),

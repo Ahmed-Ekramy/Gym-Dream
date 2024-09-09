@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
-import 'package:gym_dream/common/widgets/custom_arrow_back.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_left_widget.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 
 class AdminConfirmUserBody extends StatefulWidget {
   const AdminConfirmUserBody({super.key});
@@ -24,7 +24,7 @@ class _AdminConfirmUserBodyState extends State<AdminConfirmUserBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CustomArrowBack(),
+            const BackIcon(),
             SizedBox(height: 20.h),
             Row(
               children: [
