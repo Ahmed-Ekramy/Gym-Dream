@@ -8,6 +8,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminSettingViewBody extends StatelessWidget {
   const AdminSettingViewBody({super.key});
@@ -24,7 +25,7 @@ class AdminSettingViewBody extends StatelessWidget {
                   context: context, routeName: Routes.adminProfileView);
             },
             image: AppAsset.profile,
-            title: 'Profile',
+            title: S.of(context).profile,
           ),
           SizedBox(
             height: 8.h,
@@ -35,7 +36,7 @@ class AdminSettingViewBody extends StatelessWidget {
                   context: context, routeName: Routes.languageView);
             },
             image: AppAsset.language,
-            title: 'Language',
+            title: S.of(context).language,
           ),
           SizedBox(
             height: 8.h,
@@ -54,7 +55,7 @@ class AdminSettingViewBody extends StatelessWidget {
               );
             },
             image: AppAsset.redLogout,
-            title: 'Logout',
+            title: S.of(context).logout,
             titlestyle: AppTextStyle.black400S22.copyWith(
               fontSize: 26.sp,
               color: AppColor.red,
@@ -165,11 +166,12 @@ class SettingItem extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.white, // Changed the color to white
+          color: AppColor.white, // Changed the color to white
           borderRadius: BorderRadius.circular(8.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1), // Shadow color with opacity
+              color:
+                  AppColor.black.withOpacity(0.1), // Shadow color with opacity
               spreadRadius: 2, // Spread of the shadow
               blurRadius: 8, // Blurring effect
               offset: const Offset(0, 4), // Position of the shadow (x, y)

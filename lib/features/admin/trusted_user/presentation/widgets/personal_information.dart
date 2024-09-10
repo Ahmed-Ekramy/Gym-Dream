@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/personal_info_package_item.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class PersonalInformation extends StatelessWidget {
   const PersonalInformation({
@@ -19,14 +20,14 @@ class PersonalInformation extends StatelessWidget {
         ),
         SizedBox(height: 8.h),
         Text(
-          'ID : 101230',
+          '${S.of(context).id}: 101230',
           style: AppTextStyle.brown600S18,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Platinum Package',
+              '${S.of(context).package} ${S.of(context).platinum}',
               style: AppTextStyle.blackOpacity400S14,
             ),
             SizedBox(width: 8.w),
@@ -38,14 +39,14 @@ class PersonalInformation extends StatelessWidget {
           ],
         ),
         SizedBox(height: 8.h),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PersonalInfoPackageItem(
-              date: 'Start Date: 1/3/2024',
+              date: '${S.of(context).startDate}: 1/3/2024',
             ),
             PersonalInfoPackageItem(
-              date: 'End Date: 1/4/2024',
+              date: '${S.of(context).endDate}: 1/4/2024',
             ),
           ],
         )

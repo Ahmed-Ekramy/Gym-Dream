@@ -12,6 +12,7 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/upload_user_image.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AdminAddMemberViewBodyForm extends StatefulWidget {
@@ -50,13 +51,13 @@ class _AdminAddMemberViewBodyFormState
               UploadUserImage(cubit: cubit, picker: picker),
               SizedBox(height: 16.h),
               Text(
-                'Full Name',
+                S.of(context).fullName,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.fullNameController,
-                hintText: 'Enter your full name',
+                hintText: S.of(context).enterYourFullName,
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 maxLine: 1,
@@ -66,13 +67,13 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               Text(
-                'ID',
+                S.of(context).id,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.iDController,
-                hintText: 'Enter iD here',
+                hintText: S.of(context).enterYourIDHere,
                 obscureText: false,
                 keyboardType: TextInputType.phone,
                 maxLine: 1,
@@ -84,12 +85,12 @@ class _AdminAddMemberViewBodyFormState
               Row(
                 children: [
                   Text(
-                    'Gender',
+                    S.of(context).gender,
                     style: AppTextStyle.black500S16,
                   ),
                   SizedBox(width: 32.w),
                   Radio<String>(
-                    value: 'Male',
+                    value: S.of(context).male,
                     groupValue: cubit.gender,
                     onChanged: (value) {
                       setState(() {
@@ -97,10 +98,10 @@ class _AdminAddMemberViewBodyFormState
                       });
                     },
                   ),
-                  Text('Male', style: AppTextStyle.black400S14),
+                  Text(S.of(context).male, style: AppTextStyle.black400S14),
                   SizedBox(width: 16.w),
                   Radio<String>(
-                    value: 'Female',
+                    value: S.of(context).female,
                     groupValue: cubit.gender,
                     onChanged: (value) {
                       setState(() {
@@ -109,7 +110,7 @@ class _AdminAddMemberViewBodyFormState
                     },
                   ),
                   Text(
-                    'Female',
+                    S.of(context).female,
                     style: AppTextStyle.black400S14,
                   ),
                 ],
@@ -118,7 +119,7 @@ class _AdminAddMemberViewBodyFormState
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Package:',
+                    '${S.of(context).package}:',
                     style: AppTextStyle.black500S16,
                   ),
                   TextButton(
@@ -128,7 +129,7 @@ class _AdminAddMemberViewBodyFormState
                           routeName: Routes.packageDetailsView);
                     },
                     child: Text(
-                      'Details',
+                      S.of(context).details,
                       style: AppTextStyle.blueNavy500S14.copyWith(
                         color: AppColor.blueeee,
                       ),
@@ -138,13 +139,13 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 16.h),
               Text(
-                'WhatsApp Number',
+                S.of(context).whatsAppNumber,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.watsAppController,
-                hintText: 'WhatsApp Number Here',
+                hintText: S.of(context).whatsAppNumber,
                 obscureText: false,
                 maxLine: 1,
                 keyboardType: TextInputType.phone,
@@ -154,7 +155,7 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               Text(
-                'Birth Date',
+                S.of(context).birthDate,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
@@ -163,7 +164,7 @@ class _AdminAddMemberViewBodyFormState
                   return null; // You may want to add a date validator here
                 },
                 controller: cubit.birthDateController,
-                hintText: 'Birth Date Here',
+                hintText: S.of(context).birthDate,
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
@@ -179,7 +180,7 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 16.h),
               Text(
-                'Start Date',
+                S.of(context).startDate,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
@@ -188,7 +189,7 @@ class _AdminAddMemberViewBodyFormState
                   return null;
                 },
                 controller: cubit.startDateController,
-                hintText: 'Start Date Here',
+                hintText: S.of(context).startDate,
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
@@ -205,7 +206,7 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               Text(
-                'End Date',
+                S.of(context).endDate,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
@@ -214,7 +215,7 @@ class _AdminAddMemberViewBodyFormState
                   return null;
                 },
                 controller: cubit.endDateController,
-                hintText: 'End Date Here',
+                hintText: S.of(context).endDate,
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
@@ -230,13 +231,13 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 16.h),
               Text(
-                'Password',
+                S.of(context).password,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.passWordController,
-                hintText: 'Password',
+                hintText: S.of(context).password,
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
@@ -253,13 +254,13 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               Text(
-                'Confirm Password',
+                S.of(context).confirmPassword,
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.confirmPassWordController,
-                hintText: 'Confirm Password',
+                hintText: S.of(context).confirmPassword,
                 obscureText: true,
                 keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
@@ -278,7 +279,7 @@ class _AdminAddMemberViewBodyFormState
               CustomButton(
                 height: 30.h,
                 width: double.infinity,
-                title: 'Done',
+                title: S.of(context).done,
                 onPressed: () {
                   if (cubit.formKey.currentState!.validate() == true) {
                     // Call the function to add member here

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
+import 'package:gym_dream/features/user/setting_tab/presentation/widgets/custom_card_item_setting.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../common/helper/naviagtion_extentaions.dart';
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
-import 'custom_cardItem_setting.dart';
 
 class SettingTabView extends StatelessWidget {
   const SettingTabView({

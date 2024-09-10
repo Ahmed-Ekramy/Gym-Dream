@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_left_widget.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminConfirmUserBody extends StatefulWidget {
   const AdminConfirmUserBody({super.key});
@@ -37,19 +38,19 @@ class _AdminConfirmUserBodyState extends State<AdminConfirmUserBody> {
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'ID : 101230',
+                      '${S.of(context).id}: 101230',
                       style: AppTextStyle.brown600S18,
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'WhatsApp Number:\n01123456789',
+                      '${S.of(context).whatsAppNumber}:\n01123456789',
                       style: AppTextStyle.black400S15,
                     ),
                     SizedBox(height: 8.h),
                     Row(
                       children: [
                         Text(
-                          'Platinum Package',
+                          '${S.of(context).package} ${S.of(context).platinum}',
                           style: AppTextStyle.black400S15,
                         ),
                         Image.asset(
@@ -61,17 +62,17 @@ class _AdminConfirmUserBodyState extends State<AdminConfirmUserBody> {
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'Birth date : 10/3/2002',
+                      '${S.of(context).birthDate}: 10/3/2002',
                       style: AppTextStyle.black400S15,
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'Start Date: 1/3/2024',
+                      '${S.of(context).startDate}: 1/3/2024',
                       style: AppTextStyle.black400S15,
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'End Date: 1/4/2024',
+                      '${S.of(context).endDate}: 1/4/2024',
                       style: AppTextStyle.black400S15,
                     ),
                     SizedBox(height: 8.h),
@@ -90,7 +91,7 @@ class _AdminConfirmUserBodyState extends State<AdminConfirmUserBody> {
             CustomButton(
               width: double.infinity,
               height: 30.h,
-              title: 'Confirm',
+              title: S.of(context).confirm,
               onPressed: () {
                 AppNavigation.navigateTo(
                     context: context, routeName: Routes.homeAdminLayout);

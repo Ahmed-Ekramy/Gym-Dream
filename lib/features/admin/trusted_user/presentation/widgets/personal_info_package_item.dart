@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class PersonalInfoPackageItem extends StatelessWidget {
   const PersonalInfoPackageItem({
@@ -28,7 +29,7 @@ class PersonalInfoPackageItem extends StatelessWidget {
           ),
           SizedBox(height: 4.h),
           Text(
-            'Package ',
+            S.of(context).package,
             style: AppTextStyle.blackOpacity400S14,
           ),
           SizedBox(height: 4.h),

@@ -8,6 +8,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exercise_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 
 class UploadExerciseImage extends StatelessWidget {
@@ -40,7 +41,7 @@ class UploadExerciseImage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Upload Photo',
+                      S.of(context).uploadPhoto,
                       style: AppTextStyle.blackOpacity400S14
                           .copyWith(fontSize: 10.sp),
                     ),

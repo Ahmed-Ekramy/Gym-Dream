@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_gym_data_item.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminGymData extends StatelessWidget {
   const AdminGymData({
@@ -17,7 +18,7 @@ class AdminGymData extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Gym Data',
+            S.of(context).gymData,
             style: AppTextStyle.black700S22,
           ),
           SizedBox(height: 8.h),
@@ -25,8 +26,8 @@ class AdminGymData extends StatelessWidget {
             children: [
               Expanded(
                 child: FadeInLeft(
-                  child: const AdminGymDataItem(
-                    title: 'People in Gym now',
+                  child: AdminGymDataItem(
+                    title: S.of(context).peopleInGymNow,
                     value: '90',
                   ),
                 ),
@@ -34,8 +35,8 @@ class AdminGymData extends StatelessWidget {
               SizedBox(width: 16.w),
               Expanded(
                 child: FadeInRight(
-                  child: const AdminGymDataItem(
-                    title: 'Equipment Usages',
+                  child: AdminGymDataItem(
+                    title: S.of(context).equipmentUsages,
                     value: '30%',
                   ),
                 ),
@@ -47,8 +48,8 @@ class AdminGymData extends StatelessWidget {
             children: [
               Expanded(
                 child: FadeInLeft(
-                  child: const AdminGymDataItem(
-                    title: 'Check-ins Today',
+                  child: AdminGymDataItem(
+                    title: S.of(context).checkInsToday,
                     value: '200',
                   ),
                 ),
@@ -56,8 +57,8 @@ class AdminGymData extends StatelessWidget {
               SizedBox(width: 16.w),
               Expanded(
                 child: FadeInRight(
-                  child: const AdminGymDataItem(
-                    title: 'Total Check-ins this month',
+                  child: AdminGymDataItem(
+                    title: S.of(context).totalCheckInsThisMonth,
                     value: '1,321',
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_text_style.dart';
 
@@ -23,7 +24,7 @@ class CustomAppBarHistory extends StatelessWidget {
         ),
       ),
       title: Text(
-        "recently scanned",
+        S.of(context).recentlyScanned,
         style: AppTextStyle.black400S22,
       ),
       leading: const Padding(

@@ -929,6 +929,588 @@ class S {
       args: [],
     );
   }
+
+  /// `Done`
+  String get done {
+    return Intl.message(
+      'Done',
+      name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trusted User`
+  String get trustedUser {
+    return Intl.message(
+      'Trusted User',
+      name: 'trustedUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get editProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'editProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result`
+  String get result {
+    return Intl.message(
+      'Result',
+      name: 'result',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear`
+  String get clear {
+    return Intl.message(
+      'Clear',
+      name: 'clear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gym Members`
+  String get gymMembers {
+    return Intl.message(
+      'Gym Members',
+      name: 'gymMembers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All members`
+  String get allMembers {
+    return Intl.message(
+      'All members',
+      name: 'allMembers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New members`
+  String get newMembers {
+    return Intl.message(
+      'New members',
+      name: 'newMembers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scan the Qr Code`
+  String get scanTheQrCode {
+    return Intl.message(
+      'Scan the Qr Code',
+      name: 'scanTheQrCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send to all members`
+  String get sendToAllMembers {
+    return Intl.message(
+      'Send to all members',
+      name: 'sendToAllMembers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The gym is full send to our clients tell them`
+  String get theGymIsFullSendToOurClientsTellThem {
+    return Intl.message(
+      'The gym is full send to our clients tell them',
+      name: 'theGymIsFullSendToOurClientsTellThem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recently scanned`
+  String get recentlyScanned {
+    return Intl.message(
+      'Recently scanned',
+      name: 'recentlyScanned',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scann now`
+  String get scannNow {
+    return Intl.message(
+      'Scann now',
+      name: 'scannNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Valid Qr Code`
+  String get validQrCode {
+    return Intl.message(
+      'Valid Qr Code',
+      name: 'validQrCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Branch`
+  String get branch {
+    return Intl.message(
+      'Branch',
+      name: 'branch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our members`
+  String get ourMembers {
+    return Intl.message(
+      'Our members',
+      name: 'ourMembers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gym data`
+  String get gymData {
+    return Intl.message(
+      'Gym data',
+      name: 'gymData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `People in Gym now`
+  String get peopleInGymNow {
+    return Intl.message(
+      'People in Gym now',
+      name: 'peopleInGymNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Equipment Usages`
+  String get equipmentUsages {
+    return Intl.message(
+      'Equipment Usages',
+      name: 'equipmentUsages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CheckIns today`
+  String get checkInsToday {
+    return Intl.message(
+      'CheckIns today',
+      name: 'checkInsToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total CheckIns this month`
+  String get totalCheckInsThisMonth {
+    return Intl.message(
+      'Total CheckIns this month',
+      name: 'totalCheckInsThisMonth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add new users`
+  String get addNewUsers {
+    return Intl.message(
+      'Add new users',
+      name: 'addNewUsers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send an invite to join`
+  String get sendAnInviteToJoin {
+    return Intl.message(
+      'Send an invite to join',
+      name: 'sendAnInviteToJoin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add member`
+  String get addMember {
+    return Intl.message(
+      'Add member',
+      name: 'addMember',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload photo`
+  String get uploadPhoto {
+    return Intl.message(
+      'Upload photo',
+      name: 'uploadPhoto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No exercises available.`
+  String get noExercisesAvailable {
+    return Intl.message(
+      'No exercises available.',
+      name: 'noExercisesAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repetition`
+  String get repetition {
+    return Intl.message(
+      'Repetition',
+      name: 'repetition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video Link`
+  String get videoLink {
+    return Intl.message(
+      'Video Link',
+      name: 'videoLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Exercise`
+  String get addExercise {
+    return Intl.message(
+      'Add Exercise',
+      name: 'addExercise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add New Exercise`
+  String get addNewExercise {
+    return Intl.message(
+      'Add New Exercise',
+      name: 'addNewExercise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disable`
+  String get disable {
+    return Intl.message(
+      'Disable',
+      name: 'disable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Photo`
+  String get photo {
+    return Intl.message(
+      'Photo',
+      name: 'photo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your plan`
+  String get chooseYourPlan {
+    return Intl.message(
+      'Choose your plan',
+      name: 'chooseYourPlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gold`
+  String get gold {
+    return Intl.message(
+      'Gold',
+      name: 'gold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlimited use of essential sports equipment`
+  String get unlimitedUseOfEssentialSportsEquipment {
+    return Intl.message(
+      'Unlimited use of essential sports equipment',
+      name: 'unlimitedUseOfEssentialSportsEquipment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One consultation session with a personal trainer when you sign up for the first time`
+  String
+      get oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime {
+    return Intl.message(
+      'One consultation session with a personal trainer when you sign up for the first time',
+      name:
+          'oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use a personal locker daily.`
+  String get useAPersonalLockerDaily {
+    return Intl.message(
+      'Use a personal locker daily.',
+      name: 'useAPersonalLockerDaily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new user`
+  String get createNewUser {
+    return Intl.message(
+      'Create a new user',
+      name: 'createNewUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the required data below`
+  String get enterTheRequiredDataBelow {
+    return Intl.message(
+      'Enter the required data below',
+      name: 'enterTheRequiredDataBelow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your full name`
+  String get enterYourFullName {
+    return Intl.message(
+      'Enter your full name',
+      name: 'enterYourFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your ID here`
+  String get enterYourIDHere {
+    return Intl.message(
+      'Enter your ID here',
+      name: 'enterYourIDHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No image picked`
+  String get noImagePicked {
+    return Intl.message(
+      'No image picked',
+      name: 'noImagePicked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display name cannot be empty`
+  String get displayNameCannotBeEmpty {
+    return Intl.message(
+      'Display name cannot be empty',
+      name: 'displayNameCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display name must be between 3 and 20 characters`
+  String get displayNameMustBeBetween3And20Characters {
+    return Intl.message(
+      'Display name must be between 3 and 20 characters',
+      name: 'displayNameMustBeBetween3And20Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display Product Price cannot be empty`
+  String get displayProductPriceCannotBeEmpty {
+    return Intl.message(
+      'Display Product Price cannot be empty',
+      name: 'displayProductPriceCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display Product price must be between 1 and 5 characters`
+  String get displayProductPriceMustBeBetween1And5Characters {
+    return Intl.message(
+      'Display Product price must be between 1 and 5 characters',
+      name: 'displayProductPriceMustBeBetween1And5Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a URL`
+  String get pleaseEnterAUrl {
+    return Intl.message(
+      'Please enter a URL',
+      name: 'pleaseEnterAUrl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid URL`
+  String get pleaseEnterAValidURL {
+    return Intl.message(
+      'Please enter a valid URL',
+      name: 'pleaseEnterAValidURL',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the right number`
+  String get enterTheRightNumber {
+    return Intl.message(
+      'Enter the right number',
+      name: 'enterTheRightNumber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

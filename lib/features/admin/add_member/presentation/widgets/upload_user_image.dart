@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 
 class UploadUserImage extends StatelessWidget {
@@ -27,7 +28,7 @@ class UploadUserImage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Photo',
+              S.of(context).photo,
               style: AppTextStyle.black500S16,
             ),
             SizedBox(height: 8.h),
@@ -48,7 +49,7 @@ class UploadUserImage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Upload Photo',
+                      S.of(context).uploadPhoto,
                       style: AppTextStyle.blackOpacity400S14,
                     ),
                     SizedBox(width: 8.w),

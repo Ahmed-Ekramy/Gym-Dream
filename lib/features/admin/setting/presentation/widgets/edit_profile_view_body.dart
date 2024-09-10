@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/widgets/app_text_form_field.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
@@ -24,26 +25,70 @@ class EditProfileViewBody extends StatelessWidget {
                 backgroundImage: AssetImage(AppAsset.boy),
               ),
             ),
-            SizedBox(height: 40.h),
-            Text('Full Name', style: AppTextStyle.black600S18),
-            SizedBox(height: 4.h),
-            const AppTextFormFiled(hintText: 'Full Name', obscureText: false),
-            SizedBox(height: 8.h),
-            Text('ID', style: AppTextStyle.black600S18),
-            SizedBox(height: 4.h),
-            const AppTextFormFiled(hintText: 'ID', obscureText: false),
-            SizedBox(height: 8.h),
-            Text('WahatApp Number', style: AppTextStyle.black600S18),
-            SizedBox(height: 4.h),
-            const AppTextFormFiled(
-                hintText: 'WahatApp Number', obscureText: false),
-            SizedBox(height: 8.h),
-            Text('Birth date', style: AppTextStyle.black600S18),
-            SizedBox(height: 4.h),
-            const AppTextFormFiled(hintText: 'Birth date', obscureText: false),
-            SizedBox(height: 40.h),
+            SizedBox(
+              height: 40.h,
+            ),
+            Text(
+              S.of(context).fullName,
+              style: AppTextStyle.black600S18,
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            AppTextFormFiled(
+              hintText: S.of(context).fullName,
+              obscureText: false,
+            ),
+            SizedBox(
+              height: 8.h,
+            ),
+            Text(
+              S.of(context).id,
+              style: AppTextStyle.black600S18,
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            AppTextFormFiled(
+              hintText: S.of(context).id,
+              obscureText: false,
+            ),
+            SizedBox(
+              height: 8.h,
+            ),
+            Text(
+              S.of(context).whatsAppNumber,
+              style: AppTextStyle.black600S18,
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            AppTextFormFiled(
+              hintText: S.of(context).whatsAppNumber,
+              obscureText: false,
+            ),
+            SizedBox(
+              height: 8.h,
+            ),
+            Text(
+              S.of(context).birthDate,
+              style: AppTextStyle.black600S18,
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            AppTextFormFiled(
+              hintText: S.of(context).birthDate,
+              obscureText: false,
+            ),
+            SizedBox(
+              height: 40.h,
+            ),
             CustomButton(
-                width: double.infinity, title: 'Confirm', onPressed: () {}),
+              width: double.infinity,
+              title: S.of(context).confirm,
+              onPressed: () {},
+            ),
           ],
         ),
       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_left_item.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class DaysLeftWidget extends StatelessWidget {
   const DaysLeftWidget({
@@ -15,7 +16,7 @@ class DaysLeftWidget extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            'Days left for your package',
+            S.of(context).daysLeftForYourPackage,
             style: AppTextStyle.black700S18,
           ),
         ),
@@ -24,37 +25,37 @@ class DaysLeftWidget extends StatelessWidget {
         ),
         Row(
           children: [
-            const Expanded(
+            Expanded(
               child: DaysLeftItem(
                 value: '30',
-                time: 'Days',
+                time: S.of(context).days,
               ),
             ),
             SizedBox(
               width: 8.w,
             ),
-            const Expanded(
+            Expanded(
               child: DaysLeftItem(
                 value: '10',
-                time: 'Hours',
+                time: S.of(context).hours,
               ),
             ),
             SizedBox(
               width: 8.w,
             ),
-            const Expanded(
+            Expanded(
               child: DaysLeftItem(
                 value: '32',
-                time: 'Minutes',
+                time: S.of(context).minutes,
               ),
             ),
             SizedBox(
               width: 8.w,
             ),
-            const Expanded(
+            Expanded(
               child: DaysLeftItem(
                 value: '23',
-                time: 'Seconds',
+                time: S.of(context).seconds,
               ),
             ),
           ],

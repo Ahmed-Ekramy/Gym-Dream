@@ -1,9 +1,8 @@
-import 'package:retrofit/http.dart';
-
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
 import 'api_config.dart';
+
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConfig.baseUrl)
