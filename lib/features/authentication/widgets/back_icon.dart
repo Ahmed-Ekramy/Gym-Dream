@@ -7,7 +7,10 @@ import 'package:gym_dream/core/app_asset.dart';
 class BackIcon extends StatelessWidget {
   const BackIcon({
     super.key,
+    this.onPressed,
   });
+
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class BackIcon extends StatelessWidget {
       child: IconButton(
         padding: EdgeInsets.zero,
         onPressed: () {
-          AppNavigation.pop(context);
+          onPressed ?? AppNavigation.pop(context);
         },
         icon: Localizations.localeOf(context).languageCode == 'en'
             ? SvgPicture.asset(

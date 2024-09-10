@@ -74,22 +74,27 @@ class AdminProfileImage extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 25.r,
                   backgroundColor: const Color(0xffF6F5F5),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 8.h),
-                      Text(
-                        S.of(context).editProfile,
-                        style:
-                            AppTextStyle.black400S14.copyWith(fontSize: 7.sp),
-                      ),
-                      SizedBox(height: 3.h),
-                      SvgPicture.asset(
-                        AppAsset.edit,
-                        width: 18,
-                      ),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 8.h),
+                        FittedBox(
+                          child: Text(
+                            S.of(context).editProfile,
+                            style: AppTextStyle.black400S14
+                                .copyWith(fontSize: 7.sp),
+                          ),
+                        ),
+                        SizedBox(height: 3.h),
+                        SvgPicture.asset(
+                          AppAsset.edit,
+                          width: 18,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

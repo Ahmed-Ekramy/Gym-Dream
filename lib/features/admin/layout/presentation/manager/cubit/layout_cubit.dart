@@ -25,6 +25,7 @@ class LayoutCubit extends Cubit<LayoutState> {
 
   void changeBottomNavIndex(int index, BuildContext context) {
     currentIndex = index;
+    debugPrint("changeBottomNavIndex: $index");
 
     layOutRepo.changeBottomNavIndex(
       changeIndexParams: ChangeIndexParams(
@@ -54,8 +55,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   }
 
   void changeBottomNavToHome(BuildContext context) {
-    layOutRepo.changeBottomNavToHome(
-        changeIndexParams: ChangeIndexParams(context: context));
+    currentIndex = 0;
 
     emit(const ChangeBottomNavToHome());
   }
