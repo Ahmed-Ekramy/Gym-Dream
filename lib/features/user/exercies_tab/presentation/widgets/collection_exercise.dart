@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
@@ -28,16 +29,17 @@ class CollectionExercise extends StatelessWidget {
           children: [
             Image.asset(
               height: 110.h,
-
               imageBackground,
               fit: BoxFit.fill,
             ),
             Row(
               children: [
                 Flexible(
-                  flex: 3, // Allows better content distribution in the row
+                  flex: 3,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8.0.w,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,12 +54,12 @@ class CollectionExercise extends StatelessWidget {
                           children: [
                             Image.asset(
                               AppAsset.weightLifting,
-                              width: 45.w, // Adjusted size
-                              height: 45.h, // Adjusted size
+                              width: 45.w,
+                              height: 45.h,
                             ),
-                            SizedBox(width: 8.0.w), // Spacing between icon and text
+                            SizedBox(width: 8.0.w),
                             Text(
-                              '$numberExercises Exercises',
+                              '$numberExercises ${S.of(context).exercises}',
                               style: AppTextStyle.blackOpacity600S14,
                             ),
                           ],
@@ -67,7 +69,7 @@ class CollectionExercise extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 90.w, // Reduced width for the second image
+                  width: 90.w,
                   child: Image.asset(
                     imageExercise,
                     fit: BoxFit.fill,

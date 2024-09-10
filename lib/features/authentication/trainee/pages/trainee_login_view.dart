@@ -37,7 +37,7 @@ class TraineeLoginView extends StatelessWidget {
       ],
       child: Scaffold(
         body: SafeArea(
-          minimum: EdgeInsets.only(top: 55.h),
+          bottom: false,
           child: Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
             child: SingleChildScrollView(
@@ -120,9 +120,9 @@ class TraineeLoginView extends StatelessWidget {
                       ),
                     ),
                     Hero(
-                      tag: 1,
+                      tag: 0,
                       child: Image.asset(
-                        height: 200.h,
+                        height: 180.h,
                         AppAsset.trainee,
                       ),
                     )

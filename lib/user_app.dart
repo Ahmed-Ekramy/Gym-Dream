@@ -47,8 +47,8 @@ class UserAppGym extends StatelessWidget {
                   GlobalWidgetsLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                 ],
-                // supportedLocales: S.delegate.supportedLocales,
                 theme: ThemeData(
+                  scaffoldBackgroundColor: AppColor.white,
                   textSelectionTheme: const TextSelectionThemeData(
                     cursorColor: AppColor.primary,
                     selectionColor: AppColor.primary,

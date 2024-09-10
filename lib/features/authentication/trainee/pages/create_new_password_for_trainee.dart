@@ -49,7 +49,7 @@ class CreateNewPasswordForTrainee extends StatelessWidget {
                 SizedBox(height: 10.h),
                 const PasswordForm(),
                 const InstructionsSection(),
-                SizedBox(height: 130.h),
+                // SizedBox(height: 130.h),
               ],
             ),
           ),

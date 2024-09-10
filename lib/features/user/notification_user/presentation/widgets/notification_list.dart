@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
+
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 import 'notification_row_padge.dart';
@@ -31,7 +33,7 @@ class NotificationList extends StatelessWidget {
                   Text(
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
-                    "Hello, we remind you to change your password.",
+                    S.of(context).helloWeRemindYouToChangeYourPassword,
                     style: AppTextStyle.black400S15,
                   ),
                 ],

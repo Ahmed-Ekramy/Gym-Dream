@@ -26,7 +26,7 @@ class LanguageBodyView extends StatelessWidget {
                   ),
                   CustomListTile(
                     state: state,
-                    nameLanguage: 'Arabic',
+                    nameLanguage: 'العربية',
                     imageLanguage: AppAsset.egyptFlag,
                   ),
                 ],
