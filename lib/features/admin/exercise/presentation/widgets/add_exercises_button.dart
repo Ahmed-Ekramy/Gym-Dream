@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/add_exercises_dialog_body.dart';
@@ -43,10 +44,10 @@ class AddExercisesButton extends StatelessWidget {
   }
 
   Future<void> _dialogBuilder(BuildContext context) {
-    final GlobalKey<FormState> formKey =
-        GlobalKey<FormState>(); // Create formKey
+    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return showDialog<void>(
+      barrierDismissible: false,
       context: context,
       builder: (BuildContext context) {
         return BlocProvider(
@@ -56,11 +57,27 @@ class AddExercisesButton extends StatelessWidget {
             title: const Center(
               child: Text('Add new exercise'),
             ),
-            content: AddExercisesDialogBody(
-                formKey: formKey), // Pass formKey to the body
+            content: SizedBox(
+              height: 400.h,
+              width: 300.w,
+              child: AddExercisesDialogBody(
+                formKey: formKey,
+              ),
+            ),
             actions: <Widget>[
-              SaveAddingExercisesButton(
-                  formKey: formKey), // Pass the same formKey to the button
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: Theme.of(context).textTheme.labelLarge,
+                ),
+                child: Text(
+                  'Disable',
+                  style: AppTextStyle.orange400S10,
+                ),
+                onPressed: () {
+                  AppNavigation.pop(context);
+                },
+              ),
+              SaveAddingExercisesButton(formKey: formKey),
             ],
           ),
         );

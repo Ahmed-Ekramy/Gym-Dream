@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+
 import '../../../../../core/app_text_style.dart';
 import '../../../history_tab/presentation/widgets/last_attend_list.dart';
 import '../../../user_home_layout/presentation/manager/home_user_cubit.dart';
@@ -21,7 +23,11 @@ class HomeTab extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Center(
-              child: Text("My qr code", style: AppTextStyle.orange700S16)),
+            child: Text(
+              S.of(context).myQrCode,
+              style: AppTextStyle.orange700S16,
+            ),
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -31,7 +37,10 @@ class HomeTab extends StatelessWidget {
         SliverToBoxAdapter(
           child: Center(
             child: QrImageView(
-                data: "123456", version: QrVersions.auto, size: 270.sp),
+              data: "123456",
+              version: QrVersions.auto,
+              size: 270.sp,
+            ),
           ),
         ),
         SliverToBoxAdapter(
@@ -40,8 +49,12 @@ class HomeTab extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child:
-              Center(child: Text("History", style: AppTextStyle.orange600S18)),
+          child: Center(
+            child: Text(
+              S.of(context).history,
+              style: AppTextStyle.orange600S18,
+            ),
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -51,7 +64,10 @@ class HomeTab extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-            child: Text("Last session", style: AppTextStyle.gray600S14),
+            child: Text(
+              S.of(context).lastSession,
+              style: AppTextStyle.gray600S14,
+            ),
           ),
         ),
         SliverToBoxAdapter(
@@ -66,13 +82,16 @@ class HomeTab extends StatelessWidget {
             children: [
               const SizedBox(),
               TextButton(
-                  onPressed: () {
-                    HomeUserCubit.get(context).changeIndex(1);
-                  },
-                  child: Text(
-                    "See More",
-                    style: AppTextStyle.blue600S14.copyWith(fontSize: 10.sp),
-                  )),
+                onPressed: () {
+                  HomeUserCubit.get(context).changeIndex(1);
+                },
+                child: Text(
+                  S.of(context).seeMore,
+                  style: AppTextStyle.blue600S14.copyWith(
+                    fontSize: 10.sp,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

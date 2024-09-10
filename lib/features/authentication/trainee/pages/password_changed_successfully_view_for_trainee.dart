@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
@@ -46,7 +48,12 @@ class PasswordChangedSuccessfullyViewForTrainee extends StatelessWidget {
             CustomButton(
               width: double.infinity,
               title: S.of(context).goToHome,
-              onPressed: () {},
+              onPressed: () {
+                AppNavigation.navigateAndRemoveUntil(
+                  context: context,
+                  newRoute: Routes.traineeLogin,
+                );
+              },
             ),
             SizedBox(
               height: 25.h,

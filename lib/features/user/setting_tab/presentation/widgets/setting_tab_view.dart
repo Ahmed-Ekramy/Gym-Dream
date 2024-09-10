@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../common/helper/naviagtion_extentaions.dart';
 import '../../../../../core/app_color.dart';
@@ -21,7 +22,7 @@ class SettingTabView extends StatelessWidget {
           delegate: SliverChildListDelegate(
             [
               CustomCardItemSetting(
-                itemName: ' Profile',
+                itemName: S.of(context).profile,
                 iconItem: Icons.account_circle_outlined,
                 onTap: () {
                   AppNavigation.navigateTo(
@@ -29,7 +30,7 @@ class SettingTabView extends StatelessWidget {
                 },
               ),
               CustomCardItemSetting(
-                  itemName: ' Language',
+                  itemName: S.of(context).language,
                   iconItem: Icons.translate,
                   onTap: () {
                     AppNavigation.navigateTo(
@@ -38,7 +39,7 @@ class SettingTabView extends StatelessWidget {
               CustomCardItemSetting(
                 colorIcon: AppColor.redLightThan,
                 textStyle: AppTextStyle.redLight400S27,
-                itemName: ' Log out',
+                itemName: S.of(context).logout,
                 iconItem: Icons.logout_outlined,
                 onTap: () {
                   Future.delayed(

@@ -459,6 +459,476 @@ class S {
       args: [],
     );
   }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WhatsApp Number`
+  String get whatsAppNumber {
+    return Intl.message(
+      'WhatsApp Number',
+      name: 'whatsAppNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Package`
+  String get package {
+    return Intl.message(
+      'Package',
+      name: 'package',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Platinum`
+  String get platinum {
+    return Intl.message(
+      'Platinum',
+      name: 'platinum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth Date`
+  String get birthDate {
+    return Intl.message(
+      'Birth Date',
+      name: 'birthDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date`
+  String get startDate {
+    return Intl.message(
+      'Start Date',
+      name: 'startDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get endDate {
+    return Intl.message(
+      'End Date',
+      name: 'endDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Days left for your package`
+  String get daysLeftForYourPackage {
+    return Intl.message(
+      'Days left for your package',
+      name: 'daysLeftForYourPackage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seconds`
+  String get seconds {
+    return Intl.message(
+      'Seconds',
+      name: 'seconds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minutes`
+  String get minutes {
+    return Intl.message(
+      'Minutes',
+      name: 'minutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hours`
+  String get hours {
+    return Intl.message(
+      'Hours',
+      name: 'hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Days`
+  String get days {
+    return Intl.message(
+      'Days',
+      name: 'days',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low capacity`
+  String get lowCapacity {
+    return Intl.message(
+      'Low capacity',
+      name: 'lowCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medium capacity`
+  String get mediumCapacity {
+    return Intl.message(
+      'Medium capacity',
+      name: 'mediumCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High capacity`
+  String get highCapacity {
+    return Intl.message(
+      'High capacity',
+      name: 'highCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session completed`
+  String get sessionCompleted {
+    return Intl.message(
+      'Session completed',
+      name: 'sessionCompleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Session remaining`
+  String get sessionRemaining {
+    return Intl.message(
+      'Session remaining',
+      name: 'sessionRemaining',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History`
+  String get history {
+    return Intl.message(
+      'History',
+      name: 'history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercises`
+  String get exercises {
+    return Intl.message(
+      'Exercises',
+      name: 'exercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `our Branches`
+  String get ourBranches {
+    return Intl.message(
+      'our Branches',
+      name: 'ourBranches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `all Our Gym Branches`
+  String get allOurGymBranches {
+    return Intl.message(
+      'all Our Gym Branches',
+      name: 'allOurGymBranches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Away From You`
+  String get awayFromYou {
+    return Intl.message(
+      'Away From You',
+      name: 'awayFromYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hello, We Remind You To Change Your Password.`
+  String get helloWeRemindYouToChangeYourPassword {
+    return Intl.message(
+      'Hello, We Remind You To Change Your Password.',
+      name: 'helloWeRemindYouToChangeYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warning`
+  String get warning {
+    return Intl.message(
+      'Warning',
+      name: 'warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The gym is full now, you can go to another address`
+  String get theGymIsFullNowYouCanGoToAnotherAddress {
+    return Intl.message(
+      'The gym is full now, you can go to another address',
+      name: 'theGymIsFullNowYouCanGoToAnotherAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Qr Code`
+  String get myQrCode {
+    return Intl.message(
+      'My Qr Code',
+      name: 'myQrCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Session`
+  String get lastSession {
+    return Intl.message(
+      'Last Session',
+      name: 'lastSession',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See More`
+  String get seeMore {
+    return Intl.message(
+      'See More',
+      name: 'seeMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In`
+  String get In {
+    return Intl.message(
+      'In',
+      name: 'In',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Out`
+  String get out {
+    return Intl.message(
+      'Out',
+      name: 'out',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your gym attendance date`
+  String get yourGymAttendanceDate {
+    return Intl.message(
+      'Your gym attendance date',
+      name: 'yourGymAttendanceDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chest and Abdominal Exercises`
+  String get chestAndAbdominalExercises {
+    return Intl.message(
+      'Chest and Abdominal Exercises',
+      name: 'chestAndAbdominalExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Train with the latest workouts that fit your day.`
+  String get trainWithTheLatestWorkoutsThatFitYourDay {
+    return Intl.message(
+      'Train with the latest workouts that fit your day.',
+      name: 'trainWithTheLatestWorkoutsThatFitYourDay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our Collection`
+  String get ourCollection {
+    return Intl.message(
+      'Our Collection',
+      name: 'ourCollection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bench press`
+  String get benchPress {
+    return Intl.message(
+      'Bench press',
+      name: 'benchPress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calories`
+  String get calories {
+    return Intl.message(
+      'Calories',
+      name: 'calories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Count`
+  String get count {
+    return Intl.message(
+      'Count',
+      name: 'count',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Group`
+  String get group {
+    return Intl.message(
+      'Group',
+      name: 'group',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View Video`
+  String get viewVideo {
+    return Intl.message(
+      'View Video',
+      name: 'viewVideo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

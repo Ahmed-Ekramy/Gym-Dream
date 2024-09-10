@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
@@ -17,21 +18,14 @@ class UserProfileView extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-                backgroundColor: AppColor.orangeLight,
-                title: Text('Profile', style: AppTextStyle.black600S18),
-                centerTitle: true,
-                leading: InkWell(
-                  onTap: () => Navigator.pop(context),
-                  child: Container(
-                    padding: EdgeInsets.all(5.sp),
-                    child: SvgPicture.asset(
-                      fit: BoxFit.fill,
-                      width: 10.w,
-                      height: 10.h,
-                      AppAsset.arrowCircleRight,
-                    ),
-                  ),
-                )),
+              backgroundColor: AppColor.orangeLight,
+              title: Text(
+                S.of(context).profile,
+                style: AppTextStyle.black600S18,
+              ),
+              centerTitle: true,
+              leading: const BackIcon(),
+            ),
             SliverToBoxAdapter(
               child: SizedBox(height: 20.h),
             ),
@@ -44,44 +38,51 @@ class UserProfileView extends StatelessWidget {
               ),
             ),
             SliverToBoxAdapter(
-                child: Center(
-              child: Text.rich(
-                TextSpan(children: [
-                  TextSpan(
-                    text: 'Ahmed Ekramy Fahmy\n ',
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Ahmed Ekramy Fahmy',
                     style: AppTextStyle.black600S18,
                   ),
-                  TextSpan(
-                    text: '           ID : 101230\n\n',
+                  Text(
+                    '${S.of(context).id} : 101230',
                     style: AppTextStyle.brown600S18,
                   ),
-                  TextSpan(
-                    text: ' WhatsApp Number : 0123456789',
+                  Text(
+                    '${S.of(context).whatsAppNumber} : 0123456789',
                     style: AppTextStyle.black500S14,
                   ),
-                ]),
+                ],
               ),
-            )),
+            ),
             SliverToBoxAdapter(
               child: Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width * 0.25,
                     vertical: 20.h),
-                child: Text.rich(
-                  TextSpan(children: [
-                    TextSpan(
-                        text: 'Platinum Package\n\n',
-                        style: AppTextStyle.black500S14),
-                    TextSpan(
-                        text: 'Birth date : 10/3/2002\n\n',
-                        style: AppTextStyle.black500S14),
-                    TextSpan(
-                        text: 'Start Date: 1/3/2024\n\n',
-                        style: AppTextStyle.black500S14),
-                    TextSpan(
-                        text: 'End Date: 1/4/2024\n',
-                        style: AppTextStyle.black500S14),
-                  ]),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${S.of(context).package}: ${S.of(context).platinum}',
+                      style: AppTextStyle.black500S14,
+                    ),
+                    Text(
+                      '${S.of(context).birthDate}: 10/3/2002',
+                      style: AppTextStyle.black500S14,
+                    ),
+                    Text(
+                      '${S.of(context).startDate}: 1/3/2024',
+                      style: AppTextStyle.black500S14,
+                    ),
+                    Text(
+                      '${S.of(context).endDate}: 1/4/2024',
+                      style: AppTextStyle.black500S14,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -92,7 +93,7 @@ class UserProfileView extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Days left for your package',
+                    S.of(context).daysLeftForYourPackage,
                     style: AppTextStyle.black700S18,
                   ),
                 ),
@@ -101,37 +102,37 @@ class UserProfileView extends StatelessWidget {
             SliverToBoxAdapter(
               child: Row(
                 children: [
-                  const Expanded(
+                  Expanded(
                     child: DaysLeftItem(
                       value: '30',
-                      time: 'Days',
+                      time: S.of(context).days,
                     ),
                   ),
                   SizedBox(
                     width: 8.w,
                   ),
-                  const Expanded(
+                  Expanded(
                     child: DaysLeftItem(
                       value: '10',
-                      time: 'Hours',
+                      time: S.of(context).hours,
                     ),
                   ),
                   SizedBox(
                     width: 8.w,
                   ),
-                  const Expanded(
+                  Expanded(
                     child: DaysLeftItem(
                       value: '32',
-                      time: 'Minutes',
+                      time: S.of(context).minutes,
                     ),
                   ),
                   SizedBox(
                     width: 8.w,
                   ),
-                  const Expanded(
+                  Expanded(
                     child: DaysLeftItem(
                       value: '23',
-                      time: 'Seconds',
+                      time: S.of(context).seconds,
                     ),
                   ),
                 ],

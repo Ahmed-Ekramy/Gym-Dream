@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
@@ -49,12 +50,12 @@ class UserHomeLayoutView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('ID: 123456',
+                          Text('${S.of(context).id}: 123456',
                               style: AppTextStyle.black600S16
                                   .copyWith(color: const Color(0xff01152D))),
                           SizedBox(height: 5.h),
                           Text(
-                            '12 sessions completed,8 sessions remaining',
+                            '12 ${S.of(context).sessionCompleted},8 ${S.of(context).sessionRemaining}',
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: AppTextStyle.blackOpacity600S14.copyWith(
@@ -128,7 +129,7 @@ class UserHomeLayoutView extends StatelessWidget {
                     BlendMode.srcIn,
                   ),
                 ),
-                label: 'Home',
+                label: S.of(context).home,
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -140,7 +141,7 @@ class UserHomeLayoutView extends StatelessWidget {
                     BlendMode.srcIn,
                   ),
                 ),
-                label: 'History',
+                label: S.of(context).history,
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -152,7 +153,7 @@ class UserHomeLayoutView extends StatelessWidget {
                     BlendMode.srcIn,
                   ),
                 ),
-                label: 'Exercises',
+                label: S.of(context).exercises,
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -164,7 +165,7 @@ class UserHomeLayoutView extends StatelessWidget {
                     BlendMode.srcIn,
                   ),
                 ),
-                label: 'Settings',
+                label: S.of(context).settings,
               ),
             ],
           ),

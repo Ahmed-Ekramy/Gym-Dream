@@ -7,17 +7,15 @@ import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/otp%20cubit/validation_cubit.dart';
 
 class SaveAddingExercisesButton extends StatelessWidget {
-  final GlobalKey<FormState> formKey; // Accept formKey as a parameter
-
+  final GlobalKey<FormState> formKey;
   const SaveAddingExercisesButton({
     super.key,
-    required this.formKey, // Initialize formKey
+    required this.formKey,
   });
 
   void _validateAndNavigate(BuildContext context, GlobalKey<FormState> formKey,
       ValidationCubit validationCubit) {
     if (formKey.currentState?.validate() ?? false) {
-      // Validate form
       AppNavigation.pop(context);
     }
   }

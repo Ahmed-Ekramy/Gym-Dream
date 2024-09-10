@@ -72,6 +72,12 @@ class OtpViewForAdmin extends StatelessWidget {
                                     keyboardType: TextInputType.number,
                                     appContext: context,
                                     length: 4,
+                                    autoFocus: true,
+                                    autovalidateMode:
+                                        AutovalidateMode.onUserInteraction,
+                                    autoDismissKeyboard: true,
+                                    autoUnfocus: true,
+                                    enablePinAutofill: true,
                                     cursorHeight: 15.h,
                                     enableActiveFill: true,
                                     textStyle: AppTextStyle.black600S24,
