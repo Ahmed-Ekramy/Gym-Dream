@@ -15,7 +15,7 @@ class PasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     } else if (!state.isPasswordLongEnough || !state.isPasswordStrong) {
@@ -25,7 +25,7 @@ class PasswordValidationMessages extends StatelessWidget {
           !state.isPasswordLongEnough
               ? S.of(context).passwordMustBeAtLeast8CharactersLong
               : S.of(context).useDifferentTypesOfCharacters,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     }
