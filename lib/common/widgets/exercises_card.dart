@@ -72,7 +72,7 @@ class ExercisesCard extends StatelessWidget {
                 if (deleteButton != null) deleteButton!,
                 Container(
                   alignment: Alignment.center,
-                  width: 70.w,
+                  width: 85.w,
                   height: 25.h,
                   decoration: BoxDecoration(
                     color: AppColor.babyBlue,

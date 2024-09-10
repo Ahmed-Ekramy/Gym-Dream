@@ -1090,10 +1090,10 @@ class S {
     );
   }
 
-  /// `Scann now`
+  /// `Scan now`
   String get scannNow {
     return Intl.message(
-      'Scann now',
+      'Scan now',
       name: 'scannNow',
       desc: '',
       args: [],
@@ -1507,6 +1507,76 @@ class S {
     return Intl.message(
       'Enter the right number',
       name: 'enterTheRightNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `chest`
+  String get chest {
+    return Intl.message(
+      'chest',
+      name: 'chest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shoulders`
+  String get shoulders {
+    return Intl.message(
+      'Shoulders',
+      name: 'shoulders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Legs`
+  String get legs {
+    return Intl.message(
+      'Legs',
+      name: 'legs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `biceps`
+  String get biceps {
+    return Intl.message(
+      'biceps',
+      name: 'biceps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `triceps`
+  String get triceps {
+    return Intl.message(
+      'triceps',
+      name: 'triceps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `rest`
+  String get rest {
+    return Intl.message(
+      'rest',
+      name: 'rest',
       desc: '',
       args: [],
     );
