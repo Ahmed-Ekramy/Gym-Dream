@@ -54,6 +54,7 @@ class AddExercisesButton extends StatelessWidget {
         return BlocProvider(
           create: (_) => ValidationCubit(),
           child: AlertDialog(
+            scrollable: true,
             titleTextStyle: AppTextStyle.orange700S16,
             title: Center(
               child: Text(
@@ -61,7 +62,7 @@ class AddExercisesButton extends StatelessWidget {
               ),
             ),
             content: SizedBox(
-              height: 400.h,
+              height: 300.h,
               width: 300.w,
               child: AddExercisesDialogBody(
                 formKey: formKey,

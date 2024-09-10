@@ -10,15 +10,19 @@ class AddExercisesTextField extends StatelessWidget {
     this.onTap,
     required this.textInputType,
     this.validator,
+    this.maxLength,
   });
   final String hint;
   final bool readOnly;
   final void Function()? onTap;
   final TextInputType textInputType;
   final String? Function(String?)? validator;
+  final int? maxLength;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLength: maxLength,
+      maxLines: 1,
       validator: validator,
       onTap: onTap,
       keyboardType: textInputType,
@@ -32,6 +36,7 @@ class AddExercisesTextField extends StatelessWidget {
         disabledBorder: InputBorder.none,
         hintText: hint,
         hintStyle: AppTextStyle.blackOpacity400S14,
+        counterText: '',
       ),
     );
   }

@@ -35,11 +35,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "allOurGymBranches":
             MessageLookupByLibrary.simpleMessage("all Our Gym Branches"),
         "awayFromYou": MessageLookupByLibrary.simpleMessage("Away From You"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "benchPress": MessageLookupByLibrary.simpleMessage("Bench press"),
+        "biceps": MessageLookupByLibrary.simpleMessage("biceps"),
         "birthDate": MessageLookupByLibrary.simpleMessage("Birth Date"),
         "branch": MessageLookupByLibrary.simpleMessage("Branch"),
         "calories": MessageLookupByLibrary.simpleMessage("Calories"),
         "checkInsToday": MessageLookupByLibrary.simpleMessage("CheckIns today"),
+        "chest": MessageLookupByLibrary.simpleMessage("chest"),
         "chestAndAbdominalExercises": MessageLookupByLibrary.simpleMessage(
             "Chest and Abdominal Exercises"),
         "chooseYourMemberShipType": MessageLookupByLibrary.simpleMessage(
@@ -117,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "instructions": MessageLookupByLibrary.simpleMessage("Instructions"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastSession": MessageLookupByLibrary.simpleMessage("Last Session"),
+        "legs": MessageLookupByLibrary.simpleMessage("Legs"),
         "location": MessageLookupByLibrary.simpleMessage("Location"),
         "login": MessageLookupByLibrary.simpleMessage("Log In"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
@@ -177,11 +181,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentlyScanned":
             MessageLookupByLibrary.simpleMessage("Recently scanned"),
         "repetition": MessageLookupByLibrary.simpleMessage("Repetition"),
+        "rest": MessageLookupByLibrary.simpleMessage("rest"),
         "result": MessageLookupByLibrary.simpleMessage("Result"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "scanTheQrCode":
             MessageLookupByLibrary.simpleMessage("Scan the Qr Code"),
-        "scannNow": MessageLookupByLibrary.simpleMessage("Scann now"),
+        "scannNow": MessageLookupByLibrary.simpleMessage("Scan now"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "seconds": MessageLookupByLibrary.simpleMessage("Seconds"),
         "seeMore": MessageLookupByLibrary.simpleMessage("See More"),
@@ -196,6 +201,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sessionRemaining":
             MessageLookupByLibrary.simpleMessage("Session remaining"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shoulders": MessageLookupByLibrary.simpleMessage("Shoulders"),
         "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
             "Special symbols such as (!, @, #, \$, %, ^, &, *)"),
         "startDate": MessageLookupByLibrary.simpleMessage("Start Date"),
@@ -214,6 +220,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Train with the latest workouts that fit your day."),
         "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
+        "triceps": MessageLookupByLibrary.simpleMessage("triceps"),
         "trustedUser": MessageLookupByLibrary.simpleMessage("Trusted User"),
         "tryAgainLater":
             MessageLookupByLibrary.simpleMessage("Try again later"),

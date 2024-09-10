@@ -48,9 +48,11 @@ class AddExercisesDialogBody extends StatelessWidget {
               },
               hint: S.of(context).count,
               readOnly: false,
+              maxLength: 2,
               textInputType: TextInputType.number,
             ),
             AddExercisesTextField(
+              maxLength: 2,
               validator: (value) {
                 return MyValidatorsHelper.addExercisesValidator(context, value);
               },

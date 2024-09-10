@@ -20,6 +20,7 @@ class AdminExerciseViewBody extends StatelessWidget {
       create: (context) => ExerciseCubit()..loadExercises(),
       child: SafeArea(
         child: CustomScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           slivers: [
             const SliverAppBar(
               backgroundColor: AppColor.white,
