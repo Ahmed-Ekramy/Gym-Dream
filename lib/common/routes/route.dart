@@ -40,4 +40,7 @@ class Routes {
 
   static const String languageSelectionScreen = '/languageView';
   static const String specificUserHistor = '/SpecificUserHistory';
+
+  static const String adminProfileView = '/adminProfileView';
+  static const String editProfileView = '/editProfileView';
 }
