@@ -20,8 +20,8 @@ class AdminSettingViewBody extends StatelessWidget {
         children: [
           SettingItem(
             onTap: () {
-              // AppNavigation.navigateTo(
-              //     context: context, routeName: Routes.adminProfileView);
+              AppNavigation.navigateTo(
+                  context: context, routeName: Routes.adminProfileView);
             },
             image: AppAsset.profile,
             title: 'Profile',

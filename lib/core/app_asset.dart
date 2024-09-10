@@ -41,6 +41,7 @@ class AppAsset {
   static const english = "assets/images/english.png";
   static const language = "assets/svg/language.svg";
   static const profile = "assets/svg/profile.svg";
+  static const edit = "assets/svg/edit.svg";
 
   static const redLogout = "assets/svg/red_logout.svg";
   static const camera = "assets/svg/camera.svg";
