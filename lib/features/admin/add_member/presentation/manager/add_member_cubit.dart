@@ -12,8 +12,11 @@ class AddMemberCubit extends Cubit<AddMemberState> {
   AddMemberCubit() : super(AddMemberInitial());
 
   // Form key for validation
+  // Form key for validation
   var formKey = GlobalKey<FormState>();
   AutovalidateMode? autovalidateMode = AutovalidateMode.disabled;
+
+  // Controllers
 
   // Controllers
   var fullNameController = TextEditingController();
@@ -30,6 +33,8 @@ class AddMemberCubit extends Cubit<AddMemberState> {
 
   // Gender
   String? gender;
+
+  // Select Date Method (Handles both Start and End Dates)
 
   // Select Date Method (Handles both Start and End Dates)
   Future<void> selectDate(BuildContext context,
@@ -54,7 +59,6 @@ class AddMemberCubit extends Cubit<AddMemberState> {
     }
   }
 
-  // Upload Image from Gallery
   Future<File?> uploadImageFromGalleryModel({
     required ImagePicker picker,
   }) async {
@@ -75,32 +79,8 @@ class AddMemberCubit extends Cubit<AddMemberState> {
     }
   }
 
-  // Update Gender
   void updateGender(String selectedGender) {
     gender = selectedGender;
-    emit(AddMemberGenderUpdatedState());
-  }
-
-  // Dispose all controllers
-  void dispose() {
-    fullNameController.dispose();
-    iDController.dispose();
-    watsAppController.dispose();
-    passWordController.dispose();
-    confirmPassWordController.dispose();
-    birthDateController.dispose();
-    startDateController.dispose();
-    endDateController.dispose();
-  }
-
-  // Optional: Method to validate the form fields
-  bool validateForm() {
-    if (formKey.currentState!.validate()) {
-      return true;
-    } else {
-      autovalidateMode = AutovalidateMode.always;
-      emit(AddMemberValidationErrorState());
-      return false;
-    }
+    emit(AddMemberGenderUpdatedState()); // Emit a new state if needed
   }
 }

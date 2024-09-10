@@ -78,44 +78,48 @@ class ChoosingView extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    BlocBuilder<ChoosingCubit, String>(
-                      builder: (context, selectedCustomerKind) {
-                        return UserKind(
-                          onTap: () => context
-                              .read<ChoosingCubit>()
-                              .selectCustomerKind('trainee'),
-                          color: selectedCustomerKind == 'trainee'
-                              ? AppColor.primary
-                              : AppColor.grey,
-                          name: S.of(context).trainee,
-                          image: AppAsset.trainee,
-                          opacity: selectedCustomerKind.isEmpty ||
-                                  selectedCustomerKind == 'trainee'
-                              ? 1.0
-                              : 0.5,
-                          index: 0,
-                        );
-                      },
+                    Expanded(
+                      child: BlocBuilder<ChoosingCubit, String>(
+                        builder: (context, selectedCustomerKind) {
+                          return UserKind(
+                            onTap: () => context
+                                .read<ChoosingCubit>()
+                                .selectCustomerKind('trainee'),
+                            color: selectedCustomerKind == 'trainee'
+                                ? AppColor.primary
+                                : AppColor.grey,
+                            name: S.of(context).trainee,
+                            image: AppAsset.trainee,
+                            opacity: selectedCustomerKind.isEmpty ||
+                                    selectedCustomerKind == 'trainee'
+                                ? 1.0
+                                : 0.5,
+                            index: 0,
+                          );
+                        },
+                      ),
                     ),
-                    const Spacer(),
-                    BlocBuilder<ChoosingCubit, String>(
-                      builder: (context, selectedCustomerKind) {
-                        return UserKind(
-                          onTap: () => context
-                              .read<ChoosingCubit>()
-                              .selectCustomerKind('admin'),
-                          color: selectedCustomerKind == 'admin'
-                              ? AppColor.primary
-                              : AppColor.grey,
-                          name: S.of(context).admin,
-                          image: AppAsset.admin,
-                          opacity: selectedCustomerKind.isEmpty ||
-                                  selectedCustomerKind == 'admin'
-                              ? 1.0
-                              : 0.5,
-                          index: 1,
-                        );
-                      },
+                    // const Spacer(),
+                    Expanded(
+                      child: BlocBuilder<ChoosingCubit, String>(
+                        builder: (context, selectedCustomerKind) {
+                          return UserKind(
+                            onTap: () => context
+                                .read<ChoosingCubit>()
+                                .selectCustomerKind('admin'),
+                            color: selectedCustomerKind == 'admin'
+                                ? AppColor.primary
+                                : AppColor.grey,
+                            name: S.of(context).admin,
+                            image: AppAsset.admin,
+                            opacity: selectedCustomerKind.isEmpty ||
+                                    selectedCustomerKind == 'admin'
+                                ? 1.0
+                                : 0.5,
+                            index: 1,
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),

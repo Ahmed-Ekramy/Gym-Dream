@@ -11,6 +11,7 @@ import 'package:gym_dream/features/admin/layout/data/models/change_index_params.
 import 'package:gym_dream/features/admin/layout/data/repositories/layout_repo.dart';
 import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
 import 'package:gym_dream/features/admin/setting/presentation/view/admin_setting_view.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class LayoutRepoImpl extends LayOutRepo {
   LayoutRepoImpl();
@@ -22,7 +23,7 @@ class LayoutRepoImpl extends LayOutRepo {
 
   @override
   void changeBottomNavToHome({required ChangeIndexParams changeIndexParams}) {
-    LayoutCubit.getObject(changeIndexParams.context).currentIndex = 2;
+    LayoutCubit.getObject(changeIndexParams.context).currentIndex = 0;
   }
 
   @override
@@ -39,7 +40,7 @@ class LayoutRepoImpl extends LayOutRepo {
   List<BottomNavigationBarItem> getBottomNavItems(BuildContext context) =>
       <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          label: 'Home',
+          label: S.of(context).home,
           icon: SvgPicture.asset(
             AppAsset.home,
             width: 24.w,
@@ -64,7 +65,7 @@ class LayoutRepoImpl extends LayOutRepo {
               BlendMode.srcIn,
             ),
           ),
-          label: 'History',
+          label: S.of(context).history,
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
@@ -78,7 +79,7 @@ class LayoutRepoImpl extends LayOutRepo {
               BlendMode.srcIn,
             ),
           ),
-          label: 'Exercises',
+          label: S.of(context).exercises,
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
@@ -92,7 +93,7 @@ class LayoutRepoImpl extends LayOutRepo {
               BlendMode.srcIn,
             ),
           ),
-          label: 'settings',
+          label: S.of(context).settings,
         ),
       ];
 }

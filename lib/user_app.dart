@@ -4,9 +4,11 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/cubit/local_language_cubit.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
 import 'package:gym_dream/features/authentication/auth_wrapper.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
+import 'package:gym_dream/service_locator.dart';
 
 import 'common/routes/app_route.dart';
 import 'features/user/user_home_layout/presentation/manager/home_user_cubit.dart';
@@ -31,6 +33,9 @@ class UserAppGym extends StatelessWidget {
             ),
             BlocProvider<HomeUserCubit>(
               create: (context) => HomeUserCubit(),
+            ),
+            BlocProvider<LayoutCubit>(
+              create: (context) => serviceLocator.get<LayoutCubit>(),
             ),
           ],
           child: BlocBuilder<LocaleCubit, Locale>(

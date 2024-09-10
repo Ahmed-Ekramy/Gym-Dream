@@ -41,10 +41,12 @@ class CustomWarningMassage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8.r),
                       ),
                       child: Center(
-                        child: Text(
-                          S.of(context).sendToAllMembers,
-                          style: AppTextStyle.redBlood700S18.copyWith(
-                            fontSize: 10.sp,
+                        child: FittedBox(
+                          child: Text(
+                            S.of(context).sendToAllMembers,
+                            style: AppTextStyle.redBlood700S18.copyWith(
+                              fontSize: 10.sp,
+                            ),
                           ),
                         ),
                       ),
