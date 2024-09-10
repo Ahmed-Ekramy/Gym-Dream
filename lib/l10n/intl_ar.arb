@@ -82,7 +82,7 @@
     "@passwordChanged":{},
     "successfully":"بنجاح 🎉",
     "@successfully":{},
-    "profile":"الصفحه الشخصيه",
+    "profile":"الصفحة الشخصية",
     "@profile":{},
     "id":"الرقم التعريفي",
     "@id":{},
@@ -175,5 +175,135 @@
     "group":"المجموعة",
     "@group":{},
     "viewVideo":"عرض الفيديو",
-    "@viewVideo":{}
+    "@viewVideo":{},
+    "done":"تم",
+    "@done":{},
+    "trustedUser":"مستخدم موثوق",
+    "@trustedUser":{},
+    "fullName":"الاسم الكامل",
+    "@fullName":{},
+    "confirm":"تأكيد",
+    "@confirm":{},
+    "editProfile":"تعديل الملف الشخصي",
+    "@editProfile":{},
+    "gender":"الجنس",
+    "@gender":{},
+    "search":"بحث",
+    "@search":{},
+    "result":"النتيجة",
+    "@result":{},
+    "clear":"مسح",
+    "@clear":{},
+    "gymMembers":"أعضاء النادي الرياضي",
+    "@gymMembers":{},
+    "allMembers":"جميع الأعضاء",
+    "@allMembers":{},
+    "newMembers":"أعضاء جدد",
+    "@newMembers":{},
+    "scanTheQrCode":"مسح رمز الاستجابة السريعة",
+    "@scanTheQrCode":{},
+    "sendToAllMembers":"إرسال إلى جميع الأعضاء",
+    "@sendToAllMembers":{},
+    "theGymIsFullSendToOurClientsTellThem":"النادي ممتلئ، أرسل إلى عملائنا وأخبرهم",
+    "@theGymIsFullSendToOurClientsTellThem":{},
+    "recentlyScanned":"تم المسح مؤخرًا",
+    "@recentlyScanned":{},
+    "scannNow":"مسح الآن",
+    "@scannNow":{},
+    "validQrCode":"رمز استجابة سريع صالح",
+    "@validQrCode":{},
+    "branch":"الفرع",
+    "@branch":{},
+    "ourMembers":"أعضاؤنا",
+    "@ourMembers":{},
+    "gymData":"بيانات النادي",
+    "@gymData":{},
+    "peopleInGymNow":"الأشخاص في النادي الآن",
+    "@peopleInGymNow":{},
+    "equipmentUsages":"استخدام المعدات",
+    "@equipmentUsages":{},
+    "checkInsToday":"تسجيلات الدخول اليوم",
+    "@checkInsToday":{},
+    "totalCheckInsThisMonth":"إجمالي تسجيلات الدخول هذا الشهر",
+    "@totalCheckInsThisMonth":{},
+    "addNewUsers":"إضافة مستخدمين جدد",
+    "@addNewUsers":{},
+    "sendAnInviteToJoin":"إرسال دعوة للانضمام",
+    "@sendAnInviteToJoin":{},
+    "addMember":"إضافة عضو",
+    "@addMember":{},
+    "uploadPhoto":"تحميل صورة",
+    "@uploadPhoto":{},
+    "noExercisesAvailable":"لا توجد تمارين متاحة.",
+    "@noExercisesAvailable":{},
+    "name":"الاسم",
+    "@name":{},
+    "repetition":"التكرار",
+    "@repetition":{},
+    "videoLink":"رابط الفيديو",
+    "@videoLink":{},
+    "addExercise":"إضافة تمرين",
+    "@addExercise":{},
+    "addNewExercise":"إضافة تمرين جديد",
+    "@addNewExercise":{},
+    "disable":"الغاء",
+    "@disable":{},
+    "photo":"صورة",
+    "@photo":{},
+    "monthly":"شهري",
+    "@monthly":{},
+    "chooseYourPlan":"اختر خطتك",
+    "@chooseYourPlan":{},
+    "gold":"ذهبي",
+    "@gold":{},
+    "unlimitedUseOfEssentialSportsEquipment":"استخدام غير محدود للمعدات الرياضية الأساسية",
+    "@unlimitedUseOfEssentialSportsEquipment":{},
+    "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":"جلسة استشارة واحدة مع مدرب شخصي عند التسجيل لأول مرة",
+    "@oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":{},
+    "useAPersonalLockerDaily":"استخدام خزانة شخصية يوميًا.",
+    "@useAPersonalLockerDaily":{},
+    "createNewUser":"إنشاء مستخدم جديد",
+    "@createNewUser":{},
+    "enterTheRequiredDataBelow":"أدخل البيانات المطلوبة أدناه",
+    "@enterTheRequiredDataBelow":{},
+    "enterYourFullName":"أدخل اسمك الكامل",
+    "@enterYourFullName":{},
+    "enterYourIDHere":"أدخل معرفك هنا",
+    "@enterYourIDHere":{},
+    "male":"ذكر",
+    "@male":{},
+    "female":"أنثى",
+    "@female":{},
+    "details":"تفاصيل",
+    "@details":{},
+    "noImagePicked":"لم يتم اختيار صورة",
+    "@noImagePicked":{},
+    "displayNameCannotBeEmpty":"لا يمكن أن يكون اسم العرض فارغًا",
+    "@displayNameCannotBeEmpty":{},
+    "displayNameMustBeBetween3And20Characters":"يجب أن يكون اسم العرض بين 3 و 20 حرفًا",
+    "@displayNameMustBeBetween3And20Characters":{},
+    "displayProductPriceCannotBeEmpty":"لا يمكن أن يكون سعر المنتج فارغًا",
+    "@displayProductPriceCannotBeEmpty":{},
+    "displayProductPriceMustBeBetween1And5Characters":"يجب أن يكون سعر المنتج بين 1 و 5 أحرف",
+    "@displayProductPriceMustBeBetween1And5Characters":{},
+    "pleaseEnterAUrl":"يرجى إدخال عنوان URL",
+    "@pleaseEnterAUrl":{},
+    "pleaseEnterAValidURL":"يرجى إدخال عنوان URL صالح",
+    "@pleaseEnterAValidURL":{},
+    "enterTheRightNumber":"أدخل الرقم الصحيح",
+    "@enterTheRightNumber":{},
+    "chest":"صدر",
+    "@chest":{},
+    "back":"ظهر",
+    "@back":{},
+    "shoulders":"أكتاف",
+    "@shoulders":{},
+    "legs":"أرجل",
+    "@legs":{},
+    "biceps":"عضلة البايسبس",
+    "@biceps":{},
+    "triceps":"عضلة الترايسبس",
+    "@triceps":{},
+    "rest":"عضلة الساعد",
+    "@rest":{}
 }
