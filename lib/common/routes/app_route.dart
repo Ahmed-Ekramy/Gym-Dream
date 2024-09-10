@@ -10,6 +10,8 @@ import 'package:gym_dream/features/admin/layout/presentation/pages/layout_views.
 import 'package:gym_dream/features/admin/our_member/presentation/pages/our_member_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/pages/admin_search_view.dart';
 import 'package:gym_dream/features/admin/search/presentation/widgets/admin_search_result_view.dart';
+import 'package:gym_dream/features/admin/setting/presentation/view/admin_profile_view.dart';
+import 'package:gym_dream/features/admin/setting/presentation/view/edit_profile_view.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/pages/admin_trusted_user_view.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/specific_user_history.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/pages/user_data_view.dart';
@@ -125,6 +127,14 @@ class AppRoute {
       case Routes.adminTrustedUserView:
         return MaterialPageRoute(
           builder: (_) => const TrustedUserView(),
+        );
+      case Routes.editProfileView:
+        return MaterialPageRoute(
+          builder: (_) => const EditProfileView(),
+        );
+      case Routes.adminProfileView:
+        return MaterialPageRoute(
+          builder: (_) => const AdminProfileView(),
         );
       case Routes.adminAddMemberView:
         return MaterialPageRoute(
