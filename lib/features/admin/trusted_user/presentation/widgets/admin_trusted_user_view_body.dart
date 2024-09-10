@@ -6,6 +6,7 @@ import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/personal_information.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/trusted_or_not_trusted_user_header.dart';
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/user_image.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class TrustedUserViewBody extends StatelessWidget {
   const TrustedUserViewBody({super.key});
@@ -19,9 +20,9 @@ class TrustedUserViewBody extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 16.h),
-              const TrustedOrNotTrustedUserHeader(
+              TrustedOrNotTrustedUserHeader(
                 icon: AppAsset.check,
-                title: 'Trusted User',
+                title: S.of(context).trustedUser,
               ),
               SizedBox(height: 8.h),
               const UserImage(
@@ -35,7 +36,7 @@ class TrustedUserViewBody extends StatelessWidget {
               CustomButton(
                 height: 35.h,
                 width: double.infinity,
-                title: 'Done',
+                title: S.of(context).done,
                 onPressed: () {},
               )
             ],

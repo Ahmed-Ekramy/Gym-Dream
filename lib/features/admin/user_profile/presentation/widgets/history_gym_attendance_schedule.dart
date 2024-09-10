@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class HistoryGymAttendanceSchedule extends StatelessWidget {
   const HistoryGymAttendanceSchedule({
@@ -16,16 +17,24 @@ class HistoryGymAttendanceSchedule extends StatelessWidget {
       width: double.infinity,
       height: 25.h,
       decoration: BoxDecoration(
-          color: AppColor.grayLightOpacity40,
-          borderRadius: BorderRadius.all(Radius.circular(5.r))),
+        color: AppColor.grayLightOpacity40,
+        borderRadius: BorderRadius.all(
+          Radius.circular(5.r),
+        ),
+      ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.0.w),
+        padding: EdgeInsets.symmetric(
+          horizontal: 4.0.w,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                Text("Date", style: AppTextStyle.blueNavy500S14),
+                Text(
+                  S.of(context).date,
+                  style: AppTextStyle.blueNavy500S14,
+                ),
                 SizedBox(width: 6.w),
                 SvgPicture.asset(
                   AppAsset.arrowIcon,
@@ -36,7 +45,7 @@ class HistoryGymAttendanceSchedule extends StatelessWidget {
             ),
             Row(
               children: [
-                Text("In", style: AppTextStyle.blueNavy500S14),
+                Text(S.of(context).In, style: AppTextStyle.blueNavy500S14),
                 SizedBox(width: 6.w),
                 SvgPicture.asset(
                   AppAsset.loginIcon,
@@ -47,7 +56,7 @@ class HistoryGymAttendanceSchedule extends StatelessWidget {
             ),
             Row(
               children: [
-                Text("Out", style: AppTextStyle.blueNavy500S14),
+                Text(S.of(context).out, style: AppTextStyle.blueNavy500S14),
                 SizedBox(width: 6.w),
                 SvgPicture.asset(
                   AppAsset.logoutIcon,

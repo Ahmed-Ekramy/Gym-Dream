@@ -8,6 +8,7 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_header.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/gym_member_list_view_item.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminSearchResultView extends StatelessWidget {
   const AdminSearchResultView({super.key});
@@ -24,7 +25,7 @@ class AdminSearchResultView extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Result',
+                  S.of(context).result,
                   style: AppTextStyle.black400S22,
                 ),
                 const Spacer(),

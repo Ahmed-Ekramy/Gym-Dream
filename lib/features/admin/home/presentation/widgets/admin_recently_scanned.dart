@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_text_and_icon_botton.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/recently_member_images.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminRecentlyScanned extends StatelessWidget {
   const AdminRecentlyScanned({
@@ -23,7 +24,7 @@ class AdminRecentlyScanned extends StatelessWidget {
       child: Row(
         children: [
           RecentlyMemberImages(
-            title: 'Recently scanned',
+            title: S.of(context).recentlyScanned,
             imageList: imageList,
           ),
           SizedBox(width: 50.w),
@@ -33,7 +34,7 @@ class AdminRecentlyScanned extends StatelessWidget {
                 AppNavigation.navigateTo(
                     context: context, routeName: Routes.qrCodeView);
               },
-              title: 'Scan Now',
+              title: S.of(context).scannNow,
               textStyle: AppTextStyle.white700S14,
               icon: SvgPicture.asset(AppAsset.scan),
             ),

@@ -5,6 +5,7 @@ import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 
@@ -26,17 +27,17 @@ class AdminProfileViewBody extends StatelessWidget {
         ),
         SizedBox(height: 8.h),
         Text(
-          'ID : 101230',
+          '${S.of(context).id}: 101230',
           style: AppTextStyle.brown600S18,
         ),
         SizedBox(height: 16.h),
         Text(
-          'WhatsApp Number: 01123456789',
+          '${S.of(context).whatsAppNumber}: 01123456789',
           style: AppTextStyle.black400S15,
         ),
         SizedBox(height: 16.h),
         Text(
-          'Birth date : 10/3/2002',
+          '${S.of(context).birthDate}: 10/3/2002',
           style: AppTextStyle.black400S15,
         ),
       ],
@@ -79,7 +80,7 @@ class AdminProfileImage extends StatelessWidget {
                     children: [
                       SizedBox(height: 8.h),
                       Text(
-                        'Edit Profile',
+                        S.of(context).editProfile,
                         style:
                             AppTextStyle.black400S14.copyWith(fontSize: 7.sp),
                       ),

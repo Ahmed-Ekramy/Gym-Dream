@@ -4,6 +4,7 @@ import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/widgets/last_session_item.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class UserHistoryAndLastSession extends StatelessWidget {
   const UserHistoryAndLastSession({
@@ -16,14 +17,16 @@ class UserHistoryAndLastSession extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'History',
+          S.of(context).history,
           style: AppTextStyle.orange600S18,
         ),
-        SizedBox(height: 16.h),
+        SizedBox(
+          height: 16.h,
+        ),
         Row(
           children: [
             Text(
-              'Last Session',
+              S.of(context).lastSession,
               style: AppTextStyle.gray400S14.copyWith(fontSize: 10.sp),
             ),
             const Spacer(),
@@ -33,7 +36,7 @@ class UserHistoryAndLastSession extends StatelessWidget {
                     context: context, routeName: Routes.specificUserHistor);
               },
               child: Text(
-                'see more',
+                S.of(context).seeMore,
                 style: AppTextStyle.blue600S14,
               ),
             ),

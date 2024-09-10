@@ -3,13 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class UserHistoryHeader extends StatelessWidget implements PreferredSizeWidget {
   final double toolbarHeight;
 
   const UserHistoryHeader({
     super.key,
-    this.toolbarHeight = 90.0, // Default height if not provided
+    this.toolbarHeight = 90.0,
   });
 
   @override
@@ -35,13 +36,13 @@ class UserHistoryHeader extends StatelessWidget implements PreferredSizeWidget {
                 style: AppTextStyle.black600S16,
               ),
               Text(
-                'ID : 101230',
+                '${S.of(context).id} : 101230',
                 style: AppTextStyle.gray600S12,
               ),
               Row(
                 children: [
                   Text(
-                    'Platinum Package',
+                    '${S.of(context).package} ${S.of(context).platinum}',
                     style: AppTextStyle.gray600S12.copyWith(fontSize: 11.sp),
                   ),
                   SizedBox(
@@ -55,7 +56,7 @@ class UserHistoryHeader extends StatelessWidget implements PreferredSizeWidget {
                 ],
               ),
               Text(
-                '12 sessions completed, 8 sessions remaining',
+                '12 ${S.of(context).sessionCompleted}, 8 ${S.of(context).sessionRemaining}',
                 style: AppTextStyle.gray600S12.copyWith(fontSize: 10.sp),
               )
             ],

@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/package_pricing_card.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class PackageDetailsViewBody extends StatefulWidget {
   const PackageDetailsViewBody({super.key});
@@ -30,7 +31,7 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
                 const BackIcon(),
                 SizedBox(width: 32.w),
                 Text(
-                  'Choose your plan',
+                  S.of(context).chooseYourPlan,
                   style: AppTextStyle.black700S20,
                 ),
               ],
@@ -50,14 +51,16 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
                           selectedIndex = index; // Update the selected index
                         });
                       },
-                      title: 'Gold',
+                      title: S.of(context).gold,
                       price: '\$20',
-                      features: const [
-                        'Unlimited use of essential sports equipment',
-                        'One consultation session with a personal trainer when you sign up for the first time',
-                        'Use a personal locker daily.',
+                      features: [
+                        S.of(context).unlimitedUseOfEssentialSportsEquipment,
+                        S
+                            .of(context)
+                            .oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime,
+                        S.of(context).useAPersonalLockerDaily,
                       ],
-                      badge: 'GOLD',
+                      badge: S.of(context).gold,
                       badgeColor: AppColor.primary,
                     ),
                   );
@@ -68,7 +71,7 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
             CustomButton(
               width: double.infinity,
               height: 30.h,
-              title: 'Confirm',
+              title: S.of(context).confirm,
               onPressed: () {
                 AppNavigation.navigateTo(
                     context: context, routeName: Routes.adminConfirmUser);

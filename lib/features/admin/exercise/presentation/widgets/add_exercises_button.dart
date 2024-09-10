@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/add_exercises_dialog_body.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/save_adding_exercises_button.dart';
 import 'package:gym_dream/features/authentication/manager/otp%20cubit/validation_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AddExercisesButton extends StatelessWidget {
   const AddExercisesButton({super.key});
@@ -28,7 +29,7 @@ class AddExercisesButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Add exercises',
+                S.of(context).addExercise,
                 style: AppTextStyle.darkBlue700S10,
               ),
               Icon(
@@ -54,8 +55,10 @@ class AddExercisesButton extends StatelessWidget {
           create: (_) => ValidationCubit(),
           child: AlertDialog(
             titleTextStyle: AppTextStyle.orange700S16,
-            title: const Center(
-              child: Text('Add new exercise'),
+            title: Center(
+              child: Text(
+                S.of(context).addNewExercise,
+              ),
             ),
             content: SizedBox(
               height: 400.h,
@@ -70,7 +73,7 @@ class AddExercisesButton extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.labelLarge,
                 ),
                 child: Text(
-                  'Disable',
+                  S.of(context).disable,
                   style: AppTextStyle.orange400S10,
                 ),
                 onPressed: () {

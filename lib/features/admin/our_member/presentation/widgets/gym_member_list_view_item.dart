@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class GymMemberListViewItem extends StatelessWidget {
   const GymMemberListViewItem({
@@ -36,7 +37,7 @@ class GymMemberListViewItem extends StatelessWidget {
                 style: AppTextStyle.black400S16,
               ),
               Text(
-                'ID : $id',
+                '${S.of(context).id}: $id',
                 style: AppTextStyle.brown400S14,
               ),
             ],

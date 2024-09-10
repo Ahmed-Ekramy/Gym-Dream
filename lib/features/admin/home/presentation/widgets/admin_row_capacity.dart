@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
+
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 
@@ -30,7 +32,7 @@ class AdminRowCapacity extends StatelessWidget {
             height: 15.h,
             child: Center(
               child: Text(
-                'low capacity',
+                S.of(context).lowCapacity,
                 style: capacity > 80 && capacity <= 1000
                     ? AppTextStyle.white500S7
                     : AppTextStyle.blackOpacity500S7,
@@ -49,7 +51,7 @@ class AdminRowCapacity extends StatelessWidget {
             height: 15.h,
             child: Center(
               child: Text(
-                'medium capacity',
+                S.of(context).mediumCapacity,
                 style: capacity > 80 && capacity <= 1000
                     ? AppTextStyle.white500S7
                     : AppTextStyle.blackOpacity500S7,
@@ -72,7 +74,7 @@ class AdminRowCapacity extends StatelessWidget {
             height: 15.h,
             child: Center(
               child: Text(
-                'high capacity',
+                S.of(context).highCapacity,
                 style: capacity > 80 && capacity <= 1000
                     ? AppTextStyle.white500S7
                     : AppTextStyle.blackOpacity500S7,
