@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../common/helper/naviagtion_extentaions.dart';
 import '../../../../../common/routes/route.dart';
@@ -22,23 +23,32 @@ class OurBranchesView extends StatelessWidget {
             leading: BackIcon(),
           ),
           SliverToBoxAdapter(
-              child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Our branches', style: AppTextStyle.black600S18),
-                SizedBox(height: 2.h),
-                Text('All our gym branches', style: AppTextStyle.gray600S14)
-              ],
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    S.of(context).ourBranches,
+                    style: AppTextStyle.black600S18,
+                  ),
+                  SizedBox(height: 2.h),
+                  Text(
+                    S.of(context).allOurGymBranches,
+                    style: AppTextStyle.gray600S14,
+                  ),
+                ],
+              ),
             ),
-          )),
+          ),
           SliverList.builder(
               itemCount: 15,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 5.h),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 8.0.w,
+                    vertical: 5.h,
+                  ),
                   child: Stack(
                     children: [
                       Image.asset(
@@ -64,7 +74,7 @@ class OurBranchesView extends StatelessWidget {
                                     ),
                                     SizedBox(height: 5.h),
                                     Text(
-                                      "away from you : 200 meters",
+                                      "${S.of(context).awayFromYou}: 200 meters",
                                       style: AppTextStyle.gray600S14,
                                     ),
                                     SizedBox(height: 20.h),
@@ -76,7 +86,7 @@ class OurBranchesView extends StatelessWidget {
                                 flex: 2,
                                 child: CustomButton(
                                   height: 20.h,
-                                  title: "location",
+                                  title: S.of(context).location,
                                   textStyle: AppTextStyle.white700S14
                                       .copyWith(fontSize: 10.sp),
                                   onPressed: () {

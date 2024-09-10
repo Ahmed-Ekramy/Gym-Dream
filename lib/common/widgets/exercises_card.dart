@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class ExercisesCard extends StatelessWidget {
   const ExercisesCard({
@@ -22,14 +23,14 @@ class ExercisesCard extends StatelessWidget {
         height: 80.h,
         child: Row(
           children: [
-            // Set a fixed width for the image to prevent overflow
             Image.asset(
               AppAsset.imageExerciseDetails,
               width: 80.w,
               fit: BoxFit.cover,
             ),
-            const SizedBox(width: 10),
-            // Use Expanded to prevent overflow of text
+            const SizedBox(
+              width: 10,
+            ),
             Expanded(
               child: SizedBox(
                 width: 150.w,
@@ -38,7 +39,7 @@ class ExercisesCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      'Bench press',
+                      S.of(context).benchPress,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: AppTextStyle.black500S14,
@@ -47,15 +48,15 @@ class ExercisesCard extends StatelessWidget {
                       TextSpan(
                         children: [
                           TextSpan(
-                            text: '10-8\t\rCount\n',
+                            text: '10-8\t\r${S.of(context).count}\n',
                             style: AppTextStyle.blackOpacity500S10,
                           ),
                           TextSpan(
-                            text: '10\t\rGroups\n',
+                            text: '4\t\r${S.of(context).group}\n',
                             style: AppTextStyle.blackOpacity500S10,
                           ),
                           TextSpan(
-                            text: '300\t\rCalories',
+                            text: '100\t\r${S.of(context).calories}\n',
                             style: AppTextStyle.blackOpacity500S10,
                           ),
                         ],
@@ -78,13 +79,15 @@ class ExercisesCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
-                    'View video',
+                    S.of(context).viewVideo,
                     style: AppTextStyle.darkBlue700S10,
                   ),
                 ),
               ],
             ),
-            const SizedBox(width: 10),
+            const SizedBox(
+              width: 10,
+            ),
           ],
         ),
       ),

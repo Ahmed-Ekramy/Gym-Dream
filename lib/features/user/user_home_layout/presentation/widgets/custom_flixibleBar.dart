@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
@@ -17,7 +18,7 @@ class CustomFlexibleBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 16.w), // Add left padding to align
+            padding: EdgeInsets.only(left: 16.w),
             child: CircleAvatar(
               radius: 30.r,
               backgroundImage: const AssetImage(
@@ -29,11 +30,12 @@ class CustomFlexibleBar extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('ID: 123456', style: AppTextStyle.black600S16),
+              Text('${S.of(context).id}: 123456',
+                  style: AppTextStyle.black600S16),
               SizedBox(height: 10.h),
               Text(
                 maxLines: 2,
-                '12 sessions completed, 8 sessions remaining',
+                '12 ${S.of(context).sessionCompleted}, 8 ${S.of(context).sessionRemaining}',
                 style: AppTextStyle.blackOpacity600S14.copyWith(
                   fontSize: 8.sp,
                 ),

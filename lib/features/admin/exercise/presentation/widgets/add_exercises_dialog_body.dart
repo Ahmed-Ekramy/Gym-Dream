@@ -11,11 +11,11 @@ import 'package:gym_dream/features/admin/exercise/presentation/widgets/upload_ex
 import 'package:image_picker/image_picker.dart';
 
 class AddExercisesDialogBody extends StatelessWidget {
-  final GlobalKey<FormState> formKey; // Add formKey
+  final GlobalKey<FormState> formKey;
 
   const AddExercisesDialogBody({
     super.key,
-    required this.formKey, // Initialize the formKey
+    required this.formKey,
   });
 
   @override
@@ -25,13 +25,14 @@ class AddExercisesDialogBody extends StatelessWidget {
     return BlocProvider(
       create: (context) => ExerciseCubit(),
       child: Form(
-        key: formKey, // Attach formKey to the Form widget
+        key: formKey,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             UploadExerciseImage(
               picker: picker,
             ),
+            const Spacer(),
             AddExercisesTextField(
               validator: (value) {
                 return MyValidatorsHelper.displayNameValidator(context, value);
@@ -60,16 +61,13 @@ class AddExercisesDialogBody extends StatelessWidget {
               alignment: AlignmentDirectional.centerStart,
               child: ExercisesGroupDropDown(),
             ),
-            SizedBox(
-              height: 10.h,
-            ),
+            const Spacer(),
             SizedBox(
               height: 40.h,
               child: TextFormField(
                 maxLines: 1,
                 validator: (value) {
-                  return MyValidatorsHelper.urlValidator(
-                      value); // Ensure the validator returns a message if invalid
+                  return MyValidatorsHelper.urlValidator(value);
                 },
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(

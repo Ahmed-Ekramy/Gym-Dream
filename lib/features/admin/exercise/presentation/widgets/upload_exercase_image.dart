@@ -76,7 +76,7 @@ class UploadExerciseImage extends StatelessWidget {
                 );
               } else {
                 return Container(
-                  height: 50.h,
+                  height: 100.h,
                   decoration: BoxDecoration(
                     color: AppColor.blackOpacity4.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(8.r),

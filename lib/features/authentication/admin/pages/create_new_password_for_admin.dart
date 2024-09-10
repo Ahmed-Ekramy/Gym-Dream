@@ -25,6 +25,7 @@ class CreateNewPasswordForAdmin extends StatelessWidget {
         BlocProvider(create: (_) => CreatePasswordCubit()),
       ],
       child: Scaffold(
+        floatingActionButton: const SaveButton(),
         backgroundColor: AppColor.white,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -41,9 +42,9 @@ class CreateNewPasswordForAdmin extends StatelessWidget {
                 SizedBox(height: 10.h),
                 const PasswordForm(),
                 const InstructionsSection(),
-                SizedBox(height: 130.h),
-                const SaveButton(),
-                SizedBox(height: 20.h),
+                // SizedBox(height: 130.h),
+                // const SaveButton(),
+                // SizedBox(height: 20.h),
               ],
             ),
           ),

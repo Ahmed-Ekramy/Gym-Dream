@@ -21,6 +21,8 @@ class AdminExerciseViewBody extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             const SliverAppBar(
+              backgroundColor: AppColor.white,
+              surfaceTintColor: AppColor.white,
               pinned: false,
               leading: BackIcon(),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
@@ -23,7 +24,7 @@ class CustomRowCapacity extends StatelessWidget {
             height: 14.h,
             child: Center(
               child: Text(
-                'Low capacity',
+                S.of(context).lowCapacity,
                 style: AppTextStyle.white500S7,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -38,7 +39,7 @@ class CustomRowCapacity extends StatelessWidget {
             height: 14.h,
             child: Center(
               child: Text(
-                'Medium capacity',
+                S.of(context).mediumCapacity,
                 style: AppTextStyle.blackOpacity500S7,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -57,7 +58,7 @@ class CustomRowCapacity extends StatelessWidget {
             height: 14.h,
             child: Center(
               child: Text(
-                'High capacity',
+                S.of(context).highCapacity,
                 style: AppTextStyle.blackOpacity500S7,
                 overflow: TextOverflow.ellipsis,
               ),
