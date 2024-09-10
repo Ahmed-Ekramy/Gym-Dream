@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_dream/core/app_color.dart';
-
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QrCodeView extends StatefulWidget {
@@ -39,7 +39,9 @@ class _QrCodeViewState extends State<QrCodeView> {
             color: AppColor.white,
             child: Center(
               child: Text(
-                qrResult != null ? 'Result: ${qrResult!.code}' : 'Scan a code',
+                qrResult != null
+                    ? '${S.of(context).result}: ${qrResult!.code}'
+                    : S.of(context).scanTheQrCode,
                 style: AppTextStyle.black700S18,
               ),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class UserGymAttendanceDataList extends StatelessWidget {
   const UserGymAttendanceDataList({
@@ -26,7 +27,8 @@ class UserGymAttendanceDataList extends StatelessWidget {
                     backgroundColor: AppColor.blue,
                   ),
                   SizedBox(width: 4.w),
-                  Text("in 10:30", style: AppTextStyle.blueNavy400S12),
+                  Text("${S.of(context).In} 10:30",
+                      style: AppTextStyle.blueNavy400S12),
                 ],
               ),
               Row(
@@ -36,7 +38,8 @@ class UserGymAttendanceDataList extends StatelessWidget {
                     backgroundColor: AppColor.red,
                   ),
                   SizedBox(width: 4.w),
-                  Text("out 12:30", style: AppTextStyle.blueNavy400S12),
+                  Text("${S.of(context).out} 12:30",
+                      style: AppTextStyle.blueNavy400S12),
                 ],
               ),
             ],

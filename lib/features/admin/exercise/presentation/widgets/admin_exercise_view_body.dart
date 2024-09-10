@@ -7,6 +7,7 @@ import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exe
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/add_exercises_button.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/exercises_list_item.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminExerciseViewBody extends StatelessWidget {
   final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
@@ -33,12 +34,12 @@ class AdminExerciseViewBody extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Chest and abdominal exercises',
+                      S.of(context).chestAndAbdominalExercises,
                       style: AppTextStyle.black600S18,
                     ),
                     SizedBox(height: 8.h),
                     Text(
-                      'Chest and abdominal exercises',
+                      S.of(context).chestAndAbdominalExercises,
                       style: AppTextStyle.grey400S11,
                     ),
                     SizedBox(height: 8.h),
@@ -72,7 +73,7 @@ class AdminExerciseViewBody extends StatelessWidget {
                       state.exercises.isEmpty) {
                     return Center(
                       child: Text(
-                        'No exercises available.',
+                        S.of(context).noExercisesAvailable,
                         style: AppTextStyle.black500S14,
                       ),
                     );

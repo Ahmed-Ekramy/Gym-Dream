@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class LastSessionItem extends StatelessWidget {
   const LastSessionItem({
@@ -23,11 +24,11 @@ class LastSessionItem extends StatelessWidget {
           style: AppTextStyle.gray600S14,
         ),
         Text(
-          'in $timeIn',
+          '${S.of(context).In} $timeIn',
           style: AppTextStyle.black600S16.copyWith(fontSize: 14.sp),
         ),
         Text(
-          'out $timeOut',
+          '${S.of(context).out} $timeOut',
           style: AppTextStyle.black600S16.copyWith(fontSize: 14.sp),
         ),
       ],

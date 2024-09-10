@@ -7,6 +7,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_text_and_icon_botton.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminAddNewUserAndSendInvite extends StatelessWidget {
   const AdminAddNewUserAndSendInvite({
@@ -30,12 +31,12 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'Add New Users',
+                    S.of(context).addNewUsers,
                     style: AppTextStyle.black500S16,
                   ),
                   SizedBox(height: 4.h),
                   Text(
-                    'Send an invite to join',
+                    S.of(context).sendAnInviteToJoin,
                     style: AppTextStyle.black400S14.copyWith(
                       color: const Color(0xffA17545),
                     ),
@@ -50,7 +51,7 @@ class AdminAddNewUserAndSendInvite extends StatelessWidget {
                   AppNavigation.navigateTo(
                       context: context, routeName: Routes.adminAddMemberView);
                 },
-                title: 'Add Member',
+                title: S.of(context).addMember,
                 textStyle: AppTextStyle.orange600S14,
                 icon: SvgPicture.asset(
                   AppAsset.add,

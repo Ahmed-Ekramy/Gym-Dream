@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/setting/presentation/widgets/admin_setting_view_body.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminSettingView extends StatelessWidget {
   const AdminSettingView({super.key});
@@ -18,7 +19,7 @@ class AdminSettingView extends StatelessWidget {
           child: const BackIcon(),
         ),
         title: Text(
-          'Settings',
+          S.of(context).settings,
           style: AppTextStyle.black500S20,
         ),
       ),

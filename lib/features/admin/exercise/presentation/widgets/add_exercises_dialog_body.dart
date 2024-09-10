@@ -8,6 +8,7 @@ import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exe
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/add_exercises_text_field.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/exercises_group_drop_down.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/upload_exercase_image.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AddExercisesDialogBody extends StatelessWidget {
@@ -37,7 +38,7 @@ class AddExercisesDialogBody extends StatelessWidget {
               validator: (value) {
                 return MyValidatorsHelper.displayNameValidator(context, value);
               },
-              hint: 'name',
+              hint: S.of(context).name,
               readOnly: false,
               textInputType: TextInputType.text,
             ),
@@ -45,7 +46,7 @@ class AddExercisesDialogBody extends StatelessWidget {
               validator: (value) {
                 return MyValidatorsHelper.addExercisesValidator(context, value);
               },
-              hint: 'count',
+              hint: S.of(context).count,
               readOnly: false,
               textInputType: TextInputType.number,
             ),
@@ -53,7 +54,7 @@ class AddExercisesDialogBody extends StatelessWidget {
               validator: (value) {
                 return MyValidatorsHelper.addExercisesValidator(context, value);
               },
-              hint: 'repetition',
+              hint: S.of(context).repetition,
               readOnly: false,
               textInputType: TextInputType.number,
             ),
@@ -67,7 +68,7 @@ class AddExercisesDialogBody extends StatelessWidget {
               child: TextFormField(
                 maxLines: 1,
                 validator: (value) {
-                  return MyValidatorsHelper.urlValidator(value);
+                  return MyValidatorsHelper.urlValidator(context, value);
                 },
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -77,7 +78,7 @@ class AddExercisesDialogBody extends StatelessWidget {
                   ),
                   filled: true,
                   fillColor: AppColor.babyBlue,
-                  hintText: 'Video Link',
+                  hintText: S.of(context).videoLink,
                   hintStyle: AppTextStyle.darkBlue700S12,
                 ),
               ),

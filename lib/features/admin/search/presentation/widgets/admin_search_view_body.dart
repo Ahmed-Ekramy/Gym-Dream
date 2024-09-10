@@ -7,6 +7,7 @@ import 'package:gym_dream/common/widgets/app_text_form_field.dart';
 import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminSearchViewBody extends StatelessWidget {
   const AdminSearchViewBody({super.key});
@@ -21,7 +22,7 @@ class AdminSearchViewBody extends StatelessWidget {
             AppTextFormFiled(
               filled: true,
               fillColor: AppColor.grayLight,
-              hintText: 'Nmae',
+              hintText: S.of(context).fullName,
               obscureText: false,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -36,7 +37,7 @@ class AdminSearchViewBody extends StatelessWidget {
             AppTextFormFiled(
               filled: true,
               fillColor: AppColor.grayLight,
-              hintText: 'Id',
+              hintText: S.of(context).id,
               obscureText: false,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -51,7 +52,7 @@ class AdminSearchViewBody extends StatelessWidget {
             AppTextFormFiled(
               filled: true,
               fillColor: AppColor.grayLight,
-              hintText: 'Package',
+              hintText: S.of(context).package,
               obscureText: false,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -66,7 +67,7 @@ class AdminSearchViewBody extends StatelessWidget {
             AppTextFormFiled(
               filled: true,
               fillColor: AppColor.grayLight,
-              hintText: 'Gender',
+              hintText: S.of(context).gender,
               obscureText: false,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -81,7 +82,7 @@ class AdminSearchViewBody extends StatelessWidget {
             AppTextFormFiled(
               filled: true,
               fillColor: AppColor.grayLight,
-              hintText: 'Phone number',
+              hintText: S.of(context).phoneNumber,
               obscureText: false,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -96,7 +97,7 @@ class AdminSearchViewBody extends StatelessWidget {
             CustomButton(
               height: 35.h,
               width: double.infinity,
-              title: 'Search',
+              title: S.of(context).search,
               onPressed: () {
                 AppNavigation.navigateTo(
                     context: context, routeName: Routes.adminSearchResultView);

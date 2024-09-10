@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class CustomWarningMassage extends StatelessWidget {
   const CustomWarningMassage({
@@ -24,7 +25,8 @@ class CustomWarningMassage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("warning", style: AppTextStyle.redBlood500S14),
+                  Text(S.of(context).warning,
+                      style: AppTextStyle.redBlood500S14),
                   GestureDetector(
                     onTap: () {
                       Future.delayed(Duration.zero, () {
@@ -40,7 +42,7 @@ class CustomWarningMassage extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          "Send to all",
+                          S.of(context).sendToAllMembers,
                           style: AppTextStyle.redBlood700S18.copyWith(
                             fontSize: 10.sp,
                           ),
@@ -52,7 +54,7 @@ class CustomWarningMassage extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               Text(
-                "The gym is full send to our clients tell them",
+                S.of(context).theGymIsFullSendToOurClientsTellThem,
                 style: AppTextStyle.black400S15.copyWith(fontSize: 12.sp),
               ),
             ],

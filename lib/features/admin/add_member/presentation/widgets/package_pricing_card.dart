@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class PricingCard extends StatelessWidget {
   final String title;
@@ -54,7 +55,7 @@ class PricingCard extends StatelessWidget {
               ],
             ),
             Text(
-              '$price/mo',
+              '$price/${S.of(context).monthly}',
               style: AppTextStyle.orange700S36,
             ),
             SizedBox(height: 8.h),

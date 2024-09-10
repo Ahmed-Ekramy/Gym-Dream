@@ -6,6 +6,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/setting/presentation/widgets/admin_profile_view_body.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminProfileView extends StatelessWidget {
   const AdminProfileView({super.key});
@@ -14,7 +15,7 @@ class AdminProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'Profile',
+        title: S.of(context).profile,
         actions: [
           Column(
             children: [
@@ -28,7 +29,7 @@ class AdminProfileView extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  'Log out',
+                  S.of(context).logout,
                   style:
                       AppTextStyle.redBlood500S10.copyWith(color: AppColor.red),
                 ),

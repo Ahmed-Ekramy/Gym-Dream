@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_text_style.dart';
 
@@ -16,9 +17,11 @@ class CustomTextRich extends StatelessWidget {
         child: Text.rich(
           TextSpan(
             children: [
-              TextSpan(text: "History\n", style: AppTextStyle.black600S18),
               TextSpan(
-                  text: "Your gym attendance date",
+                  text: "${S.of(context).history}\n",
+                  style: AppTextStyle.black600S18),
+              TextSpan(
+                  text: S.of(context).yourGymAttendanceDate,
                   style: AppTextStyle.gray600S14),
             ],
           ),

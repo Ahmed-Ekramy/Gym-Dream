@@ -8,6 +8,7 @@ import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/days_
 import 'package:gym_dream/features/admin/trusted_user/presentation/widgets/personal_info_package_item.dart';
 import 'package:gym_dream/features/admin/user_profile/presentation/widgets/user_history_and_last_session.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class UserDataViewBody extends StatelessWidget {
   const UserDataViewBody({super.key});
@@ -36,7 +37,7 @@ class UserDataViewBody extends StatelessWidget {
                         ),
                         SizedBox(height: 6.h),
                         Text(
-                          'ID : 101230',
+                          '${S.of(context).id} : 101230',
                           style: AppTextStyle.brown600S18,
                         ),
                         SizedBox(height: 6.h),
@@ -44,7 +45,7 @@ class UserDataViewBody extends StatelessWidget {
                           children: [
                             SvgPicture.asset(AppAsset.whatsapp),
                             Text(
-                              ':01023126037',
+                              '${S.of(context).phoneNumber}:01023126037',
                               style: AppTextStyle.gray600S14,
                             )
                           ],
@@ -53,7 +54,7 @@ class UserDataViewBody extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              'Platinum Package',
+                              '${S.of(context).package} ${S.of(context).platinum}',
                               style: AppTextStyle.gray600S14,
                             ),
                             SizedBox(width: 4.w),
@@ -78,7 +79,7 @@ class UserDataViewBody extends StatelessWidget {
                         SizedBox(height: 2.h),
                         FittedBox(
                           child: Text(
-                            'Birth date : 10/3/2002',
+                            '${S.of(context).birthDate}: 10/3/2002',
                             style: AppTextStyle.black400S14
                                 .copyWith(fontSize: 9.sp),
                           ),
@@ -89,14 +90,14 @@ class UserDataViewBody extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16.h),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   PersonalInfoPackageItem(
-                    date: 'Start Date: 1/3/2024',
+                    date: '${S.of(context).startDate}: 1/3/2024',
                   ),
                   PersonalInfoPackageItem(
-                    date: 'End Date: 1/4/2024',
+                    date: '${S.of(context).endDate}: 1/4/2024',
                   ),
                 ],
               ),
@@ -108,7 +109,7 @@ class UserDataViewBody extends StatelessWidget {
               CustomButton(
                 width: double.infinity,
                 height: 35.h,
-                title: 'Done',
+                title: S.of(context).done,
                 onPressed: () {},
               )
             ],

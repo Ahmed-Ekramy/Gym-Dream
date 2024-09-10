@@ -5,9 +5,10 @@ import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_add_new_user_and_send_invite.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_gym_data.dart';
-import 'package:gym_dream/features/admin/home/presentation/widgets/our_member_images.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/admin_recently_scanned.dart';
 import 'package:gym_dream/features/admin/home/presentation/widgets/custom_warning_massage.dart';
+import 'package:gym_dream/features/admin/home/presentation/widgets/our_member_images.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class AdminHomeBodyView extends StatefulWidget {
   const AdminHomeBodyView({super.key});
@@ -51,7 +52,7 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
                     context: context, routeName: Routes.ourMemberView);
               },
               imageList: imageList,
-              title: 'Our Members',
+              title: S.of(context).ourMembers,
             ),
           ),
           SizedBox(height: 16.h),

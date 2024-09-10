@@ -7,6 +7,7 @@ import 'package:gym_dream/features/admin/our_member/presentation/widgets/all_mem
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/new_member_view_body.dart';
 import 'package:gym_dream/features/admin/our_member/presentation/widgets/search_icon.dart';
 import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class OurMemberView extends StatefulWidget {
   static const String routeName = 'OurMemberView';
@@ -14,7 +15,6 @@ class OurMemberView extends StatefulWidget {
   const OurMemberView({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _MyTabbedPageState createState() => _MyTabbedPageState();
 }
 
@@ -39,10 +39,10 @@ class _MyTabbedPageState extends State<OurMemberView>
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: const CustomAppBar(
-          title: 'Gym members',
-          leading: BackIcon(),
-          actions: [
+        appBar: CustomAppBar(
+          title: S.of(context).gymMembers,
+          leading: const BackIcon(),
+          actions: const [
             SearchIcon(),
           ],
         ),
@@ -52,9 +52,9 @@ class _MyTabbedPageState extends State<OurMemberView>
               height: 20.h,
             ),
             TabBar(
-              tabs: const [
-                Text('All members'),
-                Text('New members'),
+              tabs: [
+                Text(S.of(context).allMembers),
+                Text(S.of(context).newMembers),
               ],
               indicatorWeight: 3,
               indicatorColor: AppColor.primary,

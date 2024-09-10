@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_color.dart';
@@ -27,10 +28,11 @@ class CustomContainerScheduleAdmin extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("ID", style: AppTextStyle.blueNavy500S14),
+                Text(S.of(context).id, style: AppTextStyle.blueNavy500S14),
                 Row(
                   children: [
-                    Text("Date", style: AppTextStyle.blueNavy500S14),
+                    Text(S.of(context).date,
+                        style: AppTextStyle.blueNavy500S14),
                     SizedBox(width: 6.w),
                     SvgPicture.asset(
                       AppAsset.arrowIcon,
@@ -41,7 +43,7 @@ class CustomContainerScheduleAdmin extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text("In", style: AppTextStyle.blueNavy500S14),
+                    Text(S.of(context).In, style: AppTextStyle.blueNavy500S14),
                     SizedBox(width: 6.w),
                     SvgPicture.asset(
                       AppAsset.loginIcon,
@@ -52,7 +54,7 @@ class CustomContainerScheduleAdmin extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text("Out", style: AppTextStyle.blueNavy500S14),
+                    Text(S.of(context).out, style: AppTextStyle.blueNavy500S14),
                     SizedBox(width: 6.w),
                     SvgPicture.asset(
                       AppAsset.logoutIcon,

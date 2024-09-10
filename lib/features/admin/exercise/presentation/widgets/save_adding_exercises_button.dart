@@ -5,6 +5,7 @@ import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/authentication/manager/otp%20cubit/validation_cubit.dart';
+import 'package:gym_dream/generated/l10n.dart';
 
 class SaveAddingExercisesButton extends StatelessWidget {
   final GlobalKey<FormState> formKey;
@@ -39,7 +40,7 @@ class SaveAddingExercisesButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'save',
+            S.of(context).save,
             style: AppTextStyle.white700S14,
           ),
         ),
