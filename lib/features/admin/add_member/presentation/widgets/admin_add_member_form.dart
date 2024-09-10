@@ -118,7 +118,7 @@ class _AdminAddMemberViewBodyFormState
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'package :',
+                    'Package:',
                     style: AppTextStyle.black500S16,
                   ),
                   TextButton(
@@ -143,6 +143,7 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
+                controller: cubit.watsAppController,
                 hintText: 'WhatsApp Number Here',
                 obscureText: false,
                 maxLine: 1,
@@ -159,14 +160,10 @@ class _AdminAddMemberViewBodyFormState
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 validator: (text) {
-                  return null;
-
-                  // return MyValidatorsHelper.dateValidator(text);
+                  return null; // You may want to add a date validator here
                 },
                 controller: cubit.birthDateController,
-                hintText: cubit.birthDateController.text.isNotEmpty
-                    ? cubit.birthDateController.text
-                    : 'Birth Date Here',
+                hintText: 'Birth Date Here',
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
@@ -189,18 +186,15 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 validator: (text) {
                   return null;
-
-                  // return MyValidatorsHelper.dateValidator(text);
                 },
                 controller: cubit.startDateController,
-                hintText: cubit.startDateController.text.isEmpty
-                    ? 'Start Date Here'
-                    : cubit.startDateController.text,
+                hintText: 'Start Date Here',
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
                   onPressed: () {
-                    cubit.selectDate(context, date: cubit.startDateController);
+                    cubit.selectDate(context,
+                        date: cubit.startDateController, isStartDate: true);
                   },
                   icon: SvgPicture.asset(
                     AppAsset.calendar,
@@ -218,13 +212,9 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 validator: (text) {
                   return null;
-
-                  // return MyValidatorsHelper.dateValidator(text);
                 },
-                controller: cubit.startDateController,
-                hintText: cubit.endDateController.text.isEmpty
-                    ? 'End Date Here'
-                    : cubit.endDateController.text,
+                controller: cubit.endDateController,
+                hintText: 'End Date Here',
                 obscureText: false,
                 keyboardType: TextInputType.name,
                 suffixIcon: IconButton(
@@ -240,15 +230,15 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 16.h),
               Text(
-                'password',
+                'Password',
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.passWordController,
-                hintText: 'password',
-                obscureText: false,
-                keyboardType: TextInputType.phone,
+                hintText: 'Password',
+                obscureText: true,
+                keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
                   return MyValidatorsHelper.displayNameValidator(context, text);
                 },
@@ -263,19 +253,18 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               Text(
-                'confirm password',
+                'Confirm Password',
                 style: AppTextStyle.black500S16,
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.confirmPassWordController,
-                hintText: 'confirm password',
-                obscureText: false,
-                keyboardType: TextInputType.phone,
+                hintText: 'Confirm Password',
+                obscureText: true,
+                keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
                   return MyValidatorsHelper.displayNameValidator(context, text);
                 },
-                maxLine: 1,
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
@@ -292,6 +281,7 @@ class _AdminAddMemberViewBodyFormState
                 title: 'Done',
                 onPressed: () {
                   if (cubit.formKey.currentState!.validate() == true) {
+                    // Call the function to add member here
                   } else {
                     cubit.autovalidateMode = AutovalidateMode.always;
                     setState(() {});

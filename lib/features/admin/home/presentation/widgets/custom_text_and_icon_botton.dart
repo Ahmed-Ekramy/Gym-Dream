@@ -39,11 +39,14 @@ class BottomTextAndIconButton extends StatelessWidget {
               icon ?? const SizedBox(),
               SizedBox(width: 4.w),
               Expanded(
-                child: Text(
-                  title,
-                  style: textStyle ?? AppTextStyle.white700S14,
+                child: FittedBox(
+                  child: Text(
+                    title,
+                    style: textStyle ?? AppTextStyle.white700S14,
+                  ),
                 ),
               ),
+              SizedBox(width: 4.w),
             ],
           )),
     );
