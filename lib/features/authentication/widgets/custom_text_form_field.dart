@@ -151,10 +151,4 @@ class CustomTextFormField extends StatelessWidget {
             inputType == InputType.createPassword) &&
         isPasswordVisible;
   }
-
-  // bool _isStrongPassword(String value) {
-  //   final regex =
-  //       RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#\$&*~]).{8,}$');
-  //   return regex.hasMatch(value);
-  // }
 }

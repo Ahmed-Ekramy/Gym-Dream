@@ -25,7 +25,13 @@ class CreateNewPasswordForAdmin extends StatelessWidget {
         BlocProvider(create: (_) => CreatePasswordCubit()),
       ],
       child: Scaffold(
-        floatingActionButton: const SaveButton(),
+        floatingActionButton: MediaQuery.of(context).viewInsets.bottom != 0
+            ? null
+            : Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: const SaveButton(),
+              ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         backgroundColor: AppColor.white,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -150,7 +156,7 @@ class PasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     } else if (!state.isPasswordLongEnough || !state.isPasswordStrong) {
@@ -160,7 +166,7 @@ class PasswordValidationMessages extends StatelessWidget {
           !state.isPasswordLongEnough
               ? S.of(context).passwordMustBeAtLeast8CharactersLong
               : S.of(context).useDifferentTypesOfCharacters,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     }
@@ -180,7 +186,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     } else if (!state.passwordsMatch) {
@@ -188,7 +194,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).passwordDoesNotMatch,
-          style: AppTextStyle.redBlood500S14,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     }

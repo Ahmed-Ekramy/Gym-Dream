@@ -124,7 +124,7 @@ class OtpViewForTrainee extends StatelessWidget {
                                       alignment: Alignment.center,
                                       child: Text(
                                         errorMessage,
-                                        style: AppTextStyle.redBlood700S18,
+                                        style: AppTextStyle.redBlood500S10,
                                       ),
                                     ),
                                   ],
