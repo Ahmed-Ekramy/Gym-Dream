@@ -15,7 +15,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).pleaseEnterYourPassword,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     } else if (!state.passwordsMatch) {
@@ -23,7 +23,7 @@ class ConfirmPasswordValidationMessages extends StatelessWidget {
         padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           S.of(context).passwordDoesNotMatch,
-          style: AppTextStyle.redBlood700S18,
+          style: AppTextStyle.redBlood500S10,
         ),
       );
     }
