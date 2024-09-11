@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/features/user/history_tab/presentation/widgets/row_history_schedule.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
@@ -14,8 +14,8 @@ class ContainerHistorySchedule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Container(
+    return
+       Container(
           width: double.infinity,
           height: 25.h,
           decoration: BoxDecoration(
@@ -26,60 +26,30 @@ class ContainerHistorySchedule extends StatelessWidget {
           ),
           child: Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: 8.0.w,
+                horizontal: 5.0.w,
               ),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      S.of(context).package,
-                      style: AppTextStyle.blueNavy500S14,
+                    // Text(
+                    //   S.of(context).package,
+                    //   style: AppTextStyle.blueNavy500S14,
+                    // ),
+                    RowHistorySchedule(
+                      title: S.of(context).date,
+                      imageName: AppAsset.arrowIcon,
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          S.of(context).date,
-                          style: AppTextStyle.blueNavy500S14,
-                        ),
-                        SizedBox(
-                          width: 6.w,
-                        ),
-                        SvgPicture.asset(
-                          AppAsset.arrowIcon,
-                          width: 16.w,
-                          height: 16.h,
-                        ),
-                      ],
+                    RowHistorySchedule(
+                      title:  S.of(context).In,
+                      imageName: AppAsset.loginIcon,
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          S.of(context).In,
-                          style: AppTextStyle.blueNavy500S14,
-                        ),
-                        SizedBox(width: 6.w),
-                        SvgPicture.asset(
-                          AppAsset.loginIcon,
-                          width: 16.w,
-                          height: 16.h,
-                        ),
-                      ],
+                    RowHistorySchedule(
+                      title:  S.of(context).out,
+                      imageName: AppAsset.logoutIcon,
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          S.of(context).out,
-                          style: AppTextStyle.blueNavy500S14,
-                        ),
-                        SizedBox(width: 6.w),
-                        SvgPicture.asset(
-                          AppAsset.logoutIcon,
-                          width: 16.w,
-                          height: 16.h,
-                        ),
-                      ],
-                    ),
-                  ]))),
+                  ]))
     );
   }
 }
+
+

@@ -19,8 +19,13 @@ class OurBranchesView extends StatelessWidget {
       child: Scaffold(
           body: CustomScrollView(
         slivers: [
-          const SliverAppBar(
-            leading: BackIcon(),
+           SliverAppBar(
+            leading: const BackIcon(),
+            title:      Text(
+              S.of(context).ourBranches,
+              style: AppTextStyle.black600S18,
+            ),
+            centerTitle: true,
           ),
           SliverToBoxAdapter(
             child: Padding(
@@ -28,11 +33,6 @@ class OurBranchesView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    S.of(context).ourBranches,
-                    style: AppTextStyle.black600S18,
-                  ),
-                  SizedBox(height: 2.h),
                   Text(
                     S.of(context).allOurGymBranches,
                     style: AppTextStyle.gray600S14,
