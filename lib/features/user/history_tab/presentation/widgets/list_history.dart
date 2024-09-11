@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/generated/l10n.dart';
+
+import '../../../../../core/app_color.dart';
+import '../../../../../core/app_text_style.dart';
+
+class ListHistory extends StatelessWidget {
+  const ListHistory({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView.separated(
+        itemCount: 40,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: 8.0.h,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Text(
+                //   S.of(context).platinum,
+                //   style: AppTextStyle.blueNavy400S12,
+                // ),
+                Text(
+                  "2/3/2024",
+                  style: AppTextStyle.blueNavy400S12,
+                ),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 3.r,
+                      backgroundColor: AppColor.blue,
+                    ),
+                    SizedBox(width: 4.w),
+                    Text("${S.of(context).In} 10:30",
+                        style: AppTextStyle.blueNavy400S12),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 3.r,
+                      backgroundColor: AppColor.red,
+                    ),
+                    SizedBox(
+                      width: 4.w,
+                    ),
+                    Text("${S.of(context).out} 12:30",
+                        style: AppTextStyle.blueNavy400S12),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return Divider(
+            color: AppColor.grey,
+            thickness: 1.h,
+          );
+        },
+      ),
+    );
+  }
+}
