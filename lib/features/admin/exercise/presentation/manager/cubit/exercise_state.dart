@@ -18,8 +18,11 @@ final class UploadImageExerciseSuccessState extends ExerciseState {
 }
 
 final class DropDownState extends ExerciseState {
-  const DropDownState(this.dropDownList);
-  final String dropDownList;
+  const DropDownState(this.selectedGroup);
+  final String selectedGroup;
+
+  @override
+  List<Object> get props => [selectedGroup];
 }
 
 final class UploadImageExeciseErrorState extends ExerciseState {

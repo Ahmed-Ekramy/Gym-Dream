@@ -305,5 +305,11 @@
     "triceps":"triceps",
     "@triceps":{},
     "rest":"rest",
-    "@rest":{}
+    "@rest":{},
+    "deleteExercise":"Delete Exercise",
+    "@deleteExercise":{},
+    "areYouSureYouWantToDeleteThisExercise":"Are you sure you want to delete this exercise?",
+    "@areYouSureYouWantToDeleteThisExercise":{},
+    "areYouSureYouWantToLogOut":"Are you sure you want to logout?",
+    "@areYouSureYouWantToLogOut":{}
 }

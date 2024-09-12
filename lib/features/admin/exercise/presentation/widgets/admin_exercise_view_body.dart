@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exercise_cubit.dart';
@@ -95,22 +96,72 @@ class AdminExerciseViewBody extends StatelessWidget {
 
   void removeItem(BuildContext context, int index) {
     final exercisesCubit = context.read<ExerciseCubit>();
-    if (exercisesCubit.state is ExerciseListSuccess) {
-      final currentState = exercisesCubit.state as ExerciseListSuccess;
-      final removedExercise = currentState.exercises[index];
 
-      listKey.currentState?.removeItem(
-        index,
-        (context, animation) => ExerciseListItem(
-          exercise: removedExercise,
-          index: index,
-          animation: animation,
-          onRemove: () {},
-        ),
-        duration: const Duration(milliseconds: 600),
-      );
-
-      exercisesCubit.deleteExercise(index);
-    }
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            S.of(context).deleteExercise,
+            style: AppTextStyle.black600S16,
+          ),
+          content: Text(
+            S.of(context).areYouSureYouWantToDeleteThisExercise,
+            style: AppTextStyle.black500S14.copyWith(
+              fontSize: 12.sp,
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
+              child: Text(
+                S.of(context).disable,
+                style: AppTextStyle.orange400S10,
+              ),
+              onPressed: () {
+                AppNavigation.pop(context);
+              },
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+                if (exercisesCubit.state is ExerciseListSuccess) {
+                  final currentState =
+                      exercisesCubit.state as ExerciseListSuccess;
+                  final removedExercise = currentState.exercises[index];
+                  listKey.currentState?.removeItem(
+                    index,
+                    (context, animation) => ExerciseListItem(
+                      exercise: removedExercise,
+                      index: index,
+                      animation: animation,
+                      onRemove: () {},
+                    ),
+                    duration: const Duration(milliseconds: 600),
+                  );
+                  exercisesCubit.deleteExercise(index);
+                }
+              },
+              child: Container(
+                height: 25.h,
+                width: 75.w,
+                decoration: BoxDecoration(
+                  color: AppColor.primary,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Center(
+                  child: Text(
+                    S.of(context).confirm,
+                    style: AppTextStyle.white700S14,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 }

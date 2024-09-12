@@ -35,6 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "allMembers": MessageLookupByLibrary.simpleMessage("جميع الأعضاء"),
         "allOurGymBranches":
             MessageLookupByLibrary.simpleMessage("كل فروع الجيم الخاصة بنا"),
+        "areYouSureYouWantToDeleteThisExercise":
+            MessageLookupByLibrary.simpleMessage(
+                "هل أنت متأكد أنك تريد حذف هذا التمرين؟"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد أنك تريد تسجيل الخروج؟"),
         "awayFromYou": MessageLookupByLibrary.simpleMessage("بعيد عنك"),
         "back": MessageLookupByLibrary.simpleMessage("ظهر"),
         "benchPress": MessageLookupByLibrary.simpleMessage("تمرين الضغط"),
@@ -63,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "days": MessageLookupByLibrary.simpleMessage("أيام"),
         "daysLeftForYourPackage":
             MessageLookupByLibrary.simpleMessage("الأيام المتبقية في باقتك"),
+        "deleteExercise": MessageLookupByLibrary.simpleMessage("حذف التمرين"),
         "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
         "disable": MessageLookupByLibrary.simpleMessage("الغاء"),
         "displayNameCannotBeEmpty": MessageLookupByLibrary.simpleMessage(

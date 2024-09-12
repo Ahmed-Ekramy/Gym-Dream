@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
 import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
+import 'package:gym_dream/features/admin/setting/presentation/widgets/setting_item.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
@@ -43,16 +43,7 @@ class AdminSettingViewBody extends StatelessWidget {
           ),
           SettingItem(
             onTap: () {
-              Future.delayed(
-                Duration.zero,
-                () {
-                  context.read<AuthCubit>().logout();
-                },
-              );
-              AppNavigation.navigateAndRemoveUntil(
-                context: context,
-                newRoute: Routes.choosingView,
-              );
+              _showLogoutConfirmationDialog(context);
             },
             image: AppAsset.redLogout,
             title: S.of(context).logout,
@@ -65,7 +56,63 @@ class AdminSettingViewBody extends StatelessWidget {
       ),
     );
   }
+
+  void _showLogoutConfirmationDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            S.of(context).logout,
+            style: AppTextStyle.black600S16,
+          ),
+          content: Text(
+            S.of(context).areYouSureYouWantToLogOut,
+            style: AppTextStyle.black500S14.copyWith(
+              fontSize: 12.sp,
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                AppNavigation.pop(context);
+              },
+              child: Text(
+                S.of(context).disable,
+                style: AppTextStyle.orange400S10,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                AppNavigation.pop(context);
+                context.read<AuthCubit>().logout();
+                AppNavigation.navigateAndRemoveUntil(
+                  context: context,
+                  newRoute: Routes.choosingView,
+                );
+              },
+              child: Container(
+                height: 25.h,
+                width: 75.w,
+                decoration: BoxDecoration(
+                  color: AppColor.primary,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Center(
+                  child: Text(
+                    S.of(context).confirm,
+                    style: AppTextStyle.white700S14,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
+
 
 // class LanguageSelectionScreen extends StatefulWidget {
 //   const LanguageSelectionScreen({super.key});
@@ -146,50 +193,3 @@ class AdminSettingViewBody extends StatelessWidget {
 //   }
 // }
 
-class SettingItem extends StatelessWidget {
-  const SettingItem({
-    super.key,
-    required this.title,
-    required this.image,
-    this.titlestyle,
-    this.onTap,
-  });
-  final String title;
-  final String image;
-  final TextStyle? titlestyle;
-  final void Function()? onTap;
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: AppColor.white, // Changed the color to white
-          borderRadius: BorderRadius.circular(8.r),
-          boxShadow: [
-            BoxShadow(
-              color:
-                  AppColor.black.withOpacity(0.1), // Shadow color with opacity
-              spreadRadius: 2, // Spread of the shadow
-              blurRadius: 8, // Blurring effect
-              offset: const Offset(0, 4), // Position of the shadow (x, y)
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            Text(
-              title,
-              style: titlestyle ??
-                  AppTextStyle.black400S22.copyWith(fontSize: 26.sp),
-            ),
-            const Spacer(),
-            SvgPicture.asset(image)
-          ],
-        ),
-      ),
-    );
-  }
-}

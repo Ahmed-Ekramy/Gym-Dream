@@ -27,13 +27,15 @@ class AddExercisesDialogBody extends StatelessWidget {
       create: (context) => ExerciseCubit(),
       child: Form(
         key: formKey,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        child: ListView(
+          shrinkWrap: true,
+          // mainAxisSize: MainAxisSize.min,
           children: [
             UploadExerciseImage(
               picker: picker,
             ),
-            const Spacer(),
+
+            // const Spacer(),
             AddExercisesTextField(
               validator: (value) {
                 return MyValidatorsHelper.displayNameValidator(context, value);
@@ -64,9 +66,12 @@ class AddExercisesDialogBody extends StatelessWidget {
               alignment: AlignmentDirectional.centerStart,
               child: ExercisesGroupDropDown(),
             ),
-            const Spacer(),
+            // const Spacer(),
             SizedBox(
-              height: 40.h,
+              height: 15.h,
+            ),
+            SizedBox(
+              height: 50.h,
               child: TextFormField(
                 maxLines: 1,
                 validator: (value) {
