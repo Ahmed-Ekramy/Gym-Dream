@@ -305,5 +305,11 @@
     "triceps":"عضلة الترايسبس",
     "@triceps":{},
     "rest":"عضلة الساعد",
-    "@rest":{}
+    "@rest":{},
+    "deleteExercise":"حذف التمرين",
+    "@deleteExercise":{},
+    "areYouSureYouWantToDeleteThisExercise":"هل أنت متأكد أنك تريد حذف هذا التمرين؟",
+    "@areYouSureYouWantToDeleteThisExercise":{},
+    "areYouSureYouWantToLogOut":"هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "@areYouSureYouWantToLogOut":{}
 }

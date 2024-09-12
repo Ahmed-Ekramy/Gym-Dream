@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/app_text_style.dart';
-import '../../../../../generated/l10n.dart';
+
 import 'container_history_schedule.dart';
 import 'custom_text_history.dart';
 import 'list_history.dart';
@@ -14,7 +13,7 @@ class HistoryViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric( horizontal: 8.0.w),
+      padding: EdgeInsets.symmetric(horizontal: 8.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -33,4 +32,3 @@ class HistoryViewBody extends StatelessWidget {
     );
   }
 }
-

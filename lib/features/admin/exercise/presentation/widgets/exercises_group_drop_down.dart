@@ -12,9 +12,12 @@ class ExercisesGroupDropDown extends StatelessWidget {
     return BlocBuilder<ExerciseCubit, ExerciseState>(
       builder: (context, state) {
         var cubit = ExerciseCubit.get(context);
-
+        String selectedGroup = cubit.selectedGroup;
+        if (state is DropDownState) {
+          selectedGroup = state.selectedGroup;
+        }
         return DropdownButton<String>(
-          value: cubit.selectedGroup,
+          value: selectedGroup,
           elevation: 16,
           style: AppTextStyle.black500S14,
           underline: Container(

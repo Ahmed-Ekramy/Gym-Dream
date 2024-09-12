@@ -1581,6 +1581,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete Exercise`
+  String get deleteExercise {
+    return Intl.message(
+      'Delete Exercise',
+      name: 'deleteExercise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this exercise?`
+  String get areYouSureYouWantToDeleteThisExercise {
+    return Intl.message(
+      'Are you sure you want to delete this exercise?',
+      name: 'areYouSureYouWantToDeleteThisExercise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to logout?`
+  String get areYouSureYouWantToLogOut {
+    return Intl.message(
+      'Are you sure you want to logout?',
+      name: 'areYouSureYouWantToLogOut',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
