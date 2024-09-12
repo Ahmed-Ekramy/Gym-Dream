@@ -8,6 +8,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double leadingWidth;
   final Widget? leading;
   final List<Widget>? actions;
+  final void Function()? onPressedInBackIcon;
 
   const CustomAppBar({
     super.key,
@@ -15,6 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leading,
     this.leadingWidth = 35.0,
     this.actions,
+    this.onPressedInBackIcon,
   });
 
   @override
@@ -22,9 +24,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: AppBar(
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         leadingWidth: leadingWidth.w,
-        leading: leading ?? const BackIcon(),
+        leading: leading ??
+            BackIcon(
+              onPressed: onPressedInBackIcon,
+            ),
         title: Text(
           title,
           style: AppTextStyle.black400S22,

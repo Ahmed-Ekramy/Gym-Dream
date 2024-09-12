@@ -13,6 +13,7 @@ class CustomAppBarHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      backgroundColor: Colors.transparent,
       centerTitle: true,
       leadingWidth: 35.w,
       automaticallyImplyLeading: false,
@@ -27,9 +28,11 @@ class CustomAppBarHistory extends StatelessWidget {
         S.of(context).recentlyScanned,
         style: AppTextStyle.black400S22,
       ),
-      leading: const Padding(
-        padding: EdgeInsets.only(left: 8),
-        child: BackIcon(),
+      leading: Padding(
+        padding: Localizations.localeOf(context).languageCode == 'en'
+            ? const EdgeInsets.only(left: 8)
+            : const EdgeInsets.only(right: 8),
+        child: const BackIcon(),
       ),
     );
   }

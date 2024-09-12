@@ -14,11 +14,13 @@ class EditProfileViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
+        padding: EdgeInsets.symmetric(
+          horizontal: 16.w,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 40.h),
+            SizedBox(height: 20.h),
             const Center(
               child: CircleAvatar(
                 radius: 80,
@@ -26,7 +28,7 @@ class EditProfileViewBody extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 40.h,
+              height: 20.h,
             ),
             Text(
               S.of(context).fullName,
@@ -82,12 +84,15 @@ class EditProfileViewBody extends StatelessWidget {
               obscureText: false,
             ),
             SizedBox(
-              height: 40.h,
+              height: 20.h,
             ),
             CustomButton(
               width: double.infinity,
               title: S.of(context).confirm,
               onPressed: () {},
+            ),
+            SizedBox(
+              height: 40.h,
             ),
           ],
         ),
