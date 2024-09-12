@@ -34,6 +34,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "allMembers": MessageLookupByLibrary.simpleMessage("All members"),
         "allOurGymBranches":
             MessageLookupByLibrary.simpleMessage("all Our Gym Branches"),
+        "areYouSureYouWantToDeleteThisExercise":
+            MessageLookupByLibrary.simpleMessage(
+                "Are you sure you want to delete this exercise?"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to logout?"),
         "awayFromYou": MessageLookupByLibrary.simpleMessage("Away From You"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "benchPress": MessageLookupByLibrary.simpleMessage("Bench press"),
@@ -62,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "days": MessageLookupByLibrary.simpleMessage("Days"),
         "daysLeftForYourPackage":
             MessageLookupByLibrary.simpleMessage("Days left for your package"),
+        "deleteExercise":
+            MessageLookupByLibrary.simpleMessage("Delete Exercise"),
         "details": MessageLookupByLibrary.simpleMessage("Details"),
         "disable": MessageLookupByLibrary.simpleMessage("Disable"),
         "displayNameCannotBeEmpty": MessageLookupByLibrary.simpleMessage(

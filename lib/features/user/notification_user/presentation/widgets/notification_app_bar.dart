@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_asset.dart';
-import '../../../../../core/app_color.dart';
 import '../../../../../core/app_text_style.dart';
 
 class NotificationAppBar extends StatelessWidget {

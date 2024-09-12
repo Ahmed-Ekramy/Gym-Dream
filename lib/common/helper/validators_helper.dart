@@ -71,7 +71,7 @@ class MyValidatorsHelper {
 
   static String? addExercisesValidator(BuildContext context, String? value) {
     if (value == null || value.isEmpty) {
-      return 'Enter the right number';
+      return S.of(context).enterTheRightNumber;
     }
     if (value.length > 2 || value == '0' || value == '00') {
       return S.of(context).enterTheRightNumber;
