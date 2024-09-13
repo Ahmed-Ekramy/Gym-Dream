@@ -47,7 +47,7 @@ class PasswordChangedSuccessfullyViewForTrainee extends StatelessWidget {
             const Spacer(),
             CustomButton(
               width: double.infinity,
-              title: S.of(context).goToHome,
+              title: S.of(context).backToLogin,
               onPressed: () {
                 AppNavigation.navigateAndRemoveUntil(
                   context: context,
