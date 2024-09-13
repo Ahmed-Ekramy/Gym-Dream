@@ -140,10 +140,10 @@ class S {
     );
   }
 
-  /// `Phone number must start with "01"`
+  /// `Phone number must start with "010,012,011,015"`
   String get phoneNumberMustStartWith01 {
     return Intl.message(
-      'Phone number must start with "01"',
+      'Phone number must start with "010,012,011,015"',
       name: 'phoneNumberMustStartWith01',
       desc: '',
       args: [],
