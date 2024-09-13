@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "هل أنت متأكد أنك تريد تسجيل الخروج؟"),
         "awayFromYou": MessageLookupByLibrary.simpleMessage("بعيد عنك"),
         "back": MessageLookupByLibrary.simpleMessage("ظهر"),
+        "backToLogin":
+            MessageLookupByLibrary.simpleMessage("العودة إلى تسجيل الدخول"),
         "benchPress": MessageLookupByLibrary.simpleMessage("تمرين الضغط"),
         "biceps": MessageLookupByLibrary.simpleMessage("عضلة البايسبس"),
         "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
@@ -111,7 +113,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
-        "goToHome": MessageLookupByLibrary.simpleMessage("الذهاب للرئيسية"),
         "gold": MessageLookupByLibrary.simpleMessage("ذهبي"),
         "group": MessageLookupByLibrary.simpleMessage("المجموعة"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),

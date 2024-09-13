@@ -36,14 +36,14 @@ class AdminExerciseViewBody extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      S.of(context).chestAndAbdominalExercises,
+                      S.of(context).addNewExercise,
                       style: AppTextStyle.black600S18,
                     ),
-                    SizedBox(height: 8.h),
-                    Text(
-                      S.of(context).chestAndAbdominalExercises,
-                      style: AppTextStyle.grey400S11,
-                    ),
+                    // SizedBox(height: 8.h),
+                    // Text(
+                    //   S.of(context).chestAndAbdominalExercises,
+                    //   style: AppTextStyle.grey400S11,
+                    // ),
                     SizedBox(height: 8.h),
                     const AddExercisesButton(),
                     SizedBox(height: 8.h),
