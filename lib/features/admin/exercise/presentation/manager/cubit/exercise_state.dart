@@ -4,7 +4,7 @@ sealed class ExerciseState extends Equatable {
   const ExerciseState();
 
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [];
 }
 
 final class ExerciseInitial extends ExerciseState {}
@@ -18,11 +18,13 @@ final class UploadImageExerciseSuccessState extends ExerciseState {
 }
 
 final class DropDownState extends ExerciseState {
-  const DropDownState(this.selectedGroup);
   final String selectedGroup;
+  final File? image; // Include image in the state
+
+  const DropDownState(this.selectedGroup, {this.image});
 
   @override
-  List<Object> get props => [selectedGroup];
+  List<Object?> get props => [selectedGroup, image];
 }
 
 final class UploadImageExeciseErrorState extends ExerciseState {
@@ -36,6 +38,9 @@ final class UploadImageExeciseErrorState extends ExerciseState {
 final class ExerciseListError extends ExerciseState {
   final String errorMessage;
   const ExerciseListError({required this.errorMessage});
+
+  @override
+  List<Object> get props => [errorMessage];
 }
 
 final class ExerciseListSuccess extends ExerciseState {

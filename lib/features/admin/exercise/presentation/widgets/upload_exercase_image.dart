@@ -60,31 +60,28 @@ class UploadExerciseImage extends StatelessWidget {
         Expanded(
           child: BlocBuilder<ExerciseCubit, ExerciseState>(
             builder: (context, state) {
+              File? imageFile = ExerciseCubit.get(context).image;
               if (state is UploadImageExerciseSuccessState) {
-                return Container(
-                  height: 50.h,
-                  decoration: BoxDecoration(
-                    color: AppColor.blackOpacity4.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(8.r),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.r),
-                    child: Image.file(
-                      File(state.image.path),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                );
-              } else {
-                return Container(
-                  height: 100.h,
-                  decoration: BoxDecoration(
-                    color: AppColor.blackOpacity4.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(8.r),
-                  ),
-                  child: const SizedBox(),
-                );
+                imageFile = File(state.image.path);
+              } else if (state is DropDownState) {
+                imageFile = state.image;
               }
+              return Container(
+                height: 100.h,
+                decoration: BoxDecoration(
+                  color: AppColor.blackOpacity4.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(8.r),
+                ),
+                child: imageFile != null
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(8.r),
+                        child: Image.file(
+                          imageFile,
+                          fit: BoxFit.fill,
+                        ),
+                      )
+                    : const SizedBox(),
+              );
             },
           ),
         ),

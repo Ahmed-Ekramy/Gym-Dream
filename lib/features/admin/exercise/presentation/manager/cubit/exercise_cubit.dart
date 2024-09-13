@@ -24,8 +24,9 @@ class ExerciseCubit extends Cubit<ExerciseState> {
   String selectedGroup = 'chest';
 
   List<String> _exercises = [];
-
   File? image;
+
+  // Load exercises
   void loadExercises() {
     try {
       _exercises = [
@@ -36,13 +37,13 @@ class ExerciseCubit extends Cubit<ExerciseState> {
         'Pull-Up',
         'Bicep Curl'
       ];
-
       emit(ExerciseListSuccess(exercises: _exercises));
     } catch (e) {
       emit(ExerciseListError(errorMessage: e.toString()));
     }
   }
 
+  // Delete an exercise
   void deleteExercise(int index) {
     if (state is ExerciseListSuccess) {
       final currentState = state as ExerciseListSuccess;
@@ -52,6 +53,7 @@ class ExerciseCubit extends Cubit<ExerciseState> {
     }
   }
 
+  // Upload image and retain it in state
   Future<File?> uploadImageFromGalleryModel({
     required ImagePicker picker,
   }) async {
@@ -73,8 +75,9 @@ class ExerciseCubit extends Cubit<ExerciseState> {
     }
   }
 
+  // Preserve the image when selecting a group
   void selectGroup(String group) {
     selectedGroup = group;
-    emit(DropDownState(group));
+    emit(DropDownState(group, image: image)); // Retain image in the state
   }
 }
