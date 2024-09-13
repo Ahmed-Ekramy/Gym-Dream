@@ -173,7 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumberMustBe11DigitsLong": MessageLookupByLibrary.simpleMessage(
             "Phone number must be 11 digits long"),
         "phoneNumberMustStartWith01": MessageLookupByLibrary.simpleMessage(
-            "Phone number must start with \"01\""),
+            "Phone number must start with \"010,012,011,015\""),
         "photo": MessageLookupByLibrary.simpleMessage("Photo"),
         "platinum": MessageLookupByLibrary.simpleMessage("Platinum"),
         "pleaseEnterAUrl":

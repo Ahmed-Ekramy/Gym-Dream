@@ -18,7 +18,7 @@
     "@adminClickHere": {},
     "pleaseEnterYourPhoneNumber": "يرجى إدخال رقم هاتفك",
     "@pleaseEnterYourPhoneNumber": {},
-    "phoneNumberMustStartWith01": "رقم الهاتف يجب أن يبدأ بـ \"01\"",
+    "phoneNumberMustStartWith01": "رقم الهاتف يجب أن يبدأ بـ \"010,012,011,015\"",
     "@phoneNumberMustStartWith01": {},
     "phoneNumberMustBe11DigitsLong": "رقم الهاتف يجب أن يكون طوله 11 رقمًا",
     "@phoneNumberMustBe11DigitsLong": {},
