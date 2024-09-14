@@ -150,7 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":
             MessageLookupByLibrary.simpleMessage(
                 "One consultation session with a personal trainer when you sign up for the first time"),
-        "ourBranches": MessageLookupByLibrary.simpleMessage("our Branches"),
+        "OurBranches": MessageLookupByLibrary.simpleMessage("Our Branches"),
         "ourCollection": MessageLookupByLibrary.simpleMessage("Our Collection"),
         "ourMembers": MessageLookupByLibrary.simpleMessage("Our members"),
         "out": MessageLookupByLibrary.simpleMessage("Out"),

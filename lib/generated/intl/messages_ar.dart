@@ -153,7 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":
             MessageLookupByLibrary.simpleMessage(
                 "جلسة استشارة واحدة مع مدرب شخصي عند التسجيل لأول مرة"),
-        "ourBranches": MessageLookupByLibrary.simpleMessage("فروعنا"),
+        "OurBranches": MessageLookupByLibrary.simpleMessage("فروعنا"),
         "ourCollection": MessageLookupByLibrary.simpleMessage("مجموعتنا"),
         "ourMembers": MessageLookupByLibrary.simpleMessage("أعضاؤنا"),
         "out": MessageLookupByLibrary.simpleMessage("خارج"),
