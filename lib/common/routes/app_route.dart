@@ -53,7 +53,7 @@ class AppRoute {
       case Routes.homeUserLayout:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => HomeUserCubit(),
+            create: (context) => HomeUserCubit()..popToHome(),
             child: const UserHomeLayoutView(),
           ),
         );

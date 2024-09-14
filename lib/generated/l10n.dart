@@ -703,7 +703,7 @@ class S {
   /// `our Branches`
   String get ourBranches {
     return Intl.message(
-      'our Branches',
+      'Our Branches',
       name: 'ourBranches',
       desc: '',
       args: [],
