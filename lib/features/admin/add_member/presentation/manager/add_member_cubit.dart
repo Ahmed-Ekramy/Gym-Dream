@@ -83,4 +83,11 @@ class AddMemberCubit extends Cubit<AddMemberState> {
     gender = selectedGender;
     emit(AddMemberGenderUpdatedState()); // Emit a new state if needed
   }
+
+  bool passVisibility = true;
+
+  void switchPassVisibility() {
+    passVisibility = !passVisibility;
+    emit(SwitchVisibleState(passVisibility: passVisibility));
+  }
 }

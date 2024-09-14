@@ -1350,7 +1350,6 @@ class S {
     );
   }
 
-
   /// `Unlimited use of essential sports equipment`
   String get unlimitedUseOfEssentialSportsEquipment {
     return Intl.message(
@@ -1483,6 +1482,34 @@ class S {
     );
   }
 
+  /// `Display name cannot be empty`
+  String get startDateCannotBeEmpty {
+    return Intl.message(
+      'Start date name cannot be empty',
+      name: 'StartDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Display name cannot be empty`
+  String get endDateCannotBeEmpty {
+    return Intl.message(
+      'End date name cannot be empty',
+      name: 'EndDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get idCannotBeEmpty {
+    return Intl.message(
+      'Id name cannot be empty',
+      name: 'IdCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Display name must be between 3 and 20 characters`
   String get displayNameMustBeBetween3And20Characters {

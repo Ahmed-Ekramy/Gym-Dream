@@ -49,7 +49,7 @@ class AppAsset {
   static const camera = "assets/svg/camera.svg";
   static const gymImage = "assets/images/User-img.png";
   static const eosIcons = "assets/images/eos-icons_admin-outlined.png";
-
+  static const changePhoto = "assets/svg/change photo.svg";
   static const arrowCircleRight = "assets/svg/arrow-circle-right.svg";
   static const imageExerciseDetails =
       "assets/images/image exercise details.png";
@@ -58,11 +58,12 @@ class AppAsset {
   static const arrowDown = "assets/svg/arrowdown.svg";
   static const gymSad = "assets/images/gym sad.png";
 
+  static const arrowUp = "assets/svg/arrow_up.svg";
+
   static const renewSubscription = "assets/svg/renew_sub.svg";
 
   static const stopSubscription = "assets/svg/stop_sup.svg";
 
   static const editProfile = "assets/svg/edit_profile.svg";
   static const delete = "assets/svg/Delete.svg";
-
 }
