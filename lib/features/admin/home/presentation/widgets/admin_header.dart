@@ -40,7 +40,9 @@ class AdminHeader extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-          padding: EdgeInsets.only(right: 16.w),
+          padding: Localizations.localeOf(context).languageCode == 'en'
+              ? EdgeInsets.only(right: 16.w)
+              : EdgeInsets.only(left: 16.w),
           child: const CardIconBottom(),
         ),
       ],

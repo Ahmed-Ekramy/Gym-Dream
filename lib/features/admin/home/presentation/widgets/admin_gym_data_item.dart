@@ -14,6 +14,8 @@ class AdminGymDataItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 180.sw,
+      height: 100.h,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
       decoration: BoxDecoration(
         color: AppColor.bluePale,
@@ -27,9 +29,11 @@ class AdminGymDataItem extends StatelessWidget {
             style: AppTextStyle.black500S16,
           ),
           SizedBox(height: 8.h),
-          Text(
-            value,
-            style: AppTextStyle.black700S24,
+          Expanded(
+            child: Text(
+              value,
+              style: AppTextStyle.black700S24,
+            ),
           ),
         ],
       ),
