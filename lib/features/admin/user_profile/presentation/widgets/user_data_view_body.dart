@@ -44,9 +44,12 @@ class UserDataViewBody extends StatelessWidget {
                         Row(
                           children: [
                             SvgPicture.asset(AppAsset.whatsapp),
-                            Text(
-                              '${S.of(context).phoneNumber}:01023126037',
-                              style: AppTextStyle.gray600S14,
+                            Expanded(
+                              child: Text(
+                                '${S.of(context).phoneNumber}:01023126037',
+                                style: AppTextStyle.gray600S14,
+                              ),
+
                             )
                           ],
                         ),

@@ -703,8 +703,8 @@ class S {
   /// `our Branches`
   String get ourBranches {
     return Intl.message(
-      'our Branches',
-      name: 'ourBranches',
+      'Our Branches',
+      name: 'OurBranches',
       desc: '',
       args: [],
     );
@@ -1330,6 +1330,27 @@ class S {
     );
   }
 
+  /// `Gold`
+  String get silver {
+    return Intl.message(
+      'Silver',
+      name: 'silver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gold`
+  String get primary {
+    return Intl.message(
+      'primary',
+      name: 'primary',
+      desc: '',
+      args: [],
+    );
+  }
+
+
   /// `Unlimited use of essential sports equipment`
   String get unlimitedUseOfEssentialSportsEquipment {
     return Intl.message(
@@ -1451,6 +1472,17 @@ class S {
       args: [],
     );
   }
+
+  /// `Display name cannot be empty`
+  String get birthDateCannotBeEmpty {
+    return Intl.message(
+      'Birth date name cannot be empty',
+      name: 'birthDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
 
   /// `Display name must be between 3 and 20 characters`
   String get displayNameMustBeBetween3And20Characters {

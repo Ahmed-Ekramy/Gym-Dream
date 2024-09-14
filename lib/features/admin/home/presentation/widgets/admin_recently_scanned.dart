@@ -23,9 +23,15 @@ class AdminRecentlyScanned extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         children: [
-          RecentlyMemberImages(
-            title: S.of(context).recentlyScanned,
-            imageList: imageList,
+          Padding(
+            padding: Localizations.localeOf(context).languageCode == 'en'
+                ? EdgeInsets.only(left: 0.w)
+                : EdgeInsets.only(right: 8.w),
+            child: RecentlyMemberImages(
+              title: S.of(context).recentlyScanned,
+              imageList: imageList,
+            ),
+
           ),
           SizedBox(width: 50.w),
           Expanded(

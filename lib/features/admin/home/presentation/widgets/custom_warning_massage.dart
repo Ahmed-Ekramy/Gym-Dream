@@ -36,6 +36,7 @@ class CustomWarningMassage extends StatelessWidget {
                     child: Container(
                       width: 90.w,
                       height: 25.h,
+                      padding: EdgeInsets.symmetric(horizontal: 8.w),
                       decoration: BoxDecoration(
                         color: const Color(0xffFEDBDC),
                         borderRadius: BorderRadius.circular(8.r),

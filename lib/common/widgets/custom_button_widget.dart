@@ -11,12 +11,13 @@ class CustomButton extends StatelessWidget {
       required this.title,
       required this.onPressed,
       this.color = AppColor.primary,
-      this.height = 47});
+      this.height = 47, this.colorBorder});
 
   final void Function() onPressed;
   final String title;
 
   final Color? color;
+  final Color? colorBorder;
   final double? height, width;
   final TextStyle? textStyle;
 
@@ -30,6 +31,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all(color),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
+              side:  BorderSide(color: colorBorder ?? Colors.transparent),
               borderRadius: BorderRadius.circular(8.0),
             ),
           ),

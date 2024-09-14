@@ -75,6 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "disable": MessageLookupByLibrary.simpleMessage("الغاء"),
         "displayNameCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن أن يكون اسم العرض فارغًا"),
+        "birthDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "لا يمكن أن يكون تاريخ العرض فارغًا"),
+
         "displayNameMustBeBetween3And20Characters":
             MessageLookupByLibrary.simpleMessage(
                 "يجب أن يكون اسم العرض بين 3 و 20 حرفًا"),
@@ -114,6 +117,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
         "gold": MessageLookupByLibrary.simpleMessage("ذهبي"),
+        "silver": MessageLookupByLibrary.simpleMessage("فضي"),
+        "primary": MessageLookupByLibrary.simpleMessage("الاساسي"),
+
         "group": MessageLookupByLibrary.simpleMessage("المجموعة"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "gymData": MessageLookupByLibrary.simpleMessage("بيانات النادي"),
@@ -153,7 +159,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":
             MessageLookupByLibrary.simpleMessage(
                 "جلسة استشارة واحدة مع مدرب شخصي عند التسجيل لأول مرة"),
-        "ourBranches": MessageLookupByLibrary.simpleMessage("فروعنا"),
+        "OurBranches": MessageLookupByLibrary.simpleMessage("فروعنا"),
         "ourCollection": MessageLookupByLibrary.simpleMessage("مجموعتنا"),
         "ourMembers": MessageLookupByLibrary.simpleMessage("أعضاؤنا"),
         "out": MessageLookupByLibrary.simpleMessage("خارج"),
