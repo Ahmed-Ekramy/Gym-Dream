@@ -16,34 +16,28 @@ class LanguageBodyView extends StatelessWidget {
         children: [
           BlocBuilder<LanguageCubit, LanguageState>(
             builder: (context, state) {
-              return Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      context.read<LanguageCubit>().selectLanguage('en');
-                    },
-                    child: CustomListTile(
-                      state: state,
-                      nameLanguage: 'English',
-                      imageLanguage: AppAsset.english,
-                    ),
+              return Column(children: [
+                GestureDetector(
+                  onTap: () {
+                    context.read<LanguageCubit>().selectLanguage('en');
+                  },
+                  child: CustomListTile(
+                    state: state,
+                    nameLanguage: 'English',
+                    imageLanguage: AppAsset.english,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      context.read<LanguageCubit>().selectLanguage('ar');
-                    },
-                    child: CustomListTile(
-                      state: state,
-                      nameLanguage: 'العربية',
-                      imageLanguage: AppAsset.egyptFlag,
-                    ),
-                  CustomListTile(
+                ),
+                GestureDetector(
+                  onTap: () {
+                    context.read<LanguageCubit>().selectLanguage('ar');
+                  },
+                  child: CustomListTile(
                     state: state,
                     nameLanguage: 'العربية',
                     imageLanguage: AppAsset.egyptFlag,
                   ),
-                ],
-              );
+                ),
+              ]);
             },
           ),
           const Spacer(),

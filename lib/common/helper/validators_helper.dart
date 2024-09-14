@@ -17,25 +17,6 @@ class MyValidatorsHelper {
   static String? birthDateValidator(BuildContext context, String? birthDate) {
     if (birthDate == null || birthDate.isEmpty) {
       return S.of(context).birthDateCannotBeEmpty;
-
-  static String? displayProductNameValidator(
-      BuildContext context, String? displayName) {
-    if (displayName == null || displayName.isEmpty) {
-      return S.of(context).displayNameCannotBeEmpty;
-    }
-    if (displayName.length < 3 || displayName.length > 20) {
-      return S.of(context).displayNameMustBeBetween3And20Characters;
-    }
-    return null;
-  }
-
-  static String? displayProductNameValidator(
-      BuildContext context, String? displayName) {
-    if (displayName == null || displayName.isEmpty) {
-      return S.of(context).displayNameCannotBeEmpty;
-    }
-    if (displayName.length < 3 || displayName.length > 20) {
-      return S.of(context).displayNameMustBeBetween3And20Characters;
     }
     return null;
   }
