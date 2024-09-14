@@ -26,7 +26,7 @@ class UserHomeLayoutView extends StatelessWidget {
             if (!cubit.popToHome()) {
               return Future.value(false);
             }
-            return  showExitConfirmation( AppAsset.trainee,context);
+            return  showExitConfirmation( AppAsset.gymSad,context);
           },
           child: Scaffold(
             body: Column(

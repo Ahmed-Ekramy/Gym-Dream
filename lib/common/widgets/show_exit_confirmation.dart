@@ -17,7 +17,10 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
             height: 250.h,
             child: Column(
               children: [
-                Image.asset(image),
+                Image.asset(
+                    height:  150.h,
+                    fit:  BoxFit.cover,
+                    image),
                 SizedBox(height: 10.h),
                 Text("the weight are waiting for you",
                     style: AppTextStyle.black600S16),
@@ -26,29 +29,25 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
                   children: [
                     Expanded(
                       child: CustomButton(
-                        colorBorder: AppColor.primary,
-                        color: AppColor.orangeLight,
-                        height: 30.h,
+                        color: AppColor.primary,
+                        height: 25.h,
                         title: "Stay",
-                        textStyle: AppTextStyle.orange600S14,
+                        textStyle: AppTextStyle.white700S14,
                         onPressed: () {
                           Navigator.pop(context, false);
                         },
                       ),
                     ),
-                    SizedBox(
-                      width: 5.w,
-                    ),
-                    Expanded(
-                      child: CustomButton(
-                        color: Colors.red,
-                        height: 30.h,
-                        title: "Exit",
-                        textStyle: AppTextStyle.white700S14,
-                        onPressed: () {
-                          Navigator.pop(context, true);
-                        },
-                      ),
+                    SizedBox( width: 10.w),
+                    CustomButton(
+                      colorBorder: AppColor.primary,
+                      color: AppColor.orangeLight,
+                      height: 25.h,
+                      title: "Exit",
+                      textStyle: AppTextStyle.orange600S14,
+                      onPressed: () {
+                        Navigator.pop(context, true);
+                      },
                     ),
                   ],
                 )

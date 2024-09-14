@@ -704,7 +704,7 @@ class S {
   String get ourBranches {
     return Intl.message(
       'Our Branches',
-      name: 'ourBranches',
+      name: 'OurBranches',
       desc: '',
       args: [],
     );
