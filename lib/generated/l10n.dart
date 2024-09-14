@@ -230,11 +230,11 @@ class S {
     );
   }
 
-  /// `User? click here`
-  String get userClickHere {
+  /// `Trainee? click here`
+  String get traineeClickHere {
     return Intl.message(
-      'User? click here',
-      name: 'userClickHere',
+      'Trainee? click here',
+      name: 'traineeClickHere',
       desc: '',
       args: [],
     );

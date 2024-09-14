@@ -122,7 +122,7 @@ class TraineeLoginView extends StatelessWidget {
                     Hero(
                       tag: 0,
                       child: Image.asset(
-                        height: 180.h,
+                        // height: 180.h,
                         AppAsset.trainee,
                       ),
                     )

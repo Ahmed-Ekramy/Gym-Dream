@@ -111,7 +111,7 @@ class AdminLoginView extends StatelessWidget {
                               context: context, newRoute: Routes.traineeLogin);
                         },
                         child: Text(
-                          S.of(context).userClickHere,
+                          S.of(context).traineeClickHere,
                           style: AppTextStyle.blue600S8,
                         ),
                       ),
@@ -119,7 +119,7 @@ class AdminLoginView extends StatelessWidget {
                     Hero(
                       tag: 1,
                       child: Image.asset(
-                        height: 180.h,
+                        // height: 180.h,
                         AppAsset.admin,
                       ),
                     )

@@ -9,7 +9,9 @@ class AppAsset {
   static const home = "assets/svg/home-2.svg";
   static const exercises = "assets/svg/Exercises.svg";
   static const admin = "assets/images/admin.png";
-  static const trainee = "assets/images/trainerAuthImage.png";
+  static const trainee = "assets/images/trainee.png";
+  static const traineeSquare = "assets/images/trainee_square.png";
+  static const adminSquare = "assets/images/admin_square.png";
   static const backIcon = "assets/svg/backIcon.svg";
   static const arrowIcon = "assets/svg/Arrow.svg";
   static const loginIcon = "assets/svg/Login.svg";
