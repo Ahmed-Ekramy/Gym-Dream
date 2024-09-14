@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gym_dream/common/helper/naviagtion_extentaions.dart';
+import 'package:gym_dream/common/routes/route.dart';
 import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -50,9 +52,11 @@ class GymMemberListViewItem extends StatelessWidget {
             child: PopupMenuButton<int>(
               onSelected: (value) {
                 if (value == 1) {
-                  // Action 1
+                  AppNavigation.navigateTo(
+                      context: context, routeName: Routes.userDataView);
                 } else if (value == 2) {
-                  // Action 2
+                  AppNavigation.navigateTo(
+                      context: context, routeName: Routes.editProfileView);
                 }
               },
               icon: const Icon(
@@ -81,7 +85,7 @@ class GymMemberListViewItem extends StatelessWidget {
                   ),
                 ),
                 PopupMenuItem<int>(
-                  value: 1,
+                  value: 2,
                   child: SizedBox(
                     width: 200.w,
                     child: Center(
@@ -100,7 +104,7 @@ class GymMemberListViewItem extends StatelessWidget {
                   ),
                 ),
                 PopupMenuItem<int>(
-                  value: 1,
+                  value: 3,
                   child: SizedBox(
                     width: 200.w,
                     child: Center(
@@ -119,7 +123,7 @@ class GymMemberListViewItem extends StatelessWidget {
                   ),
                 ),
                 PopupMenuItem<int>(
-                  value: 1,
+                  value: 4,
                   child: SizedBox(
                     width: 200.w,
                     child: Center(
@@ -138,7 +142,7 @@ class GymMemberListViewItem extends StatelessWidget {
                   ),
                 ),
                 PopupMenuItem<int>(
-                  value: 1,
+                  value: 5,
                   child: SizedBox(
                     width: 200.w,
                     child: Center(

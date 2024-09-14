@@ -21,7 +21,8 @@ class AppTextFormFiled extends StatelessWidget {
     this.keyboardType,
     this.validator,
     this.decoration,
-    this.readOnly = false, // Add readOnly parameter
+    this.readOnly = false,
+    this.inputFormatters, // Add readOnly parameter
   });
 
   final Function(String)? onChanged;
@@ -39,6 +40,7 @@ class AppTextFormFiled extends StatelessWidget {
   final TextInputType? keyboardType;
   final InputDecoration? decoration;
   final bool readOnly; // New property for readOnly
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,7 @@ class AppTextFormFiled extends StatelessWidget {
               LengthLimitingTextInputFormatter(11),
               FilteringTextInputFormatter.digitsOnly,
             ]
-          : null,
+          : inputFormatters,
       decoration: decoration ??
           InputDecoration(
             contentPadding: EdgeInsetsDirectional.only(

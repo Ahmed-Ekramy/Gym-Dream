@@ -24,3 +24,8 @@ final class AddMemberGenderUpdatedState extends AddMemberState {}
 final class AddMemberDateUpdatedState extends AddMemberState {}
 
 final class AddMemberValidationErrorState extends AddMemberState {}
+
+final class SwitchVisibleState extends AddMemberState {
+  final bool passVisibility;
+  const SwitchVisibleState({required this.passVisibility});
+}

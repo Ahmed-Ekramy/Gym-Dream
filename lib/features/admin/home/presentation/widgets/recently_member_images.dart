@@ -28,13 +28,21 @@ class RecentlyMemberImages extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   for (int i = 0; i < imageList.take(5).length; i++)
-                    Positioned(
-                      left: i * 30.0,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage(imageList[i]),
-                        radius: 18.r,
-                      ),
-                    ),
+                    Localizations.localeOf(context).languageCode == 'en'
+                        ? Positioned(
+                            left: i * 30.0,
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(imageList[i]),
+                              radius: 18.r,
+                            ),
+                          )
+                        : Positioned(
+                            right: i * 30.0,
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage(imageList[i]),
+                              radius: 18.r,
+                            ),
+                          ),
                 ],
               ),
             ),
