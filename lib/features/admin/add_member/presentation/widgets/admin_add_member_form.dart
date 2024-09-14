@@ -11,6 +11,7 @@ import 'package:gym_dream/core/app_asset.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/manager/add_member_cubit.dart';
+import 'package:gym_dream/features/admin/add_member/presentation/widgets/package_details_view_body.dart';
 import 'package:gym_dream/features/admin/add_member/presentation/widgets/upload_user_image.dart';
 import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
@@ -26,6 +27,7 @@ class AdminAddMemberViewBodyForm extends StatefulWidget {
 class _AdminAddMemberViewBodyFormState
     extends State<AdminAddMemberViewBodyForm> {
   final ImagePicker picker = ImagePicker();
+  String? selectedPackageName;
 
   @override
   Widget build(BuildContext context) {
@@ -122,11 +124,26 @@ class _AdminAddMemberViewBodyFormState
                     '${S.of(context).package}:',
                     style: AppTextStyle.black500S16,
                   ),
+                  Text(
+                    selectedPackageName ?? '',
+                    style: AppTextStyle.black400S14,
+                  ),
                   TextButton(
-                    onPressed: () {
-                      AppNavigation.navigateTo(
-                          context: context,
-                          routeName: Routes.packageDetailsView);
+                    onPressed: () async {
+                      // Navigate to package selection and await result
+                      final result = await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PackageDetailsViewBody(),
+                        ),
+                      );
+
+                      if (result != null) {
+                        setState(() {
+                          selectedPackageName =
+                              result as String; // Update selected package
+                        });
+                      }
                     },
                     child: Text(
                       S.of(context).details,
@@ -134,7 +151,7 @@ class _AdminAddMemberViewBodyFormState
                         color: AppColor.blueeee,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
               SizedBox(height: 16.h),
@@ -150,7 +167,7 @@ class _AdminAddMemberViewBodyFormState
                 maxLine: 1,
                 keyboardType: TextInputType.phone,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNameValidator(context, text);
+                  return MyValidatorsHelper.phoneValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -161,9 +178,11 @@ class _AdminAddMemberViewBodyFormState
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 validator: (text) {
-                  return null; // You may want to add a date validator here
+                  return MyValidatorsHelper.birthDateValidator(context, text);
                 },
                 controller: cubit.birthDateController,
+                readOnly: true,
+
                 hintText: S.of(context).birthDate,
                 obscureText: false,
                 keyboardType: TextInputType.name,
@@ -185,8 +204,9 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
+                readOnly: true,
                 validator: (text) {
-                  return null;
+                  return MyValidatorsHelper.birthDateValidator(context, text);
                 },
                 controller: cubit.startDateController,
                 hintText: S.of(context).startDate,
@@ -211,8 +231,9 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
+                readOnly: true,
                 validator: (text) {
-                  return null;
+                  return MyValidatorsHelper.birthDateValidator(context, text);
                 },
                 controller: cubit.endDateController,
                 hintText: S.of(context).endDate,

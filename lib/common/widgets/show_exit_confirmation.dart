@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/app_asset.dart';
 import '../../core/app_color.dart';
 import '../../core/app_text_style.dart';
 import 'custom_button_widget.dart';
-
 Future<bool> showExitConfirmation(String image ,BuildContext context) async {
   return await showDialog(
         context: context,
@@ -17,6 +15,7 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
             height: 250.h,
             child: Column(
               children: [
+
                 Image.asset(
                     height:  150.h,
                     fit:  BoxFit.cover,
@@ -38,6 +37,7 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
                         },
                       ),
                     ),
+
                     SizedBox( width: 10.w),
                     CustomButton(
                       colorBorder: AppColor.primary,

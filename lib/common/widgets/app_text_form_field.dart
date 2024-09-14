@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/core/app_text_style.dart';
@@ -20,6 +21,7 @@ class AppTextFormFiled extends StatelessWidget {
     this.keyboardType,
     this.validator,
     this.decoration,
+    this.readOnly = false, // Add readOnly parameter
   });
 
   final Function(String)? onChanged;
@@ -36,13 +38,16 @@ class AppTextFormFiled extends StatelessWidget {
   final Widget? prefixIcon;
   final TextInputType? keyboardType;
   final InputDecoration? decoration;
+  final bool readOnly; // New property for readOnly
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: readOnly, // Apply readOnly here
       onTapOutside: (event) {
         FocusManager.instance.primaryFocus?.unfocus();
       },
+
       maxLines: maxLine ?? 1,
       obscureText: obscureText,
       keyboardType: keyboardType,
@@ -52,6 +57,12 @@ class AppTextFormFiled extends StatelessWidget {
       onFieldSubmitted: onFieldSubmitted,
       onSaved: onSaved,
       validator: validator,
+      inputFormatters: keyboardType == TextInputType.phone
+          ? [
+              LengthLimitingTextInputFormatter(11),
+              FilteringTextInputFormatter.digitsOnly,
+            ]
+          : null,
       decoration: decoration ??
           InputDecoration(
             contentPadding: EdgeInsetsDirectional.only(

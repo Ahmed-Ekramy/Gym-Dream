@@ -37,7 +37,6 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // const AdminHeader(),
           const CustomWarningMassage(),
           SizedBox(height: 16.h),
           AdminRecentlyScanned(imageList: imageList),
@@ -45,7 +44,9 @@ class _AdminHomeBodyViewState extends State<AdminHomeBodyView> {
           const AdminAddNewUserAndSendInvite(),
           SizedBox(height: 8.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            padding: Localizations.localeOf(context).languageCode == 'en'
+                ? EdgeInsets.only(left: 16.w)
+                : EdgeInsets.only(right: 24.w),
             child: OurMemberImages(
               onTap: () {
                 AppNavigation.navigateTo(
