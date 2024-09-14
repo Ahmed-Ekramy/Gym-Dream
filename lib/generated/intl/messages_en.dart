@@ -233,6 +233,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Train with the latest workouts that fit your day."),
         "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
+        "traineeClickHere":
+            MessageLookupByLibrary.simpleMessage("Trainee? click here"),
         "triceps": MessageLookupByLibrary.simpleMessage("triceps"),
         "trustedUser": MessageLookupByLibrary.simpleMessage("Trusted User"),
         "tryAgainLater":
@@ -247,8 +249,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Use a personal locker daily."),
         "useDifferentTypesOfCharacters": MessageLookupByLibrary.simpleMessage(
             "Use different types of characters"),
-        "userClickHere":
-            MessageLookupByLibrary.simpleMessage("User? click here"),
         "validQrCode": MessageLookupByLibrary.simpleMessage("Valid Qr Code"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
         "videoLink": MessageLookupByLibrary.simpleMessage("Video Link"),

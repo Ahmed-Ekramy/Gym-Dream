@@ -235,6 +235,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "تدرب مع أحدث التمارين التي تناسب يومك."),
         "trainee": MessageLookupByLibrary.simpleMessage("متدرب"),
+        "traineeClickHere":
+            MessageLookupByLibrary.simpleMessage("متدرب؟ اضغط هنا"),
         "triceps": MessageLookupByLibrary.simpleMessage("عضلة الترايسبس"),
         "trustedUser": MessageLookupByLibrary.simpleMessage("مستخدم موثوق"),
         "tryAgainLater":
@@ -249,8 +251,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("استخدام خزانة شخصية يوميًا."),
         "useDifferentTypesOfCharacters": MessageLookupByLibrary.simpleMessage(
             "استخدم أنواع مختلفة من الحروف"),
-        "userClickHere":
-            MessageLookupByLibrary.simpleMessage("مستخدم؟ اضغط هنا"),
         "validQrCode":
             MessageLookupByLibrary.simpleMessage("رمز استجابة سريع صالح"),
         "verification": MessageLookupByLibrary.simpleMessage("التحقق"),

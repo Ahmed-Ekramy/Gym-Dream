@@ -89,7 +89,7 @@ class ChoosingView extends StatelessWidget {
                                 ? AppColor.primary
                                 : AppColor.grey,
                             name: S.of(context).trainee,
-                            image: AppAsset.trainee,
+                            image: AppAsset.traineeSquare,
                             opacity: selectedCustomerKind.isEmpty ||
                                     selectedCustomerKind == 'trainee'
                                 ? 1.0
@@ -111,7 +111,7 @@ class ChoosingView extends StatelessWidget {
                                 ? AppColor.primary
                                 : AppColor.grey,
                             name: S.of(context).admin,
-                            image: AppAsset.admin,
+                            image: AppAsset.adminSquare,
                             opacity: selectedCustomerKind.isEmpty ||
                                     selectedCustomerKind == 'admin'
                                 ? 1.0
@@ -140,7 +140,7 @@ class ChoosingView extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: 60.h,
+                  height: 30.h,
                 ),
               ],
             ),
