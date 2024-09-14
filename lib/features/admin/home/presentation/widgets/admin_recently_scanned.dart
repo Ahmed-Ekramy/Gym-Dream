@@ -31,6 +31,7 @@ class AdminRecentlyScanned extends StatelessWidget {
               title: S.of(context).recentlyScanned,
               imageList: imageList,
             ),
+
           ),
           SizedBox(width: 50.w),
           Expanded(

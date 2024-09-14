@@ -182,6 +182,7 @@ class _AdminAddMemberViewBodyFormState
                 },
                 controller: cubit.birthDateController,
                 readOnly: true,
+
                 hintText: S.of(context).birthDate,
                 obscureText: false,
                 keyboardType: TextInputType.name,

@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يمكن أن يكون اسم العرض فارغًا"),
         "birthDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن أن يكون تاريخ العرض فارغًا"),
+
         "displayNameMustBeBetween3And20Characters":
             MessageLookupByLibrary.simpleMessage(
                 "يجب أن يكون اسم العرض بين 3 و 20 حرفًا"),
@@ -118,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gold": MessageLookupByLibrary.simpleMessage("ذهبي"),
         "silver": MessageLookupByLibrary.simpleMessage("فضي"),
         "primary": MessageLookupByLibrary.simpleMessage("الاساسي"),
+
         "group": MessageLookupByLibrary.simpleMessage("المجموعة"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "gymData": MessageLookupByLibrary.simpleMessage("بيانات النادي"),

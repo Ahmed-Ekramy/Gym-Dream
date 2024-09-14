@@ -1350,6 +1350,7 @@ class S {
     );
   }
 
+
   /// `Unlimited use of essential sports equipment`
   String get unlimitedUseOfEssentialSportsEquipment {
     return Intl.message(
@@ -1481,6 +1482,7 @@ class S {
       args: [],
     );
   }
+
 
   /// `Display name must be between 3 and 20 characters`
   String get displayNameMustBeBetween3And20Characters {

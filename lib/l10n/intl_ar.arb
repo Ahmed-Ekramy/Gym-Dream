@@ -260,6 +260,7 @@
     "@silver":{},
     "primary":"الأساسية",
     "@primary":{},
+
     "unlimitedUseOfEssentialSportsEquipment":"استخدام غير محدود للمعدات الرياضية الأساسية",
     "@unlimitedUseOfEssentialSportsEquipment":{},
     "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":"جلسة استشارة واحدة مع مدرب شخصي عند التسجيل لأول مرة",
@@ -286,6 +287,7 @@
     "@displayNameCannotBeEmpty":{},
         "displaybirthdateCannotBeEmpty":"لا يمكن أن يكون تاريخ العرض فارغًا",
     "@displaybirthdateCannotBeEmpty":{},
+
     "displayNameMustBeBetween3And20Characters":"يجب أن يكون اسم العرض بين 3 و 20 حرفًا",
     "@displayNameMustBeBetween3And20Characters":{},
     "displayProductPriceCannotBeEmpty":"لا يمكن أن يكون سعر المنتج فارغًا",

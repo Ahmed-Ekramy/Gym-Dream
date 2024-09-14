@@ -49,6 +49,7 @@ class UserDataViewBody extends StatelessWidget {
                                 '${S.of(context).phoneNumber}:01023126037',
                                 style: AppTextStyle.gray600S14,
                               ),
+
                             )
                           ],
                         ),

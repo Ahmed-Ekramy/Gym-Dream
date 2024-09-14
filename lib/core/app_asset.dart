@@ -62,4 +62,5 @@ class AppAsset {
 
   static const editProfile = "assets/svg/edit_profile.svg";
   static const delete = "assets/svg/Delete.svg";
+
 }

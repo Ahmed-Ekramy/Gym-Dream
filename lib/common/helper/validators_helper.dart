@@ -17,6 +17,14 @@ class MyValidatorsHelper {
   static String? birthDateValidator(BuildContext context, String? birthDate) {
     if (birthDate == null || birthDate.isEmpty) {
       return S.of(context).birthDateCannotBeEmpty;
+
+  static String? displayProductNameValidator(
+      BuildContext context, String? displayName) {
+    if (displayName == null || displayName.isEmpty) {
+      return S.of(context).displayNameCannotBeEmpty;
+    }
+    if (displayName.length < 3 || displayName.length > 20) {
+      return S.of(context).displayNameMustBeBetween3And20Characters;
     }
     return null;
   }
@@ -39,6 +47,22 @@ class MyValidatorsHelper {
   //   }
   //   if (displayName.isEmpty || displayName.length > 5) {
   //     return S.of(context).displayProductPriceMustBeBetween1And5Characters;
+
+  // static String? displayProductPriceValidator(
+  //     BuildContext context, String? displayName) {
+  //   if (displayName == null || displayName.isEmpty) {
+  //     return S.of(context).displayProductPriceCannotBeEmpty;
+  //   }
+  //   if (displayName.isEmpty || displayName.length > 5) {
+  //     return S.of(context).displayProductPriceMustBeBetween1And5Characters;
+  //   }
+  //   return null;
+  // }
+
+  // static String? displayProductDescriptionValidator(
+  //     BuildContext context, String? displayName) {
+  //   if (displayName == null || displayName.isEmpty) {
+  //     return 'Display Product Description cannot be empty';
   //   }
   //   return null;
   // }

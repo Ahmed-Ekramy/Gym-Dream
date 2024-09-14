@@ -282,6 +282,7 @@
     "@displayNameCannotBeEmpty":{},
         "displayNameCannotBeEmpty":"Display birthDate cannot be empty",
     "@displayNameCannotBeEmpty":{},
+
     "displayNameMustBeBetween3And20Characters":"Display name must be between 3 and 20 characters",
     "@displayNameMustBeBetween3And20Characters":{},
     "displayProductPriceCannotBeEmpty":"Display Product Price cannot be empty",

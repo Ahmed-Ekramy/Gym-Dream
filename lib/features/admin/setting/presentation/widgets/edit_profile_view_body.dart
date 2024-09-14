@@ -8,6 +8,12 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/features/admin/setting/presentation/manager/setting_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
+
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gym_dream/common/widgets/app_text_form_field.dart';
+import 'package:gym_dream/common/widgets/custom_button_widget.dart';
+import 'package:gym_dream/generated/l10n.dart';
+
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
 
@@ -130,6 +136,7 @@ class EditProfileViewBody extends StatelessWidget {
           ),
         );
       },
+
     );
   }
 }
