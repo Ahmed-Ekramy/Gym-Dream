@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gym_dream/common/cubit/language_cubit.dart';
-
 import '../../../../core/app_asset.dart';
 import 'button_save_language.dart';
 import 'custom_list_tile.dart';
@@ -19,15 +18,25 @@ class LanguageBodyView extends StatelessWidget {
             builder: (context, state) {
               return Column(
                 children: [
-                  CustomListTile(
-                    state: state,
-                    nameLanguage: 'English',
-                    imageLanguage: AppAsset.english,
+                  GestureDetector(
+                    onTap: () {
+                      context.read<LanguageCubit>().selectLanguage('en');
+                    },
+                    child: CustomListTile(
+                      state: state,
+                      nameLanguage: 'English',
+                      imageLanguage: AppAsset.english,
+                    ),
                   ),
-                  CustomListTile(
-                    state: state,
-                    nameLanguage: 'العربية',
-                    imageLanguage: AppAsset.egyptFlag,
+                  GestureDetector(
+                    onTap: () {
+                      context.read<LanguageCubit>().selectLanguage('ar');
+                    },
+                    child: CustomListTile(
+                      state: state,
+                      nameLanguage: 'العربية',
+                      imageLanguage: AppAsset.egyptFlag,
+                    ),
                   ),
                 ],
               );

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/app_asset.dart';
 import '../../core/app_color.dart';
 import '../../core/app_text_style.dart';
 import 'custom_button_widget.dart';
 
-Future<bool> showExitConfirmation(String image ,BuildContext context) async {
+Future<bool> showExitConfirmation(String image, BuildContext context) async {
   return await showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -17,10 +16,7 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
             height: 250.h,
             child: Column(
               children: [
-                Image.asset(
-                    height:  150.h,
-                    fit:  BoxFit.cover,
-                    image),
+                Image.asset(height: 150.h, fit: BoxFit.cover, image),
                 SizedBox(height: 10.h),
                 Text("the weight are waiting for you",
                     style: AppTextStyle.black600S16),
@@ -38,7 +34,7 @@ Future<bool> showExitConfirmation(String image ,BuildContext context) async {
                         },
                       ),
                     ),
-                    SizedBox( width: 10.w),
+                    SizedBox(width: 10.w),
                     CustomButton(
                       colorBorder: AppColor.primary,
                       color: AppColor.orangeLight,

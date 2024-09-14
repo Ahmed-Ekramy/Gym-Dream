@@ -14,6 +14,13 @@ class MyValidatorsHelper {
     return null;
   }
 
+  static String? birthDateValidator(BuildContext context, String? birthDate) {
+    if (birthDate == null || birthDate.isEmpty) {
+      return S.of(context).birthDateCannotBeEmpty;
+    }
+    return null;
+  }
+
   static String? displayProductNameValidator(
       BuildContext context, String? displayName) {
     if (displayName == null || displayName.isEmpty) {

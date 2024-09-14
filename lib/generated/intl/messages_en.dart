@@ -74,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "disable": MessageLookupByLibrary.simpleMessage("Disable"),
         "displayNameCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Display name cannot be empty"),
+        "birthDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Display birth date cannot be empty"),
         "displayNameMustBeBetween3And20Characters":
             MessageLookupByLibrary.simpleMessage(
                 "Display name must be between 3 and 20 characters"),
@@ -112,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "gold": MessageLookupByLibrary.simpleMessage("Gold"),
+        "Silver": MessageLookupByLibrary.simpleMessage("Silver"),
+        "primary": MessageLookupByLibrary.simpleMessage("Primary"),
         "group": MessageLookupByLibrary.simpleMessage("Group"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "gymData": MessageLookupByLibrary.simpleMessage("Gym data"),

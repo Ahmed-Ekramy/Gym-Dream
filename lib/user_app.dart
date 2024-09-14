@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gym_dream/common/cubit/local_language_cubit.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/features/admin/layout/presentation/manager/cubit/layout_cubit.dart';
+import 'package:gym_dream/features/admin/setting/presentation/manager/setting_cubit.dart';
 import 'package:gym_dream/features/authentication/auth_wrapper.dart';
 import 'package:gym_dream/features/authentication/manager/auth%20cubit/auth_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
@@ -36,6 +37,9 @@ class UserAppGym extends StatelessWidget {
             ),
             BlocProvider<LayoutCubit>(
               create: (context) => serviceLocator.get<LayoutCubit>(),
+            ),
+            BlocProvider<SettingCubit>(
+              create: (context) => SettingCubit(),
             ),
           ],
           child: BlocBuilder<LocaleCubit, Locale>(

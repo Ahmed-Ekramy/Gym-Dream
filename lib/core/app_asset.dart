@@ -55,4 +55,11 @@ class AppAsset {
   static const settings = "assets/svg/settings.svg";
   static const arrowDown = "assets/svg/arrowdown.svg";
   static const gymSad = "assets/images/gym sad.png";
+
+  static const renewSubscription = "assets/svg/renew_sub.svg";
+
+  static const stopSubscription = "assets/svg/stop_sup.svg";
+
+  static const editProfile = "assets/svg/edit_profile.svg";
+  static const delete = "assets/svg/Delete.svg";
 }

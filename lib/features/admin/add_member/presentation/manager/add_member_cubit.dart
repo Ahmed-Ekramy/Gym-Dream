@@ -12,11 +12,8 @@ class AddMemberCubit extends Cubit<AddMemberState> {
   AddMemberCubit() : super(AddMemberInitial());
 
   // Form key for validation
-  // Form key for validation
   var formKey = GlobalKey<FormState>();
   AutovalidateMode? autovalidateMode = AutovalidateMode.disabled;
-
-  // Controllers
 
   // Controllers
   var fullNameController = TextEditingController();
@@ -33,8 +30,6 @@ class AddMemberCubit extends Cubit<AddMemberState> {
 
   // Gender
   String? gender;
-
-  // Select Date Method (Handles both Start and End Dates)
 
   // Select Date Method (Handles both Start and End Dates)
   Future<void> selectDate(BuildContext context,
