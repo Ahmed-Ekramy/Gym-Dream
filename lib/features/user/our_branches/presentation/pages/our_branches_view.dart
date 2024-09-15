@@ -19,10 +19,10 @@ class OurBranchesView extends StatelessWidget {
       child: Scaffold(
           body: CustomScrollView(
         slivers: [
-           SliverAppBar(
+          SliverAppBar(
             leading: const BackIcon(),
-            title:      Text(
-              S.of(context).ourBranches,
+            title: Text(
+              S.of(context).OurBranches,
               style: AppTextStyle.black600S18,
             ),
             centerTitle: true,

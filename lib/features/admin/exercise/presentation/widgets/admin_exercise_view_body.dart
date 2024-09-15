@@ -7,7 +7,6 @@ import 'package:gym_dream/core/app_text_style.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/manager/cubit/exercise_cubit.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/add_exercises_button.dart';
 import 'package:gym_dream/features/admin/exercise/presentation/widgets/exercises_list_item.dart';
-import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 class AdminExerciseViewBody extends StatelessWidget {
@@ -23,15 +22,10 @@ class AdminExerciseViewBody extends StatelessWidget {
         child: CustomScrollView(
           physics: const NeverScrollableScrollPhysics(),
           slivers: [
-            const SliverAppBar(
-              backgroundColor: AppColor.white,
-              surfaceTintColor: AppColor.white,
-              pinned: false,
-              leading: BackIcon(),
-            ),
             SliverToBoxAdapter(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                padding:
+                    EdgeInsets.symmetric(horizontal: 16.0.w, vertical: 16.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

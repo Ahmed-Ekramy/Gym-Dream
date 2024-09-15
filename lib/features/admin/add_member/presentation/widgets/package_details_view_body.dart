@@ -85,8 +85,6 @@ class _PackageDetailsViewBodyState extends State<PackageDetailsViewBody> {
               ),
             ],
           ),
-
-
         ),
       ),
     );

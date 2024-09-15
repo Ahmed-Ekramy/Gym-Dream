@@ -71,7 +71,7 @@ class AdminLoginView extends StatelessWidget {
                       title: S.of(context).password,
                       inputType: InputType.password,
                       validate: (value) {
-                        return MyValidatorsHelper.passwordValidator(
+                        return MyValidatorsHelper.loginPasswordValidator(
                             context, value);
                       },
                     ),
