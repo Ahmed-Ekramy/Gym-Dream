@@ -16,8 +16,12 @@ class ExercisesGroupDropDown extends StatelessWidget {
         if (state is DropDownState) {
           selectedGroup = state.selectedGroup;
         }
+        List<String> dropdownItems = cubit.dropList(context);
+        if (!dropdownItems.contains(selectedGroup)) {
+          selectedGroup = dropdownItems.isNotEmpty ? dropdownItems.first : '';
+        }
         return DropdownButton<String>(
-          value: selectedGroup,
+          value: selectedGroup.isEmpty ? null : selectedGroup,
           elevation: 16,
           style: AppTextStyle.black500S14,
           underline: Container(
@@ -29,7 +33,7 @@ class ExercisesGroupDropDown extends StatelessWidget {
               cubit.selectGroup(value);
             }
           },
-          items: cubit.dropList.map<DropdownMenuItem<String>>((String value) {
+          items: dropdownItems.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(value),
