@@ -700,10 +700,10 @@ class S {
     );
   }
 
-  /// `our Branches`
+  /// `Our Branches`
   String get OurBranches {
     return Intl.message(
-      'our Branches',
+      'Our Branches',
       name: 'OurBranches',
       desc: '',
       args: [],
