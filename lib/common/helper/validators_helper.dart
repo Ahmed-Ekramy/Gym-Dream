@@ -21,6 +21,27 @@ class MyValidatorsHelper {
     return null;
   }
 
+  static String? startDateValidator(BuildContext context, String? startDate) {
+    if (startDate == null || startDate.isEmpty) {
+      return S.of(context).startDateCannotBeEmpty;
+    }
+    return null;
+  }
+
+  static String? endDateValidator(BuildContext context, String? endDate) {
+    if (endDate == null || endDate.isEmpty) {
+      return S.of(context).endDateCannotBeEmpty;
+    }
+    return null;
+  }
+
+  static String? idValidator(BuildContext context, String? id) {
+    if (id == null || id.isEmpty) {
+      return S.of(context).idCannotBeEmpty;
+    }
+    return null;
+  }
+
   // static String? displayProductPriceValidator(
   //     BuildContext context, String? displayName) {
   //   if (displayName == null || displayName.isEmpty) {

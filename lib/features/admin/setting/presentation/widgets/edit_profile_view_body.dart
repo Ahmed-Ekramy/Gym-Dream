@@ -9,11 +9,6 @@ import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/features/admin/setting/presentation/manager/setting_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/common/widgets/app_text_form_field.dart';
-import 'package:gym_dream/common/widgets/custom_button_widget.dart';
-import 'package:gym_dream/generated/l10n.dart';
-
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
 
@@ -36,10 +31,32 @@ class EditProfileViewBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20.h),
-                  const Center(
-                    child: CircleAvatar(
-                      radius: 80,
-                      backgroundImage: AssetImage(AppAsset.boy),
+                  Center(
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        const CircleAvatar(
+                          radius: 80,
+                          backgroundImage: AssetImage('assets/images/boy.png'),
+                        ),
+                        Container(
+                          width: 160,
+                          height: 160,
+                          decoration: BoxDecoration(
+                            color: AppColor.grey.withOpacity(0.7),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(16.h),
+                            child: InkWell(
+                              onTap: () {},
+                              child: SvgPicture.asset(
+                                AppAsset.changePhoto,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(
@@ -60,6 +77,13 @@ class EditProfileViewBody extends StatelessWidget {
                     },
                     hintText: S.of(context).fullName,
                     obscureText: false,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Text(
+                    'ID : 101230',
+                    style: AppTextStyle.brown600S18,
                   ),
                   SizedBox(
                     height: 8.h,
@@ -101,13 +125,7 @@ class EditProfileViewBody extends StatelessWidget {
                     obscureText: false,
                     keyboardType: TextInputType.name,
                     suffixIcon: IconButton(
-                      onPressed: () {
-                        // cubit.selectDate(
-                        //   context,
-                        //   date: cubit.startDateController,
-                        //   isStartDate: true,
-                        // );
-                      },
+                      onPressed: () {},
                       icon: SvgPicture.asset(
                         AppAsset.calendar,
                         height: 15.h,
@@ -116,16 +134,41 @@ class EditProfileViewBody extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 100.h,
+                    height: 60.h,
                   ),
-                  CustomButton(
-                    width: double.infinity,
-                    title: S.of(context).confirm,
-                    onPressed: () {
-                      if (cubit.formKey.currentState!.validate() == true) {
-                        // Call the function to add member here
-                      } else {}
-                    },
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: CustomButton(
+                          height: 30.h,
+                          width: double.infinity,
+                          title: S.of(context).confirm,
+                          onPressed: () {
+                            if (cubit.formKey.currentState!.validate() ==
+                                true) {
+                              // Call the function to add member here
+                            } else {}
+                          },
+                        ),
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      Expanded(
+                        child: CustomButton(
+                          height: 30.h,
+                          color: AppColor.white,
+                          colorBorder: AppColor.primary,
+                          width: double.infinity,
+                          textStyle: AppTextStyle.orange700S16,
+                          title: 'cancel',
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: 20.h,
@@ -136,7 +179,6 @@ class EditProfileViewBody extends StatelessWidget {
           ),
         );
       },
-
     );
   }
 }

@@ -15,10 +15,7 @@ class AdminSettingView extends StatelessWidget {
         return Scaffold(
           appBar: CustomAppBar(
             title: S.of(context).settings,
-            onPressedInBackIcon: () {
-              BlocProvider.of<LayoutCubit>(context)
-                  .changeBottomNavToHome(context);
-            },
+            leading: const SizedBox(),
           ),
           body: const AdminSettingViewBody(),
         );

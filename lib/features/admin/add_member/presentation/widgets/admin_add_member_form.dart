@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,6 +27,8 @@ class _AdminAddMemberViewBodyFormState
     extends State<AdminAddMemberViewBodyForm> {
   final ImagePicker picker = ImagePicker();
   String? selectedPackageName;
+  bool isPassVisible = false;
+  bool isConfirmPassVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +59,9 @@ class _AdminAddMemberViewBodyFormState
               ),
               SizedBox(height: 8.h),
               AppTextFormFiled(
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]'))
+                ],
                 controller: cubit.fullNameController,
                 hintText: S.of(context).enterYourFullName,
                 obscureText: false,
@@ -78,7 +84,7 @@ class _AdminAddMemberViewBodyFormState
                 keyboardType: TextInputType.phone,
                 maxLine: 1,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNameValidator(context, text);
+                  return MyValidatorsHelper.idValidator(context, text);
                 },
               ),
               SizedBox(height: 8.h),
@@ -90,6 +96,7 @@ class _AdminAddMemberViewBodyFormState
                   ),
                   SizedBox(width: 32.w),
                   Radio<String>(
+                    activeColor: AppColor.primary,
                     value: S.of(context).male,
                     groupValue: cubit.gender,
                     onChanged: (value) {
@@ -101,6 +108,7 @@ class _AdminAddMemberViewBodyFormState
                   Text(S.of(context).male, style: AppTextStyle.black400S14),
                   SizedBox(width: 16.w),
                   Radio<String>(
+                    activeColor: AppColor.primary,
                     value: S.of(context).female,
                     groupValue: cubit.gender,
                     onChanged: (value) {
@@ -203,7 +211,7 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 readOnly: true,
                 validator: (text) {
-                  return MyValidatorsHelper.birthDateValidator(context, text);
+                  return MyValidatorsHelper.startDateValidator(context, text);
                 },
                 controller: cubit.startDateController,
                 hintText: S.of(context).startDate,
@@ -230,7 +238,7 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 readOnly: true,
                 validator: (text) {
-                  return MyValidatorsHelper.birthDateValidator(context, text);
+                  return MyValidatorsHelper.endDateValidator(context, text);
                 },
                 controller: cubit.endDateController,
                 hintText: S.of(context).endDate,
@@ -256,18 +264,28 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 controller: cubit.passWordController,
                 hintText: S.of(context).password,
-                obscureText: true,
+                obscureText: isPassVisible,
                 keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNameValidator(context, text);
+                  return MyValidatorsHelper.passwordValidator(context, text);
                 },
                 suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    AppAsset.eyeClosed,
-                    height: 20.h,
-                    color: AppColor.grey,
-                  ),
+                  onPressed: () {
+                    setState(() {
+                      isPassVisible = !isPassVisible;
+                    });
+                  },
+                  icon: isPassVisible
+                      ? SvgPicture.asset(
+                          AppAsset.eyeClosed,
+                          height: 20.h,
+                          color: AppColor.grey,
+                        )
+                      : SvgPicture.asset(
+                          AppAsset.eyeOpen,
+                          height: 20.h,
+                          color: AppColor.grey,
+                        ),
                 ),
               ),
               SizedBox(height: 8.h),
@@ -279,18 +297,28 @@ class _AdminAddMemberViewBodyFormState
               AppTextFormFiled(
                 controller: cubit.confirmPassWordController,
                 hintText: S.of(context).confirmPassword,
-                obscureText: true,
+                obscureText: isConfirmPassVisible,
                 keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
-                  return MyValidatorsHelper.displayNameValidator(context, text);
+                  return MyValidatorsHelper.passwordValidator(context, text);
                 },
                 suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    AppAsset.eyeClosed,
-                    height: 20.h,
-                    color: AppColor.grey,
-                  ),
+                  onPressed: () {
+                    setState(() {
+                      isConfirmPassVisible = !isConfirmPassVisible;
+                    });
+                  },
+                  icon: isConfirmPassVisible
+                      ? SvgPicture.asset(
+                          AppAsset.eyeClosed,
+                          height: 20.h,
+                          color: AppColor.grey,
+                        )
+                      : SvgPicture.asset(
+                          AppAsset.eyeOpen,
+                          height: 20.h,
+                          color: AppColor.grey,
+                        ),
                 ),
               ),
               SizedBox(height: 16.h),
