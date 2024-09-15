@@ -256,11 +256,6 @@
     "@chooseYourPlan":{},
     "gold":"ذهبي",
     "@gold":{},
-    "silver":"فضي",
-    "@silver":{},
-    "primary":"الأساسية",
-    "@primary":{},
-
     "unlimitedUseOfEssentialSportsEquipment":"استخدام غير محدود للمعدات الرياضية الأساسية",
     "@unlimitedUseOfEssentialSportsEquipment":{},
     "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":"جلسة استشارة واحدة مع مدرب شخصي عند التسجيل لأول مرة",
@@ -324,5 +319,12 @@
     "areYouSureYouWantToDeleteThisExercise":"هل أنت متأكد أنك تريد حذف هذا التمرين؟",
     "@areYouSureYouWantToDeleteThisExercise":{},
     "areYouSureYouWantToLogOut":"هل أنت متأكد أنك تريد تسجيل الخروج؟",
-    "@areYouSureYouWantToLogOut":{}
+    "@areYouSureYouWantToLogOut":{},
+    "silver":"فضي",
+    "@silver":{},
+    "primary":"الأساسية",
+    "primary":{},
+    "passwordsDoNotMatch" : "كلمات المرور ليست متطابقة",
+    "@passwordsDoNotMatch" : {}
+
 }

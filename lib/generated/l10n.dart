@@ -701,9 +701,9 @@ class S {
   }
 
   /// `our Branches`
-  String get ourBranches {
+  String get OurBranches {
     return Intl.message(
-      'Our Branches',
+      'our Branches',
       name: 'OurBranches',
       desc: '',
       args: [],
@@ -1330,26 +1330,6 @@ class S {
     );
   }
 
-  /// `Gold`
-  String get silver {
-    return Intl.message(
-      'Silver',
-      name: 'silver',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Gold`
-  String get primary {
-    return Intl.message(
-      'primary',
-      name: 'primary',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Unlimited use of essential sports equipment`
   String get unlimitedUseOfEssentialSportsEquipment {
     return Intl.message(
@@ -1467,45 +1447,6 @@ class S {
     return Intl.message(
       'Display name cannot be empty',
       name: 'displayNameCannotBeEmpty',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Display name cannot be empty`
-  String get birthDateCannotBeEmpty {
-    return Intl.message(
-      'Birth date name cannot be empty',
-      name: 'birthDateCannotBeEmpty',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Display name cannot be empty`
-  String get startDateCannotBeEmpty {
-    return Intl.message(
-      'Start date name cannot be empty',
-      name: 'StartDateCannotBeEmpty',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Display name cannot be empty`
-  String get endDateCannotBeEmpty {
-    return Intl.message(
-      'End date name cannot be empty',
-      name: 'EndDateCannotBeEmpty',
-      desc: '',
-      args: [],
-    );
-  }
-
-  String get idCannotBeEmpty {
-    return Intl.message(
-      'Id name cannot be empty',
-      name: 'IdCannotBeEmpty',
       desc: '',
       args: [],
     );
@@ -1666,6 +1607,76 @@ class S {
     return Intl.message(
       'Are you sure you want to logout?',
       name: 'areYouSureYouWantToLogOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Silver`
+  String get silver {
+    return Intl.message(
+      'Silver',
+      name: 'silver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Primary`
+  String get primary {
+    return Intl.message(
+      'Primary',
+      name: 'primary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birth Date cannot be empty`
+  String get birthDateCannotBeEmpty {
+    return Intl.message(
+      'Birth Date cannot be empty',
+      name: 'birthDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date cannot be empty`
+  String get startDateCannotBeEmpty {
+    return Intl.message(
+      'Start Date cannot be empty',
+      name: 'startDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date cannot be empty`
+  String get endDateCannotBeEmpty {
+    return Intl.message(
+      'End Date cannot be empty',
+      name: 'endDateCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID cannot be empty`
+  String get idCannotBeEmpty {
+    return Intl.message(
+      'ID cannot be empty',
+      name: 'idCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get passwordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'passwordsDoNotMatch',
       desc: '',
       args: [],
     );

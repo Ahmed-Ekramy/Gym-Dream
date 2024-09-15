@@ -280,9 +280,6 @@
     "@noImagePicked":{},
     "displayNameCannotBeEmpty":"Display name cannot be empty",
     "@displayNameCannotBeEmpty":{},
-        "displayNameCannotBeEmpty":"Display birthDate cannot be empty",
-    "@displayNameCannotBeEmpty":{},
-
     "displayNameMustBeBetween3And20Characters":"Display name must be between 3 and 20 characters",
     "@displayNameMustBeBetween3And20Characters":{},
     "displayProductPriceCannotBeEmpty":"Display Product Price cannot be empty",
@@ -314,5 +311,20 @@
     "areYouSureYouWantToDeleteThisExercise":"Are you sure you want to delete this exercise?",
     "@areYouSureYouWantToDeleteThisExercise":{},
     "areYouSureYouWantToLogOut":"Are you sure you want to logout?",
-    "@areYouSureYouWantToLogOut":{}
+    "@areYouSureYouWantToLogOut":{},
+    "silver":"Silver",
+    "@silver":{},
+    "primary":"Primary",
+    "@primary":{},
+    "birthDateCannotBeEmpty" :"Birth Date cannot be empty",
+    "@birthDateCannotBeEmpty":{},
+    "startDateCannotBeEmpty" :"Start Date cannot be empty",
+    "@startDateCannotBeEmpty":{},
+    "endDateCannotBeEmpty" :"End Date cannot be empty",
+    "@endDateCannotBeEmpty":{},
+    "idCannotBeEmpty" :"ID cannot be empty",
+    "@idCannotBeEmpty":{},
+    "passwordsDoNotMatch" : "Passwords do not match",
+    "@passwordsDoNotMatch" : {}
+
 }
