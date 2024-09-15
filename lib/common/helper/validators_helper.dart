@@ -135,12 +135,30 @@ class MyValidatorsHelper {
   // }
 
   static String? passwordValidator(BuildContext context, String? value) {
+    final specialCharacterRegex = RegExp(r'[!@#$%^&*(),.?":{}|<>]');
+    final upperCaseRegex = RegExp(r'[A-Z]');
+    final lowerCaseRegex = RegExp(r'[a-z]');
+    final digitRegex = RegExp(r'\d');
+
     if (value == null || value.isEmpty) {
       return S.of(context).pleaseEnterYourPassword;
     }
     if (value.length < 8) {
       return S.of(context).passwordMustBeAtLeast8CharactersLong;
     }
+    if (!upperCaseRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainUppercaseLetter;
+    }
+    if (!lowerCaseRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainLowercaseLetter;
+    }
+    if (!digitRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainDigit;
+    }
+    if (!specialCharacterRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainSpecialCharacter;
+    }
+
     return null;
   }
 

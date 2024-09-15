@@ -1681,6 +1681,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Password must contain an uppercase letter`
+  String get passwordMustContainUppercaseLetter {
+    return Intl.message(
+      'Password must contain an uppercase letter',
+      name: 'passwordMustContainUppercaseLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain a lowercase letter`
+  String get passwordMustContainLowercaseLetter {
+    return Intl.message(
+      'Password must contain a lowercase letter',
+      name: 'passwordMustContainLowercaseLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain a digit`
+  String get passwordMustContainDigit {
+    return Intl.message(
+      'Password must contain a digit',
+      name: 'passwordMustContainDigit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain a special character`
+  String get passwordMustContainSpecialCharacter {
+    return Intl.message(
+      'Password must contain a special character',
+      name: 'passwordMustContainSpecialCharacter',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
