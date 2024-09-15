@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,6 +11,7 @@ import 'package:gym_dream/common/widgets/custom_button_widget.dart';
 import 'package:gym_dream/core/app_color.dart';
 import 'package:gym_dream/features/admin/setting/presentation/manager/setting_cubit.dart';
 import 'package:gym_dream/generated/l10n.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../../../core/app_asset.dart';
 import '../../../../../core/app_text_style.dart';
@@ -35,9 +39,11 @@ class EditProfileViewBody extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
-                        const CircleAvatar(
+                        CircleAvatar(
                           radius: 80,
-                          backgroundImage: AssetImage('assets/images/boy.png'),
+                          backgroundImage: cubit.image == null
+                              ? const AssetImage(AppAsset.boy) as ImageProvider
+                              : FileImage(File(cubit.image!.path)),
                         ),
                         Container(
                           width: 160,
@@ -49,7 +55,10 @@ class EditProfileViewBody extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.all(16.h),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                cubit.uploadImageFromGalleryModel(
+                                    picker: ImagePicker());
+                              },
                               child: SvgPicture.asset(
                                 AppAsset.changePhoto,
                               ),
@@ -70,6 +79,9 @@ class EditProfileViewBody extends StatelessWidget {
                     height: 4.h,
                   ),
                   AppTextFormFiled(
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]'))
+                    ],
                     controller: cubit.fullNameController,
                     validator: (value) {
                       return MyValidatorsHelper.displayNameValidator(
@@ -121,11 +133,14 @@ class EditProfileViewBody extends StatelessWidget {
                           context, text);
                     },
                     controller: cubit.birthDateController,
-                    hintText: S.of(context).startDate,
+                    hintText: cubit.birthDateController.text,
                     obscureText: false,
                     keyboardType: TextInputType.name,
                     suffixIcon: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        cubit.selectDate(context,
+                            date: cubit.birthDateController);
+                      },
                       icon: SvgPicture.asset(
                         AppAsset.calendar,
                         height: 15.h,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gym_dream/features/authentication/widgets/back_icon.dart';
 import 'package:gym_dream/generated/l10n.dart';
 
 import '../../../../../core/app_text_style.dart';
@@ -27,12 +26,6 @@ class CustomAppBarHistory extends StatelessWidget {
       title: Text(
         S.of(context).recentlyScanned,
         style: AppTextStyle.black400S22,
-      ),
-      leading: Padding(
-        padding: Localizations.localeOf(context).languageCode == 'en'
-            ? const EdgeInsets.only(left: 8)
-            : const EdgeInsets.only(right: 8),
-        child: const BackIcon(),
       ),
     );
   }

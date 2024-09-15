@@ -37,7 +37,7 @@ class WarningCard extends StatelessWidget {
                     CustomButton(
                       width: 130.w,
                       height: 25.h,
-                      title: S.of(context).ourBranches,
+                      title: S.of(context).OurBranches,
                       textStyle: AppTextStyle.white700S14.copyWith(
                         fontSize: 12.sp,
                       ),

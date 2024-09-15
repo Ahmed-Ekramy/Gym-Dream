@@ -16,28 +16,28 @@ class MyValidatorsHelper {
 
   static String? birthDateValidator(BuildContext context, String? birthDate) {
     if (birthDate == null || birthDate.isEmpty) {
-      return S.of(context).birthDateCannotBeEmpty;
+      return S.of(context).birthDate;
     }
     return null;
   }
 
   static String? startDateValidator(BuildContext context, String? startDate) {
     if (startDate == null || startDate.isEmpty) {
-      return S.of(context).startDateCannotBeEmpty;
+      return S.of(context).startDate;
     }
     return null;
   }
 
   static String? endDateValidator(BuildContext context, String? endDate) {
     if (endDate == null || endDate.isEmpty) {
-      return S.of(context).endDateCannotBeEmpty;
+      return S.of(context).endDate;
     }
     return null;
   }
 
   static String? idValidator(BuildContext context, String? id) {
     if (id == null || id.isEmpty) {
-      return S.of(context).idCannotBeEmpty;
+      return S.of(context).id;
     }
     return null;
   }
@@ -135,12 +135,30 @@ class MyValidatorsHelper {
   // }
 
   static String? passwordValidator(BuildContext context, String? value) {
+    final specialCharacterRegex = RegExp(r'[!@#$%^&*(),.?":{}|<>]');
+    final upperCaseRegex = RegExp(r'[A-Z]');
+    final lowerCaseRegex = RegExp(r'[a-z]');
+    final digitRegex = RegExp(r'\d');
+
     if (value == null || value.isEmpty) {
       return S.of(context).pleaseEnterYourPassword;
     }
     if (value.length < 8) {
       return S.of(context).passwordMustBeAtLeast8CharactersLong;
     }
+    if (!upperCaseRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainUppercaseLetter;
+    }
+    if (!lowerCaseRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainLowercaseLetter;
+    }
+    if (!digitRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainDigit;
+    }
+    if (!specialCharacterRegex.hasMatch(value)) {
+      return S.of(context).passwordMustContainSpecialCharacter;
+    }
+
     return null;
   }
 
