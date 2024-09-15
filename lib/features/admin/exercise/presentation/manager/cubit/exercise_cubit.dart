@@ -1,41 +1,41 @@
 import 'dart:io';
 
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gym_dream/generated/l10n.dart';
 import 'package:image_picker/image_picker.dart';
 
 part 'exercise_state.dart';
 
 class ExerciseCubit extends Cubit<ExerciseState> {
   ExerciseCubit() : super(ExerciseInitial());
-
-  static ExerciseCubit get(context) => BlocProvider.of(context);
-
-  List<String> dropList = [
-    'chest',
-    'back',
-    'shoulders',
-    'legs',
-    'biceps',
-    'triceps',
-    'rest'
-  ];
-
+  static ExerciseCubit get(BuildContext context) => BlocProvider.of(context);
   String selectedGroup = 'chest';
-
   List<String> _exercises = [];
   File? image;
+  List<String> dropList(BuildContext context) {
+    final s = S.of(context);
+    return [
+      s.chest,
+      s.back,
+      s.shoulders,
+      s.legs,
+      s.biceps,
+      s.triceps,
+      s.rest,
+    ];
+  }
 
-  // Load exercises
   void loadExercises() {
     try {
       _exercises = [
-        'Bench Press',
-        'Deadlift',
-        'Squat',
-        'Overhead Press',
-        'Pull-Up',
-        'Bicep Curl'
+        'benchPress',
+        'deadlift',
+        'squat',
+        'overheadPress',
+        'pullUp',
+        'bicepCurl'
       ];
       emit(ExerciseListSuccess(exercises: _exercises));
     } catch (e) {
@@ -43,7 +43,6 @@ class ExerciseCubit extends Cubit<ExerciseState> {
     }
   }
 
-  // Delete an exercise
   void deleteExercise(int index) {
     if (state is ExerciseListSuccess) {
       final currentState = state as ExerciseListSuccess;
@@ -53,13 +52,11 @@ class ExerciseCubit extends Cubit<ExerciseState> {
     }
   }
 
-  // Upload image and retain it in state
   Future<File?> uploadImageFromGalleryModel({
     required ImagePicker picker,
   }) async {
     try {
       XFile? pickedFile = await picker.pickImage(source: ImageSource.gallery);
-
       if (pickedFile != null) {
         image = File(pickedFile.path);
         emit(UploadImageExerciseSuccessState(image: pickedFile));
@@ -75,9 +72,8 @@ class ExerciseCubit extends Cubit<ExerciseState> {
     }
   }
 
-  // Preserve the image when selecting a group
   void selectGroup(String group) {
     selectedGroup = group;
-    emit(DropDownState(group, image: image)); // Retain image in the state
+    emit(DropDownState(group, image: image));
   }
 }
