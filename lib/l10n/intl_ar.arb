@@ -325,6 +325,14 @@
     "primary":"الأساسية",
     "primary":{},
     "passwordsDoNotMatch" : "كلمات المرور ليست متطابقة",
-    "@passwordsDoNotMatch" : {}
+    "@passwordsDoNotMatch" : {},
+    "passwordMustContainUppercaseLetter": "يجب أن تحتوي كلمة المرور على حرف كبير",
+    "@passwordMustContainUppercaseLetter": {},
+    "passwordMustContainLowercaseLetter": "يجب أن تحتوي كلمة المرور على حرف صغير",
+    "@passwordMustContainLowercaseLetter": {},
+    "passwordMustContainDigit": "يجب أن تحتوي كلمة المرور على رقم",
+    "@passwordMustContainDigit": {},
+    "passwordMustContainSpecialCharacter" : "يجب أن تحتوي كلمة المرور على رمز خاص",
+    "@passwordMustContainSpecialCharacter" : {}
 
 }

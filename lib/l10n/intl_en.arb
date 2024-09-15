@@ -325,6 +325,15 @@
     "idCannotBeEmpty" :"ID cannot be empty",
     "@idCannotBeEmpty":{},
     "passwordsDoNotMatch" : "Passwords do not match",
-    "@passwordsDoNotMatch" : {}
+    "@passwordsDoNotMatch" : {},
+    "passwordMustContainUppercaseLetter":"Password must contain an uppercase letter",
+    "@passwordMustContainUppercaseLetter":{},
+    "passwordMustContainLowercaseLetter":"Password must contain a lowercase letter",
+    "@passwordMustContainLowercaseLetter":{},
+    "passwordMustContainDigit":"Password must contain a digit",
+    "@passwordMustContainDigit":{},
+    "passwordMustContainSpecialCharacter" : "Password must contain a special character",
+    "@passwordMustContainSpecialCharacter" : {}
+
 
 }
