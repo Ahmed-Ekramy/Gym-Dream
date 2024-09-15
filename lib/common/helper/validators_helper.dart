@@ -16,28 +16,28 @@ class MyValidatorsHelper {
 
   static String? birthDateValidator(BuildContext context, String? birthDate) {
     if (birthDate == null || birthDate.isEmpty) {
-      return S.of(context).birthDateCannotBeEmpty;
+      return S.of(context).birthDate;
     }
     return null;
   }
 
   static String? startDateValidator(BuildContext context, String? startDate) {
     if (startDate == null || startDate.isEmpty) {
-      return S.of(context).startDateCannotBeEmpty;
+      return S.of(context).startDate;
     }
     return null;
   }
 
   static String? endDateValidator(BuildContext context, String? endDate) {
     if (endDate == null || endDate.isEmpty) {
-      return S.of(context).endDateCannotBeEmpty;
+      return S.of(context).endDate;
     }
     return null;
   }
 
   static String? idValidator(BuildContext context, String? id) {
     if (id == null || id.isEmpty) {
-      return S.of(context).idCannotBeEmpty;
+      return S.of(context).id;
     }
     return null;
   }

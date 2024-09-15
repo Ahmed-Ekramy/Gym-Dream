@@ -256,10 +256,7 @@ class _AdminAddMemberViewBodyFormState
                 ),
               ),
               SizedBox(height: 16.h),
-              Text(
-                S.of(context).password,
-                style: AppTextStyle.black500S16,
-              ),
+              Text(S.of(context).password, style: AppTextStyle.black500S16),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.passWordController,
@@ -276,23 +273,15 @@ class _AdminAddMemberViewBodyFormState
                     });
                   },
                   icon: isPassVisible
-                      ? SvgPicture.asset(
-                          AppAsset.eyeClosed,
-                          height: 20.h,
-                          color: AppColor.grey,
-                        )
-                      : SvgPicture.asset(
-                          AppAsset.eyeOpen,
-                          height: 20.h,
-                          color: AppColor.grey,
-                        ),
+                      ? SvgPicture.asset(AppAsset.eyeClosed,
+                          height: 20.h, color: AppColor.grey)
+                      : SvgPicture.asset(AppAsset.eyeOpen,
+                          height: 20.h, color: AppColor.grey),
                 ),
               ),
               SizedBox(height: 8.h),
-              Text(
-                S.of(context).confirmPassword,
-                style: AppTextStyle.black500S16,
-              ),
+              Text(S.of(context).confirmPassword,
+                  style: AppTextStyle.black500S16),
               SizedBox(height: 8.h),
               AppTextFormFiled(
                 controller: cubit.confirmPassWordController,
@@ -300,7 +289,10 @@ class _AdminAddMemberViewBodyFormState
                 obscureText: isConfirmPassVisible,
                 keyboardType: TextInputType.visiblePassword,
                 validator: (text) {
-                  return MyValidatorsHelper.passwordValidator(context, text);
+                  if (text != cubit.passWordController.text) {
+                    return S.of(context).passwordsDoNotMatch;
+                  }
+                  return null; // If they match, no error
                 },
                 suffixIcon: IconButton(
                   onPressed: () {
@@ -309,18 +301,13 @@ class _AdminAddMemberViewBodyFormState
                     });
                   },
                   icon: isConfirmPassVisible
-                      ? SvgPicture.asset(
-                          AppAsset.eyeClosed,
-                          height: 20.h,
-                          color: AppColor.grey,
-                        )
-                      : SvgPicture.asset(
-                          AppAsset.eyeOpen,
-                          height: 20.h,
-                          color: AppColor.grey,
-                        ),
+                      ? SvgPicture.asset(AppAsset.eyeClosed,
+                          height: 20.h, color: AppColor.grey)
+                      : SvgPicture.asset(AppAsset.eyeOpen,
+                          height: 20.h, color: AppColor.grey),
                 ),
               ),
+              SizedBox(height: 16.h),
               SizedBox(height: 16.h),
               CustomButton(
                 height: 30.h,

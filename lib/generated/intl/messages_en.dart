@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "In": MessageLookupByLibrary.simpleMessage("In"),
+        "OurBranches": MessageLookupByLibrary.simpleMessage("our Branches"),
         "addExercise": MessageLookupByLibrary.simpleMessage("Add Exercise"),
         "addMember": MessageLookupByLibrary.simpleMessage("Add member"),
         "addNewExercise":
@@ -73,15 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "details": MessageLookupByLibrary.simpleMessage("Details"),
         "disable": MessageLookupByLibrary.simpleMessage("Disable"),
         "displayNameCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
-            "Display name cannot be empty"),
-        "birthDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
-            "Display birth date cannot be empty"),
-        "startDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
-            "Display Start date cannot be empty"),
-        "endDateCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
-            "Display End date cannot be empty"),
-        "IdCannotBeEmpty":
-            MessageLookupByLibrary.simpleMessage("Display Id cannot be empty"),
+            "Display birthDate cannot be empty"),
         "displayNameMustBeBetween3And20Characters":
             MessageLookupByLibrary.simpleMessage(
                 "Display name must be between 3 and 20 characters"),
@@ -120,8 +113,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "gold": MessageLookupByLibrary.simpleMessage("Gold"),
-        "Silver": MessageLookupByLibrary.simpleMessage("Silver"),
-        "primary": MessageLookupByLibrary.simpleMessage("Primary"),
         "group": MessageLookupByLibrary.simpleMessage("Group"),
         "gym": MessageLookupByLibrary.simpleMessage("Gym"),
         "gymData": MessageLookupByLibrary.simpleMessage("Gym data"),
@@ -160,7 +151,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "oneConsultationSessionWithAPersonalTrainerWhenYouSignUpForTheFirstTime":
             MessageLookupByLibrary.simpleMessage(
                 "One consultation session with a personal trainer when you sign up for the first time"),
-        "OurBranches": MessageLookupByLibrary.simpleMessage("Our Branches"),
         "ourCollection": MessageLookupByLibrary.simpleMessage("Our Collection"),
         "ourMembers": MessageLookupByLibrary.simpleMessage("Our members"),
         "out": MessageLookupByLibrary.simpleMessage("Out"),
@@ -219,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Session remaining"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "shoulders": MessageLookupByLibrary.simpleMessage("Shoulders"),
+        "silver": MessageLookupByLibrary.simpleMessage("Silver"),
         "specialSymbolsSuchAs": MessageLookupByLibrary.simpleMessage(
             "Special symbols such as (!, @, #, \$, %, ^, &, *)"),
         "startDate": MessageLookupByLibrary.simpleMessage("Start Date"),

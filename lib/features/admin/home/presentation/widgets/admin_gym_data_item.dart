@@ -16,7 +16,9 @@ class AdminGymDataItem extends StatelessWidget {
     return Container(
       width: 180.sw,
       height: 100.h,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+      ).copyWith(top: 16.h),
       decoration: BoxDecoration(
         color: AppColor.bluePale,
         borderRadius: BorderRadius.circular(16.r),
@@ -27,6 +29,8 @@ class AdminGymDataItem extends StatelessWidget {
           Text(
             title,
             style: AppTextStyle.black500S16,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
           ),
           SizedBox(height: 8.h),
           Expanded(
