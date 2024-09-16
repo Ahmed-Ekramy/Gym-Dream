@@ -45,6 +45,7 @@ class TraineeLoginView extends StatelessWidget {
                 key: formKey,
                 child: Column(
                   children: [
+                    SizedBox(height: 20.h),
                     const DreamGymText(),
                     SizedBox(height: 16.h),
                     Text(
