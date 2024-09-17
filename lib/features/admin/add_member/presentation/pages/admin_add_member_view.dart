@@ -7,7 +7,9 @@ class AdminAddMemberView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: AdminAddMemberViewBody(),
+      body: SafeArea(
+        child: AdminAddMemberViewBody(),
+      ),
     );
   }
 }

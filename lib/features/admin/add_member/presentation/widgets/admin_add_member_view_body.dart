@@ -10,19 +10,17 @@ class AdminAddMemberViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const BackIcon(),
-              SizedBox(height: 8.h),
-              const CreateUserAndEnterDataWidget(),
-              SizedBox(height: 8.h),
-              const AdminAddMemberViewBodyForm(),
-            ],
-          ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.h),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const BackIcon(),
+            SizedBox(height: 8.h),
+            const CreateUserAndEnterDataWidget(),
+            SizedBox(height: 8.h),
+            const AdminAddMemberViewBodyForm(),
+          ],
         ),
       ),
     );

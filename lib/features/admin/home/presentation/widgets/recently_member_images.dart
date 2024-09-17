@@ -5,9 +5,14 @@ import 'package:gym_dream/core/app_text_style.dart';
 class RecentlyMemberImages extends StatelessWidget {
   final List<String> imageList;
   final String title;
+  final VoidCallback onTap;
 
-  const RecentlyMemberImages(
-      {super.key, required this.imageList, required this.title});
+  const RecentlyMemberImages({
+    super.key,
+    required this.imageList,
+    required this.title,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,15 +52,18 @@ class RecentlyMemberImages extends StatelessWidget {
               ),
             ),
             if (imageList.length > 5)
-              CircleAvatar(
-                radius: 18.r,
-                backgroundColor: Colors.orange.shade50,
-                child: Text(
-                  '+${imageList.length - 5}',
-                  style: TextStyle(
-                    color: Colors.orange,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 14.sp,
+              GestureDetector(
+                onTap: onTap,
+                child: CircleAvatar(
+                  radius: 18.r,
+                  backgroundColor: Colors.orange.shade50,
+                  child: Text(
+                    '+${imageList.length - 5}',
+                    style: TextStyle(
+                      color: Colors.orange,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14.sp,
+                    ),
                   ),
                 ),
               ),

@@ -29,8 +29,8 @@ class _AdminAddMemberViewBodyFormState
     extends State<AdminAddMemberViewBodyForm> {
   final ImagePicker picker = ImagePicker();
   String? selectedPackageName;
-  bool isPassVisible = false;
-  bool isConfirmPassVisible = false;
+  bool isPassVisible = true;
+  bool isConfirmPassVisible = true;
 
   @override
   Widget build(BuildContext context) {
